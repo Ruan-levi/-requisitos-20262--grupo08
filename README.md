@@ -71,7 +71,7 @@ O enunciado solicita **Documento de Visão, Stakeholders, roteiro e resultados d
 |:--:|---|---|---|
 | 01 | **Documento de Visão** | [Ler documento](documentos/01-documento-de-visao.md) | Redigido; validação institucional pendente |
 | 02 | **Identificação de Stakeholders** | [Ler documento](documentos/02-stakeholders.md) | Mapeamento preliminar |
-| 03 | **Roteiro e resultados da elicitação** | [Ler documento](documentos/03-elicitacao-entrevistas.md) | Roteiros e **resultados documentais**; entrevistas reais não comprovadas |
+| 03 | **Roteiro e resultados da elicitação** | [Ler análise documental e roteiros](documentos/03-elicitacao-entrevistas.md) · [Ver entrevista simulada (fictícia)](documentos/03b-entrevista-simulada.md) | Achados documentais e exemplo de entrevista **simulada**; entrevistas reais não comprovadas |
 | 04 | **Requisitos Funcionais e Não Funcionais** | [Ler especificação](documentos/04-requisitos.md) | Especificação inicial |
 | 05 | **Regras de Negócio** | [Ler regras](documentos/05-regras-de-negocio.md) | Regras propostas |
 | 06 | **Backlog Priorizado** | [Ler backlog](documentos/06-backlog-priorizado.md) | Histórias de usuário priorizadas |
@@ -79,7 +79,9 @@ O enunciado solicita **Documento de Visão, Stakeholders, roteiro e resultados d
 | 08 | **UML — Componentes** | [Ver diagrama](diagramas/02-componentes.svg) · [Editar](diagramas/02-componentes.puml) | Publicado |
 | 09 | **UML — Implantação** | [Ver diagrama](diagramas/03-implantacao.svg) · [Editar](diagramas/03-implantacao.puml) | Publicado |
 
-**Material complementar:** [Fontes consultadas, premissas e decisões de escopo](documentos/07-fontes-e-decisoes.md).  
+**Materiais complementares:** [Fontes, premissas e decisões de escopo](documentos/07-fontes-e-decisoes.md) · [Especificação de Requisitos de Software (SRS) preliminar](documentos/08-SRS-preliminar.md) · [Entrevista simulada com persona fictícia](documentos/03b-entrevista-simulada.md).
+
+O **SRS** é um complemento às exigências específicas da P1; **PDFs, pitch e protótipos não constam como entregáveis obrigatórios nesta primeira atividade**. Os arquivos Markdown são versionados no GitHub e podem ser exportados em PDF para apresentação, se solicitado.  
 **Convenções dos diagramas:** [Leia-me da pasta UML](diagramas/LEIA-ME.md).
 
 ### 4.1. Diagramas UML — visualização
@@ -150,7 +152,7 @@ Foram cadastradas **10 issues** para acompanhar os entregáveis. Os números aba
 |---|---|---|
 | [#1](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/1) | Documento de Visão | Documento publicado |
 | [#2](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/2) | Stakeholders | Mapeamento publicado |
-| [#3](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/3) | Elicitação | **Aberta:** aguarda entrevistas reais, se realizadas |
+| [#3](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/3) | Elicitação | **Aberta:** roteiro, análise documental e exemplo simulado publicados; falta coleta real |
 | [#4](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/4) | Requisitos | Especificação publicada |
 | [#5](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/5) | Regras de Negócio | Documento publicado |
 | [#6](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/6) | Backlog Priorizado | Backlog publicado |
@@ -159,16 +161,18 @@ Foram cadastradas **10 issues** para acompanhar os entregáveis. Os números aba
 | [#9](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/9) | Diagrama de Implantação | Modelo publicado |
 | [#10](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/10) | Evidência do professor e submissão | **Aberta:** ações externas pendentes |
 
-**Milestone M1:** a criação da milestone e a vinculação das issues **ainda precisam ser confirmadas no GitHub**. Os títulos das issues indicam M1, mas isso **não equivale** à associação efetiva a uma milestone.
+**Milestone M1:** a criação da milestone e a vinculação das issues **ainda precisam ser confirmadas no GitHub**. Os títulos indicam M1, mas isso **não equivale** à associação real. As dez issues desta equipe foram organizadas a partir do enunciado da P1; **não há confirmação de que reproduzam literalmente as issues disponibilizadas pela disciplina**. O professor pode comparar com os modelos oficiais.
 
 [Acessar as issues](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues) · [Acessar as milestones](https://github.com/Ruan-levi/-requisitos-20262--grupo08/milestones)
+
+**Conferência de nomenclatura:** o padrão geral informado pelo professor é `requisitos-20262--grupoX`. O nome atual do repositório tem um **hífen inicial extra**, `-requisitos-20262--grupo08`. Recomenda-se corrigir a configuração administrativa para `requisitos-20262--grupo08`, verificando os links depois da alteração. Isso não afeta os conteúdos publicados, mas pode afetar a conformidade formal.
 
 ## 7. Critérios de avaliação da P1
 
 | Critério informado no enunciado | Valor | Evidências no repositório |
 |---|---:|---|
 | Clareza da visão do problema | **0,5** | Documento de Visão |
-| Qualidade da elicitação | **0,5** | Stakeholders, roteiros e análise documental (**entrevistas reais pendentes**) |
+| Qualidade da elicitação | **0,5** | Stakeholders, roteiros, achados documentais e **simulação fictícia** (**entrevistas reais pendentes**) |
 | Qualidade dos requisitos | **0,5** | RF, RNF, regras de negócio e backlog |
 | Modelagem UML | **0,5** | Casos de Uso, Componentes e Implantação |
 | **Total possível** | **2,0** | Documentação e modelos apresentados |
@@ -187,10 +191,12 @@ A tabela representa **critérios do professor**, não nota recebida ou garantia 
 │   ├── 01-documento-de-visao.md
 │   ├── 02-stakeholders.md
 │   ├── 03-elicitacao-entrevistas.md
+│   ├── 03b-entrevista-simulada.md
 │   ├── 04-requisitos.md
 │   ├── 05-regras-de-negocio.md
 │   ├── 06-backlog-priorizado.md
-│   └── 07-fontes-e-decisoes.md
+│   ├── 07-fontes-e-decisoes.md
+│   └── 08-SRS-preliminar.md
 ├── diagramas/
 │   ├── LEIA-ME.md
 │   ├── 01-casos-de-uso.puml
@@ -200,7 +206,8 @@ A tabela representa **critérios do professor**, não nota recebida ou garantia 
 │   ├── 03-implantacao.puml
 │   └── 03-implantacao.svg
 └── evidencias/
-    └── LEIA-ME.md
+    ├── LEIA-ME.md
+    └── registro-convite-professor.md  (contém print incorporado)
 ```
 
 ## 9. Evidências e entrega no AVA
@@ -216,12 +223,14 @@ A atividade solicita: **(a) link deste repositório** e **(b) comprovação de q
 - [ ] Registrar entrevistas reais, caso tenham sido realizadas pelo grupo.
 - [ ] Criar/confirmar **Milestone M1** e vincular as issues a ela.
 - [x] **Convite enviado a `marcelobezerra-dotcom`: confirmado em captura enviada pelo grupo (status `Pending Invite`, ainda não aceito).** [Registro da confirmação](evidencias/registro-convite-professor.md).
-- [ ] Publicar captura **real** do convite/acesso em **`evidencias/convite-professor.png`**.
+- [x] **Comprovação visual do convite incorporada ao GitHub**, no [registro de evidência](evidencias/registro-convite-professor.md) (status **Pending Invite**).
+- [ ] **Confirmar a aceitação do convite**, pois a regra geral exige acesso efetivo do professor e alerta para possível desconto de até 50%.
+- [ ] Se solicitado arquivo PNG **versionado**, enviar a captura original como `evidencias/convite-professor.png`.
 - [ ] Enviar link do GitHub e evidência no AVA.
 
-[Registro da confirmação do convite](evidencias/registro-convite-professor.md) · [Orientações para anexar o print original](evidencias/LEIA-ME.md) · [Abrir pasta de evidências](evidencias/)
+[Ver print incorporado e status do convite](evidencias/registro-convite-professor.md) · [Orientações de evidências](evidencias/LEIA-ME.md) · [Abrir pasta de evidências](evidencias/)
 
-**Atenção:** o print apresentado pelo grupo comprova o **convite pendente** do professor, não a aceitação. O registro textual foi publicado; **a imagem original ainda precisa ser enviada** à pasta `evidencias/`. A leitura de um repositório público, por si só, não comprova colaboração.
+**Atenção:** o [registro do GitHub](evidencias/registro-convite-professor.md) **já contém o print visual incorporado** por uma imagem do GitHub user-attachments, mas **o convite permanece pendente de aceitação** na captura. O acesso de leitura a um repositório público não comprova a participação como colaborador.
 
 ## 10. Equipe
 
