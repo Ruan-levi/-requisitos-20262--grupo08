@@ -1,29 +1,41 @@
 # Evidências de entrega — Grupo 08
 
-Esta pasta destina-se às evidências **autênticas** exigidas pela Atividade 1 (P1) de Requisitos e Modelagem de Sistemas.
+Este diretório guarda a comprovação exigida para a **Atividade P1 — Requisitos e Modelagem de Sistemas, UNIFOR (2026.2)**.
 
-## 1. Convite ao professor no GitHub
+## 1. Convite ao professor — evidência visual já incorporada
 
-O enunciado exige comprovação de que **`marcelobezerra-dotcom`** foi adicionado ao repositório.
+O usuário GitHub exigido é **`marcelobezerra-dotcom`**.
 
-**Convite já enviado:** a captura fornecida pelo grupo mostra `marcelobezerra-dotcom` como **Pending Invite** (aguardando resposta). Veja o [registro da confirmação](registro-convite-professor.md).
+A equipe forneceu uma captura da página de colaboradores do repositório. **A imagem está visível e incorporada no arquivo [registro-convite-professor.md](registro-convite-professor.md)**, por meio de uma imagem hospedada em `github.com/user-attachments`. Portanto, **existe comprovação visual acessível a partir do GitHub**, embora **não haja ainda um arquivo PNG diretamente versionado** nesta pasta.
 
-**Ação que ainda falta:** anexar a imagem original ao repositório.
+### O que a captura comprova
 
-1. Abra a pasta `evidencias` no repositório.
-2. Selecione **Add file → Upload files**.
-3. Envie o **print original** fornecido pelo grupo, com o nome **`convite-professor.png`**.
-4. Confirme em **Commit changes** e verifique a imagem no GitHub.
-5. No AVA, envie o link do repositório e/ou anexe o print conforme o enunciado. O convite está **pendente**, não aceito.
+- O usuário `marcelobezerra-dotcom` consta na lista de **convites enviados**.
+- O status mostrado é **Pending Invite** (aguardando aceitação).
+- **Não comprova aceite nem acesso efetivamente concedido ao repositório.**
 
-**Situação:** a captura foi **fornecida na conversa**, seu conteúdo foi **confirmado e registrado em Markdown**, mas **o arquivo PNG original ainda não foi enviado ao repositório**. Nenhuma captura foi fabricada.
+[**Abrir o registro e visualizar o print**](registro-convite-professor.md)
 
-## 2. Entrevistas (quando efetivamente realizadas)
+> **Atenção à regra geral da disciplina:** o professor deve ter **acesso garantido**, e a falta de acesso pode resultar em **desconto de até 50% da nota**. Recomenda-se acompanhar o aceite e guardar outra captura do estado **colaborador aceito**, caso apareça.
 
-Caso o grupo tenha entrevistado pessoas, registre no arquivo [Elicitação](../documentos/03-elicitacao-entrevistas.md) o perfil genérico, a data, o consentimento, as perguntas feitas e os achados realmente obtidos. Evite publicar nomes completos, e-mails e dados pessoais desnecessários.
+### Caso o professor exija o PNG como arquivo separado
+
+1. Salve a captura original com o nome `convite-professor.png`.
+2. Abra a pasta `evidencias/` no GitHub e escolha **Add file → Upload files**.
+3. Envie o PNG sem modificar as informações exibidas.
+4. Clique em **Commit changes**.
+5. Verifique se a imagem pode ser aberta na pasta.
+
+A captura incorporada ao Markdown já permite avaliação visual; adicionar o PNG melhora a **versionabilidade do entregável**.
+
+## 2. Entrevistas
+
+A pasta de documentos contém [análise documental e roteiros](../documentos/03-elicitacao-entrevistas.md) e uma [entrevista fictícia simulada](../documentos/03b-entrevista-simulada.md).
+
+**A simulação não comprova entrevista real.** Caso a equipe tenha entrevistado estudantes/docentes, deve acrescentar registro fiel com data, perfil genérico, respostas efetivamente obtidas e consentimento, sem divulgar dados pessoais desnecessários.
 
 ## 3. Entrega no AVA
 
-Confirme o link do repositório, os documentos e os três diagramas. Envie também a evidência do professor conforme o formato solicitado pela atividade.
+O enunciado da P1 exige **link do repositório** e **print ou confirmação do convite ao professor**. O registro visual está acessível pelo link acima, mas a equipe ainda deve conferir a aceitação do convite e submeter a atividade no AVA, dentro do prazo aplicável.
 
-**Aviso:** o prazo informado para Sprint M1 (02/11/2026) não é automaticamente o mesmo prazo de submissão no AVA; verifique a atividade no ambiente acadêmico.
+**Sem afirmação de submissão:** não há comprovação nesta pasta de que a atividade já tenha sido enviada no AVA.
