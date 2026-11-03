@@ -136,7 +136,7 @@ Os códigos são detalhados nos arquivos de [elicitação](documentos/03-elicita
 
 ### 5.2. Limitações e validações pendentes
 
-> **As entrevistas reais não foram comprovadas neste repositório.** O entregável de elicitação apresenta **roteiros para estudantes, docentes e responsáveis institucionais** e **resultados da análise documental**. Há, separadamente, uma [entrevista simulada com a personagem fictícia Marina Costa Ribeiro](documentos/03b-entrevista-simulada.md); as respostas foram **inventadas exclusivamente para exercício acadêmico** e **não são dados coletados de usuários**.
+> **As entrevistas reais não foram comprovadas neste repositório.** O entregável de elicitação apresenta **roteiros para estudantes, docentes e responsáveis institucionais** e **resultados da análise documental**. Há, separadamente, um [estudo de persona e entrevista simulada com Lívia Alves Ribeiro](documentos/03b-entrevista-simulada.md), estudante fictícia de Administração com rotina de aulas e estágio. O documento apresenta **14 perguntas, respostas encenadas, jornada de uso e hipóteses SIM01–SIM09**, mas **não registra pesquisa com participante real**.
 
 Também permanecem pendentes a confirmação de responsáveis institucionais e a validação dos requisitos propostos. O material da UNIFOR especifica que as descrições dos temas **não constituem requisitos já validados**.
 
