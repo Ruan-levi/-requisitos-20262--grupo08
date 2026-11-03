@@ -98,8 +98,8 @@ Investigar a experiência de estudantes e docentes na busca de orientações e c
 
 ## 3.10. Exercício complementar: entrevista fictícia ilustrativa
 
-Para exemplificar a aplicação do roteiro a um cenário coerente com a Proposta 4, foi criado o documento separado **[03b — Entrevista simulada](03b-entrevista-simulada.md)**. A personagem **Marina Costa Ribeiro** e suas respostas são **inteiramente fictícias**. A simulação serve para discussão de hipóteses sobre organização de informação, pesquisa, documentação, aproveitamento de disciplinas, despesas, acessibilidade e fontes oficiais.
+Para exemplificar a aplicação do roteiro a um cenário coerente com a Proposta 4, foi criado o documento separado **[03b — Entrevista simulada](03b-entrevista-simulada.md)**. A personagem **Lívia Alves Ribeiro**, estudante fictícia de Administração da UNIFOR, e suas respostas são **inteiramente inventadas** para uma conversa encenada e natural, situada na rotina universitária. A simulação serve para discussão de hipóteses sobre a busca inicial, o planejamento de mobilidade, documentação, aproveitamento de disciplinas, custos, hospedagem, acessibilidade, idiomas e verificação de fontes oficiais.
 
-**Rastreabilidade acadêmica:** achados **AD** = análise documental; hipóteses **SIM** = simulação fictícia; achados de entrevistas reais = **não coletados**. Hipóteses SIM não validam RF/RNF, nem substituem entrevistas exigidas no enunciado.
+**Rastreabilidade acadêmica:** achados **AD** = análise documental; hipóteses **SIM01–SIM09** = simulação fictícia; achados de entrevistas reais = **não coletados**. Hipóteses SIM não validam RF/RNF, nem substituem entrevistas exigidas no enunciado.
 
 **A tarefa de realizar entrevistas verdadeiras deve permanecer aberta** até que sejam fornecidos registros autênticos.
