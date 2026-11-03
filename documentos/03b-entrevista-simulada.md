@@ -2,7 +2,7 @@
 
 **UNIFOR · Requisitos e Modelagem de Sistemas · Grupo 08 · Proposta 4**  
 **Artefato:** estudo de persona + roteiro semiestruturado + entrevista encenada + análise de necessidades  
-**Versão:** 2.0 · **Etapa:** Sprint 1 / Milestone M1 (20/10 a 02/11/2026)
+**Versão:** 2.1 · **Etapa:** Sprint 1 / Milestone M1 (20/10 a 02/11/2026)
 
 > **SIMULAÇÃO DIDÁTICA — NÃO É UMA ENTREVISTA COM UMA PESSOA REAL.** A persona, o nome, o curso, as experiências narradas e todas as respostas foram criados pela equipe para **encenar uma entrevista de elicitação**, testar perguntas e exemplificar a análise. Não houve participante real, recrutamento, consentimento, gravação ou coleta de depoimento. Os resultados abaixo são **hipóteses ilustrativas**, não evidência empírica de necessidades de estudantes. O professor solicita entrevistas: este artefato não deve ser apresentado como se uma entrevista real tivesse ocorrido.
 
@@ -18,14 +18,14 @@ A persona foi derivada das **questões a investigar na Proposta 4**, que prevê 
 
 | Dimensão | Caracterização criada para o exercício |
 |---|---|
-| Nome e identidade | **Marina Costa Ribeiro**, personagem fictícia |
+| Nome e identidade | **Marina Costa Ribeiro**, persona inteiramente fictícia, sem vínculo com pessoa real |
 | Idade | **21 anos** |
-| Ocupação | Estudante fictícia de **Administração**, 5º semestre, na UNIFOR |
-| Contexto | Concilia aulas e estágio; usa o celular nos intervalos para procurar informações acadêmicas |
+| Ocupação | Estudante fictícia de **Análise e Desenvolvimento de Sistemas (ADS)**, 4º semestre, na UNIFOR |
+| Contexto | Concilia aulas de tecnologia na UNIFOR, um estágio de suporte/tecnologia e deslocamentos diários; consulta informações no celular entre aulas e no transporte |
 | Objetivo principal | Entender como começar a se preparar para uma possível mobilidade acadêmica |
 | Destino de interesse | **Portugal**, como exemplo hipotético, sem pressupor vaga ou convênio disponível |
 | Conhecimento inicial | Já ouviu falar em intercâmbio e dupla titulação, mas não conhece as diferenças nem os trâmites |
-| Familiaridade digital | Boa com buscas e aplicativos; prefere páginas simples, menus claros e conteúdo curto |
+| Familiaridade digital | Acostumada a pesquisar sistemas e documentações técnicas, mas quer uma experiência simples: menus claros, busca eficiente e conteúdo curto |
 | Restrições | Tempo limitado, orçamento a planejar e necessidade de verificar informações oficiais |
 | Expectativa | Encontrar orientações confiáveis, organizadas por etapas, com fontes e contatos responsáveis |
 | Principal receio | Basear seu planejamento em regra, prazo ou documento desatualizado |
@@ -33,6 +33,12 @@ A persona foi derivada das **questões a investigar na Proposta 4**, que prevê 
 **Frase que sintetiza a persona (criada para o exercício):**
 
 > “Quero entender por onde começar e encontrar a informação certa, sem depender de mensagens de colegas ou de páginas sem data de atualização.”
+
+### 2.1 Proximidade com o cotidiano do Grupo 08
+
+A persona foi ambientada no contexto de estudantes de **Análise e Desenvolvimento de Sistemas da UNIFOR**, próximo do cotidiano acadêmico de Ruan Levi Ferreira Macedo, Lorhan Dejan Ferreira Macedo e Hiago Queiroz Barreto. O cenário representa aulas presenciais, conversas entre colegas no campus, uso frequente do celular, compromissos de estágio e dúvidas sobre possibilidades de experiências internacionais em áreas de tecnologia.
+
+**Essa proximidade é uma decisão de design da equipe, não evidência de que Marina exista ou tenha sido entrevistada.** O fato de os próprios integrantes conhecerem a rotina universitária não substitui a escuta de um participante externo.
 
 ### 2.1 Objetivos, comportamentos e obstáculos hipotéticos
 
@@ -79,11 +85,11 @@ A persona foi derivada das **questões a investigar na Proposta 4**, que prevê 
 
 **P01 — O que fez você começar a procurar informações sobre mobilidade internacional?**
 
-**Marina (resposta encenada):** “Eu queria ter uma experiência acadêmica fora do país, talvez por um semestre. Comecei a pensar nisso porque vi colegas comentando que estavam pesquisando intercâmbio. Só que eu ainda estou na fase de entender o que existe e o que faria sentido para meu curso.”
+**Marina (resposta encenada):** “Eu estudo ADS e gostaria de conhecer outra forma de aprender desenvolvimento de software, talvez por um semestre fora. Alguns colegas comentam sobre intercâmbio nos intervalos da faculdade, mas eu ainda não sei como pesquisar opções que tenham relação com tecnologia.”
 
 **P02 — Quando você precisa encontrar uma informação acadêmica, como costuma procurar?**
 
-**Marina:** “Eu começo pelo celular. Pesquiso o assunto pelo nome e, se a página tiver muitos menus, tento achar uma busca. Quando aparece um PDF, eu abro, mas nem sempre consigo entender se ele é o documento mais recente.”
+**Marina:** “Como tenho aula e estágio, costumo pesquisar no celular no intervalo ou voltando para casa. Mesmo sendo da área de tecnologia, fico perdido quando o site tem muitos caminhos e documentos sem data clara. Prefiro uma barra de pesquisa e assuntos separados.”
 
 **P03 — Quais são suas primeiras dúvidas sobre intercâmbio e dupla titulação?**
 
@@ -99,15 +105,15 @@ A persona foi derivada das **questões a investigar na Proposta 4**, que prevê 
 
 **P06 — Qual é sua maior preocupação sobre aproveitamento de disciplinas?**
 
-**Marina:** “Minha preocupação seria cursar matérias fora e depois não saber o que pode ser reconhecido no meu curso. Eu gostaria de ver uma explicação simples do processo e o contato da coordenação responsável pela avaliação.”
+**Marina:** “Eu teria receio de cursar disciplinas de programação ou banco de dados fora e não entender se poderiam ser aproveitadas no ADS. Eu gostaria de uma explicação geral e de saber com quem confirmar a equivalência, porque entendo que essa decisão é institucional.”
 
 **P07 — Quando pensa em despesas e hospedagem, o que seria útil consultar?**
 
-**Marina:** “Um guia com os tipos de despesas que devo pesquisar — moradia, alimentação, transporte, seguro e documentação — já ajudaria. Valores exatos podem mudar; eu preferiria links e orientações para fazer o planejamento.”
+**Marina:** “Eu tenho que conciliar estudo e estágio, então planejamento financeiro pesa bastante. Queria uma lista dos tipos de gasto — moradia, alimentação, transporte, seguro, documentação — sem valores inventados, e links para pesquisar.”
 
 **P08 — Como você organizaria as informações na página inicial do portal?**
 
-**Marina:** “Eu colocaria uma busca grande e atalhos por assunto: ‘Intercâmbio’, ‘Dupla titulação’, ‘Documentação e vistos’, ‘Aproveitamento de disciplinas’, ‘Custos e hospedagem’ e ‘Contatos’. Assim eu poderia escolher entre buscar ou navegar.”
+**Marina:** “Eu colocaria uma busca grande, porque é a primeira coisa que eu usaria no celular. Depois, atalhos por assunto: ‘Intercâmbio’, ‘Dupla titulação’, ‘Documentação e vistos’, ‘Aproveitamento de disciplinas’, ‘Custos e hospedagem’ e ‘Contatos’. Assim fica intuitivo até para quem nunca pesquisou o tema.”
 
 **P09 — Você usaria filtros para encontrar orientações? Quais fariam sentido?**
 
@@ -115,7 +121,7 @@ A persona foi derivada das **questões a investigar na Proposta 4**, que prevê 
 
 **P10 — Como você saberia se a orientação encontrada é confiável e atual?**
 
-**Marina:** “Se aparecessem a fonte, a data da última revisão e um link para o documento oficial, eu teria mais segurança. Se houver um edital específico, quero ver o próprio edital e não só um resumo antigo.”
+**Marina:** “Mesmo estudando tecnologia, eu sei que um resultado de busca pode estar desatualizado. Eu procuraria fonte, data da revisão e link para o documento oficial. Se houver edital, queria abrir a versão vigente e não depender apenas de um resumo.”
 
 **P11 — Se sua dúvida não estivesse resolvida, qual seria o próximo passo esperado?**
 
@@ -123,19 +129,19 @@ A persona foi derivada das **questões a investigar na Proposta 4**, que prevê 
 
 **P12 — O que facilitaria usar esse portal no celular ou com tecnologias assistivas?**
 
-**Marina:** “Textos divididos em tópicos, botões com tamanho bom, contraste e uma navegação que funcione sem ficar apertando várias coisas. É importante também que o portal possa ser usado por pessoas que navegam com teclado ou leitor de tela.”
+**Marina:** “Como uso o celular nos corredores da universidade e no transporte, faria diferença ter botões com tamanho adequado e leitura rápida. Para ser inclusivo, o portal também deveria funcionar por teclado, ter bom contraste e oferecer suporte a leitores de tela.”
 
 **P13 — Informações em outro idioma seriam importantes?**
 
-**Marina:** “Para mim, português resolveria no começo. Mas, pensando em alunos estrangeiros, uma versão em inglês seria útil. Principalmente se a tradução dos documentos e prazos for conferida antes de ser publicada.”
+**Marina:** “Para mim, português resolve. Mas, como o portal também pode servir a estudantes estrangeiros, uma versão em inglês ajudaria muito. Só que informação sobre prazo e documentação precisa ser revisada por alguém responsável antes de ser publicada.”
 
 **P14 — Entre todas essas possibilidades, quais três necessidades você priorizaria no primeiro acesso?**
 
-**Marina:** “Pesquisar por palavra-chave, ver as orientações por categorias e encontrar os links e contatos oficiais. Acho que isso já resolveria as primeiras dúvidas; depois poderiam vir recursos extras.”
+**Marina:** “No começo, eu priorizaria busca por palavra-chave, categorias visíveis e links para fontes e contatos oficiais. Como estudante de ADS, acho que é melhor uma primeira versão simples e confiável do que um site cheio de funções que não ajudam a encontrar a informação.”
 
 ### 3.2 Observações analíticas **sobre a encenação**
 
-A personagem foi criada para expor situações **plausíveis** de consulta, **não para comprovar que estudantes reais enfrentam essas dificuldades**. A simulação sugere que uma experiência de consulta poderia seguir três passos: **localizar orientação → verificar fonte e vigência → procurar responsável se necessário**.
+A personagem foi criada para aproximar a situação da rotina dos integrantes do Grupo 08, também estudantes de tecnologia da UNIFOR, e para expor situações **plausíveis** de consulta, **não para comprovar que estudantes reais enfrentam essas dificuldades**. A simulação sugere que uma experiência de consulta poderia seguir três passos: **localizar orientação → verificar fonte e vigência → procurar responsável se necessário**.
 
 O roteiro não atribui à universidade falhas verificadas nem afirma que existam vagas, convênios, valores, prazos ou critérios específicos para Portugal. É um exercício de reflexão sobre a experiência de busca prevista na Proposta 4.
 
