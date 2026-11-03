@@ -21,6 +21,10 @@ Abra o arquivo `.puml` no [PlantUML](https://plantuml.com/pt/) ou extensão comp
 
 ## Rastreabilidade
 
-- Casos de Uso → requisitos RF01–RF12.
+- Casos de Uso → requisitos RF01–RF12 e RF14; RF13 é uma funcionalidade opcional fora do núcleo do MVP.
 - Componentes → busca, consulta, gestão editorial, autenticação e persistência.
 - Implantação → navegador, interface web, API e servidor de dados.
+
+## Nota de consistência entre fontes e imagens
+
+Os arquivos `.puml` constituem **os modelos UML textuais de referência**. Os arquivos `.svg` são **representações visuais resumidas** para leitura rápida no GitHub, e não devem substituir a revisão do modelo de origem. A arquitetura e as relações ainda são propostas acadêmicas sujeitas à validação.
