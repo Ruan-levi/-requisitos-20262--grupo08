@@ -28,7 +28,7 @@
 
 D1/D2 → achados AD01–AD06 → RF01–RF14 e RNF01–RNF09 → RN01–RN11 → US01–US12 → casos de uso/componentes/implantação.
 
-A [entrevista simulada](03b-entrevista-simulada.md) contém as hipóteses **SIM01–SIM07**, mantidas **separadas** dos achados documentais e sem alegação de validação empírica.
+A [entrevista simulada](03b-entrevista-simulada.md) contém as hipóteses **SIM01–SIM09**, mantidas **separadas** dos achados documentais e sem alegação de validação empírica.
 
 A [elicitação](03-elicitacao-entrevistas.md) identifica os achados, e [requisitos](04-requisitos.md) e [backlog](06-backlog-priorizado.md) registram as decisões derivadas.
 
