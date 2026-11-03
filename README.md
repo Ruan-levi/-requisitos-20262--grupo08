@@ -225,7 +225,11 @@ A atividade solicita: **(a) link deste repositório** e **(b) comprovação de q
 
 ## 10. Equipe
 
-**Grupo 08 — três integrantes.** Os nomes completos ainda não foram informados para esta atividade e podem ser adicionados após confirmação da equipe.
+**Grupo 08 — integrantes:**
+
+- **Ruan Levi Ferreira Macedo**
+- **Lorhan Dejan Ferreira Macedo**
+- **Hiago Queiroz Barreto**
 
 ---
 
