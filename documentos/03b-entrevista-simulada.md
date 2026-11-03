@@ -1,198 +1,141 @@
 # Estudo de persona e entrevista simulada — Portal de Internacionalização
 
-**Universidade de Fortaleza (UNIFOR) | Requisitos e Modelagem de Sistemas | Grupo 08**  
-**Proposta selecionada:** Tema 4 — Portal de Internacionalização  
-**Etapa:** Atividade P1 / Sprint M1 — elicitação e modelagem inicial  
-**Método:** construção de persona, encenação de entrevista semiestruturada e análise de hipóteses.
+**UNIFOR · Requisitos e Modelagem de Sistemas · Grupo 08 · Proposta 4**  
+**Atividade:** P1 — elicitação de requisitos e modelagem inicial · **Sprint:** M1
 
-> **IMPORTANTE — MATERIAL SIMULADO.** A pessoa descrita e todas as respostas são fictícias. A equipe **elaborou** este estudo de persona e **encenou por escrito** uma entrevista para exercitar técnicas de levantamento de requisitos. **Não foi realizada entrevista com uma participante real** e não existem gravação, consentimento ou depoimentos externos. Este documento ilustra o método e **não substitui os resultados reais de entrevistas pedidos no enunciado**.
+> **Natureza do material:** exercício de **entrevista simulada** com uma persona fictícia. A conversa abaixo foi criada para explorar necessidades plausíveis de usuários do portal; **não houve entrevista com uma pessoa real**. O texto é um exemplo metodológico e não substitui os resultados de pesquisa de campo solicitados na atividade.
 
-## 1. Objetivo do exercício e ligação com o Tema 4
+## 1. Perfil da pessoa representada
 
-**Problema da proposta:** “Como melhorar a experiência de estudantes e docentes na busca por informações e serviços de internacionalização?”
+**Lívia Alves Ribeiro** é uma personagem fictícia de 22 anos, estudante de Administração no 5º semestre da UNIFOR. Na história construída para o exercício, ela divide a rotina entre as aulas, um estágio na área administrativa e o deslocamento de ônibus. Usa o celular para resolver questões da faculdade e costuma conversar com colegas sobre experiências acadêmicas.
 
-O tema propõe investigar um portal que concentre orientações sobre **intercâmbio, dupla titulação, vistos, documentação, aproveitamento de disciplinas, despesas, hospedagem e contatos institucionais**, observando **acessibilidade, organização da informação, versões em outros idiomas e governança dos conteúdos**.
+Lívia ainda não fez intercâmbio. O interesse surgiu depois de ouvir outras pessoas comentarem sobre estudar fora. Ela pensa em conhecer melhor as possibilidades, mas não sabe quais programas existem, quais documentos seriam necessários, nem como funcionaria o aproveitamento das disciplinas. Como precisa organizar o tempo e o orçamento, busca informações práticas antes de tomar qualquer decisão.
 
-Para exercitar a elicitação, foi criado um cenário próximo da vida universitária: uma pessoa que estuda na UNIFOR, trabalha parte do dia, conversa com colegas no campus e começou a considerar a possibilidade de estudar fora, mas **ainda não conhece as etapas**. A equipe pode plausivelmente encontrar pessoas com esse perfil nos espaços de convivência da universidade; isso **não significa que uma pessoa assim tenha sido entrevistada**.
+**Necessidade central imaginada:** entender por onde começar e saber onde verificar informações oficiais, sem depender apenas de comentários de colegas.
 
-### Por que escolher essa persona?
+**Por que esse perfil faz sentido para a proposta?** A Proposta 4 trata da experiência de estudantes e docentes na **busca por informações e serviços de internacionalização**, incluindo intercâmbio, dupla titulação, vistos, documentação, aproveitamento, custos, hospedagem e contatos. A personagem representa o público que está **iniciando uma pesquisa**, não alguém que já domina os procedimentos.
 
-A personagem **não é de Análise e Desenvolvimento de Sistemas** e não possui conhecimento técnico sobre requisitos. Essa escolha ajuda a criar uma entrevista mais natural: em vez de “pedir RF02”, a pessoa descreve, com suas próprias palavras, como procuraria orientações, o que não entende e em quais informações precisaria confiar. A interpretação em termos de requisitos é responsabilidade da equipe, **após** a conversa encenada.
+## 2. Conversa simulada — roteiro semiestruturado
 
-## 2. Ficha de persona — Lívia Alves Ribeiro (inteiramente fictícia)
+As perguntas foram construídas para permitir que a pessoa representada explique suas prioridades com palavras do cotidiano. Os nomes e as respostas fazem parte de uma **encenação escrita**; não são transcrição de entrevista realizada.
 
-| Dimensão | Caracterização criada para a simulação |
-|---|---|
-| **Nome fictício** | **Lívia Alves Ribeiro** |
-| Idade imaginada | 22 anos |
-| Papel | Estudante fictícia de **Administração**, no 5º semestre da UNIFOR |
-| Rotina | Aulas na universidade, estágio administrativo no turno oposto e deslocamento de ônibus |
-| Como soube do tema | Conversa informal com colegas sobre experiências de intercâmbio e estudo no exterior |
-| Interesse | Conhecer possibilidades acadêmicas internacionais relacionadas à sua formação e melhorar o idioma |
-| Experiência anterior | Nunca participou de mobilidade e não conhece os procedimentos de candidatura |
-| Como usa a internet | Costuma pesquisar pelo celular no trajeto e abrir links enviados pelos colegas |
-| Restrições imaginadas | Pouco tempo livre, orçamento limitado e receio de entender regras de modo incorreto |
-| Objetivo no portal | Descobrir por onde começar, quais assuntos precisa verificar e com quem falar |
-| Principal preocupação | Tomar decisões usando uma informação antiga ou incompleta |
+**Entrevistador:** A gente está fazendo um trabalho sobre internacionalização na universidade. Antes de falar do site que estamos pensando, queria entender uma coisa: você já teve vontade de estudar fora?
 
-**Frase síntese da persona (frase criada, não depoimento):**
+**Lívia:** Já, mas nunca fui muito atrás, não. Uma menina da minha turma estava falando de intercâmbio um dia desses e eu fiquei pensando que seria uma experiência muito boa. Eu faço Administração e queria conhecer outra realidade, talvez estudar um tempo fora e melhorar meu inglês. Só que eu não faço ideia de como começar.
 
-> “Não estou procurando que o site resolva tudo por mim. Eu só queria entender o caminho certo e saber onde confirmar cada informação.”
+**P01 — Entrevistador:** O que você faria primeiro para entender se existe alguma possibilidade?
 
-### 2.1 O que motiva e o que dificulta a jornada?
+**Lívia:** Acho que eu pegaria o celular e pesquisaria “intercâmbio UNIFOR”. Eu sempre começo por aí. Talvez perguntasse também para alguém da faculdade. Meu problema é que eu nem sei direito o que eu deveria pesquisar primeiro: os países, os cursos, os requisitos… fico meio perdida só de pensar.
 
-**Motivações criadas:** curiosidade sobre vivência acadêmica internacional; melhorar a comunicação em outro idioma; entender possibilidades ligadas ao curso; organizar a preparação com antecedência.
+**P02 — Entrevistador:** Quando você diz que fica perdida, qual é a principal dúvida?
 
-**Dores hipotéticas:** não saber diferenciar modalidades; desconhecer a ordem dos passos; ter dúvidas sobre custos e reconhecimento de disciplinas; receio de confiar em páginas sem data e sem fonte; dificuldade para saber qual contato procurar.
+**Lívia:** A primeira é saber o que existe mesmo. Já ouvi falar de intercâmbio e dupla titulação, mas não sei explicar a diferença. Também queria entender se isso tem alguma relação com o meu curso. Antes de pensar em passagem ou visto, eu preciso saber quais são as possibilidades.
 
-**Comportamento provável:** buscar informação rápida no celular, usar palavras do cotidiano como “estudar fora” e “intercâmbio” e conferir documentos quando alguém explica por que são importantes.
+**P03 — Entrevistador:** Você chegou a procurar informações oficiais sobre isso alguma vez?
 
-**Acessibilidade:** a personagem não representa uma deficiência específica. O exercício considera barreiras comuns de uso, como PDFs difíceis de ler no celular e menus pouco claros; a equipe deve **validar acessibilidade com usuários e critérios técnicos**, não atribuir conhecimento especializado à personagem.
+**Lívia:** Não cheguei. Até agora foi mais conversa com colegas mesmo. Então eu não posso dizer que o site da universidade é difícil ou fácil de usar, porque nunca tentei procurar essa parte. Mas sei que, quando preciso resolver alguma coisa da faculdade, gosto de achar a informação sem ter que ficar abrindo um monte de página.
 
-## 3. Roteiro e conversa encenada
+**P04 — Entrevistador:** E quando entra num site que tem muita informação, o que costuma fazer?
 
-**Abordagem do entrevistador:** perguntas abertas, sem apresentar funcionalidades prontas como respostas esperadas.  
-**Contexto fictício:** a conversa teria ocorrido em um intervalo de aulas, em ambiente informal da universidade. **Isso é parte do cenário escrito; não houve encontro real.**
+**Lívia:** Se tiver uma busca, eu uso. Se não tiver, procuro alguma coisa tipo “por onde começar” ou uma lista de assuntos. O que me desanima é entrar e encontrar um monte de texto ou PDF sem entender qual eu tenho que ler primeiro. Não é que eu não queira ler, é que às vezes nem sei se aquele documento responde à minha dúvida.
 
-### Abertura
+**P05 — Entrevistador:** Depois de entender quais possibilidades existem, o que você precisaria saber?
 
-**Entrevistador (fala fictícia):** “A gente está estudando como uma pessoa encontra informações de internacionalização da universidade. Não estamos avaliando o que você sabe; queremos entender suas dúvidas. Você pode contar um pouco do que te fez pensar no assunto?”
+**Lívia:** Acho que viria aquela parte mais prática: quais documentos, se precisa comprovar idioma, como funciona a faculdade aqui enquanto eu estiver fora… e também onde eu ficaria morando. São muitas dúvidas, né? Eu gostaria de ir descobrindo aos poucos, conforme fosse avançando.
 
-**Lívia (resposta fictícia):** “Uma colega comentou que tinha vontade de fazer intercâmbio e eu fiquei curiosa também. Nunca fui atrás de verdade. Como eu faço Administração, achei interessante a ideia de estudar um tempo em outro lugar, mas eu nem sei se tem alguma opção para o meu curso. Acho que essa seria minha primeira pergunta.”
+**P06 — Entrevistador:** Você falou em moradia. A questão financeira pesaria nessa decisão?
 
-### 3.1 Perguntas e respostas
+**Lívia:** Demais. Eu faço estágio e não tenho como simplesmente decidir viajar. Teria que ver passagem, alimentação, lugar para ficar, transporte, essas coisas. Nem espero que um site me diga exatamente quanto eu vou gastar, porque depende de muita coisa. Mas uma orientação sobre o que preciso pesquisar já ajudaria a me organizar.
 
-**P01 — Se você resolvesse pesquisar isso hoje, por onde começaria?**
+**P07 — Entrevistador:** E o que te preocuparia em relação à documentação?
 
-**Lívia:** “Provavelmente pelo Google, digitando alguma coisa com ‘intercâmbio UNIFOR’. Eu faço quase tudo no celular porque no estágio não tenho tempo de ficar pesquisando com calma. Se encontrasse uma página da universidade, tentaria entender se é o lugar certo.”
+**Lívia:** Fazer alguma coisa errada ou esquecer um documento. E visto deve mudar de país para país, né? Eu teria receio de seguir uma informação antiga. Gostaria de entender o básico, mas também de ter um caminho para conferir no lugar oficial, principalmente quando for algo de prazo.
 
-**P02 — O que você gostaria de descobrir primeiro?**
+**P08 — Entrevistador:** Tem alguma preocupação relacionada às disciplinas do seu curso?
 
-**Lívia:** “Eu queria entender o básico: se intercâmbio e dupla titulação são a mesma coisa, como saber quais possibilidades existem e com quem eu preciso falar. Antes de pensar em documentação, eu tenho que saber se faz sentido começar a me planejar.”
+**Lívia:** Tenho, sim. Imagina estudar fora e depois não saber se aquilo conta aqui? Eu ia querer entender como funciona o aproveitamento das matérias, se preciso conversar com a coordenação antes e quem realmente pode dizer o que vale. Não queria confiar só numa resposta genérica e descobrir depois que era diferente.
 
-**P03 — Você já procurou alguma orientação oficial sobre isso?**
+**P09 — Entrevistador:** Como você costuma perceber se a informação que encontrou está atualizada?
 
-**Lívia:** “Ainda não. Só ouvi colegas comentando. Por isso eu não saberia dizer se as informações atuais são fáceis ou difíceis de achar. O que eu consigo dizer é como eu tentaria procurar.”
+**Lívia:** Eu olho a data, quando aparece. Se tiver um documento oficial, prefiro abrir também. Já aconteceu de eu procurar outras coisas na internet e encontrar páginas antigas. Para um assunto importante assim, eu ia querer saber quando foi atualizado e quem é responsável por aquela orientação.
 
-**P04 — Quando você encontra um site com muitos assuntos, o que ajuda a não se perder?**
+**P10 — Entrevistador:** Se lesse uma orientação e continuasse com dúvida, o que faria?
 
-**Lívia:** “Eu gosto quando tem uma busca que entende a palavra que eu digito. Mas também acho bom ter os assuntos separados. Se tiver um botão chamado ‘Quero começar’, por exemplo, eu clicaria. Se aparecer uma lista enorme de documentos logo de cara, provavelmente eu deixaria para ver depois.”
+**Lívia:** Provavelmente perguntaria para um colega primeiro, porque é mais rápido. Mas o ideal era achar o contato certo da universidade. Às vezes a gente nem sabe para qual setor mandar a pergunta. Se o próprio assunto já mostrasse um e-mail ou um canal de atendimento, facilitaria bastante.
 
-**P05 — Que assuntos você imagina que precisaria entender depois da primeira pesquisa?**
+**P11 — Entrevistador:** Em que momento do dia você faria essas consultas?
 
-**Lívia:** “Documentos, idioma, custos e onde eu ia morar, com certeza. Também ia querer saber como fica a faculdade aqui: se eu perderia matérias ou como funcionaria a questão das disciplinas. Só que eu acho que essas perguntas vêm em momentos diferentes.”
+**Lívia:** Muito pelo celular. No ônibus, na hora do almoço ou no intervalo da aula. Se a página for difícil de mexer no celular, eu acabo deixando para depois. Gosto quando os assuntos estão separados e o texto não vem todo misturado. Também acho importante que o site seja acessível para quem precisa de outras formas de navegação.
 
-**P06 — O que seria mais complicado para você na parte financeira?**
+**P12 — Entrevistador:** Você precisaria consultar o conteúdo em outro idioma?
 
-**Lívia:** “É saber o que eu preciso colocar na conta. Eu trabalho e não tenho um orçamento sobrando, então teria que pesquisar passagem, moradia, alimentação e essas coisas. Não espero que o site me diga um valor certinho, mas ele poderia lembrar quais gastos eu preciso considerar e para onde olhar.”
+**Lívia:** Para mim, no começo, português está ótimo. Mas, se a universidade recebe alunos de fora, imagino que inglês ajude. Principalmente em coisas de documentação. Só teria que ser uma tradução bem conferida, porque um detalhe errado pode confundir muito.
 
-**P07 — E sobre documentação e visto, o que você esperaria encontrar?**
+**P13 — Entrevistador:** Imagina que a gente criasse um portal específico sobre internacionalização. O que deveria aparecer assim que você entrasse?
 
-**Lívia:** “Eu teria medo de deixar faltar alguma coisa. Queria uma orientação bem explicadinha, mas com um aviso de que depende do país e do programa. Para essas informações eu não confiaria só num resumo, queria chegar no órgão ou documento oficial.”
+**Lívia:** Uma busca bem visível e uns assuntos fáceis de entender. Tipo intercâmbio, dupla titulação, documentos, custos, hospedagem, contato… Eu também colocaria uma parte para quem está começando, porque é exatamente o meu caso. Não precisa fazer tudo pelo site; eu só queria encontrar o caminho.
 
-**P08 — Você comentou sobre disciplinas. Qual seria sua dúvida exatamente?**
+**P14 — Entrevistador:** De tudo isso, o que mais te ajudaria de verdade?
 
-**Lívia:** “Se eu passar um tempo estudando fora, não sei como funciona para aproveitar as matérias depois. Eu queria saber se tenho que conversar com a coordenação antes e onde encontro esse contato. Não acho que um site deva prometer que uma disciplina vai ser aceita.”
+**Lívia:** Primeiro, conseguir achar o assunto. Depois, ler uma explicação que eu entenda. E, se for algo importante, ter o link do documento oficial ou saber com quem falar. Acho que, se tivesse essas três coisas, eu já conseguiria me planejar melhor e saber quais perguntas fazer.
 
-**P09 — Como você perceberia que uma informação encontrada ainda está valendo?**
+**Entrevistador:** Então, para você, o mais importante não seria se inscrever no intercâmbio pelo portal, e sim entender as etapas e encontrar informações confiáveis?
 
-**Lívia:** “Se tivesse uma data de atualização e o link do documento, já ajudava muito. Às vezes a gente acha uma página antiga em pesquisa e nem percebe. Também seria legal ter escrito quem é o setor responsável.”
+**Lívia:** Exatamente. Eu ainda estou muito antes da parte da inscrição. Quero entender as possibilidades e saber onde confirmar tudo. Aí, quando eu decidir ir atrás, já não vou começar do zero.
 
-**P10 — Se você não entendesse uma orientação, o que faria?**
+## 3. Interpretação do exercício pela equipe
 
-**Lívia:** “Eu ia perguntar para alguém, provavelmente um colega primeiro. Mas seria mais fácil se a própria página indicasse um e-mail ou um canal da universidade para aquela dúvida. Aí eu não ficava mandando mensagem para o lugar errado.”
+A conversa criada ilustra um percurso possível para um usuário iniciante:
 
-**P11 — Você usaria esse tipo de portal só no computador?**
+**Descobrir as possibilidades → encontrar orientações → compreender o assunto → conferir a fonte e a atualização → entrar em contato com o setor responsável.**
 
-**Lívia:** “Não, muito mais no celular. Se o texto for gigante e ficar ruim de ler, eu vou acabar deixando para depois. Gosto de páginas com títulos diretos, perguntas frequentes e links que abrem sem complicação.”
+As necessidades abaixo são **hipóteses extraídas da simulação**, não resultados observados em participantes reais.
 
-**P12 — Você teria necessidade de consultar informações em outra língua?**
-
-**Lívia:** “Eu começaria pelo português. Mas imagino que alguém de outro país chegando à universidade precisaria de outra língua, talvez inglês. Só acho importante revisar essas traduções, porque prazo e documento não podem ficar confusos.”
-
-**P13 — Vamos imaginar que você entra nesse portal pela primeira vez. O que deveria aparecer na tela?**
-
-**Lívia:** “Um campo para pesquisar e uns assuntos que eu entenda de primeira: intercâmbio, dupla titulação, documentação, custos, hospedagem e contato. Talvez uma explicação curta de como começar. Eu não preciso fazer inscrição por ali; só quero saber onde procurar.”
-
-**P14 — Entre tudo que conversamos, o que mais faria diferença para você?**
-
-**Lívia:** “Ter um caminho mais claro. Eu acho que começo pesquisando, depois vou lendo os assuntos que combinam com a minha dúvida e, quando preciso de certeza, vou para o documento ou falo com o setor certo. Isso já me ajudaria a não ficar dependendo do que meus colegas ouviram falar.”
-
-### Encerramento
-
-**Entrevistador (fala fictícia):** “Entendi. Então, antes de qualquer serviço mais avançado, o importante seria conseguir procurar, entender as etapas e conferir a fonte da informação?”
-
-**Lívia:** “Isso. Porque eu nem cheguei na parte de me inscrever. Primeiro preciso entender se vale a pena começar e para quem perguntar.”
-
-## 4. Análise da simulação pela equipe de requisitos
-
-**Separação metodológica:** as falas acima foram criadas para explorar o cenário. A coluna “interpretação” abaixo é **análise da equipe** sobre o texto encenado — não constitui descoberta empírica nem validação junto a usuários reais.
-
-| ID | Necessidade hipotética inferida | Perguntas relacionadas | Requisitos que já tratam do assunto |
+| Código | Hipótese de necessidade | Base no diálogo | Requisitos relacionados |
 |---|---|---|---|
-| **SIM01** | Explicar as modalidades e oferecer orientação inicial clara. | P02, P04 | RF01, RF04; RNF06 |
-| **SIM02** | Facilitar pesquisa por palavra-chave e categorias. | P01, P04, P13 | RF01–RF03 |
-| **SIM03** | Organizar orientações sobre documentos, vistos, custos e hospedagem. | P05–P07 | RF04–RF05 |
-| **SIM04** | Orientar o encaminhamento das dúvidas sobre aproveitamento de disciplinas. | P05, P08 | RF04, RF06 |
-| **SIM05** | Mostrar fonte, responsabilidade e data de revisão. | P07, P09 | RF05, RF08; RN05, RN08 |
-| **SIM06** | Indicar o canal de atendimento responsável. | P08, P10, P14 | RF06 |
-| **SIM07** | Favorecer leitura e navegação pelo celular. | P01, P11 | RNF01, RNF02, RNF06 |
-| **SIM08** | Considerar traduções institucionais revisadas. | P12 | RF07; RN07 |
-| **SIM09** | Não substituir processos oficiais de seleção ou aproveitamento. | P08, P13 | RN08–RN09; limites do escopo |
+| SIM01 | Explicar o que é intercâmbio, dupla titulação e por onde começar. | P01–P02 | RF01, RF04 |
+| SIM02 | Oferecer busca e organização por categorias, sem exigir conhecimento prévio. | P01, P04, P13 | RF01–RF03 |
+| SIM03 | Reunir orientações introdutórias sobre documentação, vistos, custos e hospedagem. | P05–P07 | RF04–RF05 |
+| SIM04 | Explicar o encaminhamento adequado para aproveitamento de disciplinas. | P08 | RF04, RF06 |
+| SIM05 | Mostrar fonte e data de revisão para distinguir orientações atuais. | P07, P09 | RF05, RF08; RN05, RN08 |
+| SIM06 | Facilitar contato com o setor institucional responsável. | P10, P14 | RF06 |
+| SIM07 | Possibilitar consulta clara pelo celular e navegação acessível. | P04, P11 | RNF01, RNF02, RNF06 |
+| SIM08 | Considerar versões multilíngues revisadas. | P12 | RF07; RN07 |
+| SIM09 | Manter o portal como fonte de orientação, sem substituir seleções e decisões oficiais. | P08, P13–P14 | RN08–RN09; escopo do produto |
 
-**Conclusão do exercício:** o cenário ilustra um percurso possível de uso do portal — **encontrar → compreender → verificar na fonte oficial → contatar o responsável, se necessário**. A persona não demonstra que essa seja uma necessidade observada na comunidade da UNIFOR. Para confirmar, o grupo precisaria ouvir participantes reais.
+### 3.1 O que isso representa para a solução proposta
 
-### 4.1 Priorização hipotética
+O exercício ajuda a examinar a coerência dos seguintes elementos já previstos na documentação do Grupo 08:
 
-| Essencial para uma primeira consulta | Melhoria posterior |
-|---|---|
-| Busca, categorias e temas principais (RF01–RF04) | Versão em inglês dos conteúdos revisados (RF07) |
-| Fontes, documentos e contatos (RF05–RF06) | Sinalizar informação desatualizada (RF13) |
-| Fonte e data de revisão visíveis (RF08) | Refinamentos de navegação após testes reais |
-| Responsividade e acessibilidade (RNF01–RNF02) | Recursos adicionais definidos por pesquisa futura |
+- **Área de consulta:** categorias, pesquisa, filtros e orientações temáticas.
+- **Confiabilidade:** links oficiais, identificação da fonte e data de revisão.
+- **Encaminhamento:** contatos institucionais por assunto.
+- **Inclusão:** interface responsiva, acessível e possibilidade de conteúdo em português e inglês.
+- **Governança:** revisão e publicação de conteúdos por responsáveis autorizados.
+- **Limites:** o portal informa e orienta; não aprova candidaturas, emite vistos ou determina aproveitamento acadêmico.
 
-A priorização do produto deve seguir o **backlog oficial do grupo** e ser revista com base em dados reais, não nas respostas fabricadas para a simulação.
+**Importante:** o diálogo não demonstra que a UNIFOR tenha falhas específicas em seus canais atuais. Na própria encenação, a personagem diz que ainda não consultou as orientações oficiais.
 
-## 5. Jornada do usuário representada pela persona
+## 4. Jornada ilustrativa de uso
 
-| Momento | Ação imaginada de Lívia | Recurso do portal proposto |
+| Etapa | Ação imaginada | Funcionalidade proposta |
 |---|---|---|
-| **Descoberta** | Ouve sobre mobilidade e procura o assunto no celular. | Página inicial com categorias e apresentação. |
-| **Exploração** | Pesquisa “intercâmbio” e “dupla titulação”. | Busca por palavra-chave e filtros. |
-| **Preparação** | Consulta vistos, custos, hospedagem e disciplinas. | Conteúdo organizado por tema. |
-| **Confirmação** | Verifica quando e por quem a informação foi atualizada. | Fonte oficial, data de revisão e links. |
-| **Encaminhamento** | Procura o setor responsável por uma dúvida. | Contatos institucionais por assunto. |
+| Descoberta | Ouve colegas comentarem sobre mobilidade e procura o tema. | Página inicial e categorias (RF01). |
+| Busca | Digita “intercâmbio” ou “dupla titulação”. | Pesquisa de conteúdos publicados (RF02). |
+| Exploração | Procura documentos, custos ou disciplinas. | Filtros e páginas temáticas (RF03–RF04). |
+| Verificação | Quer confirmar se uma regra está atualizada. | Fontes e data de revisão (RF05, RF08). |
+| Encaminhamento | Precisa perguntar sobre o aproveitamento acadêmico. | Contatos institucionais (RF06). |
 
-## 6. Limitações e uso acadêmico correto
+## 5. Limites e continuidade da elicitação
 
-- **Atividade efetivamente realizada:** criação de persona, roteiro, respostas encenadas e interpretação de requisitos.
-- **Atividade NÃO realizada:** entrevista com Lívia ou com qualquer participante externo.
-- **Tipo de evidência:** exercício de design e simulação de elicitação, **não pesquisa de campo**.
-- **Data de entrevista:** **não se aplica**; não há registro de encontro verdadeiro.
-- **Consentimento ou gravação:** **não se aplica**; não houve participante real.
-- **Regras acadêmicas:** não se afirmam editais específicos, vagas, exigências de visto ou resultados de aproveitamento como fatos oficiais.
+Este arquivo registra **uma persona fictícia e uma entrevista encenada por escrito**, produzidas como apoio ao desenho do portal. O roteiro e a análise são artefatos do trabalho; **não houve coleta com entrevistado real**. Por isso, os códigos **SIM01–SIM09** permanecem separados dos achados **AD01–AD06**, que têm origem na análise dos materiais da disciplina.
 
-O professor pede **roteiro e resultados de entrevistas** na P1. A simulação demonstra a técnica, mas **não comprova que o requisito de entrevista real foi atendido**. Uma entrevista breve com pessoa voluntária — sem publicação de dados pessoais — é a maneira correta de complementar esse item.
+O enunciado da P1 pede **roteiro e resultados de entrevistas**. Para apresentar resultados efetivamente coletados, a equipe precisa aplicar o roteiro a pelo menos uma pessoa real e registrar de forma fiel suas respostas, com data, perfil genérico e consentimento para uso acadêmico.
 
-### Roteiro curto para uma entrevista real (8–10 minutos)
+O [documento principal de elicitação](03-elicitacao-entrevistas.md) já contém um roteiro para estudantes, docentes e responsáveis institucionais. As perguntas acima também podem servir de inspiração, mas não devem ser tratadas como respostas previamente obtidas.
 
-Para testar as hipóteses com um colega ou conhecido de outro curso, use perguntas abertas:
+## 6. Fontes
 
-1. Você já teve curiosidade sobre intercâmbio ou dupla titulação? O que despertou esse interesse?
-2. Onde procuraria informações sobre mobilidade acadêmica? Já tentou procurar?
-3. Quais são suas dúvidas mais importantes sobre esse assunto?
-4. Como gostaria que as orientações fossem organizadas?
-5. Que informação sobre documentos, custos, disciplinas ou hospedagem você precisaria conferir?
-6. Como identificaria se a informação está atualizada e é oficial?
-7. Se restasse uma dúvida, como gostaria de entrar em contato com o setor responsável?
-8. O que seria indispensável num portal para você usar no dia a dia?
-
-**Registre depois somente o que a pessoa efetivamente disser**, incluindo data, perfil genérico e consentimento. Não reutilize as respostas fictícias de Lívia como se fossem resultados de campo.
-
-## 7. Referências e rastreabilidade
-
-- UNIFOR. *Propostas de Projetos de Sistemas — Internacionalização e ENADE*, 2026.2. **Tema 4 — Portal de Internacionalização**, p. 2.
-- UNIFOR. *Projeto de Extensão — Internacionalização: Engenharia de Requisitos Aplicada ao Contexto Educacional*. Material da disciplina.
-- Grupo 08: [stakeholders](02-stakeholders.md), [elicitação documental](03-elicitacao-entrevistas.md), [RF/RNF](04-requisitos.md), [regras de negócio](05-regras-de-negocio.md), [backlog](06-backlog-priorizado.md).
-
-**Resumo de integridade:** a personagem e o diálogo foram concebidos pela equipe como um exemplo de entrevista em contexto universitário. **Nenhuma parte deve ser atribuída a uma pessoa entrevistada de fato.**
+- UNIFOR. *Propostas de Projetos de Sistemas — Internacionalização e ENADE*, semestre 2026.2, **Tema 4 — Portal de Internacionalização**, p. 2.
+- UNIFOR. *Projeto de Extensão — Internacionalização: Engenharia de Requisitos Aplicada ao Contexto Educacional*.
+- Grupo 08. [Documento de visão](01-documento-de-visao.md), [Stakeholders](02-stakeholders.md), [Requisitos](04-requisitos.md), [Regras de negócio](05-regras-de-negocio.md) e [Backlog priorizado](06-backlog-priorizado.md).
