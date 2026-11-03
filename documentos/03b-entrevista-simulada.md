@@ -7,7 +7,7 @@
 
 ## 1. Perfil da pessoa representada
 
-**Lívia Alves Ribeiro** é uma personagem fictícia de 22 anos, estudante de Administração no 5º semestre da UNIFOR. Na história construída para o exercício, ela divide a rotina entre as aulas, um estágio na área administrativa e o deslocamento de ônibus. Usa o celular para resolver questões da faculdade e costuma conversar com colegas sobre experiências acadêmicas.
+**Lívia Alves Ribeiro** é a persona desenvolvida para este estudo: tem 22 anos e cursa o 5º semestre de Administração na UNIFOR. Na história construída para o exercício, ela divide a rotina entre as aulas, um estágio na área administrativa e o deslocamento de ônibus. Usa o celular para resolver questões da faculdade e costuma conversar com colegas sobre experiências acadêmicas.
 
 Lívia ainda não fez intercâmbio. O interesse surgiu depois de ouvir outras pessoas comentarem sobre estudar fora. Ela pensa em conhecer melhor as possibilidades, mas não sabe quais programas existem, quais documentos seriam necessários, nem como funcionaria o aproveitamento das disciplinas. Como precisa organizar o tempo e o orçamento, busca informações práticas antes de tomar qualquer decisão.
 
