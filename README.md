@@ -215,13 +215,13 @@ A atividade solicita: **(a) link deste repositório** e **(b) comprovação de q
 - [x] Issues correspondentes aos entregáveis criadas no GitHub.
 - [ ] Registrar entrevistas reais, caso tenham sido realizadas pelo grupo.
 - [ ] Criar/confirmar **Milestone M1** e vincular as issues a ela.
-- [ ] Confirmar o convite ou a associação do usuário **`marcelobezerra-dotcom`** ao repositório.
+- [x] **Convite enviado a `marcelobezerra-dotcom`: confirmado em captura enviada pelo grupo (status `Pending Invite`, ainda não aceito).** [Registro da confirmação](evidencias/registro-convite-professor.md).
 - [ ] Publicar captura **real** do convite/acesso em **`evidencias/convite-professor.png`**.
 - [ ] Enviar link do GitHub e evidência no AVA.
 
-[Orientações para a evidência](evidencias/LEIA-ME.md) · [Abrir pasta de evidências](evidencias/)
+[Registro da confirmação do convite](evidencias/registro-convite-professor.md) · [Orientações para anexar o print original](evidencias/LEIA-ME.md) · [Abrir pasta de evidências](evidencias/)
 
-**Atenção:** o fato de o repositório ser público não comprova a inclusão do professor como colaborador. Não serão utilizados prints ou relatos fictícios.
+**Atenção:** o print apresentado pelo grupo comprova o **convite pendente** do professor, não a aceitação. O registro textual foi publicado; **a imagem original ainda precisa ser enviada** à pasta `evidencias/`. A leitura de um repositório público, por si só, não comprova colaboração.
 
 ## 10. Equipe
 
