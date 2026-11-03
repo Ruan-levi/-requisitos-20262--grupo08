@@ -20,6 +20,7 @@
 | RF11 | Manter conteúdos nos estados rascunho, em revisão e publicado. | Alta |
 | RF12 | Permitir somente a publicadores autorizados aprovar e publicar conteúdos. | Alta |
 | RF13 | Permitir a visitantes sinalizar informações desatualizadas, sem exigir dados pessoais. | Baixa |
+| RF14 | Permitir que o administrador gerencie os perfis e as permissões de acesso de usuários autorizados. | Alta |
 
 ## 4.2 Requisitos não funcionais (RNF)
 
@@ -33,7 +34,7 @@
 | RNF06 | Usabilidade | Textos claros, categorias compreensíveis, feedback de busca vazia e navegação consistente. |
 | RNF07 | Rastreabilidade | Registrar editor, revisor e data de alteração/publicação. |
 | RNF08 | Manutenibilidade | Atualizar orientações via painel, sem alterar diretamente o código do portal. |
-| RNF09 | Desempenho | Consultas públicas devem responder em tempo adequado; limite numérico será definido após testes e dimensionamento. |
+| RNF09 | Desempenho | **Meta proposta:** 95% das buscas responderem em até 3 segundos em cenário de teste com até 20 usuários simultâneos e catálogo de até 10 mil orientações publicadas. Medir em ambiente de homologação; parâmetros sujeitos a revisão após dimensionamento. |
 
 ## 4.3 Critérios de aceitação para funções essenciais
 
@@ -59,6 +60,11 @@
 - Apenas perfil publicador ou administrador aprova publicações.
 - Fonte, revisor e data permanecem registrados.
 
+**RF14 — Gestão de permissões**
+- Apenas administradores autenticados podem conceder ou revogar perfis editoriais.
+- Usuário sem autorização não pode alterar permissões por acesso direto à API.
+- A alteração registra administrador responsável e data.
+
 **RF07 — Multilíngue**
 - O usuário consegue alternar o idioma da interface.
 - Conteúdo sem tradução aprovada não pode ser exibido como tradução oficial.
@@ -78,8 +84,10 @@
 |---|---|
 | AD01 — Melhorar a busca | RF01–RF03, RNF06 |
 | AD02 — Orientações temáticas | RF04–RF06, RF08 |
-| AD03 — Acessibilidade, idiomas e governança | RF07–RF13, RNF01–RNF09 |
-| AD05 — Usuários e área institucional | RF09–RF12 |
+| AD03 — Acessibilidade, idiomas e governança | RF07–RF14, RNF01–RNF09 |
+| AD05 — Usuários e área institucional | RF09–RF12, RF14 |
+
+**As hipóteses da [entrevista simulada](03b-entrevista-simulada.md) são identificadas como SIM01–SIM07 e não constituem validação empírica.**
 
 Os achados estão documentados em [03-elicitacao-entrevistas.md](03-elicitacao-entrevistas.md). Consulte também [regras de negócio](05-regras-de-negocio.md) e [backlog](06-backlog-priorizado.md).
 
