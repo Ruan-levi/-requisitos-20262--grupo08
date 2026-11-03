@@ -45,6 +45,10 @@ Seguindo o [LAPIS do professor](https://github.com/marcelobezerra-dotcom/Lapis-u
 
 [Índice de Requisitos](Requisitos/README.md) · [Gestão de Configuração](GestaoConfiguracao/README.md) · [Guia UML](diagrams/README.md) · [Evidências](evidencias/LEIA-ME.md)
 
+### 🎤 Diagramas renovados para apresentação
+
+**[Abrir o roteiro de apresentação dos três diagramas](diagrams/GUIA-APRESENTACAO.md)** — traz falas sugeridas, requisitos correspondentes e um exemplo que conecta os três desenhos. Os SVG foram refeitos para visualização em tela cheia e em projetor, com fontes maiores, legenda visual e organização por finalidade. O PlantUML permanece editável.
+
 ### Visualizar os diagramas
 
 <details><summary><strong>Casos de Uso</strong></summary>

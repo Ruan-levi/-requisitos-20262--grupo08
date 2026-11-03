@@ -1,46 +1,53 @@
 @startuml
-title Portal de Internacionalização — Diagrama UML de Casos de Uso
+' Portal de Internacionalização · Grupo 08 · Proposta 4 · Sprint M1
+title UML 01 — Casos de Uso: consulta e gestão do Portal de Internacionalização
 left to right direction
+skinparam backgroundColor #FFFFFF
 skinparam shadowing false
-skinparam packageStyle rectangle
+skinparam defaultFontName Arial
+skinparam defaultFontSize 16
+skinparam ArrowColor #4C6A86
 skinparam actorStyle awesome
+skinparam packageStyle rectangle
+skinparam UsecaseBackgroundColor #E5F4FF
+skinparam UsecaseBorderColor #377BA8
+skinparam UsecaseFontColor #143650
+skinparam ActorBorderColor #277FB0
+skinparam ActorFontColor #172C3B
 
-actor "Visitante" as Visitante
-actor "Estudante" as Estudante
-actor "Docente" as Docente
-actor "Editor" as Editor
-actor "Publicador" as Publicador
-actor "Administrador" as Administrador
+actor "Visitante\n(estudante ou docente)" as V
+actor "Editor" as ED
+actor "Publicador" as PUB
+actor "Administrador" as ADM
 
-Estudante --|> Visitante
-Docente --|> Visitante
-
-rectangle "Portal de Internacionalização" {
-  usecase "(RF01–RF04)\nConsultar orientações" as UC1
-  usecase "(RF02)\nPesquisar conteúdos" as UC2
-  usecase "(RF03)\nFiltrar por categoria" as UC3
-  usecase "(RF05, RF06, RF08)\nConsultar fontes e contatos" as UC4
-  usecase "(RF07)\nSelecionar idioma" as UC5
-  usecase "(RF09)\nAutenticar-se" as UC6
-  usecase "(RF10–RF11)\nCadastrar/editar conteúdos" as UC7
-  usecase "(RF12)\nRevisar/publicar conteúdos" as UC8
-  usecase "(RF14)\nAdministrar permissões" as UC9
+rectangle "Portal de Internacionalização — proposta de sistema" {
+ package "1. Consulta pública — sem login" #EAF6FF {
+  usecase "Consultar orientações\npor categoria\nRF01 · RF04" as UC1
+  usecase "Pesquisar e filtrar\npor palavra, tema e público\nRF02 · RF03" as UC2
+  usecase "Conferir fontes, data\nde revisão e contatos\nRF05 · RF06 · RF08" as UC3
+  usecase "Selecionar idioma\ncom tradução aprovada\nRF07" as UC4
+  usecase "Sinalizar conteúdo\ndesatualizado\nRF13 <<evolução>>" as UC5
+ }
+ package "2. Gestão editorial — com autenticação" #E8F8F1 {
+  usecase "Autenticar-se\nRF09" as LOGIN
+  usecase "Criar e atualizar\nrascunhos (RF10 · RF11)" as EDIT
+  usecase "Revisar e publicar\norientações (RF12)" as PUBLISH
+  usecase "Administrar perfis\ne permissões (RF14)" as ADMIN
+ }
 }
-Visitante -- UC1
-Visitante -- UC2
-Visitante -- UC3
-Visitante -- UC4
-Visitante -- UC5
-Editor -- UC6
-Editor -- UC7
-Publicador -- UC6
-Publicador -- UC8
-Administrador -- UC6
-Administrador -- UC9
-
-note bottom of UC8
-  Apenas responsáveis autorizados.
-  Fluxo editorial proposto,
-  ainda não validado institucionalmente.
+V -- UC1
+V -- UC2
+V -- UC3
+V -- UC4
+V .. UC5
+ED -- LOGIN
+ED -- EDIT
+PUB -- LOGIN
+PUB -- PUBLISH
+ADM -- LOGIN
+ADM -- ADMIN
+note bottom of PUBLISH
+ Só orientações aprovadas são públicas.
+ Papéis propostos; a validar com a instituição.
 end note
 @enduml

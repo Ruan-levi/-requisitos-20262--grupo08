@@ -1,30 +1,39 @@
-# Diagramas UML — Portal de Internacionalização
+# 📊 Diagramas UML — Portal de Internacionalização
 
-A **Entrega 1** exige diagramas de **Casos de Uso, Componentes e Implantação**. Para facilitar a correção, disponibilizamos cada modelo em dois formatos:
+**Grupo 08 · Proposta 4 · Atividade P1 / M1**
 
-- **`.puml`** — código PlantUML editável (fonte do diagrama);
-- **`.svg`** — visualização vetorial que pode ser aberta pelo navegador.
+Os três diagramas exigidos no enunciado foram reorganizados para apresentação: **tipografia grande, legendas curtas, cores consistentes e blocos com finalidade explícita**.
 
-| Diagrama | Fonte editável | Visualização |
-|---|---|---|
-| Casos de Uso | [PlantUML](01-casos-de-uso.puml) | [SVG](01-casos-de-uso.svg) |
-| Componentes | [PlantUML](02-componentes.puml) | [SVG](02-componentes.svg) |
-| Implantação | [PlantUML](03-implantacao.puml) | [SVG](03-implantacao.svg) |
+| Modelo exigido | O que apresenta | Visual pronto para apresentar | Fonte UML editável |
+|---|---|---|---|
+| **Casos de Uso** | **Quem** pode usar cada funcionalidade | [01 — SVG](01-casos-de-uso.svg) | [PlantUML](01-casos-de-uso.puml) |
+| **Componentes** | **Quais partes** compõem a solução e se conectam | [02 — SVG](02-componentes.svg) | [PlantUML](02-componentes.puml) |
+| **Implantação** | **Onde** a solução funcionaria e como se comunica | [03 — SVG](03-implantacao.svg) | [PlantUML](03-implantacao.puml) |
 
-## Observação sobre os modelos
+## 🎤 Apresentação guiada
 
-A equipe representa uma **proposta de sistema**, não uma solução já implementada na UNIFOR. Os atores e componentes são hipóteses de projeto baseadas nos requisitos iniciais. Os papéis editoriais, integrações e infraestrutura precisam ser validados antes de uma implementação institucional.
+**[Abrir o GUIA-APRESENTACAO.md](GUIA-APRESENTACAO.md)**: inclui um roteiro de fala de aproximadamente 40–60 segundos por diagrama, perguntas que cada modelo responde e um exemplo único de uso para conectar os três.
 
-## Como editar
+### Identidade visual
 
-Abra o arquivo `.puml` no [PlantUML](https://plantuml.com/pt/) ou extensão compatível. Os arquivos SVG também permitem edição vetorial em ferramentas compatíveis.
+- **Azul:** experiência pública de estudantes e docentes.
+- **Verde:** edição, revisão, autenticação e autorização editorial.
+- **Roxo:** armazenamento, referências externas e infraestrutura proposta.
 
-## Rastreabilidade
+**SVG** = versão vetorial preparada para leitura em projetores e navegadores. **PlantUML (`.puml`)** = especificação UML editável, com a mesma arquitetura e relações fundamentais. O SVG é uma **composição visual de apresentação**, não uma exportação automática 1:1 do PlantUML.
 
-- Casos de Uso → requisitos RF01–RF12 e RF14; RF13 é uma funcionalidade opcional fora do núcleo do MVP.
-- Componentes → busca, consulta, gestão editorial, autenticação e persistência.
-- Implantação → navegador, interface web, API e servidor de dados.
+## Modelo acadêmico, não produto pronto
 
-## Nota de consistência entre fontes e imagens
+A área pública é informativa; o painel editorial depende de perfis autorizados; fontes oficiais permanecem externas; a infraestrutura de hospedagem **não foi escolhida nem implementada**. Papéis e regras ainda precisam ser validados com a instituição.
 
-Os arquivos `.puml` constituem **os modelos UML textuais de referência**. Os arquivos `.svg` são **representações visuais resumidas** para leitura rápida no GitHub, e não devem substituir a revisão do modelo de origem. A arquitetura e as relações ainda são propostas acadêmicas sujeitas à validação.
+### Rastreabilidade
+
+- **Casos de Uso:** RF01–RF12, RF14; RF13 sinalizado como evolução opcional.
+- **Componentes:** RF01–RF12, RF14 e RN01–RN11, com foco na gestão de conteúdo.
+- **Implantação:** RNF02, RNF03, RNF05 e arquitetura conceitual da SRS.
+
+Os detalhes são desenvolvidos em [RF/RNF](../Requisitos/Especificacao/01-requisitos-funcionais-e-nao-funcionais.md), [Regras de negócio](../Requisitos/Especificacao/02-regras-de-negocio.md) e [SRS](../Requisitos/Especificacao/04-SRS-preliminar.md).
+
+**Editar:** abrir o `.puml` no [PlantUML](https://plantuml.com/pt/), modificar o modelo e **atualizar também o SVG de apresentação** caso as relações ou funções mudem.
+
+[Voltar ao README](../README.md).

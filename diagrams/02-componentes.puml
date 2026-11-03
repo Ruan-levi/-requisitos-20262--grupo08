@@ -1,36 +1,42 @@
 @startuml
-title Portal de Internacionalização — Diagrama UML de Componentes
-left to right direction
+' Portal de Internacionalização · Grupo 08 · Proposta 4 · Sprint M1
+title UML 02 — Componentes: consulta, serviços e gestão editorial
+top to bottom direction
+skinparam backgroundColor #FFFFFF
 skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam defaultFontSize 16
 skinparam componentStyle uml2
-
-package "Portal Web" {
-  [Interface pública] as UI
-  [Painel administrativo] as AdminUI
+skinparam packageStyle rectangle
+skinparam ArrowColor #58718C
+skinparam ComponentBackgroundColor #E8F3FF
+skinparam ComponentBorderColor #3A7BA6
+skinparam ComponentFontColor #163650
+package "Área pública (sem login)" #EAF6FF {
+  component "Portal público\nRF01–RF08" as PUBLIC
+  component "API de orientações\npublicadas" as CONTENT
+  component "Pesquisa e filtros\nRF02 · RF03" as SEARCH
 }
-package "Serviços da aplicação" {
-  [API de conteúdo] as API
-  [Serviço de pesquisa] as Busca
-  [Gestão editorial] as Editorial
-  [Autenticação e autorização] as Auth
+package "Gestão institucional (restrita)" #E8F8F1 {
+  component "Painel administrativo" as ADMINUI
+  component "Gestão editorial\nRF10–RF12" as EDITORIAL
+  component "Autenticação e perfis\nRF09 · RF14" as AUTH
 }
-database "Banco de dados\nOrientações, categorias, usuários e revisões" as DB
-cloud "Fontes institucionais\n(links oficiais)" as Fonte
+database "Banco de dados\norientações, categorias,\nusuários e revisões" as DB
+cloud "Fontes institucionais\neditais e documentos oficiais" as SOURCES
 
-UI --> API : consultas
-UI --> Busca : pesquisas e filtros
-UI --> Fonte : links
-AdminUI --> Auth : login e permissões
-AdminUI --> Editorial : criação e revisão
-Editorial --> Auth : verifica permissões
-Editorial --> API : publicar conteúdos
-API --> DB : consulta e atualização
-Busca --> DB : consulta apenas publicados
-Editorial --> DB : rascunhos e revisões
-Auth --> DB : identidades e perfis
-
+PUBLIC --> CONTENT : consulta
+PUBLIC --> SEARCH : busca/filtro
+ADMINUI --> EDITORIAL : edição e revisão
+ADMINUI --> AUTH : login/permissões
+EDITORIAL --> AUTH : valida privilégios
+CONTENT --> DB : lê publicados
+SEARCH --> DB : pesquisa publicados
+EDITORIAL --> DB : grava versões/revisões
+AUTH --> DB : consulta identidades/perfis
+CONTENT ..> SOURCES : apresenta links oficiais
 note bottom of DB
-  Modelagem conceitual da Sprint M1.
-  Não representa sistema já implantado.
+ Arquitetura lógica proposta para a P1.
+ Serviços e banco não estão implantados.
 end note
 @enduml
