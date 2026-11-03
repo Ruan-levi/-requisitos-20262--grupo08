@@ -136,7 +136,7 @@ Os códigos são detalhados nos arquivos de [elicitação](documentos/03-elicita
 
 ### 5.2. Limitações e validações pendentes
 
-> **As entrevistas reais não foram comprovadas neste repositório.** O entregável de elicitação apresenta roteiros para estudantes, docentes e responsáveis institucionais, além dos **resultados da análise documental**. Não contém falas atribuídas a participantes fictícios.
+> **As entrevistas reais não foram comprovadas neste repositório.** O entregável de elicitação apresenta **roteiros para estudantes, docentes e responsáveis institucionais** e **resultados da análise documental**. Há, separadamente, uma [entrevista simulada com a personagem fictícia Marina Costa Ribeiro](documentos/03b-entrevista-simulada.md); as respostas foram **inventadas exclusivamente para exercício acadêmico** e **não são dados coletados de usuários**.
 
 Também permanecem pendentes a confirmação de responsáveis institucionais e a validação dos requisitos propostos. O material da UNIFOR especifica que as descrições dos temas **não constituem requisitos já validados**.
 
@@ -173,7 +173,7 @@ Foram cadastradas **10 issues** para acompanhar os entregáveis. Os números aba
 |---|---:|---|
 | Clareza da visão do problema | **0,5** | Documento de Visão |
 | Qualidade da elicitação | **0,5** | Stakeholders, roteiros, achados documentais e **simulação fictícia** (**entrevistas reais pendentes**) |
-| Qualidade dos requisitos | **0,5** | RF, RNF, regras de negócio e backlog |
+| Qualidade dos requisitos | **0,5** | RF01–RF14, RNF01–RNF09, RN01–RN11 e US01–US12 |
 | Modelagem UML | **0,5** | Casos de Uso, Componentes e Implantação |
 | **Total possível** | **2,0** | Documentação e modelos apresentados |
 
