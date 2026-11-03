@@ -19,12 +19,12 @@ rectangle "Portal de Internacionalização" {
   usecase "(RF01–RF04)\nConsultar orientações" as UC1
   usecase "(RF02)\nPesquisar conteúdos" as UC2
   usecase "(RF03)\nFiltrar por categoria" as UC3
-  usecase "(RF05, RF06, RF08)\nConsultar fontes, contatos e revisão" as UC4
+  usecase "(RF05, RF06, RF08)\nConsultar fontes e contatos" as UC4
   usecase "(RF07)\nSelecionar idioma" as UC5
   usecase "(RF09)\nAutenticar-se" as UC6
   usecase "(RF10–RF11)\nCadastrar/editar conteúdos" as UC7
   usecase "(RF12)\nRevisar/publicar conteúdos" as UC8
-  usecase "(RF14)\nAdministrar perfis e permissões" as UC9
+  usecase "(RF14)\nAdministrar permissões" as UC9
 }
 Visitante -- UC1
 Visitante -- UC2
