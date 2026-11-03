@@ -66,7 +66,7 @@ Seguindo o [LAPIS do professor](https://github.com/marcelobezerra-dotcom/Lapis-u
 ## 🗓️ Sprints, issues e próximos passos
 
 - **[Issues #1–#10](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues):** #1–#2 e #4–#9 concluídas; **#3** (entrevista real) e **#10** (evidência/AVA) abertas.
-- **[Milestones](https://github.com/Ruan-levi/-requisitos-20262--grupo08/milestones):** M1 criada para a entrega inicial; conferir issues atribuídas.
+- **[Milestones](https://github.com/Ruan-levi/-requisitos-20262--grupo08/milestones):** M1 criada e **as 10 issues #1–#10 vinculadas**, sendo 8 fechadas e 2 abertas.
 - **[GitHub Projects e Kanban](GestaoConfiguracao/04-guia-github-projects.md):** instruções para criar o quadro de acompanhamento indicado no LAPIS.
 - **Próximas atividades:** refinar SRS, casos de uso, controle de versões e possíveis protótipos **conforme os enunciados futuros**; não presumir novas exigências.
 
@@ -76,7 +76,8 @@ Seguindo o [LAPIS do professor](https://github.com/marcelobezerra-dotcom/Lapis-u
 - [x] Convite ao usuário **`marcelobezerra-dotcom`** registrado em [evidência visual](evidencias/registro-convite-professor.md); captura anterior mostrava **Pending Invite**.
 - [ ] Registrar resultados de **entrevista efetivamente realizada** para atender integralmente ao item.
 - [ ] Confirmar que o professor **aceitou** o convite em `Settings → Collaborators`.
-- [ ] Verificar se todas as issues constam na M1 e, se necessário, configurar o **Project/Kanban**.
+- [x] **Todas as 10 issues foram associadas à Milestone M1** (8 fechadas e 2 abertas).
+- [ ] Configurar um **Project/Kanban**, se for solicitado para esta etapa ou utilizado no acompanhamento das próximas atividades.
 - [ ] Conferir o nome do repositório: possui hífen inicial extra (`-requisitos-20262--grupo08`), enquanto a P1 indica `requisitos-20262--grupo08`.
 - [ ] **Enviar o link do GitHub e a comprovação solicitada no AVA**.
 
