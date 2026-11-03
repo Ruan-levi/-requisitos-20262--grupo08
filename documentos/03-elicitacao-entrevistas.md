@@ -1,9 +1,9 @@
 # 3. Elicitação de Requisitos: Roteiros e Resultados
 
 **Tema:** Portal de Internacionalização · **Sprint:** M1  
-**Abordagens:** análise documental + roteiro de entrevistas semiestruturadas
+**Abordagens:** análise documental + roteiros de entrevistas semiestruturadas + exemplo de entrevista simulada, identificado como ficção.
 
-> **Declaração de integridade:** os resultados apresentados neste documento são **achados da análise documental**. A equipe não forneceu transcrições nem registros de entrevistas realizadas. Portanto, **não há respostas de entrevistados reais a relatar** nesta versão.
+> **Declaração de integridade:** os resultados apresentados neste documento são **achados da análise documental**. A equipe não forneceu transcrições nem registros de entrevistas realizadas. Portanto, **não há respostas de entrevistados reais a relatar** nesta versão. Para demonstrar a técnica, existe uma **[entrevista simulada com persona fictícia](03b-entrevista-simulada.md)**, que não constitui pesquisa empírica.
 
 ## 3.1 Objetivo da elicitação
 
@@ -95,3 +95,11 @@ Investigar a experiência de estudantes e docentes na busca de orientações e c
 - **Próximo passo:** realizar entrevistas e validar as hipóteses, registrando evidências e revisão do backlog.
 
 **Rastreabilidade:** AD01–AD06 → [Requisitos](04-requisitos.md) → [Backlog](06-backlog-priorizado.md).
+
+## 3.10. Exercício complementar: entrevista fictícia ilustrativa
+
+Para exemplificar a aplicação do roteiro a um cenário coerente com a Proposta 4, foi criado o documento separado **[03b — Entrevista simulada](03b-entrevista-simulada.md)**. A personagem **Marina Costa Ribeiro** e suas respostas são **inteiramente fictícias**. A simulação serve para discussão de hipóteses sobre organização de informação, pesquisa, documentação, aproveitamento de disciplinas, despesas, acessibilidade e fontes oficiais.
+
+**Rastreabilidade acadêmica:** achados **AD** = análise documental; hipóteses **SIM** = simulação fictícia; achados de entrevistas reais = **não coletados**. Hipóteses SIM não validam RF/RNF, nem substituem entrevistas exigidas no enunciado.
+
+**A tarefa de realizar entrevistas verdadeiras deve permanecer aberta** até que sejam fornecidos registros autênticos.
