@@ -148,20 +148,20 @@ Foram cadastradas **10 issues** para acompanhar os entregáveis. Os números aba
 
 | Issue | Atividade | Registro de acompanhamento |
 |---|---|---|
-| [#1](../../issues/1) | Documento de Visão | Documento publicado |
-| [#2](../../issues/2) | Stakeholders | Mapeamento publicado |
-| [#3](../../issues/3) | Elicitação | **Aberta:** aguarda entrevistas reais, se realizadas |
-| [#4](../../issues/4) | Requisitos | Especificação publicada |
-| [#5](../../issues/5) | Regras de Negócio | Documento publicado |
-| [#6](../../issues/6) | Backlog Priorizado | Backlog publicado |
-| [#7](../../issues/7) | Diagrama de Casos de Uso | Modelo publicado |
-| [#8](../../issues/8) | Diagrama de Componentes | Modelo publicado |
-| [#9](../../issues/9) | Diagrama de Implantação | Modelo publicado |
-| [#10](../../issues/10) | Evidência do professor e submissão | **Aberta:** ações externas pendentes |
+| [#1](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/1) | Documento de Visão | Documento publicado |
+| [#2](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/2) | Stakeholders | Mapeamento publicado |
+| [#3](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/3) | Elicitação | **Aberta:** aguarda entrevistas reais, se realizadas |
+| [#4](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/4) | Requisitos | Especificação publicada |
+| [#5](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/5) | Regras de Negócio | Documento publicado |
+| [#6](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/6) | Backlog Priorizado | Backlog publicado |
+| [#7](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/7) | Diagrama de Casos de Uso | Modelo publicado |
+| [#8](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/8) | Diagrama de Componentes | Modelo publicado |
+| [#9](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/9) | Diagrama de Implantação | Modelo publicado |
+| [#10](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/10) | Evidência do professor e submissão | **Aberta:** ações externas pendentes |
 
 **Milestone M1:** a criação da milestone e a vinculação das issues **ainda precisam ser confirmadas no GitHub**. Os títulos das issues indicam M1, mas isso **não equivale** à associação efetiva a uma milestone.
 
-[Acessar as issues](../../issues) · [Acessar as milestones](../../milestones)
+[Acessar as issues](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues) · [Acessar as milestones](https://github.com/Ruan-levi/-requisitos-20262--grupo08/milestones)
 
 ## 7. Critérios de avaliação da P1
 
