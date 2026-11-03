@@ -1,245 +1,85 @@
-# Portal de Internacionalização | UNIFOR
+# 🌍 Portal de Internacionalização | UNIFOR — Grupo 08
 
-**Trabalho P1 — Elicitação de Requisitos e Modelagem Inicial**  
-**Disciplina:** Requisitos e Modelagem de Sistemas · **Semestre:** 2026.2 · **Equipe:** Grupo 08  
-**Tema selecionado:** 4 — Portal de Internacionalização · **Sprint 1 / M1:** 20/10 a 02/11/2026  
-**Etapa do projeto:** análise e modelagem, **sem implementação obrigatória nesta entrega**.
+**Disciplina:** Requisitos e Modelagem de Sistemas · **Semestre:** 2026.2 · **Proposta 4**  
+**Atividade:** P1 — Elicitação e Modelagem Inicial · **Milestone M1:** 20/10 a 02/11/2026  
+**Equipe:** Ruan Levi Ferreira Macedo · Lorhan Dejan Ferreira Macedo · Hiago Queiroz Barreto
 
----
+> **Problema:** Como melhorar a experiência de estudantes e docentes na busca por informações e serviços de internacionalização?
 
-## 1. Contexto e problema
+Propomos um **portal web informativo** que facilite encontrar orientações sobre intercâmbio, dupla titulação, vistos, documentação, aproveitamento de disciplinas, despesas, hospedagem e contatos. **Acessibilidade, organização da informação, versões multilíngues e governança de conteúdo** são pontos centrais da Proposta 4. **Não existe implementação do portal nesta entrega P1**; o trabalho trata de requisitos e modelagem.
 
-A proposta parte da seguinte questão definida nos materiais da disciplina:
+## 📚 Entregáveis da P1
 
-> **Como melhorar a experiência de estudantes e docentes na busca por informações e serviços de internacionalização?**
-
-O projeto investiga formas de facilitar a localização, a compreensão e a atualização de orientações sobre **intercâmbio, dupla titulação, vistos, documentação, aproveitamento de disciplinas, despesas, hospedagem, contatos e serviços institucionais**.
-
-A análise também contempla as quatro preocupações destacadas no **Tema 4**: **acessibilidade**, **organização da informação**, **versões multilíngues** e **governança do conteúdo**.
-
-**Importante:** a proposta não presume que a UNIFOR não possua informações de internacionalização. O problema a validar é a *experiência de consulta* a essas informações.
-
-## 2. Visão e objetivos da solução
-
-O **Portal de Internacionalização** é uma proposta de **sistema web informativo**, com uma área pública de consulta e uma área de gestão destinada a responsáveis autorizados.
-
-**Objetivo geral:** especificar uma solução que facilite a busca e o entendimento de informações e serviços de internacionalização acadêmica.
-
-**Objetivos específicos:**
-
-- Centralizar orientações e organizar os conteúdos por assunto e público-alvo.
-- Permitir pesquisas por palavra-chave e filtragem por categorias.
-- Direcionar o usuário para documentos, contatos e fontes institucionais.
-- Considerar navegação acessível, responsiva e informações em mais de um idioma.
-- Definir regras para atualização, revisão e publicação de conteúdos.
-
-### Público-alvo e partes interessadas
-
-| Público / stakeholder | Necessidade investigada |
-|---|---|
-| **Estudantes** | Encontrar orientações sobre mobilidade, documentação e preparação. |
-| **Docentes** | Localizar serviços e informações sobre atividades acadêmicas internacionais. |
-| **Estudantes internacionais** | Compreender orientações com linguagem acessível e suporte multilíngue. |
-| **Equipe de internacionalização** | Validar fontes e organizar revisão, manutenção e publicação. |
-| **Coordenações de curso** | Apoiar encaminhamentos acadêmicos pertinentes. |
-| **Equipe de TI** | Apoiar questões de segurança, privacidade, acesso e manutenção. |
-
-**Nomenclatura institucional:** o documento do Tema 4 menciona **DRI**, enquanto o material de extensão utiliza **NEI**. A denominação vigente e as respectivas competências precisam ser confirmadas; o projeto não assume equivalência entre as duas unidades.
-
-## 3. Escopo do produto proposto
-
-| Incluído na proposta inicial | Fora do escopo inicial |
-|---|---|
-| Catálogo de orientações por tema e público | Inscrição oficial em programas de mobilidade |
-| Busca por palavra-chave e filtros | Aprovação automática de candidaturas |
-| Informações e links para fontes oficiais | Emissão de vistos e documentos oficiais |
-| Contatos e canais de atendimento | Processamento de pagamentos |
-| Identificação da fonte e da última revisão | Alteração de matrículas ou histórico acadêmico |
-| Área restrita para gestão editorial | Integrações com sistemas institucionais sem autorização |
-
-**Evoluções consideradas:** versão em inglês dos conteúdos aprovados e recurso de comunicação de informações desatualizadas.
-
-O projeto documenta a **proposta e os requisitos**, não um portal já desenvolvido ou implantado.
-
----
-
-## 4. Entregáveis obrigatórios da Atividade P1
-
-O enunciado solicita **Documento de Visão, Stakeholders, roteiro e resultados de entrevistas, requisitos funcionais e não funcionais, regras de negócio, backlog priorizado e três diagramas UML**.
-
-| Nº | Entregável | Arquivo disponível | Situação |
-|:--:|---|---|---|
-| 01 | **Documento de Visão** | [Ler documento](documentos/01-documento-de-visao.md) | Redigido; validação institucional pendente |
-| 02 | **Identificação de Stakeholders** | [Ler documento](documentos/02-stakeholders.md) | Mapeamento preliminar |
-| 03 | **Roteiro e resultados da elicitação** | [Ler análise documental e roteiros](documentos/03-elicitacao-entrevistas.md) · [Ver entrevista simulada (fictícia)](documentos/03b-entrevista-simulada.md) | Achados documentais e exemplo de entrevista **simulada**; entrevistas reais não comprovadas |
-| 04 | **Requisitos Funcionais e Não Funcionais** | [Ler especificação](documentos/04-requisitos.md) | Especificação inicial |
-| 05 | **Regras de Negócio** | [Ler regras](documentos/05-regras-de-negocio.md) | Regras propostas |
-| 06 | **Backlog Priorizado** | [Ler backlog](documentos/06-backlog-priorizado.md) | Histórias de usuário priorizadas |
-| 07 | **UML — Casos de Uso** | [Ver diagrama](diagramas/01-casos-de-uso.svg) · [Editar](diagramas/01-casos-de-uso.puml) | Publicado |
-| 08 | **UML — Componentes** | [Ver diagrama](diagramas/02-componentes.svg) · [Editar](diagramas/02-componentes.puml) | Publicado |
-| 09 | **UML — Implantação** | [Ver diagrama](diagramas/03-implantacao.svg) · [Editar](diagramas/03-implantacao.puml) | Publicado |
-
-**Materiais complementares:** [Fontes, premissas e decisões de escopo](documentos/07-fontes-e-decisoes.md) · [Especificação de Requisitos de Software (SRS) preliminar](documentos/08-SRS-preliminar.md) · [Entrevista simulada com persona fictícia](documentos/03b-entrevista-simulada.md).
-
-O **SRS** é um complemento às exigências específicas da P1; **PDFs, pitch e protótipos não constam como entregáveis obrigatórios nesta primeira atividade**. Os arquivos Markdown são versionados no GitHub e podem ser exportados em PDF para apresentação, se solicitado.  
-**Convenções dos diagramas:** [Leia-me da pasta UML](diagramas/LEIA-ME.md).
-
-### 4.1. Diagramas UML — visualização
-
-Os arquivos **SVG** podem ser visualizados no GitHub. As fontes **PlantUML (`.puml`)** ficam disponíveis para alterações futuras.
-
-<details>
-<summary><strong>Diagrama de Casos de Uso — atores e funcionalidades</strong></summary>
-
-![Diagrama UML de Casos de Uso](diagramas/01-casos-de-uso.svg)
-
-</details>
-
-<details>
-<summary><strong>Diagrama de Componentes — divisão lógica do portal</strong></summary>
-
-![Diagrama UML de Componentes](diagramas/02-componentes.svg)
-
-</details>
-
-<details>
-<summary><strong>Diagrama de Implantação — arquitetura proposta</strong></summary>
-
-![Diagrama UML de Implantação](diagramas/03-implantacao.svg)
-
-</details>
-
----
-
-## 5. Metodologia de elicitação e rastreabilidade
-
-A primeira etapa do projeto foi organizada em **análise documental, identificação dos interessados, preparação de entrevistas, definição de requisitos, priorização e modelagem UML**.
-
-**Fontes documentais da disciplina:**
-
-1. *Propostas de Projetos de Sistemas — Internacionalização e ENADE* (UNIFOR, 2026.2), com foco no **Tema 4 — Portal de Internacionalização**, p. 2.
-2. *Projeto de Extensão — Internacionalização: Engenharia de Requisitos Aplicada ao Contexto Educacional* (UNIFOR), apresentação de apoio sobre contexto, stakeholders e técnicas de elicitação.
-3. Enunciado da **Atividade 1 — Trabalho P1 (2,0 pontos)**, incluindo os entregáveis e critérios de avaliação.
-
-### 5.1. Resultados efetivamente obtidos
-
-A documentação registra **achados da leitura dos materiais** e os relaciona aos requisitos. Por exemplo:
-
-| Evidência documental | Decisão de especificação | Histórias do backlog |
+| Item exigido | Arquivo do Grupo 08 | Situação |
 |---|---|---|
-| Necessidade de facilitar a busca por orientações | **RF01–RF03:** categorias, pesquisa e filtros | **US01–US03** |
-| Temas de internacionalização previstos na proposta | **RF04–RF06:** orientações, fontes e contatos | **US04–US05** |
-| Acessibilidade e idiomas como questões de levantamento | **RNF01–RNF02**, **RF07** | **US09** |
-| Governança e atualização de informações | **RF08–RF12**, **RNF07–RNF08** | **US06–US08**, **US10** |
+| 1. Documento de Visão | [Visão da demanda](Requisitos/Elicitacao/01-documento-de-visao.md) | Elaborado; a validar |
+| 2. Stakeholders | [Partes interessadas](Requisitos/Elicitacao/02-stakeholders.md) | Mapeamento inicial |
+| 3. Roteiro e resultados de entrevistas | [Roteiros e análise documental](Requisitos/Elicitacao/03-roteiros-e-resultados.md) · [Persona e entrevista simulada](Requisitos/Elicitacao/04-persona-e-entrevista-simulada.md) | **Entrevista real pendente** |
+| 4. Requisitos RF/RNF | [Especificação inicial](Requisitos/Especificacao/01-requisitos-funcionais-e-nao-funcionais.md) | Elaborada |
+| 5. Regras de negócio | [RN01–RN11](Requisitos/Especificacao/02-regras-de-negocio.md) | Propostas |
+| 6. Backlog priorizado | [US01–US12](Requisitos/Especificacao/03-backlog-priorizado.md) | MoSCoW |
+| 7. UML Casos de Uso | [Visual](diagrams/01-casos-de-uso.svg) · [Fonte](diagrams/01-casos-de-uso.puml) | Publicado |
+| 8. UML Componentes | [Visual](diagrams/02-componentes.svg) · [Fonte](diagrams/02-componentes.puml) | Publicado |
+| 9. UML Implantação | [Visual](diagrams/03-implantacao.svg) · [Fonte](diagrams/03-implantacao.puml) | Publicado |
 
-Os códigos são detalhados nos arquivos de [elicitação](documentos/03-elicitacao-entrevistas.md), [requisitos](documentos/04-requisitos.md) e [backlog](documentos/06-backlog-priorizado.md).
+**Complementos:** [SRS preliminar](Requisitos/Especificacao/04-SRS-preliminar.md) · [Glossário do domínio](Requisitos/Especificacao/05-glossario.md) · [Fontes e decisões](GestaoConfiguracao/02-fontes-e-decisoes.md).
 
-### 5.2. Limitações e validações pendentes
+**Elicitação:** a entrevista com Lívia é uma **simulação de persona**, não uma pesquisa realizada com participante real. Os **achados documentais (AD)** são distintos das **hipóteses simuladas (SIM)**.
 
-> **As entrevistas reais não foram comprovadas neste repositório.** O entregável de elicitação apresenta **roteiros para estudantes, docentes e responsáveis institucionais** e **resultados da análise documental**. Há, separadamente, um [estudo de persona e entrevista simulada com Lívia Alves Ribeiro](documentos/03b-entrevista-simulada.md), estudante fictícia de Administração com rotina de aulas e estágio. O documento apresenta **14 perguntas, respostas encenadas, jornada de uso e hipóteses SIM01–SIM09**, mas **não registra pesquisa com participante real**.
-
-Também permanecem pendentes a confirmação de responsáveis institucionais e a validação dos requisitos propostos. O material da UNIFOR especifica que as descrições dos temas **não constituem requisitos já validados**.
-
----
-
-## 6. Priorização e gestão da Sprint M1
-
-A priorização do **backlog do produto** segue a abordagem **MoSCoW**: **Must Have** (essencial), **Should Have** (importante) e **Could Have** (desejável). A Sprint M1 é dedicada **à análise e à modelagem inicial**, e não à implementação das funcionalidades.
-
-Foram cadastradas **10 issues** para acompanhar os entregáveis. Os números abaixo apontam para as tarefas reais no GitHub.
-
-| Issue | Atividade | Registro de acompanhamento |
-|---|---|---|
-| [#1](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/1) | Documento de Visão | Documento publicado |
-| [#2](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/2) | Stakeholders | Mapeamento publicado |
-| [#3](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/3) | Elicitação | **Aberta:** roteiro, análise documental e exemplo simulado publicados; falta coleta real |
-| [#4](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/4) | Requisitos | Especificação publicada |
-| [#5](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/5) | Regras de Negócio | Documento publicado |
-| [#6](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/6) | Backlog Priorizado | Backlog publicado |
-| [#7](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/7) | Diagrama de Casos de Uso | Modelo publicado |
-| [#8](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/8) | Diagrama de Componentes | Modelo publicado |
-| [#9](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/9) | Diagrama de Implantação | Modelo publicado |
-| [#10](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/10) | Evidência do professor e submissão | **Aberta:** ações externas pendentes |
-
-**Milestone M1:** a criação da milestone e a vinculação das issues **ainda precisam ser confirmadas no GitHub**. Os títulos indicam M1, mas isso **não equivale** à associação real. As dez issues desta equipe foram organizadas a partir do enunciado da P1; **não há confirmação de que reproduzam literalmente as issues disponibilizadas pela disciplina**. O professor pode comparar com os modelos oficiais.
-
-[Acessar as issues](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues) · [Acessar as milestones](https://github.com/Ruan-levi/-requisitos-20262--grupo08/milestones)
-
-**Conferência de nomenclatura:** o padrão geral informado pelo professor é `requisitos-20262--grupoX`. O nome atual do repositório tem um **hífen inicial extra**, `-requisitos-20262--grupo08`. Recomenda-se corrigir a configuração administrativa para `requisitos-20262--grupo08`, verificando os links depois da alteração. Isso não afeta os conteúdos publicados, mas pode afetar a conformidade formal.
-
-## 7. Critérios de avaliação da P1
-
-| Critério informado no enunciado | Valor | Evidências no repositório |
-|---|---:|---|
-| Clareza da visão do problema | **0,5** | Documento de Visão |
-| Qualidade da elicitação | **0,5** | Stakeholders, roteiros, achados documentais e **simulação fictícia** (**entrevistas reais pendentes**) |
-| Qualidade dos requisitos | **0,5** | RF01–RF14, RNF01–RNF09, RN01–RN11 e US01–US12 |
-| Modelagem UML | **0,5** | Casos de Uso, Componentes e Implantação |
-| **Total possível** | **2,0** | Documentação e modelos apresentados |
-
-A tabela representa **critérios do professor**, não nota recebida ou garantia de pontuação.
-
----
-
-## 8. Estrutura do repositório
+## 🗂️ Organização inspirada no repositório LAPIS
 
 ```text
--requisitos-20262--grupo08/
-├── README.md
-├── documentos/
-│   ├── 00-orientacoes-da-entrega.md
-│   ├── 01-documento-de-visao.md
-│   ├── 02-stakeholders.md
-│   ├── 03-elicitacao-entrevistas.md
-│   ├── 03b-entrevista-simulada.md
-│   ├── 04-requisitos.md
-│   ├── 05-regras-de-negocio.md
-│   ├── 06-backlog-priorizado.md
-│   ├── 07-fontes-e-decisoes.md
-│   └── 08-SRS-preliminar.md
-├── diagramas/
-│   ├── LEIA-ME.md
-│   ├── 01-casos-de-uso.puml
-│   ├── 01-casos-de-uso.svg
-│   ├── 02-componentes.puml
-│   ├── 02-componentes.svg
-│   ├── 03-implantacao.puml
-│   └── 03-implantacao.svg
-└── evidencias/
-    ├── LEIA-ME.md
-    └── registro-convite-professor.md  (contém print incorporado)
+README.md
+Requisitos/
+  README.md
+  Elicitacao/       → Visão, stakeholders, roteiros e persona
+  Especificacao/    → RF/RNF, RN, backlog, SRS e glossário
+  Artefatos/        → Referência aos templates do professor
+GestaoConfiguracao/ → Entrega P1, fontes, gestão de mudanças e sprints
+diagrams/           → Casos de Uso, Componentes e Implantação (SVG + PlantUML)
+evidencias/         → Registros e imagem do convite ao professor
+.github/            → Modelo de Pull Request para evoluções futuras
 ```
 
-## 9. Evidências e entrega no AVA
+Seguindo o [LAPIS do professor](https://github.com/marcelobezerra-dotcom/Lapis-unifor), o trabalho é organizado segundo **Análise de Viabilidade → Elicitação → Especificação → Validação**. Na P1, a elaboração inicial está documentada; **a validação com interessados ainda depende de contato real**.
 
-A atividade solicita: **(a) link deste repositório** e **(b) comprovação de que o usuário `marcelobezerra-dotcom` foi adicionado ao GitHub**.
+[Índice de Requisitos](Requisitos/README.md) · [Gestão de Configuração](GestaoConfiguracao/README.md) · [Guia UML](diagrams/README.md) · [Evidências](evidencias/LEIA-ME.md)
 
-**Pendências verificáveis antes da submissão:**
+### Visualizar os diagramas
 
-- [x] Documentos de visão, interessados, requisitos, regras e backlog publicados.
-- [x] Roteiro e resultados de **análise documental** publicados.
-- [x] Três diagramas UML em formato visual e editável publicados.
-- [x] Issues correspondentes aos entregáveis criadas no GitHub.
-- [ ] Registrar entrevistas reais, caso tenham sido realizadas pelo grupo.
-- [ ] Criar/confirmar **Milestone M1** e vincular as issues a ela.
-- [x] **Convite enviado a `marcelobezerra-dotcom`: confirmado em captura enviada pelo grupo (status `Pending Invite`, ainda não aceito).** [Registro da confirmação](evidencias/registro-convite-professor.md).
-- [x] **Comprovação visual do convite incorporada ao GitHub**, no [registro de evidência](evidencias/registro-convite-professor.md) (status **Pending Invite**).
-- [ ] **Confirmar a aceitação do convite**, pois a regra geral exige acesso efetivo do professor e alerta para possível desconto de até 50%.
-- [ ] Se solicitado arquivo PNG **versionado**, enviar a captura original como `evidencias/convite-professor.png`.
-- [ ] Enviar link do GitHub e evidência no AVA.
+<details><summary><strong>Casos de Uso</strong></summary>
 
-[Ver print incorporado e status do convite](evidencias/registro-convite-professor.md) · [Orientações de evidências](evidencias/LEIA-ME.md) · [Abrir pasta de evidências](evidencias/)
+![Casos de Uso](diagrams/01-casos-de-uso.svg)
 
-**Atenção:** o [registro do GitHub](evidencias/registro-convite-professor.md) **já contém o print visual incorporado** por uma imagem do GitHub user-attachments, mas **o convite permanece pendente de aceitação** na captura. O acesso de leitura a um repositório público não comprova a participação como colaborador.
+</details>
+<details><summary><strong>Componentes</strong></summary>
 
-## 10. Equipe
+![Componentes](diagrams/02-componentes.svg)
 
-**Grupo 08 — integrantes:**
+</details>
+<details><summary><strong>Implantação</strong></summary>
 
-- **Ruan Levi Ferreira Macedo**
-- **Lorhan Dejan Ferreira Macedo**
-- **Hiago Queiroz Barreto**
+![Implantação](diagrams/03-implantacao.svg)
 
----
+</details>
 
-*Projeto acadêmico de análise e modelagem de sistemas. Não representa uma plataforma oficial da UNIFOR nem uma implantação em produção.*
+## 🗓️ Sprints, issues e próximos passos
+
+- **[Issues #1–#10](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues):** #1–#2 e #4–#9 concluídas; **#3** (entrevista real) e **#10** (evidência/AVA) abertas.
+- **[Milestones](https://github.com/Ruan-levi/-requisitos-20262--grupo08/milestones):** M1 criada para a entrega inicial; conferir issues atribuídas.
+- **[GitHub Projects e Kanban](GestaoConfiguracao/04-guia-github-projects.md):** instruções para criar o quadro de acompanhamento indicado no LAPIS.
+- **Próximas atividades:** refinar SRS, casos de uso, controle de versões e possíveis protótipos **conforme os enunciados futuros**; não presumir novas exigências.
+
+## ✅ Antes de enviar no AVA
+
+- [x] Visão, stakeholders, RF/RNF, regras, backlog, diagramas e análise documental publicados.
+- [x] Convite ao usuário **`marcelobezerra-dotcom`** registrado em [evidência visual](evidencias/registro-convite-professor.md); captura anterior mostrava **Pending Invite**.
+- [ ] Registrar resultados de **entrevista efetivamente realizada** para atender integralmente ao item.
+- [ ] Confirmar que o professor **aceitou** o convite em `Settings → Collaborators`.
+- [ ] Verificar se todas as issues constam na M1 e, se necessário, configurar o **Project/Kanban**.
+- [ ] Conferir o nome do repositório: possui hífen inicial extra (`-requisitos-20262--grupo08`), enquanto a P1 indica `requisitos-20262--grupo08`.
+- [ ] **Enviar o link do GitHub e a comprovação solicitada no AVA**.
+
+**Critérios informados:** Visão 0,5 · Elicitação 0,5 · Requisitos 0,5 · UML 0,5 = **2,0 pontos possíveis**.
+
+**Referência de organização:** [LAPIS — Marcelo Bezerra](https://github.com/marcelobezerra-dotcom/Lapis-unifor). *Projeto acadêmico; não representa sistema oficial ou já implantado da UNIFOR.*

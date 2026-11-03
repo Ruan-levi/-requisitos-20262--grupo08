@@ -28,9 +28,9 @@
 
 D1/D2 → achados AD01–AD06 → RF01–RF14 e RNF01–RNF09 → RN01–RN11 → US01–US12 → casos de uso/componentes/implantação.
 
-A [entrevista simulada](03b-entrevista-simulada.md) contém as hipóteses **SIM01–SIM09**, mantidas **separadas** dos achados documentais e sem alegação de validação empírica.
+A [entrevista simulada](../Requisitos/Elicitacao/04-persona-e-entrevista-simulada.md) contém as hipóteses **SIM01–SIM09**, mantidas **separadas** dos achados documentais e sem alegação de validação empírica.
 
-A [elicitação](03-elicitacao-entrevistas.md) identifica os achados, e [requisitos](04-requisitos.md) e [backlog](06-backlog-priorizado.md) registram as decisões derivadas.
+A [elicitação](../Requisitos/Elicitacao/03-roteiros-e-resultados.md) identifica os achados, e [requisitos](../Requisitos/Especificacao/01-requisitos-funcionais-e-nao-funcionais.md) e [backlog](../Requisitos/Especificacao/03-backlog-priorizado.md) registram as decisões derivadas.
 
 ## 7.5 Orientação de integridade documental
 
@@ -40,6 +40,6 @@ A [elicitação](03-elicitacao-entrevistas.md) identifica os achados, e [requisi
 
 Além da P1, foram consideradas as instruções gerais do GitHub: repositório nomeado no padrão **`requisitos-20262--grupoX`**, professor `marcelobezerra-dotcom` como colaborador, histórico de commits por sprint, issues e entregáveis versionados. Os modelos de organização são os repositórios públicos [Lapis-unifor](https://github.com/marcelobezerra-dotcom/Lapis-unifor) e [Feira Livre 2026.1](https://github.com/marcelobezerra-dotcom/requisitos-projeto-feira-livre-2026-01).
 
-A **P1 exige especificamente** documento de visão, stakeholders, roteiros e resultados de entrevistas, requisitos, regras, backlog e diagramas de casos de uso, componentes e implantação. O [SRS preliminar](08-SRS-preliminar.md) foi incluído **como material complementar**, sem afirmar que SRS, pitch ou protótipo são obrigatórios nesta entrega.
+A **P1 exige especificamente** documento de visão, stakeholders, roteiros e resultados de entrevistas, requisitos, regras, backlog e diagramas de casos de uso, componentes e implantação. O [SRS preliminar](../Requisitos/Especificacao/04-SRS-preliminar.md) foi incluído **como material complementar**, sem afirmar que SRS, pitch ou protótipo são obrigatórios nesta entrega.
 
 **Conformidade pendente:** o nome atual do repositório possui um hífen inicial extra (`-requisitos-20262--grupo08`), diferente do padrão `requisitos-20262--grupo08`. A correção exige renomeação administrativa no GitHub. As issues existentes foram organizadas pelo Grupo 08 de acordo com a P1; não há confirmação de que sejam cópias literais das issues fornecidas na disciplina.

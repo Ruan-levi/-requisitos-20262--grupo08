@@ -30,7 +30,7 @@ A captura incorporada ao Markdown já permite avaliação visual; adicionar o PN
 
 ## 2. Entrevistas
 
-A pasta de documentos contém [análise documental e roteiros](../documentos/03-elicitacao-entrevistas.md) e uma [entrevista fictícia simulada](../documentos/03b-entrevista-simulada.md).
+A pasta de documentos contém [análise documental e roteiros](../Requisitos/Elicitacao/03-roteiros-e-resultados.md) e uma [entrevista fictícia simulada](../Requisitos/Elicitacao/04-persona-e-entrevista-simulada.md).
 
 **A simulação não comprova entrevista real.** Caso a equipe tenha entrevistado estudantes/docentes, deve acrescentar registro fiel com data, perfil genérico, respostas efetivamente obtidas e consentimento, sem divulgar dados pessoais desnecessários.
 

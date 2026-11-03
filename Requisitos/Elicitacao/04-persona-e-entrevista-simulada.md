@@ -132,10 +132,10 @@ Este arquivo registra **uma persona fictícia e uma entrevista encenada por escr
 
 O enunciado da P1 pede **roteiro e resultados de entrevistas**. Para apresentar resultados efetivamente coletados, a equipe precisa aplicar o roteiro a pelo menos uma pessoa real e registrar de forma fiel suas respostas, com data, perfil genérico e consentimento para uso acadêmico.
 
-O [documento principal de elicitação](03-elicitacao-entrevistas.md) já contém um roteiro para estudantes, docentes e responsáveis institucionais. As perguntas acima também podem servir de inspiração, mas não devem ser tratadas como respostas previamente obtidas.
+O [documento principal de elicitação](03-roteiros-e-resultados.md) já contém um roteiro para estudantes, docentes e responsáveis institucionais. As perguntas acima também podem servir de inspiração, mas não devem ser tratadas como respostas previamente obtidas.
 
 ## 6. Fontes
 
 - UNIFOR. *Propostas de Projetos de Sistemas — Internacionalização e ENADE*, semestre 2026.2, **Tema 4 — Portal de Internacionalização**, p. 2.
 - UNIFOR. *Projeto de Extensão — Internacionalização: Engenharia de Requisitos Aplicada ao Contexto Educacional*.
-- Grupo 08. [Documento de visão](01-documento-de-visao.md), [Stakeholders](02-stakeholders.md), [Requisitos](04-requisitos.md), [Regras de negócio](05-regras-de-negocio.md) e [Backlog priorizado](06-backlog-priorizado.md).
+- Grupo 08. [Documento de visão](01-documento-de-visao.md), [Stakeholders](02-stakeholders.md), [Requisitos](../Especificacao/01-requisitos-funcionais-e-nao-funcionais.md), [Regras de negócio](../Especificacao/02-regras-de-negocio.md) e [Backlog priorizado](../Especificacao/03-backlog-priorizado.md).

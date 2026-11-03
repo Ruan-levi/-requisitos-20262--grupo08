@@ -74,4 +74,4 @@ Este é um **documento de visão proposto pela equipe**, elaborado a partir das 
 
 **Fontes:** UNIFOR, *Propostas de Projetos de Sistemas — Internacionalização e ENADE* (2026.2, p. 2, Tema 4); UNIFOR, *Projeto de Extensão — Internacionalização*, apresentação de Requisitos e Modelagem de Sistemas.
 
-**Artefatos relacionados:** [Stakeholders](02-stakeholders.md) · [Elicitação](03-elicitacao-entrevistas.md) · [Requisitos](04-requisitos.md).
+**Artefatos relacionados:** [Stakeholders](02-stakeholders.md) · [Elicitação](03-roteiros-e-resultados.md) · [Requisitos](../Especificacao/01-requisitos-funcionais-e-nao-funcionais.md).

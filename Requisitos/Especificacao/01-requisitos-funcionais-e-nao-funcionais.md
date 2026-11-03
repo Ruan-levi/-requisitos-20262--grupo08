@@ -87,8 +87,8 @@
 | AD03 — Acessibilidade, idiomas e governança | RF07–RF14, RNF01–RNF09 |
 | AD05 — Usuários e área institucional | RF09–RF12, RF14 |
 
-**As hipóteses da [entrevista simulada](03b-entrevista-simulada.md) são identificadas como SIM01–SIM07 e não constituem validação empírica.**
+**As hipóteses da [entrevista simulada](../Elicitacao/04-persona-e-entrevista-simulada.md) são identificadas como SIM01–SIM07 e não constituem validação empírica.**
 
-Os achados estão documentados em [03-elicitacao-entrevistas.md](03-elicitacao-entrevistas.md). Consulte também [regras de negócio](05-regras-de-negocio.md) e [backlog](06-backlog-priorizado.md).
+Os achados estão documentados em [03-elicitacao-entrevistas.md](../Elicitacao/03-roteiros-e-resultados.md). Consulte também [regras de negócio](02-regras-de-negocio.md) e [backlog](03-backlog-priorizado.md).
 
 **Nota:** são requisitos acadêmicos **propostos**, não decisões oficiais aprovadas pela UNIFOR.

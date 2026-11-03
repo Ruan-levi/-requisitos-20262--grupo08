@@ -3,7 +3,7 @@
 **Tema:** Portal de Internacionalização · **Sprint:** M1  
 **Abordagens:** análise documental + roteiros de entrevistas semiestruturadas + exemplo de entrevista simulada, identificado como ficção.
 
-> **Declaração de integridade:** os resultados apresentados neste documento são **achados da análise documental**. A equipe não forneceu transcrições nem registros de entrevistas realizadas. Portanto, **não há respostas de entrevistados reais a relatar** nesta versão. Para demonstrar a técnica, existe uma **[entrevista simulada com persona fictícia](03b-entrevista-simulada.md)**, que não constitui pesquisa empírica.
+> **Declaração de integridade:** os resultados apresentados neste documento são **achados da análise documental**. A equipe não forneceu transcrições nem registros de entrevistas realizadas. Portanto, **não há respostas de entrevistados reais a relatar** nesta versão. Para demonstrar a técnica, existe uma **[entrevista simulada com persona fictícia](04-persona-e-entrevista-simulada.md)**, que não constitui pesquisa empírica.
 
 ## 3.1 Objetivo da elicitação
 
@@ -94,11 +94,11 @@ Investigar a experiência de estudantes e docentes na busca de orientações e c
 - **Risco:** sem entrevistas, pode haver divergência entre a proposta e as necessidades reais.
 - **Próximo passo:** realizar entrevistas e validar as hipóteses, registrando evidências e revisão do backlog.
 
-**Rastreabilidade:** AD01–AD06 → [Requisitos](04-requisitos.md) → [Backlog](06-backlog-priorizado.md).
+**Rastreabilidade:** AD01–AD06 → [Requisitos](../Especificacao/01-requisitos-funcionais-e-nao-funcionais.md) → [Backlog](../Especificacao/03-backlog-priorizado.md).
 
 ## 3.10. Exercício complementar: entrevista fictícia ilustrativa
 
-Para exemplificar a aplicação do roteiro a um cenário coerente com a Proposta 4, foi criado o documento separado **[03b — Entrevista simulada](03b-entrevista-simulada.md)**. A personagem **Lívia Alves Ribeiro**, estudante fictícia de Administração da UNIFOR, e suas respostas são **inteiramente inventadas** para uma conversa encenada e natural, situada na rotina universitária. A simulação serve para discussão de hipóteses sobre a busca inicial, o planejamento de mobilidade, documentação, aproveitamento de disciplinas, custos, hospedagem, acessibilidade, idiomas e verificação de fontes oficiais.
+Para exemplificar a aplicação do roteiro a um cenário coerente com a Proposta 4, foi criado o documento separado **[03b — Entrevista simulada](04-persona-e-entrevista-simulada.md)**. A personagem **Lívia Alves Ribeiro**, estudante fictícia de Administração da UNIFOR, e suas respostas são **inteiramente inventadas** para uma conversa encenada e natural, situada na rotina universitária. A simulação serve para discussão de hipóteses sobre a busca inicial, o planejamento de mobilidade, documentação, aproveitamento de disciplinas, custos, hospedagem, acessibilidade, idiomas e verificação de fontes oficiais.
 
 **Rastreabilidade acadêmica:** achados **AD** = análise documental; hipóteses **SIM01–SIM09** = simulação fictícia; achados de entrevistas reais = **não coletados**. Hipóteses SIM não validam RF/RNF, nem substituem entrevistas exigidas no enunciado.
 

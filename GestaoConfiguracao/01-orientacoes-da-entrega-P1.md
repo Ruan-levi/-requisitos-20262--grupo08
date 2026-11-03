@@ -7,19 +7,19 @@
 
 ## Documentos obrigatórios
 
-- [Documento de Visão](01-documento-de-visao.md)
-- [Identificação de Stakeholders](02-stakeholders.md)
-- [Roteiros de entrevista e resultados da análise documental](03-elicitacao-entrevistas.md)
-- [Requisitos funcionais e não funcionais](04-requisitos.md)
-- [Regras de negócio](05-regras-de-negocio.md)
-- [Backlog priorizado](06-backlog-priorizado.md)
-- [Diagramas UML — Casos de Uso, Componentes e Implantação](../diagramas/LEIA-ME.md)
+- [Documento de Visão](../Requisitos/Elicitacao/01-documento-de-visao.md)
+- [Identificação de Stakeholders](../Requisitos/Elicitacao/02-stakeholders.md)
+- [Roteiros de entrevista e resultados da análise documental](../Requisitos/Elicitacao/03-roteiros-e-resultados.md)
+- [Requisitos funcionais e não funcionais](../Requisitos/Especificacao/01-requisitos-funcionais-e-nao-funcionais.md)
+- [Regras de negócio](../Requisitos/Especificacao/02-regras-de-negocio.md)
+- [Backlog priorizado](../Requisitos/Especificacao/03-backlog-priorizado.md)
+- [Diagramas UML — Casos de Uso, Componentes e Implantação](../diagrams/README.md)
 
 ## Materiais complementares
 
-- [Entrevista fictícia **simulada**, não realizada](03b-entrevista-simulada.md)
-- [Referências, premissas e decisões de escopo](07-fontes-e-decisoes.md)
-- [Especificação de Requisitos de Software (SRS) preliminar](08-SRS-preliminar.md)
+- [Entrevista fictícia **simulada**, não realizada](../Requisitos/Elicitacao/04-persona-e-entrevista-simulada.md)
+- [Referências, premissas e decisões de escopo](02-fontes-e-decisoes.md)
+- [Especificação de Requisitos de Software (SRS) preliminar](../Requisitos/Especificacao/04-SRS-preliminar.md)
 
 ## Entrega no AVA
 

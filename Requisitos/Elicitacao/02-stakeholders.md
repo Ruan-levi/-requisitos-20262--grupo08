@@ -53,4 +53,4 @@ Esta é uma proposta de papéis para modelagem, **não uma distribuição de res
 
 UNIFOR. *Propostas de Projetos de Sistemas — Internacionalização e ENADE*, Tema 4, p. 2 (2026.2); *Projeto de Extensão — Internacionalização*, slides sobre público-alvo, objetivos e metodologia.
 
-**Relacionado:** [Roteiro e resultados da elicitação](03-elicitacao-entrevistas.md).
+**Relacionado:** [Roteiro e resultados da elicitação](03-roteiros-e-resultados.md).

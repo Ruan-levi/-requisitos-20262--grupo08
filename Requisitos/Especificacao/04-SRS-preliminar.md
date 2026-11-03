@@ -41,7 +41,7 @@ O produto é uma **proposta para sistema web responsivo**. O backend, a hospedag
 
 ## 4. Requisitos (especificação de referência)
 
-Os códigos e critérios de aceitação estão definidos integralmente em **[04-requisitos.md](04-requisitos.md)**:
+Os códigos e critérios de aceitação estão definidos integralmente em **[04-requisitos.md](01-requisitos-funcionais-e-nao-funcionais.md)**:
 
 - **RF01–RF08:** navegação, pesquisa, filtragem, orientações, fontes, contatos, idioma e revisão.
 - **RF09–RF12:** autenticação, gestão editorial e publicação.
@@ -53,7 +53,7 @@ Os códigos e critérios de aceitação estão definidos integralmente em **[04-
 
 ## 5. Regras do domínio e controle de acesso
 
-As regras **RN01–RN11** estão especificadas em **[05-regras-de-negocio.md](05-regras-de-negocio.md)**, abrangendo publicação, conteúdo obrigatório, autenticação, revisão, rastreabilidade, categorias, idiomas, fontes atuais, limitações da plataforma e administração de perfis.
+As regras **RN01–RN11** estão especificadas em **[05-regras-de-negocio.md](02-regras-de-negocio.md)**, abrangendo publicação, conteúdo obrigatório, autenticação, revisão, rastreabilidade, categorias, idiomas, fontes atuais, limitações da plataforma e administração de perfis.
 
 O sistema **não determina elegibilidade para mobilidade** nem substitui instâncias acadêmicas responsáveis pela análise de candidaturas e aproveitamento de disciplinas.
 
@@ -98,18 +98,18 @@ O sistema **não determina elegibilidade para mobilidade** nem substitui instân
 
 | Diagrama exigido | Fonte editável | Visual |
 |---|---|---|
-| Casos de Uso | [01-casos-de-uso.puml](../diagramas/01-casos-de-uso.puml) | [SVG](../diagramas/01-casos-de-uso.svg) |
-| Componentes | [02-componentes.puml](../diagramas/02-componentes.puml) | [SVG](../diagramas/02-componentes.svg) |
-| Implantação | [03-implantacao.puml](../diagramas/03-implantacao.puml) | [SVG](../diagramas/03-implantacao.svg) |
+| Casos de Uso | [01-casos-de-uso.puml](../../diagrams/01-casos-de-uso.puml) | [SVG](../../diagrams/01-casos-de-uso.svg) |
+| Componentes | [02-componentes.puml](../../diagrams/02-componentes.puml) | [SVG](../../diagrams/02-componentes.svg) |
+| Implantação | [03-implantacao.puml](../../diagrams/03-implantacao.puml) | [SVG](../../diagrams/03-implantacao.svg) |
 
 A implantação representa uma arquitetura **conceitual**, sem afirmação de deploy em produção.
 
 ## 9. Rastreabilidade e priorização
 
 **Fontes D1/D2 → achados documentais AD01–AD06 → RF/RNF → RN → histórias US01–US12 → UML.**  
-Consulte [elicitação](03-elicitacao-entrevistas.md), [backlog](06-backlog-priorizado.md) e [fontes e decisões](07-fontes-e-decisoes.md).
+Consulte [elicitação](../Elicitacao/03-roteiros-e-resultados.md), [backlog](03-backlog-priorizado.md) e [fontes e decisões](../../GestaoConfiguracao/02-fontes-e-decisoes.md).
 
-**A entrevista simulada** em [03b-entrevista-simulada.md](03b-entrevista-simulada.md) usa códigos **SIM**, que representam hipóteses fictícias e **não validam os requisitos**.
+**A entrevista simulada** em [03b-entrevista-simulada.md](../Elicitacao/04-persona-e-entrevista-simulada.md) usa códigos **SIM**, que representam hipóteses fictícias e **não validam os requisitos**.
 
 ## 10. Pendências de validação
 

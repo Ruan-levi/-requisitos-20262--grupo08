@@ -32,15 +32,15 @@ O **MVP** deve permitir que o usuário **encontre, leia e confira orientações 
 
 | Tarefa | Entregável | Situação |
 |---|---|---|
-| M1-01 — Definir visão do produto | [Documento de Visão](01-documento-de-visao.md) | Documento elaborado; validação pendente |
-| M1-02 — Identificar stakeholders | [Stakeholders](02-stakeholders.md) | Mapeamento preliminar |
-| M1-03 — Elicitar necessidades | [Elicitação e entrevistas](03-elicitacao-entrevistas.md) e [simulação fictícia](03b-entrevista-simulada.md) | Análise documental, roteiros e exercício fictício; entrevistas reais não comprovadas |
-| M1-04 — Especificar RF/RNF | [Requisitos](04-requisitos.md) | Especificação inicial |
-| M1-05 — Definir regras de negócio | [Regras](05-regras-de-negocio.md) | Regras propostas |
+| M1-01 — Definir visão do produto | [Documento de Visão](../Elicitacao/01-documento-de-visao.md) | Documento elaborado; validação pendente |
+| M1-02 — Identificar stakeholders | [Stakeholders](../Elicitacao/02-stakeholders.md) | Mapeamento preliminar |
+| M1-03 — Elicitar necessidades | [Elicitação e entrevistas](../Elicitacao/03-roteiros-e-resultados.md) e [simulação fictícia](../Elicitacao/04-persona-e-entrevista-simulada.md) | Análise documental, roteiros e exercício fictício; entrevistas reais não comprovadas |
+| M1-04 — Especificar RF/RNF | [Requisitos](01-requisitos-funcionais-e-nao-funcionais.md) | Especificação inicial |
+| M1-05 — Definir regras de negócio | [Regras](02-regras-de-negocio.md) | Regras propostas |
 | M1-06 — Priorizar backlog | Este documento | Priorização inicial |
-| M1-07 — Modelar Casos de Uso | [Diagrama de Casos de Uso](../diagramas/01-casos-de-uso.puml) | Modelo inicial |
-| M1-08 — Modelar Componentes | [Diagrama de Componentes](../diagramas/02-componentes.puml) | Modelo inicial |
-| M1-09 — Modelar Implantação | [Diagrama de Implantação](../diagramas/03-implantacao.puml) | Modelo conceitual |
+| M1-07 — Modelar Casos de Uso | [Diagrama de Casos de Uso](../../diagrams/01-casos-de-uso.puml) | Modelo inicial |
+| M1-08 — Modelar Componentes | [Diagrama de Componentes](../../diagrams/02-componentes.puml) | Modelo inicial |
+| M1-09 — Modelar Implantação | [Diagrama de Implantação](../../diagrams/03-implantacao.puml) | Modelo conceitual |
 | M1-10 — Conferir entrega | README, evidências e GitHub | Verificar convite ao professor e entrega no AVA |
 
 ## 6.4 Dependências, riscos e revisão
