@@ -66,7 +66,7 @@ Investigar a experiência de estudantes e docentes na busca de orientações e c
 |---|---|---|---|
 | AD01 | O problema principal é melhorar a busca de informações e serviços por estudantes e docentes. | D1, Tema 4, p. 2 | RF01–RF03 |
 | AD02 | As orientações abrangem intercâmbio, dupla titulação, vistos, documentação, aproveitamento, despesas, hospedagem e contatos. | D1, Tema 4, p. 2 | RF04–RF06 |
-| AD03 | Acessibilidade, organização da informação, versões multilíngues e governança devem ser investigadas. | D1, Tema 4, p. 2 | RF07–RF12 e RNF01–RNF08 |
+| AD03 | Acessibilidade, organização da informação, versões multilíngues e governança devem ser investigadas. | D1, Tema 4, p. 2 | RF07–RF12, RF14 e RNF01–RNF08 |
 | AD04 | A metodologia prevê entrevistas com estudantes e equipe institucional e análise documental. | D2, slides 3 e 6 | Plano de entrevistas e validação |
 | AD05 | O material de extensão inclui interesses de estudantes e gestão institucional. | D2, slides 4 e 7 | Separação de acesso público e editorial |
 | AD06 | As propostas não constituem requisitos validados. | D1, pp. 1 e 3 | Marcar decisões como propostas, nunca normas oficiais |
