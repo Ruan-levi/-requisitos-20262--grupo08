@@ -1,0 +1,31 @@
+@startuml
+title Portal de Internacionalização — Diagrama UML de Implantação (proposta)
+skinparam shadowing false
+left to right direction
+
+node "Dispositivo do usuário" <<device>> as Dispositivo {
+  artifact "Navegador" as Browser
+}
+node "Hospedagem web" <<node>> as Host {
+  artifact "Interface web" as Front
+}
+node "Servidor de aplicação" <<node>> as Server {
+  artifact "API de orientações" as API
+  artifact "Autenticação e gestão editorial" as Auth
+}
+node "Servidor de dados" <<node>> as Data {
+  database "Banco de dados" as DB
+}
+
+Browser --> Front : HTTPS
+Front --> API : HTTPS
+Front --> Auth : HTTPS
+API --> DB : conexão restrita e segura
+Auth --> DB : conexão restrita e segura
+
+note bottom of Server
+  Arquitetura lógica/proposta.
+  Provedor e infraestrutura ainda
+  não definidos na Sprint M1.
+end note
+@enduml
