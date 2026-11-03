@@ -16,16 +16,8 @@ Na captura da página **Settings → Collaborators and teams**, encaminhada pelo
 - Outro convite pendente exibido é para `hqueiroz673`; o colaborador com acesso é `lorhandejan7`.
 
 ## Comprovação visual
+<img width="1907" height="977" alt="image" src="https://github.com/user-attachments/assets/68665711-d8bf-4189-b9bd-8dafdbc79b06" />
 
-**O arquivo original da captura de tela não está anexado a este repositório nesta etapa.** A captura foi fornecida no ChatGPT e analisada; este registro é uma descrição fiel das informações visíveis, **não substitui o print** caso o professor exija a imagem.
-
-**Como anexar a captura original em GitHub:**
-
-1. Abrir a pasta [evidencias/](./) no GitHub.
-2. Selecionar **Add file → Upload files**.
-3. Enviar a imagem original com o nome **`convite-professor.png`** (sem edições que alterem o status).
-4. Confirmar com **Commit changes**.
-5. Conferir a imagem e enviar o link do repositório, com a evidência, no AVA.
 
 ## Interpretação correta
 
