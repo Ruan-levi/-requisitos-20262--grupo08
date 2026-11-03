@@ -16,6 +16,7 @@
 | RN08 | Informações sobre custos, prazos, vistos e elegibilidade deverão indicar fonte vigente, evitando garantias automáticas. | RF04–RF06 |
 | RN09 | O portal não poderá aprovar inscrições nem modificar históricos acadêmicos. | Escopo |
 | RN10 | Alterações substanciais em informação já publicada deverão passar por nova revisão antes de substituir o conteúdo público. | RF10–RF12 |
+| RN11 | Somente administradores autorizados poderão conceder, alterar ou revogar perfis de acesso editorial, mantendo registro da operação. | RF14, RNF03, RNF07 |
 
 ## 5.1 Papéis e permissões propostos
 
