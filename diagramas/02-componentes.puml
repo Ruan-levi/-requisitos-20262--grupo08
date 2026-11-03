@@ -1,0 +1,36 @@
+@startuml
+title Portal de Internacionalização — Diagrama UML de Componentes
+left to right direction
+skinparam shadowing false
+skinparam componentStyle uml2
+
+package "Portal Web" {
+  [Interface pública] as UI
+  [Painel administrativo] as AdminUI
+}
+package "Serviços da aplicação" {
+  [API de conteúdo] as API
+  [Serviço de pesquisa] as Busca
+  [Gestão editorial] as Editorial
+  [Autenticação e autorização] as Auth
+}
+database "Banco de dados\nOrientações, categorias, usuários e revisões" as DB
+cloud "Fontes institucionais\n(links oficiais)" as Fonte
+
+UI --> API : consultas
+UI --> Busca : pesquisas e filtros
+UI --> Fonte : links
+AdminUI --> Auth : login e permissões
+AdminUI --> Editorial : criação e revisão
+Editorial --> Auth : verifica permissões
+Editorial --> API : publicar conteúdos
+API --> DB : consulta e atualização
+Busca --> DB : consulta apenas publicados
+Editorial --> DB : rascunhos e revisões
+Auth --> DB : identidades e perfis
+
+note bottom of DB
+  Modelagem conceitual da Sprint M1.
+  Não representa sistema já implantado.
+end note
+@enduml
