@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#07345e" />
+    <meta name="description" content="Protótipo acadêmico do Portal de Internacionalização da UNIFOR — Grupo 08. Consulte orientações e explore possibilidades de mobilidade acadêmica." />
+    <title>Portal de Internacionalização | Protótipo — Grupo 08</title>
+    <link rel="icon" href="./assets/icone.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="7"/><path d="m16 16 5 5"/></symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+      <symbol id="icon-arrow-up-right" viewBox="0 0 24 24"><path d="M6 18 18 6M8 6h10v10"/></symbol>
+      <symbol id="icon-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-3 3-4 6-4 9s1 6 4 9m0-18c3 3 4 6 4 9s-1 6-4 9"/></symbol>
+      <symbol id="icon-plane" viewBox="0 0 24 24"><path d="m21 3-7.5 18-2.7-7.8L3 10.5 21 3Z"/><path d="m10.8 13.2 4.5-4.5"/></symbol>
+      <symbol id="icon-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v17H6.5A2.5 2.5 0 0 1 4 17.5Zm0 12A2.5 2.5 0 0 1 6.5 15H20M8 8h8"/></symbol>
+      <symbol id="icon-file" viewBox="0 0 24 24"><path d="M6 2.5h8l5 5v14H6V2.5Z"/><path d="M14 2.5v5h5M9 12h7m-7 4h7"/></symbol>
+      <symbol id="icon-graduation" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5L2 9Zm4 3v5c3.5 3.5 8.5 3.5 12 0v-5M22 9v6"/></symbol>
+      <symbol id="icon-wallet" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="15" rx="3"/><path d="M3 9h18M16 14h2"/></symbol>
+      <symbol id="icon-message" viewBox="0 0 24 24"><path d="M20 11.5A8.5 8.5 0 0 1 11.5 20H4l2-4A8.5 8.5 0 1 1 20 11.5Z"/><path d="M8 11.5h8m-8 3h5"/></symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+      <symbol id="icon-shield" viewBox="0 0 24 24"><path d="m12 2 8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+      <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19"/></symbol>
+      <symbol id="icon-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 10v6m0-9h.01"/></symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="icon-users" viewBox="0 0 24 24"><circle cx="9" cy="9" r="3"/><path d="M3 19v-2a6 6 0 0 1 12 0v2M17 6a3 3 0 0 1 0 6m1 2a5 5 0 0 1 3 5"/></symbol>
+      <symbol id="icon-lightbulb" viewBox="0 0 24 24"><path d="M9 18h6m-5 3h4M8 15a7 7 0 1 1 8 0c-.8.7-1 1.3-1 3H9c0-1.7-.2-2.3-1-3Z"/></symbol>
+    </svg>
+
+    <div class="top-strip">
+      <div class="container top-strip__inner">
+        <span class="top-strip__notice"><span class="tiny-dot"></span><span data-i18n="prototypeTop">Protótipo acadêmico · UNIFOR · Grupo 08</span></span>
+        <a href="https://unifor.br/dri/inicial" rel="noopener noreferrer" target="_blank"><span data-i18n="officialSite">Conheça a DRI oficial</span><svg class="icon icon--tiny"><use href="#icon-arrow-up-right" /></svg></a>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="#inicio" aria-label="Portal de Internacionalização — início">
+          <span class="brand__symbol" aria-hidden="true"><svg class="icon"><use href="#icon-globe" /></svg></span>
+          <span class="brand__text"><strong>internacionaliza<span class="brand__dot">.</span></strong><small>UNIFOR · GRUPO 08</small></span>
+        </a>
+        <nav class="main-nav" id="menu-principal" aria-label="Navegação principal">
+          <a href="#inicio" class="nav-active" data-i18n="navHome">Início</a>
+          <a href="#categorias" data-i18n="navTopics">Temas</a>
+          <a href="#explorar" data-i18n="navGuides">Orientações</a>
+          <a href="#como-funciona" data-i18n="navHow">Como funciona</a>
+          <a href="#contatos" data-i18n="navContact">Contatos</a>
+        </nav>
+        <div class="header-actions">
+          <button type="button" class="header-action font-control" id="fontButton" aria-label="Aumentar tamanho do texto" aria-pressed="false" title="Aumentar texto">A<span aria-hidden="true">+</span></button>
+          <button type="button" class="header-action locale-control" id="localeButton" aria-label="Switch to English" title="Alterar idioma">EN</button>
+          <a class="header-cta" href="#explorar"><span data-i18n="navExplore">Explorar portal</span><svg class="icon icon--small"><use href="#icon-arrow" /></svg></a>
+          <button type="button" class="mobile-menu-toggle" id="menuButton" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu"><svg class="icon"><use href="#icon-menu" /></svg></button>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero__ambient hero__ambient--one"></div>
+        <div class="hero__ambient hero__ambient--two"></div>
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <div class="eyebrow eyebrow--light"><span class="eyebrow__line"></span><span data-i18n="heroEyebrow">INTERNACIONALIZAÇÃO SEM COMPLICAÇÃO</span></div>
+            <h1 id="hero-title"><span data-i18n="heroTitle1">O mundo está</span> <span class="hero__highlight" data-i18n="heroTitle2">mais perto</span><span class="hero__title-last" data-i18n="heroTitle3">do que você imagina.</span></h1>
+            <p class="hero__lead" data-i18n="heroLead">Encontre informações sobre intercâmbio, dupla titulação, documentos e tudo o que você precisa entender antes de dar o próximo passo.</p>
+            <form class="hero-search" id="heroSearchForm" role="search">
+              <svg class="icon"><use href="#icon-search" /></svg>
+              <label class="sr-only" for="heroSearchInput" data-i18n="searchLabel">Pesquisar orientações</label>
+              <input type="search" id="heroSearchInput" autocomplete="off" placeholder="O que você procura? Ex.: intercâmbio" data-i18n-placeholder="heroPlaceholder" />
+              <button type="submit" data-i18n="heroSearch">Pesquisar <svg class="icon icon--small"><use href="#icon-arrow" /></svg></button>
+            </form>
+            <div class="hero__suggestions"><span data-i18n="popularSearches">Buscas populares:</span><button type="button" data-search="intercâmbio" data-search-en="exchange" data-i18n="suggestExchange">Intercâmbio</button><button type="button" data-search="documentos" data-search-en="documents" data-i18n="suggestDocs">Documentos</button><button type="button" data-search="dupla titulação" data-search-en="dual degree" data-i18n="suggestDegree">Dupla titulação</button></div>
+          </div>
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero__image-halo"></div>
+            <img class="hero__illustration" src="./assets/conexoes-globais.svg" alt="" loading="eager" />
+            <div class="hero__floating hero__floating--top"><span class="floating-icon"><svg class="icon"><use href="#icon-plane" /></svg></span><span><strong>Novos caminhos</strong><small>Experiências além-fronteiras</small></span></div>
+            <div class="hero__floating hero__floating--bottom"><span class="floating-signal"></span><span><strong>Informações em um só lugar</strong><small>Explore. Entenda. Planeje.</small></span></div>
+          </div>
+        </div>
+        <div class="hero__bottom-line"></div>
+      </section>
+
+      <section class="audience-band" aria-label="Navegação por público">
+        <div class="container audience-band__inner">
+          <div class="audience-band__label"><svg class="icon"><use href="#icon-users" /></svg><span data-i18n="audienceLabel">Este espaço é para você que é...</span></div>
+          <div class="audience-band__links">
+            <button type="button" data-audience-jump="estudante"><span data-i18n="audienceStudent">Estudante da UNIFOR</span><svg class="icon icon--small"><use href="#icon-arrow" /></svg></button>
+            <button type="button" data-audience-jump="docente"><span data-i18n="audienceTeacher">Docente</span><svg class="icon icon--small"><use href="#icon-arrow" /></svg></button>
+            <button type="button" data-audience-jump="internacional"><span data-i18n="audienceInternational">Estudante internacional</span><svg class="icon icon--small"><use href="#icon-arrow" /></svg></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--topics" id="categorias" aria-labelledby="topics-title">
+        <div class="container">
+          <div class="section-heading">
+            <div><div class="eyebrow"><span class="eyebrow__line"></span><span data-i18n="topicsEyebrow">EXPLORE POR INTERESSE</span></div><h2 id="topics-title" data-i18n="topicsTitle">Tudo começa com uma boa orientação.</h2><p data-i18n="topicsDescription">Os principais assuntos da internacionalização, organizados para você encontrar o que procura com menos etapas.</p></div>
+            <a class="text-link" href="#explorar"><span data-i18n="topicsAll">Ver todas as orientações</span><svg class="icon icon--small"><use href="#icon-arrow-up-right" /></svg></a>
+          </div>
+          <div class="topics-grid" id="topicsGrid">
+            <button type="button" class="topic-card topic-card--blue" data-topic-jump="mobilidade"><span class="topic-card__icon"><svg class="icon"><use href="#icon-plane" /></svg></span><span class="topic-card__body"><strong data-i18n="topicMobility">Intercâmbio e mobilidade</strong><small data-i18n="topicMobilityDesc">Explore possibilidades de estudar e ensinar fora.</small></span><span class="topic-card__arrow"><svg class="icon"><use href="#icon-arrow-up-right" /></svg></span></button>
+            <button type="button" class="topic-card topic-card--mint" data-topic-jump="titulacao"><span class="topic-card__icon"><svg class="icon"><use href="#icon-graduation" /></svg></span><span class="topic-card__body"><strong data-i18n="topicDegree">Dupla titulação</strong><small data-i18n="topicDegreeDesc">Entenda conceitos e caminhos acadêmicos.</small></span><span class="topic-card__arrow"><svg class="icon"><use href="#icon-arrow-up-right" /></svg></span></button>
+            <button type="button" class="topic-card topic-card--gold" data-topic-jump="documentos"><span class="topic-card__icon"><svg class="icon"><use href="#icon-file" /></svg></span><span class="topic-card__body"><strong data-i18n="topicDocuments">Documentos e vistos</strong><small data-i18n="topicDocumentsDesc">Saiba o que consultar antes de viajar.</small></span><span class="topic-card__arrow"><svg class="icon"><use href="#icon-arrow-up-right" /></svg></span></button>
+            <button type="button" class="topic-card topic-card--lavender" data-topic-jump="academico"><span class="topic-card__icon"><svg class="icon"><use href="#icon-book" /></svg></span><span class="topic-card__body"><strong data-i18n="topicAcademic">Vida acadêmica</strong><small data-i18n="topicAcademicDesc">Disciplinas, créditos e cooperação acadêmica.</small></span><span class="topic-card__arrow"><svg class="icon"><use href="#icon-arrow-up-right" /></svg></span></button>
+            <button type="button" class="topic-card topic-card--coral" data-topic-jump="planejamento"><span class="topic-card__icon"><svg class="icon"><use href="#icon-wallet" /></svg></span><span class="topic-card__body"><strong data-i18n="topicPlanning">Custos e hospedagem</strong><small data-i18n="topicPlanningDesc">Organize suas perguntas sobre planejamento.</small></span><span class="topic-card__arrow"><svg class="icon"><use href="#icon-arrow-up-right" /></svg></span></button>
+            <button type="button" class="topic-card topic-card--sky" data-topic-jump="apoio"><span class="topic-card__icon"><svg class="icon"><use href="#icon-message" /></svg></span><span class="topic-card__body"><strong data-i18n="topicSupport">Apoio e contatos</strong><small data-i18n="topicSupportDesc">Saiba onde confirmar suas dúvidas.</small></span><span class="topic-card__arrow"><svg class="icon"><use href="#icon-arrow-up-right" /></svg></span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--explore" id="explorar" aria-labelledby="explore-title">
+        <div class="container">
+          <div class="section-heading section-heading--compact"><div><div class="eyebrow"><span class="eyebrow__line"></span><span data-i18n="exploreEyebrow">CENTRAL DE ORIENTAÇÕES</span></div><h2 id="explore-title" data-i18n="exploreTitle">Encontre respostas para começar.</h2><p data-i18n="exploreDescription">Explore conteúdos demonstrativos, filtre por público ou pesquise um assunto.</p></div><span class="demo-pill"><svg class="icon icon--tiny"><use href="#icon-info" /></svg><span data-i18n="demoBadge">Conteúdo demonstrativo</span></span></div>
+          <div class="explore-panel">
+            <div class="filter-bar">
+              <label class="filter-search"><svg class="icon"><use href="#icon-search" /></svg><span class="sr-only" data-i18n="searchGuides">Pesquisar nas orientações</span><input id="guideSearch" type="search" placeholder="Busque por assunto, palavra-chave..." data-i18n-placeholder="guidePlaceholder" /></label>
+              <label class="filter-select"><span class="sr-only" data-i18n="filterByTopic">Filtrar por assunto</span><select id="topicFilter"><option value="all" data-i18n="filterAllTopics">Todos os assuntos</option><option value="mobilidade" data-i18n="topicMobility">Intercâmbio e mobilidade</option><option value="titulacao" data-i18n="topicDegree">Dupla titulação</option><option value="documentos" data-i18n="topicDocuments">Documentos e vistos</option><option value="academico" data-i18n="topicAcademic">Vida acadêmica</option><option value="planejamento" data-i18n="topicPlanning">Custos e hospedagem</option><option value="apoio" data-i18n="topicSupport">Apoio e contatos</option></select></label>
+            </div>
+            <div class="audience-filters" role="group" aria-label="Filtrar por público"><button type="button" class="filter-chip is-active" data-audience-filter="todos" aria-pressed="true" data-i18n="filterEveryone">Todos os públicos</button><button type="button" class="filter-chip" data-audience-filter="estudante" aria-pressed="false" data-i18n="filterStudents">Estudantes</button><button type="button" class="filter-chip" data-audience-filter="docente" aria-pressed="false" data-i18n="filterTeachers">Docentes</button><button type="button" class="filter-chip" data-audience-filter="internacional" aria-pressed="false" data-i18n="filterInternationals">Internacionais</button></div>
+            <div class="results-toolbar"><p id="resultsCount" role="status" aria-live="polite"></p><button id="clearFilters" type="button" class="clear-filters" data-i18n="clearFilters">Limpar filtros ×</button></div>
+            <div class="guides-grid" id="guidesGrid"></div>
+            <div id="emptyState" class="empty-state" hidden><span class="empty-state__icon"><svg class="icon"><use href="#icon-search" /></svg></span><h3 data-i18n="emptyTitle">Nenhuma orientação encontrada.</h3><p data-i18n="emptyDescription">Tente outra palavra-chave ou remova algum filtro.</p><button id="clearEmpty" type="button" class="btn btn--outline" data-i18n="emptyReset">Mostrar todas as orientações</button></div>
+          </div>
+          <p class="section-disclaimer"><svg class="icon icon--small"><use href="#icon-info" /></svg><span data-i18n="contentDisclaimer">As orientações desta demonstração são ilustrativas. Para regras, documentos e prazos vigentes, consulte os canais oficiais da DRI.</span></p>
+        </div>
+      </section>
+
+      <section class="section section--journey" id="como-funciona" aria-labelledby="journey-title">
+        <div class="container journey-layout"><div class="journey-intro"><div class="eyebrow"><span class="eyebrow__line"></span><span data-i18n="howEyebrow">SIMPLES, DO INÍCIO AO FIM</span></div><h2 id="journey-title" data-i18n="howTitle">O seu primeiro passo, com mais clareza.</h2><p data-i18n="howDescription">Nosso projeto foi pensado para diminuir dúvidas durante a busca de informações. É uma ferramenta de consulta, não de inscrição ou aprovação.</p><a href="#explorar" class="btn btn--navy"><span data-i18n="howCta">Começar a explorar</span><svg class="icon icon--small"><use href="#icon-arrow" /></svg></a></div><div class="journey-steps"><div class="journey-step"><span>01</span><div><h3 data-i18n="step1Title">Escolha o seu assunto</h3><p data-i18n="step1Description">Navegue pelas categorias ou pesquise diretamente o que precisa entender.</p></div></div><div class="journey-step"><span>02</span><div><h3 data-i18n="step2Title">Leia a orientação</h3><p data-i18n="step2Description">Organize suas dúvidas sobre procedimentos, documentos e próximos passos.</p></div></div><div class="journey-step"><span>03</span><div><h3 data-i18n="step3Title">Confirme na fonte oficial</h3><p data-i18n="step3Description">Verifique editais atualizados e procure o setor institucional responsável.</p></div></div></div></div>
+      </section>
+
+      <section class="section section--editorial" id="gestao" aria-labelledby="editorial-title">
+        <div class="container editorial-layout"><div class="editorial-card"><span class="editorial-card__eyebrow" data-i18n="editorialCardEyebrow">DEMONSTRAÇÃO DE FLUXO</span><div class="editorial-card__header"><span class="editorial-card__icon"><svg class="icon"><use href="#icon-file" /></svg></span><span class="editorial-card__status" id="editorStatus" aria-live="polite">Rascunho</span></div><h3 data-i18n="editorialSample">Orientação sobre documentos de viagem</h3><p data-i18n="editorialSampleDescription">Exemplo fictício para demonstrar a revisão de informações antes da publicação.</p><div class="editorial-progress" aria-hidden="true"><span class="is-complete" id="stage1"></span><span id="stage2"></span><span id="stage3"></span></div><div class="editorial-card__actions"><button type="button" id="advanceStage" class="btn btn--white" data-i18n="editorialAdvance">Enviar para revisão <svg class="icon icon--small"><use href="#icon-arrow" /></svg></button><button type="button" class="link-button" id="resetStage" data-i18n="editorialReset">Reiniciar</button></div><small data-i18n="editorialWarning">Simulação local no navegador: não altera conteúdos reais e não possui login.</small></div><div class="editorial-copy"><div class="eyebrow"><span class="eyebrow__line"></span><span data-i18n="editorialEyebrow">INFORMAÇÃO CONFIÁVEL</span></div><h2 id="editorial-title" data-i18n="editorialTitle">Informação bem cuidada também faz parte da experiência.</h2><p data-i18n="editorialDescription">Além de facilitar a consulta, o projeto prevê uma área restrita para editores e publicadores responsáveis por revisar informações antes que elas apareçam ao público.</p><ul class="check-list"><li><svg class="icon"><use href="#icon-check" /></svg><span data-i18n="editorialPoint1">Rascunhos não aparecem na consulta pública.</span></li><li><svg class="icon"><use href="#icon-check" /></svg><span data-i18n="editorialPoint2">Aprovação por responsáveis autorizados.</span></li><li><svg class="icon"><use href="#icon-check" /></svg><span data-i18n="editorialPoint3">Fontes e datas de revisão identificáveis.</span></li></ul><p class="small-note"><svg class="icon icon--small"><use href="#icon-shield" /></svg><span data-i18n="editorialLimit">Autenticação real e publicação segura dependem de um backend, fora do escopo deste protótipo estático.</span></p></div></div>
+      </section>
+
+      <section class="section section--faq" id="duvidas" aria-labelledby="faq-title"><div class="container faq-layout"><div><div class="eyebrow"><span class="eyebrow__line"></span><span data-i18n="faqEyebrow">PERGUNTAS FREQUENTES</span></div><h2 id="faq-title" data-i18n="faqTitle">Dúvidas que merecem respostas claras.</h2><p data-i18n="faqDescription">Orientações iniciais para você saber o que verificar antes de avançar.</p><div class="faq-accent"><svg class="icon"><use href="#icon-lightbulb" /></svg><span data-i18n="faqTip">Dica: sempre confirme requisitos e prazos em editais e canais oficiais.</span></div></div><div class="faq-list"><details><summary data-i18n="faqQ1">O portal faz inscrições para intercâmbio?</summary><p data-i18n="faqA1">Não. Este protótipo organiza informações para consulta. Inscrições e seleções seguem procedimentos e canais oficiais informados pela universidade.</p></details><details><summary data-i18n="faqQ2">Como saber quais documentos são exigidos?</summary><p data-i18n="faqA2">A documentação depende da modalidade, do destino e das regras vigentes. Use este portal para localizar o assunto e confira o edital ou setor responsável antes de tomar decisões.</p></details><details><summary data-i18n="faqQ3">Posso consultar as orientações sem cadastro?</summary><p data-i18n="faqA3">Sim, na proposta a consulta pública não exige conta. A autenticação é prevista apenas para quem administra e publica conteúdos.</p></details><details><summary data-i18n="faqQ4">Estas orientações já são oficiais da UNIFOR?</summary><p data-i18n="faqA4">Não. Trata-se de uma demonstração acadêmica do Grupo 08. O portal não representa um sistema institucional implantado, e os conteúdos de exemplo não substituem fontes oficiais.</p></details></div></div></section>
+
+      <section class="contact-section" id="contatos" aria-labelledby="contact-title"><div class="container contact-section__inner"><div class="contact-section__orb" aria-hidden="true"><svg class="icon"><use href="#icon-globe" /></svg></div><div><div class="eyebrow eyebrow--light"><span class="eyebrow__line"></span><span data-i18n="contactEyebrow">PRECISA DE INFORMAÇÕES OFICIAIS?</span></div><h2 id="contact-title" data-i18n="contactTitle">O seu próximo passo é falar com a DRI.</h2><p data-i18n="contactDescription">Para orientações vigentes, editais e atendimento institucional, consulte o site oficial da Diretoria de Relações Internacionais da UNIFOR.</p></div><a class="btn btn--white contact-section__button" href="https://unifor.br/dri/contatos" target="_blank" rel="noopener noreferrer"><span data-i18n="contactButton">Acessar contatos oficiais</span><svg class="icon icon--small"><use href="#icon-arrow-up-right" /></svg></a></div></section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-main"><div class="footer-brand"><a class="brand brand--footer" href="#inicio"><span class="brand__symbol"><svg class="icon"><use href="#icon-globe" /></svg></span><span class="brand__text"><strong>internacionaliza<span class="brand__dot">.</span></strong><small>UNIFOR · GRUPO 08</small></span></a><p data-i18n="footerDescription">Protótipo acadêmico de um portal de consulta sobre internacionalização. Desenvolvido como parte da disciplina de Requisitos e Modelagem de Sistemas.</p></div><div class="footer-links"><strong data-i18n="footerNavigate">Navegue</strong><a href="#categorias" data-i18n="navTopics">Temas</a><a href="#explorar" data-i18n="navGuides">Orientações</a><a href="#duvidas" data-i18n="footerFaq">Dúvidas frequentes</a></div><div class="footer-links"><strong data-i18n="footerReferences">Referências</strong><a href="https://unifor.br/dri/inicial" target="_blank" rel="noopener noreferrer">DRI — UNIFOR <svg class="icon icon--tiny"><use href="#icon-arrow-up-right" /></svg></a><a href="https://github.com/Ruan-levi/-requisitos-20262--grupo08" target="_blank" rel="noopener noreferrer"><span data-i18n="footerRepository">Repositório do projeto</span><svg class="icon icon--tiny"><use href="#icon-arrow-up-right" /></svg></a></div></div><div class="container footer-bottom"><span>© 2026 · Grupo 08 · <span data-i18n="footerSchool">Projeto de Requisitos e Modelagem de Sistemas</span></span><span class="footer-disclaimer" data-i18n="footerDisclaimer">Projeto independente, não oficial e sem coleta de dados pessoais.</span></div></footer>
+
+    <dialog id="guideDialog" class="guide-dialog" aria-labelledby="dialogTitle"><div class="guide-dialog__body"><button class="dialog-close" id="closeDialog" type="button" aria-label="Fechar orientação"><svg class="icon"><use href="#icon-close" /></svg></button><span class="dialog-kicker" id="dialogCategory"></span><h2 id="dialogTitle"></h2><p id="dialogDescription" class="dialog-intro"></p><h3 id="dialogStepsTitle" data-i18n="dialogStepsTitle">Por onde começar</h3><ol id="dialogSteps"></ol><p class="dialog-notice"><svg class="icon icon--small"><use href="#icon-info" /></svg><span data-i18n="dialogNotice">Orientação ilustrativa. Confirme procedimentos e prazos nas fontes oficiais.</span></p><a href="https://unifor.br/dri/inicial" class="btn btn--navy" id="dialogOfficialLink" target="_blank" rel="noopener noreferrer"><span data-i18n="dialogOfficial">Consultar DRI oficial</span><svg class="icon icon--small"><use href="#icon-arrow-up-right" /></svg></a></div></dialog>
+  </body>
+</html>

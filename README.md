@@ -88,3 +88,11 @@ Seguindo o [LAPIS do professor](https://github.com/marcelobezerra-dotcom/Lapis-u
 **Critérios informados:** Visão 0,5 · Elicitação 0,5 · Requisitos 0,5 · UML 0,5 = **2,0 pontos possíveis**.
 
 **Referência de organização:** [LAPIS — Marcelo Bezerra](https://github.com/marcelobezerra-dotcom/Lapis-unifor). *Projeto acadêmico; não representa sistema oficial ou já implantado da UNIFOR.*
+
+## 🌐 Protótipo navegável do Portal de Internacionalização
+
+O projeto também possui um **[protótipo interativo em HTML, CSS e JavaScript](prototipo/README.md)**, organizado separadamente na pasta [`prototipo/`](prototipo/).
+
+- **Demonstração:** pesquisa de orientações, filtros por assunto/público, página de detalhes, interface em português/inglês, ajuste de texto e simulação de revisão editorial.
+- **Publicação:** workflow [Publicar protótipo](.github/workflows/publicar-prototipo.yml) no GitHub Pages, usando somente a pasta `prototipo/`. Para ativar a primeira publicação, conferir **Settings → Pages → Source: GitHub Actions**.
+- **Limites:** conteúdo didático, sem autenticação, inscrições ou dados reais. O protótipo **não é um serviço institucional da UNIFOR**.
