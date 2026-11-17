@@ -5,7 +5,7 @@ Inspirado na [organização de Requisitos do LAPIS](https://github.com/marcelobe
 | Etapa | Entregáveis do projeto |
 |---|---|
 | **Análise de viabilidade (inicial)** | [Visão da demanda](Elicitacao/01-documento-de-visao.md) e [fontes/premissas](../GestaoConfiguracao/02-fontes-e-decisoes.md) |
-| **Elicitação** | [Visão](Elicitacao/01-documento-de-visao.md), [stakeholders](Elicitacao/02-stakeholders.md), [roteiro e resultados documentais](Elicitacao/03-roteiros-e-resultados.md), [persona simulada](Elicitacao/04-persona-e-entrevista-simulada.md) |
+| **Elicitação** | [Visão](Elicitacao/01-documento-de-visao.md), [stakeholders](Elicitacao/02-stakeholders.md), [roteiro e resultados documentais](Elicitacao/03-roteiros-e-resultados.md), [persona simulada](Elicitacao/04-persona-e-entrevista-simulada.md), [necessidades dos usuários](Elicitacao/05-necessidades-dos-usuarios.md) |
 | **Especificação** | [RF/RNF](Especificacao/01-requisitos-funcionais-e-nao-funcionais.md), [RN](Especificacao/02-regras-de-negocio.md), [backlog](Especificacao/03-backlog-priorizado.md), [SRS](Especificacao/04-SRS-preliminar.md) |
 | **Vocabulário** | [Glossário](Especificacao/05-glossario.md) |
 | **Modelagem** | [UML](../diagrams/README.md) |
