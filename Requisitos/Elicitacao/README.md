@@ -4,6 +4,7 @@
 2. [Stakeholders](02-stakeholders.md) — públicos e responsabilidades propostas.
 3. [Roteiros e resultados](03-roteiros-e-resultados.md) — perguntas e achados **de análise documental**.
 4. [Persona e entrevista simulada](04-persona-e-entrevista-simulada.md) — exercício didático com respostas **inventadas**, não pesquisa de campo.
+5. [Necessidades dos usuários](05-necessidades-dos-usuarios.md) — justificativa do portal, públicos beneficiados, matriz NU01–NU13, cenários de uso e pontos para validação.
 
 **Situação:** os documentos da disciplina foram analisados. A entrevista real e a validação com estudantes, docentes ou responsáveis institucionais permanecem pendentes ([issue #3](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/3)).
 
