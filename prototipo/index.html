@@ -49,9 +49,9 @@
         </a>
         <nav class="main-nav" id="menu-principal" aria-label="Navegação principal">
           <a href="#inicio" class="nav-active" data-i18n="navHome">Início</a>
-          <a href="#categorias" data-i18n="navTopics">Temas</a>
+          <a href="#universidades" data-i18n="navUniversities">Universidades</a>
           <a href="#explorar" data-i18n="navGuides">Orientações</a>
-          <a href="#como-funciona" data-i18n="navHow">Como funciona</a>
+          <a href="#fontes-oficiais" data-i18n="navSources">Fontes oficiais</a>
           <a href="#contatos" data-i18n="navContact">Contatos</a>
         </nav>
         <div class="header-actions">
@@ -101,6 +101,21 @@
         </div>
       </section>
 
+      <section class="official-hub" id="fontes-oficiais" aria-labelledby="official-hub-title">
+        <div class="container">
+          <div class="official-hub__heading">
+            <div><div class="eyebrow"><span class="eyebrow__line"></span><span data-i18n="hubEyebrow">ACESSOS DIRETOS · UNIFOR</span></div><h2 id="official-hub-title" data-i18n="hubTitle">A informação certa, na fonte certa.</h2><p data-i18n="hubDescription">Cada assunto leva à página ou ao documento institucional correspondente — sem precisar recomeçar a navegação.</p></div>
+            <span class="official-hub__verified"><svg class="icon icon--small"><use href="#icon-shield" /></svg><span data-i18n="hubNotice">Fontes institucionais pesquisadas em novembro de 2026</span></span>
+          </div>
+          <div class="official-hub__grid">
+            <a class="official-tile" href="https://unifor.br/dri/convenios" target="_blank" rel="noopener noreferrer"><span class="official-tile__icon official-tile__icon--blue"><svg class="icon"><use href="#icon-globe" /></svg></span><strong data-i18n="hubUniversities">Universidades e convênios</strong><small data-i18n="hubUniversitiesDesc">Entenda as parcerias internacionais da Unifor.</small><span class="official-tile__link"><span data-i18n="hubGo">Abrir na Unifor</span><svg class="icon icon--small"><use href="#icon-arrow-up-right" /></svg></span></a>
+            <a class="official-tile" href="https://unifor.br/documents/20143/3197315/guia-aluno-intercambista-2024.pdf" target="_blank" rel="noopener noreferrer"><span class="official-tile__icon official-tile__icon--amber"><svg class="icon"><use href="#icon-file" /></svg></span><strong data-i18n="hubDocs">Guia do intercambista</strong><small data-i18n="hubDocsDesc">Passo a passo e documentos de referência (edição 2024).</small><span class="official-tile__link"><span data-i18n="hubRead">Consultar documento</span><svg class="icon icon--small"><use href="#icon-arrow-up-right" /></svg></span></a>
+            <a class="official-tile" href="https://unifor.br/dri/aluno" target="_blank" rel="noopener noreferrer"><span class="official-tile__icon official-tile__icon--mint"><svg class="icon"><use href="#icon-graduation" /></svg></span><strong data-i18n="hubApplications">Intercâmbio e seleção</strong><small data-i18n="hubApplicationsDesc">Critérios, perguntas frequentes e orientações para estudantes.</small><span class="official-tile__link"><span data-i18n="hubGo">Abrir na Unifor</span><svg class="icon icon--small"><use href="#icon-arrow-up-right" /></svg></span></a>
+            <a class="official-tile" href="https://unifor.br/dri/contatos" target="_blank" rel="noopener noreferrer"><span class="official-tile__icon official-tile__icon--purple"><svg class="icon"><use href="#icon-message" /></svg></span><strong data-i18n="hubContacts">Atendimento da DRI</strong><small data-i18n="hubContactsDesc">Fale com a equipe responsável pelo seu assunto.</small><span class="official-tile__link"><span data-i18n="hubGo">Abrir na Unifor</span><svg class="icon icon--small"><use href="#icon-arrow-up-right" /></svg></span></a>
+          </div>
+        </div>
+      </section>
+
       <section class="section section--topics" id="categorias" aria-labelledby="topics-title">
         <div class="container">
           <div class="section-heading">
@@ -114,6 +129,25 @@
             <button type="button" class="topic-card topic-card--lavender" data-topic-jump="academico"><span class="topic-card__icon"><svg class="icon"><use href="#icon-book" /></svg></span><span class="topic-card__body"><strong data-i18n="topicAcademic">Vida acadêmica</strong><small data-i18n="topicAcademicDesc">Disciplinas, créditos e cooperação acadêmica.</small></span><span class="topic-card__arrow"><svg class="icon"><use href="#icon-arrow-up-right" /></svg></span></button>
             <button type="button" class="topic-card topic-card--coral" data-topic-jump="planejamento"><span class="topic-card__icon"><svg class="icon"><use href="#icon-wallet" /></svg></span><span class="topic-card__body"><strong data-i18n="topicPlanning">Custos e hospedagem</strong><small data-i18n="topicPlanningDesc">Organize suas perguntas sobre planejamento.</small></span><span class="topic-card__arrow"><svg class="icon"><use href="#icon-arrow-up-right" /></svg></span></button>
             <button type="button" class="topic-card topic-card--sky" data-topic-jump="apoio"><span class="topic-card__icon"><svg class="icon"><use href="#icon-message" /></svg></span><span class="topic-card__body"><strong data-i18n="topicSupport">Apoio e contatos</strong><small data-i18n="topicSupportDesc">Saiba onde confirmar suas dúvidas.</small></span><span class="topic-card__arrow"><svg class="icon"><use href="#icon-arrow-up-right" /></svg></span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--universities" id="universidades" aria-labelledby="universities-title">
+        <div class="container universities-layout">
+          <div class="universities-intro">
+            <div class="eyebrow eyebrow--light"><span class="eyebrow__line"></span><span data-i18n="uniEyebrow">DESCUBRA POSSIBILIDADES</span></div>
+            <h2 id="universities-title" data-i18n="uniTitle">Qual universidade combina com o seu curso?</h2>
+            <p data-i18n="uniDescription">Escolha sua área para consultar uma lista de referência publicada pela Unifor. O documento abre diretamente no site institucional.</p>
+            <div class="university-orbit" aria-hidden="true"><span>BR</span><span>PT</span><span>ES</span><span>DE</span><svg class="icon"><use href="#icon-globe" /></svg></div>
+          </div>
+          <div class="university-finder">
+            <span class="university-finder__number">01 / 02</span>
+            <label for="courseSelect" data-i18n="uniLabel">Escolha um curso ou uma área</label>
+            <select id="courseSelect"><option value="all" data-i18n="uniAll">Quero explorar todas as parcerias</option><option value="ads">Análise e Desenvolvimento de Sistemas</option><option value="computacao" data-i18n="uniComputer">Engenharia da Computação</option><option value="enfermagem" data-i18n="uniNursing">Enfermagem</option><option value="direito" data-i18n="uniLaw">Direito</option><option value="pos" data-i18n="uniPostgraduate">Pós-Graduação</option></select>
+            <div class="university-finder__result" aria-live="polite"><div class="university-finder__badge"><svg class="icon icon--small"><use href="#icon-check" /></svg><span data-i18n="uniReference">Referência institucional</span></div><h3 id="courseResultTitle"></h3><p id="courseResultDescription"></p><span class="university-finder__date" id="courseResultDate"></span></div>
+            <a id="courseResultLink" class="btn btn--gold" href="https://unifor.br/dri/convenios" rel="noopener noreferrer" target="_blank"><span id="courseResultAction"></span><svg class="icon icon--small"><use href="#icon-arrow-up-right" /></svg></a>
+            <p class="university-finder__warning"><svg class="icon icon--small"><use href="#icon-info" /></svg><span data-i18n="uniWarning">Listas históricas não garantem vagas atuais. Confirme convênios, cursos elegíveis e editais com a DRI antes de se candidatar.</span></p>
           </div>
         </div>
       </section>
@@ -150,6 +184,6 @@
 
     <footer class="site-footer"><div class="container footer-main"><div class="footer-brand"><a class="brand brand--footer" href="#inicio"><span class="brand__symbol"><svg class="icon"><use href="#icon-globe" /></svg></span><span class="brand__text"><strong>internacionaliza<span class="brand__dot">.</span></strong><small>UNIFOR · GRUPO 08</small></span></a><p data-i18n="footerDescription">Protótipo acadêmico de um portal de consulta sobre internacionalização. Desenvolvido como parte da disciplina de Requisitos e Modelagem de Sistemas.</p></div><div class="footer-links"><strong data-i18n="footerNavigate">Navegue</strong><a href="#categorias" data-i18n="navTopics">Temas</a><a href="#explorar" data-i18n="navGuides">Orientações</a><a href="#duvidas" data-i18n="footerFaq">Dúvidas frequentes</a></div><div class="footer-links"><strong data-i18n="footerReferences">Referências</strong><a href="https://unifor.br/dri/inicial" target="_blank" rel="noopener noreferrer">DRI — UNIFOR <svg class="icon icon--tiny"><use href="#icon-arrow-up-right" /></svg></a><a href="https://github.com/Ruan-levi/-requisitos-20262--grupo08" target="_blank" rel="noopener noreferrer"><span data-i18n="footerRepository">Repositório do projeto</span><svg class="icon icon--tiny"><use href="#icon-arrow-up-right" /></svg></a></div></div><div class="container footer-bottom"><span>© 2026 · Grupo 08 · <span data-i18n="footerSchool">Projeto de Requisitos e Modelagem de Sistemas</span></span><span class="footer-disclaimer" data-i18n="footerDisclaimer">Projeto independente, não oficial e sem coleta de dados pessoais.</span></div></footer>
 
-    <dialog id="guideDialog" class="guide-dialog" aria-labelledby="dialogTitle"><div class="guide-dialog__body"><button class="dialog-close" id="closeDialog" type="button" aria-label="Fechar orientação"><svg class="icon"><use href="#icon-close" /></svg></button><span class="dialog-kicker" id="dialogCategory"></span><h2 id="dialogTitle"></h2><p id="dialogDescription" class="dialog-intro"></p><h3 id="dialogStepsTitle" data-i18n="dialogStepsTitle">Por onde começar</h3><ol id="dialogSteps"></ol><p class="dialog-notice"><svg class="icon icon--small"><use href="#icon-info" /></svg><span data-i18n="dialogNotice">Orientação ilustrativa. Confirme procedimentos e prazos nas fontes oficiais.</span></p><a href="https://unifor.br/dri/inicial" class="btn btn--navy" id="dialogOfficialLink" target="_blank" rel="noopener noreferrer"><span data-i18n="dialogOfficial">Consultar DRI oficial</span><svg class="icon icon--small"><use href="#icon-arrow-up-right" /></svg></a></div></dialog>
+    <dialog id="guideDialog" class="guide-dialog" aria-labelledby="dialogTitle"><div class="guide-dialog__body"><button class="dialog-close" id="closeDialog" type="button" aria-label="Fechar orientação"><svg class="icon"><use href="#icon-close" /></svg></button><span class="dialog-kicker" id="dialogCategory"></span><h2 id="dialogTitle"></h2><p id="dialogDescription" class="dialog-intro"></p><h3 id="dialogStepsTitle" data-i18n="dialogStepsTitle">Por onde começar</h3><ol id="dialogSteps"></ol><div class="dialog-source"><span data-i18n="dialogSourceHeading">FONTE ESPECÍFICA</span><strong id="dialogSourceName"></strong><small id="dialogReviewed"></small></div><p class="dialog-notice"><svg class="icon icon--small"><use href="#icon-info" /></svg><span data-i18n="dialogNotice">Orientação ilustrativa. Confirme procedimentos e prazos nas fontes oficiais.</span></p><a href="https://unifor.br/dri/inicial" class="btn btn--navy" id="dialogOfficialLink" target="_blank" rel="noopener noreferrer"><span data-i18n="dialogOfficial">Consultar DRI oficial</span><svg class="icon icon--small"><use href="#icon-arrow-up-right" /></svg></a></div></dialog>
   </body>
 </html>

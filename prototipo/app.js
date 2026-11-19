@@ -1,12 +1,16 @@
 /**
  * Portal de Internacionalização — demonstração acadêmica (Grupo 08).
- * Toda a base de orientações abaixo é fictícia e existe apenas no navegador.
+ * As sínteses são didáticas; os links externos apontam para fontes da UNIFOR.
  * Nenhum dado é enviado a serviços externos. Não existe autenticação real.
  */
 
 const DRI_HOME = 'https://unifor.br/dri/inicial';
 const DRI_STUDENT = 'https://unifor.br/dri/aluno';
 const DRI_CONTACT = 'https://unifor.br/dri/contatos';
+const DRI_AGREEMENTS = 'https://unifor.br/dri/convenios';
+const DRI_GUIDE = 'https://unifor.br/documents/20143/3197315/guia-aluno-intercambista-2024.pdf';
+const DRI_ACADEMIC = 'https://www.unifor.br/cesta-de-servicos/secretaria-academica';
+const DRI_MANUAL = 'https://unifor.br/documents/d/nei/manual-de-boas-praticas-de-internacionalizacao-atualizado-digital-2026';
 
 const categories = {
   mobilidade: { pt: 'Intercâmbio e mobilidade', en: 'Exchange and mobility' },
@@ -21,10 +25,10 @@ const guides = [
   {
     id: 'intercambio', category: 'mobilidade', audience: ['estudante'],
     title: { pt: 'Intercâmbio acadêmico: por onde começar?', en: 'Academic exchange: where to start?' },
-    summary: { pt: 'Conheça perguntas essenciais para investigar modalidades, oportunidades e etapas de mobilidade.', en: 'Explore the essential questions about mobility options, opportunities and stages.' },
+    summary: { pt: 'Comece pelas regras de mobilidade, seleção semestral e apoio da DRI ao estudante.', en: 'Start with mobility eligibility, semester-based selection and student support from DRI.' },
     steps: {
-      pt: ['Consulte as oportunidades e modalidades descritas nos canais oficiais.', 'Verifique a existência de editais atualizados e suas condições específicas.', 'Procure a DRI e a coordenação do curso para confirmar os próximos passos.'],
-      en: ['Explore mobility opportunities and options on official channels.', 'Check current calls for applications and their specific conditions.', 'Contact DRI and your course coordination to confirm the next steps.']
+      pt: ['Consulte a página de apoio ao estudante e os editais vigentes para identificar a modalidade.', 'A DRI informa, para mobilidade acadêmica, critérios como integralização entre 30% e 70% do curso, PMG de pelo menos 7,0 e proficiência no idioma; confirme a versão aplicável.', 'Procure a DRI e a coordenação para verificar universidades elegíveis, prazos e documentos.'],
+      en: ['Review the student support page and current calls to identify your program.', 'DRI describes requirements such as 30%–70% degree completion, a minimum 7.0 academic average and language proficiency; verify the applicable rules.', 'Contact DRI and your coordinator to check eligible universities, deadlines and documents.']
     },
     official: DRI_STUDENT
   },
@@ -53,8 +57,8 @@ const guides = [
     title: { pt: 'Vistos e documentação de viagem', en: 'Visas and travel documents' },
     summary: { pt: 'Organize as perguntas sobre documentos, passaporte e exigências de cada destino.', en: 'Organize your questions about travel documents, passports and destination rules.' },
     steps: {
-      pt: ['Identifique o país de destino e a finalidade da viagem.', 'Confira os requisitos de documentos e vistos nas autoridades competentes.', 'Consulte a DRI para orientações acadêmicas complementares.'],
-      en: ['Identify your destination country and reason for traveling.', 'Check visa and document requirements with the competent authorities.', 'Consult DRI for additional academic guidance.']
+      pt: ['Consulte o Guia Prático do Intercambista e identifique os documentos da candidatura.', 'Após a carta de aceitação da universidade estrangeira, verifique visto, passaporte e demais exigências diretamente no consulado do país de destino.', 'Confirme com a DRI o seguro-saúde e demais providências acadêmicas antes de viajar.'],
+      en: ['Use the official exchange guide to identify application documents.', 'After the host institution acceptance letter, verify visas, passports and other requirements with the destination consulate.', 'Confirm health insurance and academic arrangements with DRI before departure.']
     },
     official: DRI_CONTACT
   },
@@ -63,8 +67,8 @@ const guides = [
     title: { pt: 'Aproveitamento de disciplinas e créditos', en: 'Course recognition and transfer credits' },
     summary: { pt: 'Entenda com quem confirmar compatibilidade curricular e procedimentos acadêmicos.', en: 'Find out who can confirm curriculum compatibility and academic procedures.' },
     steps: {
-      pt: ['Reúna informações sobre disciplinas e cargas horárias propostas.', 'Verifique as orientações da coordenação do seu curso.', 'Não presuma o aproveitamento: solicite confirmação às instâncias responsáveis.'],
-      en: ['Gather the proposed courses and workload information.', 'Review the guidance provided by your course coordination.', 'Never assume credits will transfer: seek formal confirmation from the responsible office.']
+      pt: ['Elabore o plano de estudos com disciplinas, ementas e cargas horárias da instituição anfitriã.', 'Antes de cursar as disciplinas, busque validação da coordenação do curso.', 'Na volta, reúna comprovantes acadêmicos oficiais e confirme equivalências e traduções exigidas para aproveitamento.'],
+      en: ['Build a study plan with course syllabi and workloads at the host institution.', 'Seek approval from your course coordinator before taking the classes.', 'On return, gather official academic records and verify recognition and translation requirements.']
     },
     official: DRI_HOME
   },
@@ -83,8 +87,8 @@ const guides = [
     title: { pt: 'Planejamento financeiro para mobilidade', en: 'Financial planning for mobility' },
     summary: { pt: 'Uma lista de temas que vale investigar: transporte, moradia, taxas e despesas.', en: 'A checklist of topics to explore: travel, housing, fees and living expenses.' },
     steps: {
-      pt: ['Liste custos prováveis de viagem, moradia e rotina.', 'Verifique eventuais condições financeiras previstas em editais.', 'Consulte fontes atuais e faça seu planejamento antes de se comprometer.'],
-      en: ['List likely travel, housing and everyday expenses.', 'Check financial conditions in any applicable official calls.', 'Review up-to-date sources and plan before making commitments.']
+      pt: ['Planeje transporte, moradia, alimentação, visto e despesas pessoais.', 'Consulte os convênios e editais para saber quais taxas podem existir em cada instituição.', 'Verifique seguro-saúde, acidentes pessoais e repatriação exigidos no programa; bolsas não devem ser presumidas.'],
+      en: ['Budget travel, housing, food, visas and living costs.', 'Check the applicable agreements and calls for possible institutional fees.', 'Review health, accident and repatriation insurance requirements; do not assume scholarship coverage.']
     },
     official: DRI_STUDENT
   },
@@ -103,8 +107,8 @@ const guides = [
     title: { pt: 'Primeiros passos para estudantes internacionais', en: 'First steps for international students' },
     summary: { pt: 'Explore onde encontrar orientações acadêmicas e canais de apoio da universidade.', en: 'Explore where to find academic guidance and institutional support channels.' },
     steps: {
-      pt: ['Confira informações públicas da DRI para estudantes de outras instituições.', 'Liste dúvidas sobre documentação e vida acadêmica.', 'Entre em contato com os responsáveis para obter orientação atualizada.'],
-      en: ['Review DRI guidance for students from other institutions.', 'List questions about documents and academic life.', 'Contact the responsible staff for current guidance.']
+      pt: ['Consulte a seção da DRI para estudantes de instituições estrangeiras.', 'Verifique se a instituição de origem possui convênio; na ausência dele, pergunte sobre o programa Free Mover e suas taxas.', 'Confirme documentação, plano de estudos e prazos com o setor responsável.'],
+      en: ['Review the DRI section for students of foreign institutions.', 'Check whether your home university has an agreement; otherwise ask about the fee-based Free Mover route.', 'Confirm documentation, study plan and deadlines with the responsible office.']
     },
     official: DRI_STUDENT
   },
@@ -117,13 +121,82 @@ const guides = [
       en: ['Identify the topic of your question.', 'Open the official DRI contacts page and choose the appropriate channel.', 'Confirm current guidance, deadlines and documents directly.']
     },
     official: DRI_CONTACT
+  },
+  {
+    id: 'universidades-parceiras', category: 'mobilidade', audience: ['estudante', 'docente', 'internacional'],
+    title: { pt: 'Onde encontrar universidades parceiras?', en: 'Where to find partner universities?' },
+    summary: { pt: 'Acesse a área de convênios e consulte listas institucionais por curso.', en: 'Visit the official agreements page and course-specific institutional lists.' },
+    steps: {
+      pt: ['Consulte os convênios de cooperação na página oficial da DRI.', 'Selecione seu curso na busca por universidades deste protótipo para abrir listas de referência.', 'Confirme com a equipe da DRI se a instituição e as vagas estão disponíveis no semestre pretendido.'],
+      en: ['Review cooperation agreements on the official DRI website.', 'Select your course in the prototype university finder to open reference lists.', 'Confirm with DRI whether the institution and places are available for your intended term.']
+    },
+    official: DRI_AGREEMENTS
+  },
+  {
+    id: 'editais', category: 'mobilidade', audience: ['estudante'],
+    title: { pt: 'Editais, candidaturas e critérios', en: 'Applications, calls and eligibility' },
+    summary: { pt: 'Encontre as orientações de seleção e entenda o que precisa ser confirmado antes da inscrição.', en: 'Find selection guidance and what to verify before applying.' },
+    steps: {
+      pt: ['Confira se existe edital ou chamada vigente para sua modalidade e semestre.', 'Na orientação da DRI, verifique as condições acadêmicas e linguísticas.', 'Busque a equipe de apoio ao estudante para esclarecer documentos, prazos e universidades elegíveis.'],
+      en: ['Check for a currently valid call for your program and intended semester.', 'Review academic and language conditions in official DRI guidance.', 'Contact student support to clarify documents, deadlines and eligible universities.']
+    },
+    official: DRI_STUDENT
+  },
+  {
+    id: 'documentos-academicos', category: 'documentos', audience: ['estudante'],
+    title: { pt: 'Formulários, histórico e inscrição', en: 'Forms, transcripts and applications' },
+    summary: { pt: 'Localize os requerimentos acadêmicos de intercâmbio e os canais responsáveis.', en: 'Locate institutional exchange requests and the responsible offices.' },
+    steps: {
+      pt: ['Verifique no edital quais formulários e comprovantes são obrigatórios.', 'Consulte a Secretaria Acadêmica para orientações sobre os requerimentos 153 e 154.', 'Confirme a tramitação diretamente com o setor de internacionalização.'],
+      en: ['Check the official call for required forms and supporting documents.', 'Consult the Academic Secretariat on requests 153 and 154.', 'Confirm the process with the international office.']
+    },
+    official: DRI_ACADEMIC
   }
 ];
+
+// Fonte específica por orientação (RF05/RF08); a data é da pesquisa do Grupo 08,
+// não indica publicação ou validação editorial pela universidade.
+const guideSources = {
+  intercambio: { url: DRI_STUDENT, pt: 'DRI · Apoio ao Estudante', en: 'DRI · Student Support' },
+  'mobilidade-docente': { url: DRI_CONTACT, pt: 'DRI · Contatos e apoio docente', en: 'DRI · Contacts and faculty support' },
+  'dupla-titulacao': { url: DRI_STUDENT, pt: 'DRI · Programas e dupla titulação', en: 'DRI · Programs and dual degrees' },
+  'vistos-documentos': { url: DRI_GUIDE, pt: 'Guia Prático do Intercambista · 2024 (PDF)', en: 'Exchange Student Guide · 2024 (PDF)' },
+  aproveitamento: { url: DRI_MANUAL, pt: 'Manual de Boas Práticas de Internacionalização · 2026', en: 'Internationalization Practices Manual · 2026' },
+  'colaboracao-docente': { url: DRI_AGREEMENTS, pt: 'DRI · Convênios e cooperação', en: 'DRI · Agreements and cooperation' },
+  custos: { url: DRI_STUDENT, pt: 'DRI · Perguntas frequentes e despesas', en: 'DRI · FAQ and costs' },
+  hospedagem: { url: DRI_GUIDE, pt: 'Guia Prático do Intercambista · 2024 (PDF)', en: 'Exchange Student Guide · 2024 (PDF)' },
+  'alunos-internacionais': { url: DRI_STUDENT, pt: 'DRI · Estudantes de outras instituições', en: 'DRI · Incoming students' },
+  contatos: { url: DRI_CONTACT, pt: 'DRI · Contatos institucionais', en: 'DRI · Institutional contacts' },
+  'universidades-parceiras': { url: DRI_AGREEMENTS, pt: 'DRI · Convênios e universidades', en: 'DRI · Agreements and universities' },
+  editais: { url: DRI_STUDENT, pt: 'DRI · Apoio ao Estudante', en: 'DRI · Student Support' },
+  'documentos-academicos': { url: DRI_ACADEMIC, pt: 'Unifor · Secretaria Acadêmica', en: 'Unifor · Academic Secretariat' }
+};
+
+const courseSources = {
+  all: { url: DRI_AGREEMENTS, year: null,
+    title: { pt: 'Convênios e parcerias internacionais', en: 'International agreements and partnerships' },
+    description: { pt: 'Veja as informações sobre cooperação internacional e procure a DRI para confirmar opções do seu curso.', en: 'Explore international agreements and check program-specific options with DRI.' } },
+  ads: { url: 'https://unifor.br/documents/d/nei/analise-e-desenvolvimento-de-sistemas-2025', year: 2025,
+    title: { pt: 'Análise e Desenvolvimento de Sistemas', en: 'Systems Analysis and Development' } },
+  computacao: { url: 'https://unifor.br/documents/d/nei/engenharia-da-computacao-2025', year: 2025,
+    title: { pt: 'Engenharia da Computação', en: 'Computer Engineering' } },
+  enfermagem: { url: 'https://unifor.br/documents/d/nei/enfermagem-2025', year: 2025,
+    title: { pt: 'Enfermagem', en: 'Nursing' } },
+  direito: { url: 'https://unifor.br/documents/d/guest/universidades-conveniadas-direito-2025', year: 2025,
+    title: { pt: 'Direito', en: 'Law' } },
+  pos: { url: 'https://unifor.br/documents/d/nei/universidades-conveniadas-pos-graduacao-2024-2', year: 2024,
+    title: { pt: 'Pós-Graduação', en: 'Postgraduate studies' } }
+};
 
 const translations = {
   pt: {
     prototypeTop: 'Protótipo acadêmico · UNIFOR · Grupo 08', officialSite: 'Conheça a DRI oficial',
     navHome: 'Início', navTopics: 'Temas', navGuides: 'Orientações', navHow: 'Como funciona', navContact: 'Contatos', navExplore: 'Explorar portal',
+    navUniversities: 'Universidades', navSources: 'Fontes oficiais',
+    hubEyebrow: 'ACESSOS DIRETOS · UNIFOR', hubTitle: 'A informação certa, na fonte certa.', hubDescription: 'Cada assunto leva à página ou ao documento institucional correspondente — sem precisar recomeçar a navegação.', hubNotice: 'Fontes institucionais pesquisadas em novembro de 2026',
+    hubUniversities: 'Universidades e convênios', hubUniversitiesDesc: 'Entenda as parcerias internacionais da Unifor.', hubDocs: 'Guia do intercambista', hubDocsDesc: 'Passo a passo e documentos de referência (edição 2024).', hubApplications: 'Intercâmbio e seleção', hubApplicationsDesc: 'Critérios, perguntas frequentes e orientações para estudantes.', hubContacts: 'Atendimento da DRI', hubContactsDesc: 'Fale com a equipe responsável pelo seu assunto.', hubGo: 'Abrir na Unifor', hubRead: 'Consultar documento',
+    uniEyebrow: 'DESCUBRA POSSIBILIDADES', uniTitle: 'Qual universidade combina com o seu curso?', uniDescription: 'Escolha sua área para consultar uma lista de referência publicada pela Unifor. O documento abre diretamente no site institucional.', uniLabel: 'Escolha um curso ou uma área', uniAll: 'Quero explorar todas as parcerias', uniComputer: 'Engenharia da Computação', uniNursing: 'Enfermagem', uniLaw: 'Direito', uniPostgraduate: 'Pós-Graduação', uniReference: 'Referência institucional', uniWarning: 'Listas históricas não garantem vagas atuais. Confirme convênios, cursos elegíveis e editais com a DRI antes de se candidatar.',
+    uniDefaultDate: 'Página institucional de convênios', uniArchiveDate: (year) => `Lista de referência publicada em ${year}`, uniArchiveDesc: 'Documento com universidades conveniadas para a área selecionada; consulte a DRI para verificar a lista mais recente.', uniOpenList: 'Abrir lista oficial de referência', uniOpenAll: 'Explorar convênios da DRI',
     heroEyebrow: 'INTERNACIONALIZAÇÃO SEM COMPLICAÇÃO', heroTitle1: 'O mundo está', heroTitle2: 'mais perto', heroTitle3: 'do que você imagina.',
     heroLead: 'Encontre informações sobre intercâmbio, dupla titulação, documentos e tudo o que você precisa entender antes de dar o próximo passo.',
     searchLabel: 'Pesquisar orientações', heroPlaceholder: 'O que você procura? Ex.: intercâmbio', heroSearch: 'Pesquisar', popularSearches: 'Buscas populares:',
@@ -154,7 +227,7 @@ const translations = {
     faqQ4: 'Estas orientações já são oficiais da UNIFOR?', faqA4: 'Não. Trata-se de uma demonstração acadêmica do Grupo 08. O portal não representa um sistema institucional implantado, e os conteúdos de exemplo não substituem fontes oficiais.',
     contactEyebrow: 'PRECISA DE INFORMAÇÕES OFICIAIS?', contactTitle: 'O seu próximo passo é falar com a DRI.', contactDescription: 'Para orientações vigentes, editais e atendimento institucional, consulte o site oficial da Diretoria de Relações Internacionais da UNIFOR.', contactButton: 'Acessar contatos oficiais',
     footerDescription: 'Protótipo acadêmico de um portal de consulta sobre internacionalização. Desenvolvido como parte da disciplina de Requisitos e Modelagem de Sistemas.', footerNavigate: 'Navegue', footerFaq: 'Dúvidas frequentes', footerReferences: 'Referências', footerRepository: 'Repositório do projeto', footerSchool: 'Projeto de Requisitos e Modelagem de Sistemas', footerDisclaimer: 'Projeto independente, não oficial e sem coleta de dados pessoais.',
-    dialogStepsTitle: 'Por onde começar', dialogNotice: 'Orientação ilustrativa. Confirme procedimentos e prazos nas fontes oficiais.', dialogOfficial: 'Consultar DRI oficial',
+    dialogStepsTitle: 'Por onde começar', dialogNotice: 'Orientação ilustrativa. Confirme procedimentos e prazos nas fontes oficiais.', dialogOfficial: 'Abrir fonte específica na Unifor', dialogSourceHeading: 'FONTE ESPECÍFICA', sourceChecked: 'Fonte pesquisada pelo Grupo 08 em 19/11/2026', cardSource: 'Fonte oficial',
     results: (count) => `${count} ${count === 1 ? 'orientação encontrada' : 'orientações encontradas'}`,
     seeGuide: 'Ler orientação', demoGuide: 'Guia ilustrativo',
     status: ['Rascunho', 'Em revisão', 'Publicado'],
@@ -164,6 +237,11 @@ const translations = {
   en: {
     prototypeTop: 'Academic prototype · UNIFOR · Group 08', officialSite: 'Visit the official DRI website',
     navHome: 'Home', navTopics: 'Topics', navGuides: 'Guides', navHow: 'How it works', navContact: 'Contacts', navExplore: 'Explore portal',
+    navUniversities: 'Universities', navSources: 'Official sources',
+    hubEyebrow: 'DIRECT ACCESS · UNIFOR', hubTitle: 'The right information, from the right source.', hubDescription: 'Each subject links to its specific institutional page or document, so you can find answers with fewer steps.', hubNotice: 'Institutional sources researched in November 2026',
+    hubUniversities: 'Universities and agreements', hubUniversitiesDesc: 'Explore UNIFOR international partnerships.', hubDocs: 'Exchange student guide', hubDocsDesc: 'Step-by-step reference and documents (2024 edition).', hubApplications: 'Exchange and applications', hubApplicationsDesc: 'Requirements, FAQs and advice for students.', hubContacts: 'Contact DRI', hubContactsDesc: 'Get in touch with the responsible team.', hubGo: 'Open at UNIFOR', hubRead: 'Read document',
+    uniEyebrow: 'EXPLORE POSSIBILITIES', uniTitle: 'Which university fits your degree?', uniDescription: 'Choose your area to open a UNIFOR-published reference list directly on the university site.', uniLabel: 'Select your degree or area', uniAll: 'Explore all partnerships', uniComputer: 'Computer Engineering', uniNursing: 'Nursing', uniLaw: 'Law', uniPostgraduate: 'Postgraduate studies', uniReference: 'Institutional reference', uniWarning: 'Historical lists do not guarantee currently available places. Confirm eligible degrees, agreements and calls with DRI before applying.',
+    uniDefaultDate: 'Official agreements page', uniArchiveDate: (year) => `Reference list published in ${year}`, uniArchiveDesc: 'An institutional document of partner universities for this area; contact DRI for the most up-to-date list.', uniOpenList: 'Open official reference list', uniOpenAll: 'Explore DRI agreements',
     heroEyebrow: 'INTERNATIONAL OPPORTUNITIES MADE CLEAR', heroTitle1: 'The world is', heroTitle2: 'closer', heroTitle3: 'than you imagine.',
     heroLead: 'Find information about academic exchanges, dual degrees, documents and everything you need to explore before taking the next step.',
     searchLabel: 'Search guides', heroPlaceholder: 'What are you looking for? E.g., exchange', heroSearch: 'Search', popularSearches: 'Popular searches:',
@@ -194,7 +272,7 @@ const translations = {
     faqQ4: 'Are these guides official UNIFOR information?', faqA4: 'No. This is an academic demonstration by Group 08. It is not an official institutional system, and sample content does not replace official sources.',
     contactEyebrow: 'NEED OFFICIAL INFORMATION?', contactTitle: 'Your next step is to contact DRI.', contactDescription: 'For current guidance, calls and institutional assistance, please consult the official UNIFOR International Relations Directorate website.', contactButton: 'Visit official contacts',
     footerDescription: 'Academic prototype of an internationalization guidance portal. Developed for the Requirements and Systems Modeling course.', footerNavigate: 'Navigate', footerFaq: 'Frequently asked questions', footerReferences: 'References', footerRepository: 'Project repository', footerSchool: 'Requirements and Systems Modeling project', footerDisclaimer: 'Independent, unofficial project with no personal data collection.',
-    dialogStepsTitle: 'Where to start', dialogNotice: 'Illustrative guidance. Check procedures and deadlines with official sources.', dialogOfficial: 'Visit official DRI',
+    dialogStepsTitle: 'Where to start', dialogNotice: 'Illustrative guidance. Check procedures and deadlines with official sources.', dialogOfficial: 'Open specific UNIFOR source', dialogSourceHeading: 'SPECIFIC SOURCE', sourceChecked: 'Source researched by Group 08 on 19 Nov 2026', cardSource: 'Official source',
     results: (count) => `${count} ${count === 1 ? 'guide found' : 'guides found'}`,
     seeGuide: 'Read guide', demoGuide: 'Sample guide',
     status: ['Draft', 'Under review', 'Published'],
@@ -244,8 +322,28 @@ function createCard(guide) {
   button.textContent = `${t('seeGuide')} →`;
   button.setAttribute('aria-label', `${t('seeGuide')}: ${guide.title[state.language]}`);
   button.addEventListener('click', () => openGuide(guide.id));
-  element.append(tags, title, summary, button);
+  const source = document.createElement('a');
+  source.className = 'guide-card__source';
+  source.href = guideSources[guide.id].url;
+  source.target = '_blank';
+  source.rel = 'noopener noreferrer';
+  source.textContent = `${t('cardSource')} ↗`;
+  source.setAttribute('aria-label', `${t('cardSource')}: ${guideSources[guide.id][state.language]}`);
+  const actions = document.createElement('div');
+  actions.className = 'guide-card__actions';
+  actions.append(button, source);
+  element.append(tags, title, summary, actions);
   return element;
+}
+
+function renderCourse() {
+  const selected = courseSources[$('#courseSelect').value] || courseSources.all;
+  const isArchive = Boolean(selected.year);
+  $('#courseResultTitle').textContent = selected.title[state.language];
+  $('#courseResultDescription').textContent = isArchive ? t('uniArchiveDesc') : selected.description[state.language];
+  $('#courseResultDate').textContent = isArchive ? t('uniArchiveDate')(selected.year) : t('uniDefaultDate');
+  $('#courseResultLink').href = selected.url;
+  $('#courseResultAction').textContent = isArchive ? t('uniOpenList') : t('uniOpenAll');
 }
 
 function renderGuides() {
@@ -273,7 +371,10 @@ function openGuide(id) {
     li.textContent = step;
     return li;
   }));
-  $('#dialogOfficialLink').href = guide.official;
+  const source = guideSources[guide.id];
+  $('#dialogSourceName').textContent = source[state.language];
+  $('#dialogReviewed').textContent = t('sourceChecked');
+  $('#dialogOfficialLink').href = source.url;
   $('#guideDialog').showModal();
 }
 
@@ -351,6 +452,7 @@ function applyLanguage() {
   $$('.audience-filters').forEach((element) => element.setAttribute('aria-label', state.language === 'pt' ? 'Filtrar por público' : 'Filter by audience'));
   updateEditorial();
   renderGuides();
+  renderCourse();
   if (state.language === 'pt') {
     document.title = 'Portal de Internacionalização | Protótipo — Grupo 08';
   } else {
@@ -370,6 +472,7 @@ $('#topicFilter').addEventListener('change', (event) => {
   state.topic = event.target.value;
   renderGuides();
 });
+$('#courseSelect').addEventListener('change', renderCourse);
 $$('[data-audience-filter]').forEach((button) => button.addEventListener('click', () => setAudience(button.dataset.audienceFilter)));
 $$('[data-audience-jump]').forEach((button) => button.addEventListener('click', () => setAudience(button.dataset.audienceJump)));
 $$('[data-topic-jump]').forEach((button) => button.addEventListener('click', () => setTopic(button.dataset.topicJump)));
