@@ -19,7 +19,15 @@
 
 5. Acesse `http://localhost:5500` em seu navegador.
 
-Não é necessário executar `npm install` nem `npm test`: este é um protótipo estático sem pacotes NPM.
+Não é necessário executar `npm install`: este é um protótipo estático sem pacotes NPM.
+
+Para conferir a integridade do catálogo e das traduções, execute na raiz do repositório:
+
+```bash
+node --test prototipo/tests/catalog.test.cjs
+```
+
+Os testes utilizam apenas recursos nativos do Node.js.
 
 ## Como está organizado
 
@@ -27,8 +35,10 @@ Não é necessário executar `npm install` nem `npm test`: este é um protótipo
 prototipo/
 ├── index.html                  # Estrutura, áreas e acessibilidade da página
 ├── style.css                   # Identidade visual e responsividade
-├── app.js                      # Busca, filtros, guias, idioma e demonstração editorial
+├── app.js                      # Busca, filtros, cursos, fontes, idioma e demonstração editorial
 ├── README.md                   # Este guia
+├── tests/
+│   └── catalog.test.cjs       # Testes de fontes, guias, cursos e traduções
 └── assets/
     ├── conexoes-globais.svg   # Ilustração original do conceito internacional
     └── icone.svg              # Ícone original do protótipo
@@ -39,15 +49,30 @@ prototipo/
 | Funcionalidade | Teste prático | Artefatos relacionados |
 |---|---|---|
 | Página inicial e categorias | Clicar em **Intercâmbio e mobilidade**, **Documentos** ou outro tema. | RF01, RF04 |
+| Central de fontes específicas | Abrir **Convênios**, **Guia Prático**, **Apoio ao Estudante** ou **Contatos** diretamente na Unifor. | RF05–RF06 |
+| Busca de universidades por curso | Em **Universidades**, escolher ADS, Engenharia da Computação, Enfermagem, Direito ou Pós; abrir o documento oficial com a lista histórica. | RF01, RF05 |
 | Pesquisa por palavra-chave | Digitar `intercâmbio`, `visto`, `custos` ou `docentes`. | RF02 |
 | Filtro por público | Escolher **Estudantes**, **Docentes** ou **Internacionais** e combinar com categorias. | RF03 |
-| Conteúdo explicativo | Abrir **Ler orientação**, ver passos e seguir o link da DRI oficial. | RF04–RF06 |
+| Conteúdo explicativo | Abrir **Ler orientação**, ver passos, título da fonte e data da pesquisa; ou clicar diretamente em **Fonte oficial** no cartão. | RF04–RF06, RF08 |
 | Interface em inglês | Usar o botão **EN** no cabeçalho para traduzir a interface e os exemplos. | Exemplo de RF07; tradução institucional ainda não aprovada |
 | Texto ampliado | Usar o botão **A+**. Redimensionar a janela ou navegar pelo teclado. | Protótipo de RNF01, RNF02 e RNF06 |
 | Fluxo editorial | Clicar em **Enviar para revisão**, depois **Aprovar publicação**. | Demonstração de RF11–RF12; sem backend |
 | FAQ e contato institucional | Abrir as perguntas e o link externo para a DRI. | RF05–RF06 |
 
 Os textos e os guias são definidos em um **catálogo local de demonstração** em `app.js`. Não há banco de dados nem persistência dos registros editoriais. Nenhuma ação de publicação altera conteúdo remoto.
+
+### Fontes institucionais utilizadas
+
+| Tema do protótipo | Destino oficial | Observação |
+|---|---|---|
+| Universidades e convênios | [DRI — Convênios](https://unifor.br/dri/convenios) | Página institucional, não catálogo de vagas em tempo real |
+| Mobilidade, seleção, dupla titulação e dúvidas | [DRI — Apoio ao Estudante](https://unifor.br/dri/aluno) | Condições podem mudar por edital |
+| Passaporte e procedimentos | [Guia Prático do Intercambista — 2024](https://unifor.br/documents/20143/3197315/guia-aluno-intercambista-2024.pdf) | Edição histórica, sempre confirmar atualização |
+| Políticas e aproveitamento acadêmico | [Manual de Boas Práticas — 2026](https://unifor.br/documents/d/nei/manual-de-boas-praticas-de-internacionalizacao-atualizado-digital-2026) | Material institucional de referência |
+| Formulários e requerimentos | [Secretaria Acadêmica](https://www.unifor.br/cesta-de-servicos/secretaria-academica) | Informações oficiais sobre processos administrativos |
+| Equipe responsável | [DRI — Contatos](https://unifor.br/dri/contatos) | Confirmar contatos diretamente na fonte |
+
+**Buscador por curso:** são links para documentos de 2024/2025 encontrados no domínio oficial da Unifor, não uma base atualizada automaticamente de todas as universidades. O visitante é alertado disso antes de abrir um documento. O selo **Fonte pesquisada em 19/11/2026** registra apenas a consulta documental realizada pelo grupo, não uma revisão ou aprovação de conteúdo pela DRI.
 
 ## Publicação pelo GitHub Pages
 

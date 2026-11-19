@@ -93,6 +93,7 @@ Seguindo o [LAPIS do professor](https://github.com/marcelobezerra-dotcom/Lapis-u
 
 O projeto também possui um **[protótipo interativo em HTML, CSS e JavaScript](prototipo/README.md)**, organizado separadamente na pasta [`prototipo/`](prototipo/).
 
-- **Demonstração:** pesquisa de orientações, filtros por assunto/público, página de detalhes, interface em português/inglês, ajuste de texto e simulação de revisão editorial.
+- **Demonstração:** pesquisa de orientações, filtros por assunto/público, consulta de universidades por curso com documentos institucionais, links específicos para convênios, documentação e contatos, página de detalhes com fonte e data de pesquisa, interface em português/inglês, ajuste de texto e simulação de revisão editorial.
+- **Validação técnica:** `node --test prototipo/tests/catalog.test.cjs` verifica o catálogo bilíngue, a cobertura de fontes e os links de referência.
 - **Publicação:** workflow [Publicar protótipo](.github/workflows/publicar-prototipo.yml) no GitHub Pages, usando somente a pasta `prototipo/`. Para ativar a primeira publicação, conferir **Settings → Pages → Source: GitHub Actions**.
 - **Limites:** conteúdo didático, sem autenticação, inscrições ou dados reais. O protótipo **não é um serviço institucional da UNIFOR**.
