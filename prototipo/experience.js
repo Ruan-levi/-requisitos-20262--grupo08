@@ -376,7 +376,7 @@
     const home=!parts;
     [...main.children].forEach(child=>{child.hidden = home ? child===root : child!==root;});
     document.body.classList.toggle('xp-is-open',!home);
-    if(home){const homeNav=document.querySelector('#menu-principal [href="#inicio"]');if(homeNav)homeNav.classList.add('nav-active');window.scrollTo(0,0);document.title = lang()==='pt'?'Portal de Internacionalização | Protótipo — Grupo 08':'Internationalization Portal | Prototype — Group 08';return;}
+    if(home){const homeNav=document.querySelector('#menu-principal [href="#inicio"]');if(homeNav)homeNav.classList.add('nav-active');if(!location.hash||location.hash==='#inicio')window.scrollTo(0,0);document.title = lang()==='pt'?'Portal de Internacionalização | Protótipo — Grupo 08':'Internationalization Portal | Prototype — Group 08';return;}
     root.hidden=false;
     root.innerHTML=navigation();
     const page=parts[0]||'painel', id=parts[1]||'';
@@ -402,7 +402,7 @@
     if(page==='orientacoes'&&!id)paintGuideResults();
     const oldHome=document.querySelector('#menu-principal .nav-active');
     if(oldHome)oldHome.classList.remove('nav-active');
-    document.title=(page==='painel'?S('title'):S(page)||S('title'))+' | Grupo 08';
+    document.title=(page==='painel'?S('title'):page==='noticias'?S('news'):S(page)||S('title'))+' | Grupo 08';
     window.scrollTo(0,0);
   }
   root.addEventListener('input',e=>{
