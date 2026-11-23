@@ -95,3 +95,32 @@ Depois da primeira execução bem-sucedida, a URL aparecerá na seção **Pages*
 - As necessidades e funcionalidades são **propostas acadêmicas não validadas por entrevistas reais**.
 
 Consulte o [documento de necessidades dos usuários](../Requisitos/Elicitacao/05-necessidades-dos-usuarios.md), os [requisitos RF/RNF](../Requisitos/Especificacao/01-requisitos-funcionais-e-nao-funcionais.md) e o [backlog](../Requisitos/Especificacao/03-backlog-priorizado.md).
+
+
+## Experiência interna ampliada (v2)
+
+O portal incorpora uma **aplicação de navegação interna** integrada à página inicial, sem criar contas ou encaminhar visitantes à DRI a cada clique:
+
+- **Central de serviços:** `#/painel` — entradas separadas para estudantes, docentes e visitantes internacionais.
+- **Programas:** `#/programas` e páginas internas para intercâmbio acadêmico, dupla titulação, Buddy Program, EducationUSA e Free Mover. Cada página contém explicações, verificação de requisitos, etapas, perguntas frequentes e fontes contextuais.
+- **Universidades:** `#/universidades` — exemplos institucionais documentados, filtros por país e área, páginas de detalhe por instituição e arquivos históricos por curso. **Não é um sistema de vagas ou lista exaustiva de convênios ativos.**
+- **Documentos:** `#/documentos` — checklists em três fases, referências a guia, manual, secretaria e links oficiais. Marcar itens não salva nem envia dados.
+- **Docentes:** `#/docentes` — caminhos para mobilidade, pesquisa e cooperação.
+- **Estudantes internacionais:** `#/internacionais` — orientações de chegada, convênios, Free Mover e acolhimento.
+- **Orientações:** `#/orientacoes` — busca e páginas internas detalhadas para todos os guias do catálogo anterior.
+- **Minha jornada:** `#/planejar` — formulário orientativo de modalidade, área e destino, com roteiro local, imprimível e sem avaliação automática de elegibilidade.
+- **Contatos:** `#/contatos` — FAQ e acesso aos canais oficiais.
+
+A interface principal preserva português/inglês, ajuste de texto, navegação em teclado e adaptação a telas pequenas. Toda informação de parceria sem confirmação atual é identificada como **referência histórica/institucional**, e a candidatura permanece nos canais oficiais.
+
+Arquivos novos: `experience.js` e `experience.css` (camada de navegação interna), mais `tests/experience.test.cjs`. O protótipo anterior continua presente em `index.html`, `app.js` e `style.css`. Links a serviços oficiais são contextuais, e não substituem informações internas.
+
+### Verificações
+
+```bash
+node --test prototipo/tests/*.test.cjs
+```
+
+O workflow do GitHub Pages executa esses testes antes de publicar. A verificação visual nos principais navegadores e dispositivos ainda deve ser executada como parte da revisão de protótipo; testes automatizados não são certificação de acessibilidade.
+
+O planejamento das telas para edição posterior no Figma está em [FIGMA-HANDOFF.md](FIGMA-HANDOFF.md). Não foi criado nem alterado arquivo no Figma nesta etapa.
