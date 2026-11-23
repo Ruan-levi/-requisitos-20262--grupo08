@@ -28,6 +28,14 @@ jobs:
       - name: Baixar arquivos do repositório
         uses: actions/checkout@v4
 
+      - name: Preparar Node.js para validação
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validar catálogo, rotas e fontes
+        run: node --test prototipo/tests/*.test.cjs
+
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
 
