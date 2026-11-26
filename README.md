@@ -81,7 +81,7 @@ Seguindo o [LAPIS do professor](https://github.com/marcelobezerra-dotcom/Lapis-u
 - [x] Visão, stakeholders, RF/RNF, regras, backlog, diagramas e análise documental publicados.
 - [x] Convite ao usuário **`marcelobezerra-dotcom`** registrado em [evidência visual](evidencias/registro-convite-professor.md); captura anterior mostrava **Pending Invite**.
 - [ ] Registrar resultados de **entrevista efetivamente realizada** para atender integralmente ao item.
-- [ ] Confirmar que o professor **aceitou** o convite em `Settings → Collaborators`.
+- [x] **Acesso do professor confirmado em 25/11/2026:** o GitHub retornou permissão **`write`** para `marcelobezerra-dotcom` (além do registro histórico do convite).
 - [x] **Todas as 10 issues foram associadas à Milestone M1** (8 fechadas e 2 abertas).
 - [ ] Configurar um **Project/Kanban**, se for solicitado para esta etapa ou utilizado no acompanhamento das próximas atividades.
 - [ ] Conferir o nome do repositório: possui hífen inicial extra (`-requisitos-20262--grupo08`), enquanto a P1 indica `requisitos-20262--grupo08`.

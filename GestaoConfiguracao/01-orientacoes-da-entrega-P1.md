@@ -23,7 +23,7 @@
 
 ## Entrega no AVA
 
-São exigidos o **link do repositório** e a **comprovação do usuário `marcelobezerra-dotcom` como convidado/colaborador**. O [registro de evidência](../evidencias/registro-convite-professor.md) já incorpora o print de um convite enviado **Pending Invite**, mas a **aceitação e o acesso efetivo ainda não foram confirmados**.
+São exigidos o **link do repositório** e a **comprovação do usuário `marcelobezerra-dotcom` como convidado/colaborador**. O [registro de evidência](../evidencias/registro-convite-professor.md) mostra um convite anteriormente em **Pending Invite**. A auditoria de **25/11/2026** confirmou que `marcelobezerra-dotcom` possui permissão **`write`** no repositório. A entrega no AVA ainda não está comprovada.
 
 ## Situação da pesquisa
 

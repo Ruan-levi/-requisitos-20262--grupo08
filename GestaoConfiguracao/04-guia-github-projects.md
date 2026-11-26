@@ -27,7 +27,7 @@ A M1 é histórica e mantém as issues **#3 (entrevistas reais) e #10 (comprova�
 | [#15](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/15) | Evolução futura do backend editorial | Aberta |
 | [#16](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/16) | Acessibilidade, navegadores e idiomas | Aberta |
 | [#17](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/17) | Criar milestone M2 e GitHub Project | Aberta |
-| [#18](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/18) | Documentação e GitHub Actions | Conforme conclusão do PR de auditoria |
+| [#18](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/18) | Documentação e GitHub Actions | Concluída: CI verde e publicação após PR #19 |
 
 Para criar o marco M2: **Issues → Milestones → New milestone**, nomear **M2 — Protótipo navegável e validação**, manter o prazo em branco até haver data definida e atribuir #13–#18. Não associar as issues M2 à M1 só para aumentar artificialmente o percentual de conclusão.
 

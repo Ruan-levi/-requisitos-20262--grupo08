@@ -5,7 +5,7 @@
 
 ## Escopo verificado
 
-A atividade P1 descrita em [orientações da entrega](01-orientacoes-da-entrega-P1.md) exige Documento de Visão, identificação de stakeholders, roteiro/resultados de elicitação, RF/RNF, regras de negócio, backlog e UML (Casos de Uso, Componentes e Implantação). Os documentos estão presentes no repositório. A **entrevista real não foi comprovada**: roteiro e entrevista simulada **não** substituem a aplicação com participantes. A aceitação do convite ao professor e a submissão ao AVA também não estão comprovadas.
+A atividade P1 descrita em [orientações da entrega](01-orientacoes-da-entrega-P1.md) exige Documento de Visão, identificação de stakeholders, roteiro/resultados de elicitação, RF/RNF, regras de negócio, backlog e UML (Casos de Uso, Componentes e Implantação). Os documentos estão presentes no repositório. A **entrevista real não foi comprovada**: roteiro e entrevista simulada **não** substituem a aplicação com participantes. A permissão atual do professor `marcelobezerra-dotcom` foi verificada como **`write`** no GitHub em 25/11/2026. A submissão ao AVA permanece sem comprovação.
 
 O protótipo complementar apresenta uma aplicação estática baseada em HTML/CSS/JS, em GitHub Pages. Ele **não implementa** o sistema editorial e administrativo da SRS; isto deve ser mencionado na apresentação para não confundir o público.
 
@@ -47,7 +47,7 @@ O protótipo complementar apresenta uma aplicação estática baseada em HTML/CS
 1. Listas e notícias antigas são **referências históricas**, não vagas, editais ou convênios confirmados para o semestre atual.
 2. O portal é **independente e acadêmico**, não um produto oficial implantado pela Unifor.
 3. O fluxo editorial de três estados é **demonstração local**; não existe autenticação, banco, auditoria ou publicação remota.
-4. As **11 verificações automáticas anteriores** passaram em 23/11/2026, mas eram principalmente testes de código/catálogo; a auditoria de navegador real e de links externos é uma atividade separada (issue #13).
+4. A atualização de 25/11/2026 passou **16 de 16 testes automáticos**, incluindo checagem de sintaxe e integridade, e o [GitHub Pages publicou com sucesso](https://github.com/Ruan-levi/-requisitos-20262--grupo08/actions/runs/45739825496). Isso **não comprova** uma revisão visual em navegadores reais ou todos os destinos externos (issues #13 e #14).
 5. Houve correção de canal central de contato para `dri@unifor.br` e `+55 85 3477-3834`, conforme [página oficial de Contatos](https://unifor.br/dri/contatos).
 6. GitHub Pages pode levar alguns instantes após novo merge para refletir a versão; verificar o status em Actions antes de demonstrar.
 
@@ -79,7 +79,7 @@ O protótipo complementar apresenta uma aplicação estática baseada em HTML/CS
 
 **M2 — Protótipo e validação** (marco planejado, **ainda não criado na plataforma**): issues [#13](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/13) (smoke test), [#14](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/14) (fontes), [#15](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/15) (backend editorial), [#16](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/16) (a11y), [#17](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/17) (milestone/Project) e [#18](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/18) (documentação e CI). Esses itens ficam sem milestone no GitHub enquanto a M2 não puder ser criada pelo fluxo de integração.
 
-**CI:** [Validar protótipo](../.github/workflows/validar-prototipo.yml) executa verificações em PRs e pushes da `main`. **Deploy:** [Publicar protótipo](../.github/workflows/publicar-prototipo.yml) executa validação antes de publicar. Sucesso na CI não equivale a testes de usabilidade completos.
+**CI:** [Validar protótipo](../.github/workflows/validar-prototipo.yml) executa verificações em PRs e pushes da `main`, com 16 testes aprovados em 25/11/2026. **Deploy:** [Publicar protótipo](../.github/workflows/publicar-prototipo.yml) executou validação e publicou com sucesso após [PR #19](https://github.com/Ruan-levi/-requisitos-20262--grupo08/pull/19). Sucesso na CI não equivale a testes de usabilidade completos.
 
 ---
-**Parecer:** os artefatos escritos da P1 estão majoritariamente organizados, com lacuna real de entrevista e confirmação de submissão/colaboração; o protótipo atende a maior parte dos fluxos informativos, mas **não aos RF administrativos**, que fazem parte da proposta de produto, não da implementação estática. Não atribuir nota exata sem rubrica de apresentação mais recente.
+**Parecer:** os artefatos escritos da P1 estão majoritariamente organizados, com lacuna real de entrevista e confirmação da submissão no AVA; o protótipo atende a maior parte dos fluxos informativos, mas **não aos RF administrativos**, que fazem parte da proposta de produto, não da implementação estática. Não atribuir nota exata sem rubrica de apresentação mais recente.
