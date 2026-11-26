@@ -38,7 +38,7 @@ test('destinos têm vínculo de referência e portal próprio com caminhos espec
 });
 test('recursos não prometem vagas ou inscrições e diferenciam EducationUSA', () => {
   assert.match(js,/convênio não significa vaga|convênio não garante|não comprova vaga|não substitui a seleção/i);
-  assert.match(js,/não é uma universidade conveniada/i);
+  assert.match(js,/não equivale a convênio|não é uma universidade conveniada/i);
   assert.match(js,/não envie documentos pessoais/i);
   assert.match(js,/Aceitação formal|aceitação formal/i);
 });

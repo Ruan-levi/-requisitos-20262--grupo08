@@ -1,5 +1,27 @@
 # 🌍 Portal de Internacionalização | UNIFOR — Grupo 08
 
+## Preparação do pitch — revisão transversal do portal
+
+A nova [auditoria de funcionalidades e roteiro de apresentação](GestaoConfiguracao/09-auditoria-transversal-pitch-2026.md) analisa **universidades, documentação, dupla titulação, intercâmbio, jornada, contatos, docentes e estudantes internacionais**, além das limitações acadêmicas do protótipo.
+
+**Demonstração recomendada:** [Salamanca — passo a passo com links específicos](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/destinos/salamanca) → [Dupla Titulação — cursos, parceiros e Requerimento 175](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/programas/dupla-titulacao) → [Documentos por modalidade](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/documentos) → [Minha jornada](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/planejar).
+
+A página de Salamanca distingue **site oficial**, **Relações Internacionais**, **mobilidade de entrada**, **modalidade de convênio**, **orientações aos estudantes** e **contatos internacionais**. O portal apresenta a sequência de nomeação e candidatura sem prometer vaga ou aprovação.
+
+---
+
+## Catálogo internacional ampliado — 16 instituições / 11 países
+
+O protótipo agora permite consultar **16 instituições de referência em 11 países** com **busca, filtro por país e área de interesse, páginas internas de detalhes e links para portais oficiais de mobilidade das próprias universidades**. Os dados foram pesquisados em documentos e páginas da Unifor e nos sites das instituições estrangeiras em 26/11/2026.
+
+- **[Explorar o catálogo de destinos](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/destinos)** · [Universidades e filtros](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/universidades)
+- **[Ver as 16 fontes institucionais e links estrangeiros](GestaoConfiguracao/08-catalogo-universidades-internacionais-2026.md)** — tabela de referências Unifor, procedimentos de mobilidade e informações adicionais.
+- [Figma — desenho editável](https://www.figma.com/design/wINNQ9DbvhYKjjxyRV2lYc) · [Plano de trabalho P2](GestaoConfiguracao/06-plano-entrega-P2.md).
+
+**Importante:** são referências de cooperação, não lista de vagas abertas ou acordos automaticamente válidos por curso. Para candidaturas, confirmar elegibilidade, edital, nomeação e prazos com a DRI e a universidade de destino.
+
+---
+
 ## Redesign do portal e Figma — novembro/2026
 
 **Interface redesenhada e funcional:** [Abrir o Portal de Internacionalização](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/painel) · **[Abrir arquivo de design no Figma](https://www.figma.com/design/wINNQ9DbvhYKjjxyRV2lYc)**.
