@@ -1,5 +1,15 @@
 # 🌍 Portal de Internacionalização | UNIFOR — Grupo 08
 
+## Redesign do portal e Figma — novembro/2026
+
+**Interface redesenhada e funcional:** [Abrir o Portal de Internacionalização](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/painel) · **[Abrir arquivo de design no Figma](https://www.figma.com/design/wINNQ9DbvhYKjjxyRV2lYc)**.
+
+A nova experiência apresenta etapas de preparação, páginas específicas de universidades estrangeiras e acesso contextual aos próprios portais: [Universidade do Porto](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/destinos/porto), [Universidad de Salamanca](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/destinos/salamanca) e [Universidad Nacional de Cuyo](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/destinos/cuyo). O EducationUSA é apresentado como recurso de orientação, não como universidade conveniada. Veja a [pesquisa de fontes e decisões de UX](GestaoConfiguracao/07-pesquisa-dri-destinos-e-redesign.md).
+
+**Atenção:** são referências documentais, não disponibilidade de vagas, confirmação de convênio por curso ou processo de inscrição. O Figma possui telas de redesign editáveis e é um artefato de design separado do protótipo HTML navegável. Os requisitos e arquivos entregues para P1/P2 permanecem preservados.
+
+---
+
 ## 📘 Trabalho P2 — Sprint 2 (03/11–23/11/2026)
 
 **Pacote da entrega P2 (2,0 pontos):** [SRS formal IEEE 830 v2.0](Requisitos/Especificacao/06-SRS-IEEE830-P2.md) · [Matriz de consistência](Requisitos/Especificacao/07-matriz-consistencia-P2.md) · [UML revisada P2](diagrams/README.md) · [14 wireframes SVG](prototipo/wireframes/README.md) · [Galeria visual](https://ruan-levi.github.io/-requisitos-20262--grupo08/wireframes/) · [Protótipo navegável](https://ruan-levi.github.io/-requisitos-20262--grupo08/) · [Plano para envio no AVA](GestaoConfiguracao/06-plano-entrega-P2.md).

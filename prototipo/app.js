@@ -191,7 +191,7 @@ const courseSources = {
 const translations = {
   pt: {
     prototypeTop: 'Protótipo acadêmico · UNIFOR · Grupo 08', officialSite: 'Conheça a DRI oficial',
-    navHome: 'Início', navPrograms: 'Programas', navTopics: 'Temas', navGuides: 'Orientações', navHow: 'Como funciona', navContact: 'Contatos', navExplore: 'Explorar portal',
+    navHome: 'Início', navPrograms: 'Programas', navProcess: 'Como funciona', navDestinations: 'Portais estrangeiros', navTopics: 'Temas', navGuides: 'Orientações', navHow: 'Como funciona', navContact: 'Contatos', navExplore: 'Explorar portal',
     navUniversities: 'Universidades', navSources: 'Fontes oficiais',
     hubEyebrow: 'ACESSOS DIRETOS · UNIFOR', hubTitle: 'A informação certa, na fonte certa.', hubDescription: 'Cada assunto leva à página ou ao documento institucional correspondente — sem precisar recomeçar a navegação.', hubNotice: 'Fontes institucionais pesquisadas em novembro de 2026',
     hubUniversities: 'Universidades e convênios', hubUniversitiesDesc: 'Entenda as parcerias internacionais da Unifor.', hubDocs: 'Guia do intercambista', hubDocsDesc: 'Passo a passo e documentos de referência (edição 2024).', hubApplications: 'Intercâmbio e seleção', hubApplicationsDesc: 'Critérios, perguntas frequentes e orientações para estudantes.', hubContacts: 'Atendimento da DRI', hubContactsDesc: 'Fale com a equipe responsável pelo seu assunto.', hubGo: 'Explorar no portal', hubRead: 'Ver documentos no portal',
@@ -236,7 +236,7 @@ const translations = {
   },
   en: {
     prototypeTop: 'Academic prototype · UNIFOR · Group 08', officialSite: 'Visit the official DRI website',
-    navHome: 'Home', navPrograms: 'Programs', navTopics: 'Topics', navGuides: 'Guides', navHow: 'How it works', navContact: 'Contacts', navExplore: 'Explore portal',
+    navHome: 'Home', navPrograms: 'Programs', navProcess: 'How it works', navDestinations: 'Host portals', navTopics: 'Topics', navGuides: 'Guides', navHow: 'How it works', navContact: 'Contacts', navExplore: 'Explore portal',
     navUniversities: 'Universities', navSources: 'Official sources',
     hubEyebrow: 'DIRECT ACCESS · UNIFOR', hubTitle: 'The right information, from the right source.', hubDescription: 'Each subject links to its specific institutional page or document, so you can find answers with fewer steps.', hubNotice: 'Institutional sources researched in November 2026',
     hubUniversities: 'Universities and agreements', hubUniversitiesDesc: 'Explore UNIFOR international partnerships.', hubDocs: 'Exchange student guide', hubDocsDesc: 'Step-by-step reference and documents (2024 edition).', hubApplications: 'Exchange and applications', hubApplicationsDesc: 'Requirements, FAQs and advice for students.', hubContacts: 'Contact DRI', hubContactsDesc: 'Get in touch with the responsible team.', hubGo: 'Explore in the portal', hubRead: 'Browse documents in the portal',

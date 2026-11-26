@@ -22,3 +22,7 @@ A existência da M1 **não significa que um quadro Kanban já tenha sido criado*
 O workflow [Organizar M2](../.github/workflows/organizar-m2.yml) cria a milestone e vincula as issues automaticamente quando houver permissões; o Project/Kanban permanece uma organização complementar a conferir.
 
 **Estado confirmado em 26/11/2026:** milestone M2 criada (número 2) e issues vinculadas pela [Action](https://github.com/Ruan-levi/-requisitos-20262--grupo08/actions/runs/45829236580). O Project/Kanban não foi comprovado.
+
+## Pesquisa e redesign visual — novembro/2026
+
+[Estudo da DRI e de portais de universidades anfitriãs](07-pesquisa-dri-destinos-e-redesign.md), [protótipo GitHub Pages](https://ruan-levi.github.io/-requisitos-20262--grupo08/) e [arquivo de redesign no Figma](https://www.figma.com/design/wINNQ9DbvhYKjjxyRV2lYc).
