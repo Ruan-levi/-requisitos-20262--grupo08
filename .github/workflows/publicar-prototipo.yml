@@ -60,6 +60,9 @@ jobs:
         with:
           path: ./prototipo
 
+      - name: Aguardar indexação do artefato no GitHub Pages
+        run: sleep 15
+
       - name: Publicar protótipo
         id: deployment
         uses: actions/deploy-pages@v4
