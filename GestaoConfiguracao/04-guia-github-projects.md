@@ -54,3 +54,9 @@ O LAPIS contém scripts PowerShell para importar issues e configurar sprints. **
 Manter SRS, casos de uso, backlog e baselines em revisão incremental. A M2 sugerida aqui é organizacional; **não** pressupõe prazo ou novo requisito formal do professor.
 
 [Gestão de configuração](README.md) · [Controle de mudanças](03-controle-de-mudancas.md).
+
+## Sprint 2 real conforme enunciado da P2
+
+O professor estabeleceu **03/11 a 23/11/2026** para a M2, com foco em **SRS IEEE 830, consistência UML e protótipos**. Os novos registros de trabalho são as issues **#20–#23**. O [workflow organizar-m2.yml](../.github/workflows/organizar-m2.yml) foi projetado para criar/vincular automaticamente a M2 por GitHub Actions, de maneira idempotente. A execução deverá ser verificada na aba Actions e não se confunde com um quadro Projects/Kanban já existente.
+
+A issue #15 de backend real não é exigência de implementação da P2; fica fora da M2. Os wireframes de administração atendem à **prototipação**, e não a um sistema com login efetivamente implantado.

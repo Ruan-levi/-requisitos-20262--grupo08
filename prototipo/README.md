@@ -1,5 +1,14 @@
 # Protótipo web — Portal de Internacionalização
 
+## Artefatos e demonstração da P2
+
+- [Galeria dos 14 wireframes](wireframes/index.html), com SVG editável, inclusive telas administrativas propostas.
+- [Protótipo funcionando no GitHub Pages](https://ruan-levi.github.io/-requisitos-20262--grupo08/).
+- [SRS IEEE 830 v2](../Requisitos/Especificacao/06-SRS-IEEE830-P2.md) e [consistência UML](../Requisitos/Especificacao/07-matriz-consistencia-P2.md).
+- [Plano da Sprint 2 / envio no AVA](../GestaoConfiguracao/06-plano-entrega-P2.md).
+
+**Importante:** a existência dos wireframes de login/permissões não significa implantação de autenticação ou de backend.
+
 **Projeto:** UNIFOR · Requisitos e Modelagem de Sistemas · Grupo 08 · 2026.2  
 **Tecnologias:** HTML5, CSS3, JavaScript puro, sem dependências externas.  
 **Objetivo:** demonstrar a experiência de navegação pensada nos requisitos do [Portal de Internacionalização](../Requisitos/Elicitacao/01-documento-de-visao.md).

@@ -1,0 +1,42 @@
+name: Organizar Milestone M2 (P2)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/organizar-m2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  associate:
+    name: Criar milestone M2 e vincular issues sem duplicar
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+    steps:
+      - name: Conferir/criar Milestone M2 e associar backlog
+        shell: bash
+        run: |
+          set -euo pipefail
+          title="M2 — SRS, Consistência e Prototipação (P2)"
+          echo "Buscando Milestone existente..."
+          milestone="$(gh api "repos/$REPO/milestones?state=all&per_page=100" --jq '.[] | select(.title=="M2 — SRS, Consistência e Prototipação (P2)") | .number' | head -n 1)"
+          if [[ -z "$milestone" ]]; then
+            echo "Criando M2 (Sprint 2: 03/11–23/11/2026)"
+            milestone="$(gh api -X POST "repos/$REPO/milestones" \
+              -f title="$title" \
+              -f description="Trabalho P2. Sprint 2: 03/11 a 23/11/2026. SRS IEEE 830, consistência UML, wireframes, protótipo e gestão; artefatos revisados/entregues posteriormente quando necessário." \
+              -f due_on="2026-11-24T02:59:59Z" \
+              --jq .number)"
+          fi
+          echo "Milestone M2: $milestone" >> "$GITHUB_STEP_SUMMARY"
+          for issue in 13 14 16 17 18 20 21 22 23; do
+            gh api -X PATCH "repos/$REPO/issues/$issue" -F milestone="$milestone" >/dev/null
+            echo "- Issue #$issue vinculada à M2" >> "$GITHUB_STEP_SUMMARY"
+          done
+          echo "OBS: a issue #15 é evolução de backend, fora do escopo da P2." >> "$GITHUB_STEP_SUMMARY"

@@ -1,5 +1,13 @@
 # 🌍 Portal de Internacionalização | UNIFOR — Grupo 08
 
+## 📘 Trabalho P2 — Sprint 2 (03/11–23/11/2026)
+
+**Pacote da entrega P2 (2,0 pontos):** [SRS formal IEEE 830 v2.0](Requisitos/Especificacao/06-SRS-IEEE830-P2.md) · [Matriz de consistência](Requisitos/Especificacao/07-matriz-consistencia-P2.md) · [UML revisada P2](diagrams/README.md) · [14 wireframes SVG](prototipo/wireframes/README.md) · [Galeria visual](https://ruan-levi.github.io/-requisitos-20262--grupo08/wireframes/) · [Protótipo navegável](https://ruan-levi.github.io/-requisitos-20262--grupo08/) · [Plano para envio no AVA](GestaoConfiguracao/06-plano-entrega-P2.md).
+
+Os artefatos P2 foram elaborados **depois da Sprint prevista** e versionados com data real. A UML, a SRS e os wireframes administrativos representam uma solução futura; o protótipo web atual **não possui login, API ou banco**. A homologação institucional e a submissão ao AVA não são presumidas.
+
+---
+
 **Disciplina:** Requisitos e Modelagem de Sistemas · **Semestre:** 2026.2 · **Proposta 4**  
 **Atividade:** P1 — Elicitação e Modelagem Inicial · **Milestone M1:** 20/10 a 02/11/2026  
 **Equipe:** Ruan Levi Ferreira Macedo · Lorhan Dejan Ferreira Macedo · Hiago Queiroz Barreto

@@ -68,3 +68,9 @@ Navegação superior; navegação lateral com estado ativo; breadcrumb; hero da 
 ## Requisitos rastreados
 
 RF01–RF08: categorias, buscas, filtros, orientações, fontes, contatos, idiomas e referência de atualização. RF09–RF14 permanecem propostas de backend/governança, não implementadas como serviços reais. RNF01, RNF02, RNF04, RNF05 e RNF06 são abordados no protótipo; acessibilidade plena e requisitos de desempenho exigem avaliação formal.
+
+## Base vetorial criada para a entrega P2
+
+Antes da eventual importação ao Figma, foram produzidas **14 telas em SVG** e uma [galeria navegável](wireframes/index.html). Estas telas são a evidência de wireframes da Sprint 2 e podem ser usadas como ponto de partida para camadas e componentes no Figma.
+
+A atividade P2 aceita **Figma ou similar**: o [protótipo HTML publicado](https://ruan-levi.github.io/-requisitos-20262--grupo08/) demonstra a navegação. Nenhum arquivo Figma foi criado nesta etapa; a apresentação não deve alegar o contrário.

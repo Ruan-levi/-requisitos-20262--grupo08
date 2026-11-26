@@ -1,0 +1,73 @@
+@startuml
+' UML Sprint 2 - casos de uso (solucao-alvo)
+title P2 - Casos de Uso | Portal de Internacionalização
+left to right direction
+skinparam backgroundColor white
+skinparam shadowing false
+skinparam actorStyle awesome
+skinparam packageStyle rectangle
+skinparam usecase {
+ BackgroundColor #E9F2FE
+ BorderColor #2B5D99
+ FontColor #15385B
+}
+actor "Visitante /
+Estudante" as V
+actor "Docente" as D
+actor "Estudante
+internacional" as I
+actor "Editor" as E
+actor "Publicador" as P
+actor "Administrador" as A
+rectangle "Portal de Internacionalização (sistema proposto)" {
+  package "Consulta publica - demonstrada no prototipo P2" {
+    usecase "UC01 - Explorar
+programas e temas
+(RF01, RF04)" as C1
+    usecase "UC02 - Pesquisar
+orientacoes e filtros
+(RF02, RF03)" as C2
+    usecase "UC03 - Consultar
+universidades
+(RF04, RF05)" as C3
+    usecase "UC04 - Documentos
+e roteiro
+(RF04, RF05, RF06)" as C4
+    usecase "UC05 - Idioma,
+fontes e contatos
+(RF05-RF08)" as C5
+  }
+  package "Gestao editorial - proposta nao implementada" {
+    usecase "UC06 - Autenticar
+(RF09)" as C6
+    usecase "UC07 - Editar, revisar
+e publicar (RF08,
+RF10-RF12)" as C7
+    usecase "UC08 - Gerenciar
+permissoes (RF14)" as C8
+  }
+  usecase "UC09 - Sinalizar
+conteudo (RF13)
+[evolucao]" as C9
+}
+V --> C1
+V --> C2
+V --> C3
+V --> C4
+V --> C5
+V ..> C9
+D --> C1
+D --> C5
+I --> C1
+I --> C5
+E --> C6
+E --> C7
+P --> C6
+P --> C7
+A --> C6
+A --> C8
+note bottom of C7
+  Depende de backend e permissoes reais.
+  Wireframes nao equivalem a implementacao.
+end note
+@enduml

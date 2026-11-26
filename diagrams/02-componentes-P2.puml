@@ -1,0 +1,50 @@
+@startuml
+' UML Sprint 2 - componentes atual x proposto
+title P2 - Componentes | Protótipo e arquitetura-alvo
+top to bottom direction
+skinparam backgroundColor white
+skinparam componentStyle uml2
+skinparam shadowing false
+package "Protótipo P2 - implementado em GitHub Pages" #E8F2FF {
+ component "Interface pública
+HTML, CSS, JS
+RF01-RF07" as UI
+ component "Catálogo e guias
+JavaScript local
+RF02-RF05" as DATA
+ component "Navegação / roteiros /
+checklists locais" as FLOW
+}
+cloud "Fontes oficiais
+DRI, documentos e contatos" as SOURCES
+package "Sistema futuro - NÃO implementado" #E7F7ED {
+ component "API de orientações
+publicadas" as API
+ component "Serviço de autenticação
+RF09" as AUTH
+ component "Gestão editorial
+RF10-RF12" as EDIT
+ component "Permissões e auditoria
+RF08, RF14" as ROLES
+ database "Banco de dados
+conteúdo, histórico,
+usuários e revisões" as DB
+ component "Sinalizações
+RF13 [evolução]" as FLAGS
+}
+UI --> DATA : consulta local
+UI --> FLOW : rotas e interação
+UI ..> SOURCES : links contextuais HTTPS
+UI ..> API : integração futura
+API --> DB
+AUTH --> DB
+EDIT --> AUTH : exige autorização
+EDIT --> DB
+ROLES --> AUTH
+ROLES --> DB
+FLAGS --> API
+note right of UI
+  Não possui login real, banco,
+  submissões ou API implantada.
+end note
+@enduml
