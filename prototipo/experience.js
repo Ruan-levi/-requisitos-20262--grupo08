@@ -153,9 +153,223 @@
       subjects:L(['Convênio bilateral','Indicação institucional','Mobilidade em Mendoza'],['Bilateral agreement','Home nomination','Study in Mendoza'])
     }
   ];
-  const externalWhitelist = /^(https:\/\/(?:www\.)?(?:unifor\.br|up\.pt|international\.up\.pt|internacional\.usal\.es|uncuyo\.edu\.ar|educationusa\.state\.gov)\/)/i;
+
+  // Referências documentadas no site institucional da Unifor e canais da anfitriã.
+  // Evitar usar as páginas de candidatura diretamente antes da seleção de origem.
+  const destinationReferences2026 = [
+  {
+    "id": "minho",
+    "name": "Universidade do Minho",
+    "country": "Portugal",
+    "flag": "🇵🇹",
+    "field": "tecnologia",
+    "city": "Braga e Guimarães",
+    "origin": "https://unifor.br/web/graduacao/analise-e-desenvolvimento-de-sistema",
+    "process": "https://alunos.uminho.pt/EN/incomingstudents/Pages/ProcedimentosCandidaturas.aspx",
+    "extra": "https://www.uminho.pt/EN/education/support-for-students/international-relations-services/Incoming/Pages/Procedimentos-de-candidatura.aspx",
+    "focus": "candidatura, indicação e aceitação pela instituição",
+    "detail": "O processo de mobilidade incoming inclui instruções para a universidade de origem e avaliação pela coordenação. A aceitação é comunicada oficialmente.",
+    "fieldLabel": "Tecnologia e engenharias"
+  },
+  {
+    "id": "aveiro",
+    "name": "Universidade de Aveiro",
+    "country": "Portugal",
+    "flag": "🇵🇹",
+    "field": "tecnologia",
+    "city": "Aveiro",
+    "origin": "https://unifor.br/web/graduacao/analise-e-desenvolvimento-de-sistema",
+    "process": "https://www.ua.pt/pt/divisaointernacional/durante-mobilidade-incoming",
+    "extra": "https://forms.ua.pt/index.php?lang=en&r=survey%2Findex&sid=952522",
+    "focus": "orientações para incoming e contrato de estudos",
+    "detail": "A instituição organiza a chegada e a execução da mobilidade acadêmica; alterações ao plano de estudos passam pela aprovação das coordenações.",
+    "fieldLabel": "Tecnologia e engenharias"
+  },
+  {
+    "id": "braganca",
+    "name": "Instituto Politécnico de Bragança",
+    "country": "Portugal",
+    "flag": "🇵🇹",
+    "field": "tecnologia",
+    "city": "Bragança",
+    "origin": "https://unifor.br/web/graduacao/analise-e-desenvolvimento-de-sistema",
+    "process": "https://portalold.ipb.pt/index.php/en/gri/mobility-from-non-european-heis",
+    "extra": "https://atlas.ipb.pt/pt/internacionalizar/erasmus/mobilidade-estudantes",
+    "focus": "documentação e intercâmbio de instituições não europeias",
+    "detail": "O IPB informa quais documentos podem ser exigidos após seleção pela instituição de origem. O portal de Erasmus apresenta outras modalidades e não assegura o mesmo regime.",
+    "fieldLabel": "Tecnologia e engenharias"
+  },
+  {
+    "id": "deggendorf",
+    "name": "Deggendorf Institute of Technology",
+    "country": "Alemanha",
+    "flag": "🇩🇪",
+    "field": "tecnologia",
+    "city": "Deggendorf",
+    "origin": "https://www.unifor.br/web/graduacao/ciencias-economicas",
+    "process": "https://www.th-deg.de/en/Internationales",
+    "extra": "https://www.th-deg.de/studying-in-english",
+    "focus": "programas de intercâmbio internacionais e disciplinas em inglês",
+    "detail": "A instituição descreve opções de intercâmbio em áreas como negócios e tecnologia, além de oferta de disciplinas em inglês. A relação de dupla titulação ou intercâmbio depende do curso na Unifor.",
+    "fieldLabel": "Negócios e tecnologia"
+  },
+  {
+    "id": "hwr-berlin",
+    "name": "Berlin School of Economics and Law (HWR Berlin)",
+    "country": "Alemanha",
+    "flag": "🇩🇪",
+    "field": "gestao",
+    "city": "Berlim",
+    "origin": "https://www.unifor.br/web/graduacao/administracao",
+    "process": "https://www.hwr-berlin.de/en/study/international-study/exchange-students-at-the-hwr-berlin/",
+    "extra": "https://www.hwr-berlin.de/en/study/international-study/exchange-students-at-the-hwr-berlin/organizing-your-studies-at-department-1",
+    "focus": "intercâmbio, Business & Economics e organização de disciplinas",
+    "detail": "A HWR Berlin orienta estudantes intercambistas por departamentos e informa como organizar o semestre. A Unifor também menciona modalidades acadêmicas específicas em Administração.",
+    "fieldLabel": "Administração e negócios"
+  },
+  {
+    "id": "oviedo",
+    "name": "Universidad de Oviedo",
+    "country": "Espanha",
+    "flag": "🇪🇸",
+    "field": "geral",
+    "city": "Oviedo",
+    "origin": "https://unifor.br/web/graduacao/analise-e-desenvolvimento-de-sistema",
+    "process": "https://biologia.uniovi.es/es/movilidades-de-convenios",
+    "extra": "https://sede.uniovi.es/web/facultad-de-filosof%C3%ADa-y-letras/convenios-internacionales",
+    "focus": "convênios internacionais e serviços de mobilidade",
+    "detail": "A universidade descreve modalidades de mobilidade internacional em páginas de suas faculdades. Antes de consultar requisitos, confirme a unidade acadêmica e o edital correspondente.",
+    "fieldLabel": "Áreas acadêmicas diversas"
+  },
+  {
+    "id": "rotterdam",
+    "name": "Rotterdam University of Applied Sciences",
+    "country": "Países Baixos",
+    "flag": "🇳🇱",
+    "field": "tecnologia",
+    "city": "Roterdã",
+    "origin": "https://unifor.br/web/graduacao/analise-e-desenvolvimento-de-sistema",
+    "process": "https://www.rotterdamuas.com/study-information/faq-exchange/incoming-exchange-students/application-process/",
+    "extra": "https://www.rotterdamuas.com/study-information/enrolment/application-procedures/default-content/exchange-programme-application-procedure/",
+    "focus": "candidatura de intercâmbio e reconhecimento acadêmico",
+    "detail": "O Centre of International Affairs descreve candidatura, confirmação de aceitação e procedimentos de matrícula. Os acordos de disciplinas devem ser alinhados com os coordenadores.",
+    "fieldLabel": "Tecnologia e projetos aplicados"
+  },
+  {
+    "id": "imt-albi",
+    "name": "IMT Mines Albi",
+    "country": "França",
+    "flag": "🇫🇷",
+    "field": "tecnologia",
+    "city": "Albi",
+    "origin": "https://unifor.br/web/graduacao/analise-e-desenvolvimento-de-sistema",
+    "process": "https://www.imt-mines-albi.fr/en/join-general-engineering-program-bac-3-or-bac-4-international-partner-school",
+    "extra": "https://www.imt-mines-albi.fr/en/joining-a-training-course/how-can-i-join-imt-mines-albi-engineering-school",
+    "focus": "mobilidade em engenharia e indicação pela instituição parceira",
+    "detail": "A IMT Mines Albi publica procedimentos próprios de intercâmbio e dupla titulação para estudantes de instituições parceiras, com necessidade de indicação oficial.",
+    "fieldLabel": "Engenharias"
+  },
+  {
+    "id": "sonora",
+    "name": "Universidad de Sonora",
+    "country": "México",
+    "flag": "🇲🇽",
+    "field": "geral",
+    "city": "Hermosillo",
+    "origin": "https://unifor.br/web/graduacao/analise-e-desenvolvimento-de-sistema",
+    "process": "https://movilidad.unison.mx/estudiante-entrante/",
+    "extra": "https://movilidad.unison.mx/international-incoming-students/",
+    "focus": "indicação institucional e portal de mobilidade entrante",
+    "detail": "A Universidad de Sonora orienta que candidatos sejam indicados pela instituição de origem no portal específico de mobilidade. Não é inscrição livre para qualquer interessado.",
+    "fieldLabel": "Áreas acadêmicas diversas"
+  },
+  {
+    "id": "pucp",
+    "name": "Pontificia Universidad Católica del Perú",
+    "country": "Peru",
+    "flag": "🇵🇪",
+    "field": "geral",
+    "city": "Lima",
+    "origin": "https://unifor.br/web/graduacao/analise-e-desenvolvimento-de-sistema",
+    "process": "https://internacional.pucp.edu.pe/estudiantes-internacionales-2/estudia-en-la-pucp/",
+    "extra": "https://internacional.pucp.edu.pe/estudiantes-internacionales-2/tramites/",
+    "focus": "nomeação, estudos e documentação para visitantes",
+    "detail": "Para intercâmbio, a PUCP explica que a instituição de origem realiza a nomeação e disponibiliza procedimentos para estudantes internacionais.",
+    "fieldLabel": "Áreas acadêmicas diversas"
+  },
+  {
+    "id": "uniandes",
+    "name": "Universidad de los Andes",
+    "country": "Colômbia",
+    "flag": "🇨🇴",
+    "field": "gestao",
+    "city": "Bogotá",
+    "origin": "https://unifor.br/web/graduacao/analise-e-desenvolvimento-de-sistema",
+    "process": "https://www.uniandes.edu.co/internacionalizacion/en/node/114761",
+    "extra": "https://www.uniandes.edu.co/internacionalizacion/es/socios",
+    "focus": "intercâmbio semestral e programas acadêmicos para visitantes",
+    "detail": "A Uniandes publica informações sobre mobilidade entrante e atividades acadêmicas internacionais, com regras que variam conforme a modalidade e a faculdade.",
+    "fieldLabel": "Administração e áreas diversas"
+  },
+  {
+    "id": "concordia",
+    "name": "Concordia University",
+    "country": "Canadá",
+    "flag": "🇨🇦",
+    "field": "geral",
+    "city": "Montréal",
+    "origin": "https://unifor.br/web/guest/-/quer-ser-um-cidadao-global-saiba-mais-sobre-as-parcerias-internacionais-da-unifor",
+    "process": "https://www.concordia.ca/international/students-from-abroad/inbound-exchange.html",
+    "extra": "https://www.concordia.ca/international/students-from-abroad/inbound-exchange/apply.html",
+    "focus": "intercâmbio incoming ou visitante pagante",
+    "detail": "A Concordia diferencia intercâmbio por universidade parceira de visitante internacional com pagamento de taxas. A menção da Unifor é histórica e não confirma que o acordo esteja vigente.",
+    "fieldLabel": "Áreas acadêmicas diversas",
+    "historical": true
+  },
+  {
+    "id": "appstate",
+    "name": "Appalachian State University",
+    "country": "Estados Unidos",
+    "flag": "🇺🇸",
+    "field": "geral",
+    "city": "Boone, Carolina do Norte",
+    "origin": "https://unifor.br/web/graduacao/analise-e-desenvolvimento-de-sistema",
+    "process": "https://international.appstate.edu/incoming-exchange-students",
+    "extra": "https://international.appstate.edu/international-students/orientation-and-pre-arrival",
+    "focus": "intercâmbio, contato com a instituição de origem e orientação na chegada",
+    "detail": "A Appalachian State orienta estudantes de intercâmbio a procurar inicialmente o escritório internacional da universidade de origem e disponibiliza informações sobre chegada.",
+    "fieldLabel": "Áreas acadêmicas diversas"
+  }
+];
+  verifiedDestinations.push(...destinationReferences2026.map(d => ({
+    id:d.id, name:d.name, country:d.country, flag:d.flag, field:d.field,
+    city:d.city, focus:d.focus, fieldLabel:d.fieldLabel, historical:!!d.historical,
+    origin:d.origin, process:d.process, extra:d.extra,
+    summary:L(d.name+' — '+d.detail, d.name+' — '+d.focus+'. Verify the current agreement and eligibility with UNIFOR.'),
+    subjects:L([d.fieldLabel,d.focus], [d.fieldLabel,d.focus]),
+    steps:L([
+      'Consulte a referência institucional da Unifor e confirme com a DRI se há acordo ativo para seu curso.',
+      'Verifique edital vigente, eventual indicação pela Unifor e a compatibilidade de disciplinas.',
+      'Conheça o portal de '+d.name+' e pesquise as orientações de mobilidade: '+d.focus+'.',
+      d.detail,
+      'Confirme a candidatura, documentos e aceitação apenas pelos canais oficiais da instituição anfitriã.'
+    ],[
+      'Check UNIFOR institutional reference and verify the partnership is active for your degree.',
+      'Review the current call, nomination process and academic compatibility with DRI.',
+      'Explore official incoming and international student instructions at '+d.name+'.',
+      d.focus+'.',
+      'Confirm application rules, documents and acceptance directly with the host institution.'
+    ]),
+    note:L((d.historical?'A menção da Unifor é histórica. ':'')+'A instituição aparece em referências institucionais, mas nenhuma vaga, convênio atual por curso ou candidatura está garantida.', 'Institutional reference only; current partnership, eligibility and places are not guaranteed.')
+  })));
+  // Mapa estável de áreas para o catálogo principal de universidades.
+  verifiedDestinations.forEach(d=>{if(!d.field)d.field=d.id==='porto'?'tecnologia':'geral';});
+  const externalWhitelist = new Set(
+    verifiedDestinations.flatMap(d=>[d.origin,d.process,d.extra])
+      .concat(['https://educationusa.state.gov/your-5-steps-us-study'])
+  );
   function verifiedExternal(url, label){
-    if (!externalWhitelist.test(url)) return '';
+    if (typeof url !== 'string' || !url.startsWith('https://') || !externalWhitelist.has(url)) return '';
     const host = new URL(url).hostname;
     return '<a class="xp-resource-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer"><span class="xp-resource-link__text"><strong>'+esc(label)+'</strong><small>'+esc(host)+'</small></span><span aria-hidden="true">↗</span></a>';
   }
@@ -193,26 +407,73 @@
       '<div class="xp-process-list">'+all.map((x,i)=>'<article class="xp-process-item"><span class="xp-process-number">'+String(i+1).padStart(2,'0')+'</span><div><h2>'+esc(x[0])+'</h2><p>'+esc(x[1])+'</p>'+link(x[2],S('details'))+'</div></article>').join('')+'</div>'+
       '<div class="xp-paper xp-process-last"><h2>'+(lang()==='pt'?'Antes de preencher qualquer inscrição':'Before completing any application')+'</h2><p>'+(lang()==='pt'?'Não envie documentos pessoais pelo protótipo. Informações aqui organizadas não substituem o edital, nem o processo seletivo institucional ou a carta de aceitação da universidade estrangeira.':'Do not submit personal documents through this prototype. This guide does not replace institutional calls or a host university acceptance letter.')+'</p>'+verifiedExternal(URLs.intercambio,lang()==='pt'?'Exemplo: notícia institucional sobre intercâmbio 2027.1':'Example: institutional exchange news')+'</div>'+note();
   }
+
+  let destinationCountry='all', destinationField='all', destinationQuery='';
+  function destinationFieldTitle(key){
+    const tags={geral:L('Todas as áreas','General / all fields'),tecnologia:L('Tecnologia e engenharias','Technology and engineering'),gestao:L('Negócios e gestão','Business and management'),saude:L('Saúde','Health')};
+    return tr(tags[key]||tags.geral);
+  }
   function destinationCard(d){
-    return '<article class="xp-destination-card"><div class="xp-destination-card__top"><span class="xp-destination-flag">'+d.flag+'</span>'+badge(d.country)+'</div><h3>'+esc(d.name)+'</h3><p>'+esc(tr(d.summary))+'</p><div class="xp-destination-tags">'+tr(d.subjects).slice(0,2).map(t=>badge(t)).join('')+'</div>'+link('destinos/'+d.id,S('details'))+'</article>';
+    return '<article class="xp-destination-card"><div class="xp-destination-card__top"><span class="xp-destination-flag" aria-hidden="true">'+d.flag+'</span>'+badge(d.country)+'</div>'+
+      '<div class="xp-destination-card__meta">'+esc(d.city||'')+' · '+esc(destinationFieldTitle(d.field))+'</div>'+
+      '<h3>'+esc(d.name)+'</h3><p>'+esc(tr(d.summary))+'</p>'+
+      '<div class="xp-destination-tags">'+tr(d.subjects).slice(0,2).map(t=>badge(t)).join('')+'</div>'+
+      (d.historical?'<p class="xp-destination-warning">'+(lang()==='pt'?'Referência histórica da Unifor.':'Historical UNIFOR reference.')+'</p>':'')+
+      '<div class="xp-destination-actions">'+link('destinos/'+d.id,lang()==='pt'?'Informações e portais':'Information and portals')+
+      verifiedExternal(d.process,lang()==='pt'?'Portal oficial da universidade':'Official host portal')+'</div></article>';
+  }
+  function destinationFilters(){
+    const countries=[...new Set(verifiedDestinations.map(d=>d.country))].sort((a,b)=>a.localeCompare(b,lang()==='pt'?'pt-BR':'en'));
+    const opts=countries.map(c=>'<option value="'+esc(c)+'"'+(destinationCountry===c?' selected':'')+'>'+esc(c)+'</option>').join('');
+    const fields=['tecnologia','gestao','geral'];
+    return '<form class="xp-destination-filters" role="search" id="xpDestinationForm">'+
+      '<label>'+(lang()==='pt'?'Buscar universidade ou cidade':'Find a university or city')+
+      '<input id="xpDestinationQuery" type="search" autocomplete="off" value="'+esc(destinationQuery)+'" placeholder="'+(lang()==='pt'?'Ex.: Portugal, engenharia, Montréal':'e.g., Portugal, engineering, Montréal')+'"></label>'+
+      '<label>'+(lang()==='pt'?'País':'Country')+'<select id="xpDestinationCountry"><option value="all">'+esc(S('allCountries'))+'</option>'+opts+'</select></label>'+
+      '<label>'+(lang()==='pt'?'Área de interesse':'Field of interest')+'<select id="xpDestinationField"><option value="all">'+esc(S('allCourses'))+'</option>'+fields.map(f=>'<option value="'+f+'"'+(destinationField===f?' selected':'')+'>'+esc(destinationFieldTitle(f))+'</option>').join('')+'</select></label>'+
+      '<button type="button" id="xpDestinationReset" class="xp-btn xp-btn--outline">'+(lang()==='pt'?'Limpar filtros':'Clear filters')+'</button></form>';
+  }
+  function paintDestinationResults(){
+    const node=root.querySelector('#xpDestinationResults');if(!node)return;
+    const rows=verifiedDestinations.filter(d=>
+      (destinationCountry==='all'||d.country===destinationCountry)&&
+      (destinationField==='all'||d.field===destinationField)&&
+      norm([d.name,d.country,d.city,d.fieldLabel,d.focus,tr(d.summary)].join(' ')).includes(norm(destinationQuery))
+    );
+    node.innerHTML='<p class="xp-results-count" role="status">'+rows.length+' '+(lang()==='pt'?'instituições de referência encontradas':'reference institutions found')+'</p>'+
+      (rows.length?'<div class="xp-cards xp-cards--3">'+rows.map(destinationCard).join('')+'</div>':
+      '<div class="xp-empty">'+(lang()==='pt'?'Nenhuma instituição corresponde à pesquisa. Limpe os filtros ou tente outra expressão.':'No institution matches these filters. Clear filters or try another search.')+'</div>');
   }
   function destinationsPage(id){
     const d=verifiedDestinations.find(x=>x.id===id);
-    if (d) {
+    if(d){
       return hero(d.name,tr(d.summary),d.flag+' '+d.country,link('destinos',S('back'),'xp-btn--gold'))+
-      '<div class="xp-two"><article class="xp-paper xp-maincol">'+sectionHeader(lang()==='pt'?'Como funciona o caminho até essa universidade':'Your path to this institution','')+steps(tr(d.steps))+
-      '<div class="xp-disclaimer xp-disclaimer--soft"><span>ⓘ</span><p>'+esc(tr(d.note))+'</p></div>'+
-      '<div class="xp-source-journey"><span>1 · Unifor / DRI</span><span aria-hidden="true">→</span><span>2 · '+esc(d.name)+'</span><span aria-hidden="true">→</span><span>3 · '+(lang()==='pt'?'Aceitação formal':'Formal acceptance')+'</span></div></article>'+
-      '<aside class="xp-aside"><div class="xp-sidebar-card"><h3>'+(lang()==='pt'?'Canais relacionados a este destino':'Relevant official resources')+'</h3><p>'+(lang()==='pt'?'Os acessos abaixo levam a páginas específicas, e não apenas à página inicial da DRI.':'These links open dedicated resources, not just DRI home.')+'</p>'+
-      verifiedExternal(d.origin,lang()==='pt'?'Convênios e instituições — Unifor':'Unifor institutional partnerships')+
-      verifiedExternal(d.process,lang()==='pt'?'Como funciona a mobilidade — destino':'Incoming mobility — host university')+
-      verifiedExternal(d.extra,lang()==='pt'?'Instruções e portal do destino':'Host procedures and guidance')+
-      '<small>'+esc(S('history'))+'</small></div><div class="xp-sidebar-card"><h3>'+esc(S('next'))+'</h3>'+link('documentos',S('documents'))+link('processo',lang()==='pt'?'Etapas do processo':'Process steps')+link('contatos',S('contacts'))+'</div></aside></div>'+note();
+        '<div class="xp-destination-profile"><span>'+esc(d.city||d.country)+'</span><span>'+esc(destinationFieldTitle(d.field))+'</span><span>'+(lang()==='pt'?'Pesquisa documental: novembro de 2026':'Document review: November 2026')+'</span></div>'+
+        '<div class="xp-two"><article class="xp-paper xp-maincol">'+
+        sectionHeader(lang()==='pt'?'O que você precisa saber':'What you need to know','')+
+        '<p class="xp-lead">'+esc(d.focus||'')+'</p>'+
+        sectionHeader(lang()==='pt'?'Passo a passo de consulta':'Suggested research steps','')+steps(tr(d.steps))+
+        '<div class="xp-disclaimer xp-disclaimer--soft"><span>ⓘ</span><p>'+esc(tr(d.note))+'</p></div>'+
+        '<div class="xp-source-journey"><span>1 · Unifor / DRI</span><span aria-hidden="true">→</span><span>2 · '+esc(d.name)+'</span><span aria-hidden="true">→</span><span>3 · '+(lang()==='pt'?'Aceitação formal':'Formal acceptance')+'</span></div></article>'+
+        '<aside class="xp-aside"><div class="xp-sidebar-card"><h3>'+(lang()==='pt'?'Portais e informações oficiais':'Official portals and resources')+'</h3><p>'+(lang()==='pt'?'A referência da Unifor e os serviços da universidade de destino têm finalidades diferentes. Confirme o processo aplicável.':'UNIFOR listings and host university portals serve different purposes. Confirm the applicable procedure.')+'</p>'+
+        verifiedExternal(d.origin,lang()==='pt'?'Onde a Unifor cita esta instituição':'UNIFOR institutional reference')+
+        verifiedExternal(d.process,lang()==='pt'?'Portal de mobilidade / informação do destino':'Host university mobility portal')+
+        verifiedExternal(d.extra,lang()==='pt'?'Serviços, orientações ou formulários oficiais':'Official services, forms or guidance')+
+        '<small>'+esc(S('history'))+'</small></div>'+
+        '<div class="xp-sidebar-card"><h3>'+esc(S('next'))+'</h3>'+link('documentos',S('documents'))+link('processo',lang()==='pt'?'Etapas do processo':'Process steps')+link('contatos',S('contacts'))+'</div></aside></div>'+note();
     }
-    return hero(lang()==='pt'?'Destinos e portais internacionais':'Destinations and international portals',lang()==='pt'?'Compare três instituições citadas entre os convênios da Unifor e explore os procedimentos oficiais de cada universidade.':'Explore three institutions listed among UNIFOR partnerships, then read their own incoming student instructions.',lang()==='pt'?'PESQUISA POR DESTINO':'DESTINATION RESEARCH',link('processo',lang()==='pt'?'Entenda as etapas':'Understand the steps','xp-btn--gold'))+
-    '<div class="xp-disclaimer xp-disclaimer--soft"><span>ⓘ</span><p>'+(lang()==='pt'?'São exemplos documentados de parcerias, não um catálogo completo de vagas, cursos ou convênios ativos. Confirme a elegibilidade com a DRI.':'Documented partnership examples, not a complete live inventory of vacancies or active agreements. Verify eligibility with DRI.')+'</p></div>'+
-    '<div class="xp-cards xp-cards--3">'+verifiedDestinations.map(destinationCard).join('')+'</div>'+
-    '<div class="xp-paper xp-education"><div><span class="xp-eyebrow">EDUCATIONUSA</span><h2>'+(lang()==='pt'?'Quer estudar nos Estados Unidos?':'Planning to study in the United States?')+'</h2><p>'+(lang()==='pt'?'O EducationUSA oferece uma trilha independente de orientação em cinco etapas: pesquisa, financiamento, candidatura, visto e preparação da partida. Não é uma universidade conveniada nem um processo da Unifor.':'EducationUSA offers independent advising in five steps: research, finances, application, visa and departure. It is not a UNIFOR partner university or application.')+'</p></div>'+verifiedExternal('https://educationusa.state.gov/your-5-steps-us-study',lang()==='pt'?'Explorar os 5 passos EducationUSA':'Explore EducationUSA 5 steps')+'</div>'+note();
+    const totalCountries=new Set(verifiedDestinations.map(d=>d.country)).size;
+    return hero(lang()==='pt'?'Universidades e portais internacionais':'Universities and international portals',
+      lang()==='pt'?'Pesquise instituições citadas pela Unifor e conheça os serviços oficiais de cada destino, com orientação sobre como iniciar.':'Browse institutions listed in UNIFOR sources and explore their official services and study procedures.',
+      lang()==='pt'?'CATÁLOGO DE REFERÊNCIAS':'REFERENCE DIRECTORY',link('processo',lang()==='pt'?'Entenda as etapas':'Understand the steps','xp-btn--gold'))+
+      '<div class="xp-reference-overview"><div><strong>'+verifiedDestinations.length+'</strong><span>'+(lang()==='pt'?'universidades selecionadas':'selected institutions')+'</span></div><div><strong>'+totalCountries+'</strong><span>'+(lang()==='pt'?'países representados':'countries represented')+'</span></div><p>'+(lang()==='pt'?'Listagem orientativa, não é o número total de convênios ativos da Unifor.':'Illustrative list, not the total number of currently active UNIFOR agreements.')+'</p></div>'+
+      '<div class="xp-disclaimer xp-disclaimer--soft"><span>ⓘ</span><p>'+
+      (lang()==='pt'?'As referências vêm de páginas institucionais ou notícias da Unifor. A oferta de intercâmbio depende do curso, de acordo vigente, de editais e de eventual nomeação.':'References come from UNIFOR listings or institutional news. Mobility depends on academic area, active agreements, calls and any required nomination.')+
+      '</p></div>'+destinationFilters()+'<div id="xpDestinationResults" aria-live="polite"></div>'+
+      '<div class="xp-paper xp-education"><div><span class="xp-eyebrow">EDUCATIONUSA</span><h2>'+
+      (lang()==='pt'?'Vai pesquisar instituições nos Estados Unidos?':'Considering the United States?')+
+      '</h2><p>'+(lang()==='pt'?'A orientação EducationUSA tem cinco etapas para o estudo no país, mas não equivale a convênio nem candidatura pela Unifor.':'EducationUSA offers five study preparation steps, not a UNIFOR partnership or application.')+
+      '</p></div>'+verifiedExternal('https://educationusa.state.gov/your-5-steps-us-study',lang()==='pt'?'Consultar EducaçãoUSA':'Visit EducationUSA')+'</div>'+note();
   }
 
   const programs = [
@@ -289,7 +550,11 @@
     { id: 'salamanca', country: 'Espanha', flag:'🇪🇸', name:'Universidad de Salamanca', field:'geral', label:L('Programa Santander Top España','Santander Top España program'), context:L('A Unifor documentou a participação de estudantes e docente em edição do programa. Isto não garante novas chamadas.','UNIFOR documented student and faculty participation in an earlier program edition. This does not guarantee future calls.'), source:'https://unifor.br/pt/-/unifor-divulga-resultado-final-do-programa-santander-top-espana-2026' },
     { id: 'cuyo', country: 'Argentina', flag:'🇦🇷', name:'Universidad Nacional de Cuyo', field:'geral', label:L('Cooperação institucional','Institutional cooperation'), context:L('Instituição mencionada na lista institucional de convênios. Confirme o escopo e a vigência do acordo.','Institution listed among institutional agreements. Confirm scope and current status.'), source:URLs.convenio },
     { id: 'porto-odonto', country: 'Portugal', flag:'🇵🇹', name:'Faculdade de Medicina Dentária — Universidade do Porto', field:'saude', label:L('Saúde / Odontologia','Health / Dentistry'), context:L('Referência citada em notícia institucional sobre cooperação internacional. Consulte curso, modalidades e convênio.','Referenced in an institutional article about cooperation. Check the degree, mobility type and agreement.'), source:URLs.noticia }
-  ];
+  ].concat(verifiedDestinations.filter(d=>!['porto','salamanca','cuyo'].includes(d.id)).map(d=>({
+    id:'catalogo-'+d.id,country:d.country,flag:d.flag,name:d.name,field:d.field,
+    destinationId:d.id, label:L(d.fieldLabel,d.fieldLabel),source:d.origin,
+    context:L(d.focus+' '+d.name+' possui orientações públicas para mobilidade internacional. Confirme os convênios atuais.',d.focus+'. Verify current agreements.')
+  })));
   const courseDocs = [
     {name: L('Análise e Desenvolvimento de Sistemas','Systems Analysis and Development'), url:URLs.docsads, year:'2025'},
     {name: L('Engenharia da Computação','Computer Engineering'),url:URLs.docseng,year:'2025'},
@@ -344,7 +609,7 @@
         ['🧭',S('planning'),'Monte um roteiro orientativo para seu interesse.','Build a consultation route for your interests.','planejar']
       ].map(item=>'<a href="#/'+item[4]+'" class="xp-card xp-card--link">'+iconBox(item[0])+'<h3>'+esc(item[1])+'</h3><p>'+esc(lang()==='pt'?item[2]:item[3])+'</p><span class="xp-card-link">'+esc(S('details'))+' →</span></a>').join('')+'</div>'+
       sectionHeader(lang()==='pt'?'Modalidades em destaque':'Featured programs','')+programCards()+
-      '<div class="xp-destinations-invite">'+sectionHeader(lang()==='pt'?'Explore destinos reais':'Explore documented destinations',lang()==='pt'?'Vá além do guia: consulte as páginas das universidades estrangeiras.':'Go beyond generic links: read official host institution procedures.')+'<div class="xp-cards xp-cards--3">'+verifiedDestinations.map(destinationCard).join('')+'</div></div>'+
+      '<div class="xp-destinations-invite">'+sectionHeader(lang()==='pt'?'Explore destinos reais':'Explore documented destinations',lang()==='pt'?'Vá além do guia: consulte as páginas das universidades estrangeiras.':'Go beyond generic links: read official host institution procedures.')+'<div class="xp-cards xp-cards--3">'+verifiedDestinations.slice(0,3).map(destinationCard).join('')+'</div>'+link('destinos',lang()==='pt'?'Explorar o catálogo completo':'Browse the full catalog')+'</div>'+
       '<div class="xp-news-link">'+link('noticias',S('news'))+'</div>'+
       '<div class="xp-callout"><div><h3>'+esc(lang()==='pt'?'Está se preparando para uma seleção?':'Planning to apply?')+'</h3><p>'+esc(lang()==='pt'?'Explore um roteiro personalizado de consulta, sem preencher cadastro e sem enviar documentos.':'Explore a personalized reading route without registration or document upload.')+'</p></div>'+link('planejar',S('planCta'),'xp-btn--gold')+'</div>'+note();
   }
@@ -365,14 +630,15 @@
     return '<article class="xp-uni-card"><div class="xp-uni-top"><span class="xp-country-icon">'+u.flag+'</span>'+badge(u.country)+'</div><h3>'+esc(u.name)+'</h3><p>'+esc(tr(u.label))+'</p><div class="xp-uni-footer"><span>'+esc(S('history'))+'</span><a href="#/universidades/'+u.id+'">'+esc(S('details'))+' →</a></div></article>';
   }
   function filters(){
-    const countryOpts = ['Portugal','Espanha','Argentina'];
+    const countryOpts = [...new Set(universities.map(u=>u.country))].sort((a,b)=>a.localeCompare(b,lang()==='pt'?'pt-BR':'en'));
     const country = '<label>'+esc(S('selectedCountry'))+'<select id="xpCountry"><option value="all">'+esc(S('allCountries'))+'</option>'+countryOpts.map(c=>'<option value="'+c+'"'+(selectedCountry===c?' selected':'')+'>'+c+'</option>').join('')+'</select></label>';
-    const fieldOpts = [['geral',L('Geral / intercultural','General / intercultural')],['tecnologia',L('Engenharia e tecnologia','Engineering and technology')],['saude',L('Ciências da saúde','Health sciences')]];
+    const fieldOpts = [['geral',L('Geral / intercultural','General / intercultural')],['tecnologia',L('Engenharia e tecnologia','Engineering and technology')],['saude',L('Ciências da saúde','Health sciences')],['gestao',L('Negócios e administração','Business and management')]];
     const field = '<label>'+esc(S('selectedCourse'))+'<select id="xpField"><option value="all">'+esc(S('allCourses'))+'</option>'+fieldOpts.map(([key,value])=>'<option value="'+key+'"'+(selectedField===key?' selected':'')+'>'+esc(tr(value))+'</option>').join('')+'</select></label>';
     return '<div class="xp-filterbar"><label>'+esc(S('find'))+'<input id="xpUniSearch" type="search" autocomplete="off" placeholder="'+esc(S('find'))+'" value="'+esc(query)+'"></label>'+country+field+'</div>';
   }
   function unisPage(id){
     const u=universities.find(item=>item.id===id);
+    if(u && u.destinationId)return destinationsPage(u.destinationId);
     if(u){
       return hero(u.name, u.country+' • '+tr(u.label),S('universities'))+
         '<div class="xp-two"><article class="xp-paper xp-maincol"><div class="xp-feature-flag">'+u.flag+'</div>'+
@@ -383,7 +649,7 @@
     }
     return hero(S('universities'), lang()==='pt'?'Explore referências reais documentadas em páginas institucionais, com filtros e detalhes internos.':'Explore institutions documented in official sources using internal filters.',S('universities'),link('planejar',S('planCta'),'xp-btn--gold'))+
       '<div class="xp-disclaimer xp-disclaimer--soft"><span aria-hidden="true">⌕</span><p>'+esc(S('examples'))+'</p></div>'+
-      '<div class="xp-mini-path"><div><strong>'+(lang()==='pt'?'Precisa entender o processo da universidade estrangeira?':'Need host university procedures?')+'</strong><p>'+(lang()==='pt'?'Veja os portais de Porto, Salamanca e Cuyo com passos e links específicos.':'Compare Porto, Salamanca and Cuyo with precise official sources.')+'</p></div>'+link('destinos',lang()==='pt'?'Ver portais internacionais':'Explore host portals','xp-btn--primary')+'</div>'+filters()+'<div id="xpUniResults" aria-live="polite"></div>'+
+      '<div class="xp-mini-path"><div><strong>'+(lang()==='pt'?'Precisa entender o processo da universidade estrangeira?':'Need host university procedures?')+'</strong><p>'+(lang()==='pt'?'Explore universidades em 11 países e seus portais específicos de mobilidade.':'Explore universities across 11 countries and their official mobility portals.')+'</p></div>'+link('destinos',lang()==='pt'?'Ver portais internacionais':'Explore host portals','xp-btn--primary')+'</div>'+filters()+'<div id="xpUniResults" aria-live="polite"></div>'+
       '<div class="xp-paper xp-doc-references">'+sectionHeader(S('records'),S('formHint'))+
       '<div class="xp-document-links">'+courseDocs.map(item=>'<div class="xp-document-row"><div><strong>'+esc(tr(item.name))+'</strong><small>'+esc(S('dateText'))+': '+item.year+'</small></div>'+out(item.url,L('Consultar lista de referência','Open reference list'))+'</div>').join('')+'</div></div>'+note();
   }
@@ -538,6 +804,7 @@
     const active=root.querySelector('.xp-sidenav [data-path="'+page+'"]');
     if(active){active.classList.add('is-active');active.setAttribute('aria-current','page');}
     if(page==='universidades'&&!id)paintUniversityResults();
+    if(page==='destinos'&&!id)paintDestinationResults();
     if(page==='orientacoes'&&!id)paintGuideResults();
     const oldHome=document.querySelector('#menu-principal .nav-active');
     if(oldHome)oldHome.classList.remove('nav-active');
@@ -548,10 +815,13 @@
   root.addEventListener('input',e=>{
     if(e.target.id==='xpUniSearch'){query=e.target.value;paintUniversityResults();}
     if(e.target.id==='xpGuideSearch'){selectedGuide=e.target.value;paintGuideResults();}
+    if(e.target.id==='xpDestinationQuery'){destinationQuery=e.target.value;paintDestinationResults();}
   });
   root.addEventListener('change',e=>{
     if(e.target.id==='xpCountry'){selectedCountry=e.target.value;paintUniversityResults();}
     if(e.target.id==='xpField'){selectedField=e.target.value;paintUniversityResults();}
+    if(e.target.id==='xpDestinationCountry'){destinationCountry=e.target.value;paintDestinationResults();}
+    if(e.target.id==='xpDestinationField'){destinationField=e.target.value;paintDestinationResults();}
     if(e.target.matches('[data-check]')){const k=e.target.dataset.check;if(e.target.checked)completed.add(k);else completed.delete(k);}
   });
   root.addEventListener('click',e=>{
@@ -559,8 +829,10 @@
     if(doc){selectedDoc=doc.dataset.docTab;activate();root.querySelector('[data-doc-tab="'+selectedDoc+'"]').focus();}
     if(e.target.closest('#xpResetChecks')){completed.clear();activate();}
     if(e.target.closest('#xpPrint'))window.print();
+    if(e.target.closest('#xpDestinationReset')){destinationCountry='all';destinationField='all';destinationQuery='';activate();}
   });
   root.addEventListener('submit',e=>{
+    if(e.target.id==='xpDestinationForm'){e.preventDefault();paintDestinationResults();}
     if(e.target.id==='xpPlanForm'){
       e.preventDefault();
       renderPlan({program:root.querySelector('#xpPlanProgram').value,course:root.querySelector('#xpPlanCourse').value,country:root.querySelector('#xpPlanCountry').value});

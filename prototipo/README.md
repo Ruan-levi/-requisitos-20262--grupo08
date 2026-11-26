@@ -151,3 +151,11 @@ Rotas adicionais: `#/processo` (seis etapas) e `#/destinos`, com páginas espec�
 [Arquivo de redesign no Figma](https://www.figma.com/design/wINNQ9DbvhYKjjxyRV2lYc) · [Portal publicado](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/painel).
 
 Estas melhorias não introduzem backend, vagas em tempo real nem envio de documentos. Os testes automatizados não substituem a validação visual e de acessibilidade.
+
+## Catálogo internacional ampliado — 16 universidades / 11 países
+
+A rota `#/destinos` agora possui pesquisa por nome/cidade, filtros de país e de área, contagem de resultados e limpar filtros. Cada `#/destinos/:id` apresenta passos orientativos, referência Unifor, portal da instituição estrangeira e serviço complementar oficial. A lista `#/universidades` também incorpora os registros novos e permite chegar aos mesmos detalhes.
+
+[Catálogo de fontes completo](../GestaoConfiguracao/08-catalogo-universidades-internacionais-2026.md) · [Abrir destinos](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/destinos).
+
+Não são dados de vagas em tempo real. A pesquisa e os filtros não transmitem dados pessoais. O portfólio representa uma seleção de instituições mencionadas em fontes institucionais, não a base integral da DRI.

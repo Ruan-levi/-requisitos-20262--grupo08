@@ -26,3 +26,7 @@ O workflow [Organizar M2](../.github/workflows/organizar-m2.yml) cria a mileston
 ## Pesquisa e redesign visual — novembro/2026
 
 [Estudo da DRI e de portais de universidades anfitriãs](07-pesquisa-dri-destinos-e-redesign.md), [protótipo GitHub Pages](https://ruan-levi.github.io/-requisitos-20262--grupo08/) e [arquivo de redesign no Figma](https://www.figma.com/design/wINNQ9DbvhYKjjxyRV2lYc).
+
+## Novas universidades e países (26/11/2026)
+
+[Catálogo de 16 instituições em 11 países, com 3 categorias de links](08-catalogo-universidades-internacionais-2026.md): fonte Unifor, portal de mobilidade da universidade estrangeira e informações adicionais. [Explorar o protótipo](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/destinos).
