@@ -74,3 +74,9 @@ RF01–RF08: categorias, buscas, filtros, orientações, fontes, contatos, idiom
 Antes da eventual importação ao Figma, foram produzidas **14 telas em SVG** e uma [galeria navegável](wireframes/index.html). Estas telas são a evidência de wireframes da Sprint 2 e podem ser usadas como ponto de partida para camadas e componentes no Figma.
 
 A atividade P2 aceita **Figma ou similar**: o [protótipo HTML publicado](https://ruan-levi.github.io/-requisitos-20262--grupo08/) demonstra a navegação. Nenhum arquivo Figma foi criado nesta etapa; a apresentação não deve alegar o contrário.
+
+## Redesign novembro/2026 — arquivo Figma criado
+
+**[Abrir o arquivo de redesign no Figma](https://www.figma.com/design/wINNQ9DbvhYKjjxyRV2lYc)**. O arquivo contém telas de início, destinos/portais estrangeiros, sequência de preparação e layout mobile elaboradas como camadas editáveis. Essas telas acompanham o protótipo HTML, mas não o substituem. Para verificar os fluxos, consulte `#/processo` e `#/destinos` no site publicado.
+
+[Análise de UX e links externos](../GestaoConfiguracao/07-pesquisa-dri-destinos-e-redesign.md).

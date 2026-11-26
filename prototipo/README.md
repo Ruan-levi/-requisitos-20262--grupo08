@@ -141,3 +141,13 @@ node --test prototipo/tests/*.test.cjs
 O workflow do GitHub Pages executa esses testes antes de publicar. A verificação visual nos principais navegadores e dispositivos ainda deve ser executada como parte da revisão de protótipo; testes automatizados não são certificação de acessibilidade.
 
 O planejamento das telas para edição posterior no Figma está em [FIGMA-HANDOFF.md](FIGMA-HANDOFF.md). Não foi criado nem alterado arquivo no Figma nesta etapa.
+
+## Redesign de navegação e portais estrangeiros
+
+O pacote atual incorpora `redesign.css` sobre as folhas de estilo existentes, melhorando hierarquia tipográfica, espaçamento, cartões, responsividade, orientação por etapas e comunicação sobre fontes.
+
+Rotas adicionais: `#/processo` (seis etapas) e `#/destinos`, com páginas específicas para Porto, Salamanca e Cuyo, que explicam como cada universidade recebe estudantes internacionais e oferecem links externos contextualizados. EducationUSA recebe tratamento separado como recurso de orientação nos Estados Unidos. Veja [pesquisa e links verificados](../GestaoConfiguracao/07-pesquisa-dri-destinos-e-redesign.md).
+
+[Arquivo de redesign no Figma](https://www.figma.com/design/wINNQ9DbvhYKjjxyRV2lYc) · [Portal publicado](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/painel).
+
+Estas melhorias não introduzem backend, vagas em tempo real nem envio de documentos. Os testes automatizados não substituem a validação visual e de acessibilidade.
