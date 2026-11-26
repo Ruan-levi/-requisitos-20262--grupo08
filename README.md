@@ -1,141 +1,122 @@
-# 🌍 Portal de Internacionalização | UNIFOR — Grupo 08
+# 🌍 Portal de Internacionalização — Grupo 08
 
-## Preparação do pitch — revisão transversal do portal
+**Requisitos e Modelagem de Sistemas · Unifor · 2026.2 · Proposta 4**
 
-A nova [auditoria de funcionalidades e roteiro de apresentação](GestaoConfiguracao/09-auditoria-transversal-pitch-2026.md) analisa **universidades, documentação, dupla titulação, intercâmbio, jornada, contatos, docentes e estudantes internacionais**, além das limitações acadêmicas do protótipo.
+Um protótipo acadêmico pensado para ajudar estudantes e docentes a **entender oportunidades de internacionalização, organizar documentos e encontrar informações confiáveis** sem precisar começar a pesquisa do zero.
 
-**Demonstração recomendada:** [Salamanca — passo a passo com links específicos](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/destinos/salamanca) → [Dupla Titulação — cursos, parceiros e Requerimento 175](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/programas/dupla-titulacao) → [Documentos por modalidade](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/documentos) → [Minha jornada](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/planejar).
+## 🚀 Acesse o projeto
 
-A página de Salamanca distingue **site oficial**, **Relações Internacionais**, **mobilidade de entrada**, **modalidade de convênio**, **orientações aos estudantes** e **contatos internacionais**. O portal apresenta a sequência de nomeação e candidatura sem prometer vaga ou aprovação.
-
----
-
-## Catálogo internacional ampliado — 16 instituições / 11 países
-
-O protótipo agora permite consultar **16 instituições de referência em 11 países** com **busca, filtro por país e área de interesse, páginas internas de detalhes e links para portais oficiais de mobilidade das próprias universidades**. Os dados foram pesquisados em documentos e páginas da Unifor e nos sites das instituições estrangeiras em 26/11/2026.
-
-- **[Explorar o catálogo de destinos](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/destinos)** · [Universidades e filtros](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/universidades)
-- **[Ver as 16 fontes institucionais e links estrangeiros](GestaoConfiguracao/08-catalogo-universidades-internacionais-2026.md)** — tabela de referências Unifor, procedimentos de mobilidade e informações adicionais.
-- [Figma — desenho editável](https://www.figma.com/design/wINNQ9DbvhYKjjxyRV2lYc) · [Plano de trabalho P2](GestaoConfiguracao/06-plano-entrega-P2.md).
-
-**Importante:** são referências de cooperação, não lista de vagas abertas ou acordos automaticamente válidos por curso. Para candidaturas, confirmar elegibilidade, edital, nomeação e prazos com a DRI e a universidade de destino.
-
----
-
-## Redesign do portal e Figma — novembro/2026
-
-**Interface redesenhada e funcional:** [Abrir o Portal de Internacionalização](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/painel) · **[Abrir arquivo de design no Figma](https://www.figma.com/design/wINNQ9DbvhYKjjxyRV2lYc)**.
-
-A nova experiência apresenta etapas de preparação, páginas específicas de universidades estrangeiras e acesso contextual aos próprios portais: [Universidade do Porto](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/destinos/porto), [Universidad de Salamanca](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/destinos/salamanca) e [Universidad Nacional de Cuyo](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/destinos/cuyo). O EducationUSA é apresentado como recurso de orientação, não como universidade conveniada. Veja a [pesquisa de fontes e decisões de UX](GestaoConfiguracao/07-pesquisa-dri-destinos-e-redesign.md).
-
-**Atenção:** são referências documentais, não disponibilidade de vagas, confirmação de convênio por curso ou processo de inscrição. O Figma possui telas de redesign editáveis e é um artefato de design separado do protótipo HTML navegável. Os requisitos e arquivos entregues para P1/P2 permanecem preservados.
-
----
-
-## 📘 Trabalho P2 — Sprint 2 (03/11–23/11/2026)
-
-**Pacote da entrega P2 (2,0 pontos):** [SRS formal IEEE 830 v2.0](Requisitos/Especificacao/06-SRS-IEEE830-P2.md) · [Matriz de consistência](Requisitos/Especificacao/07-matriz-consistencia-P2.md) · [UML revisada P2](diagrams/README.md) · [14 wireframes SVG](prototipo/wireframes/README.md) · [Galeria visual](https://ruan-levi.github.io/-requisitos-20262--grupo08/wireframes/) · [Protótipo navegável](https://ruan-levi.github.io/-requisitos-20262--grupo08/) · [Plano para envio no AVA](GestaoConfiguracao/06-plano-entrega-P2.md).
-
-Os artefatos P2 foram elaborados **depois da Sprint prevista** e versionados com data real. A UML, a SRS e os wireframes administrativos representam uma solução futura; o protótipo web atual **não possui login, API ou banco**. A homologação institucional e a submissão ao AVA não são presumidas.
-
----
-
-**Disciplina:** Requisitos e Modelagem de Sistemas · **Semestre:** 2026.2 · **Proposta 4**  
-**Atividade:** P1 — Elicitação e Modelagem Inicial · **Milestone M1:** 20/10 a 02/11/2026  
-**Equipe:** Ruan Levi Ferreira Macedo · Lorhan Dejan Ferreira Macedo · Hiago Queiroz Barreto
-
-> **Problema:** Como melhorar a experiência de estudantes e docentes na busca por informações e serviços de internacionalização?
-
-Propomos um **portal web informativo** que facilite encontrar orientações sobre intercâmbio, dupla titulação, vistos, documentação, aproveitamento de disciplinas, despesas, hospedagem e contatos. **Acessibilidade, organização da informação, versões multilíngues e governança de conteúdo** são pontos centrais da Proposta 4. **A P1 exigia documentação e modelagem, não implementação.** Posteriormente o grupo desenvolveu um protótipo web complementar, com fluxos públicos demonstrativos, sem autenticação ou backend.
-
-## 📚 Entregáveis da P1
-
-| Item exigido | Arquivo do Grupo 08 | Situação |
+| | Acesso | O que você encontra |
 |---|---|---|
-| 1. Documento de Visão | [Visão da demanda](Requisitos/Elicitacao/01-documento-de-visao.md) | Elaborado; a validar |
-| 2. Stakeholders | [Partes interessadas](Requisitos/Elicitacao/02-stakeholders.md) | Mapeamento inicial |
-| 3. Roteiro e resultados de entrevistas | [Roteiros e análise documental](Requisitos/Elicitacao/03-roteiros-e-resultados.md) · [Persona e entrevista simulada](Requisitos/Elicitacao/04-persona-e-entrevista-simulada.md) | **Entrevista real pendente** |
-| 4. Requisitos RF/RNF | [Especificação inicial](Requisitos/Especificacao/01-requisitos-funcionais-e-nao-funcionais.md) | Elaborada |
-| 5. Regras de negócio | [RN01–RN11](Requisitos/Especificacao/02-regras-de-negocio.md) | Propostas |
-| 6. Backlog priorizado | [US01–US12](Requisitos/Especificacao/03-backlog-priorizado.md) | MoSCoW |
-| 7. UML Casos de Uso | [Visual](diagrams/01-casos-de-uso.svg) · [Fonte](diagrams/01-casos-de-uso.puml) | Publicado |
-| 8. UML Componentes | [Visual](diagrams/02-componentes.svg) · [Fonte](diagrams/02-componentes.puml) | Publicado |
-| 9. UML Implantação | [Visual](diagrams/03-implantacao.svg) · [Fonte](diagrams/03-implantacao.puml) | Publicado |
+| 🌐 **Aplicação web** | **[Abrir o portal de internacionalização](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/painel)** | Protótipo navegável, com páginas, filtros, guias e links para instituições estrangeiras |
+| 🎨 **Figma** | **[Visualizar o protótipo visual no Figma](https://www.figma.com/design/wINNQ9DbvhYKjjxyRV2lYc)** | Telas editáveis do redesign, incluindo início, destinos, Salamanca, dupla titulação e versão mobile |
+| 🧩 **Wireframes P2** | [Abrir galeria de wireframes](https://ruan-levi.github.io/-requisitos-20262--grupo08/wireframes/) | 14 telas vetoriais de baixa fidelidade |
+| 📂 **Documentação** | [Consultar os artefatos do projeto](Requisitos/README.md) | Requisitos, especificações, casos de uso e diagramas |
 
-**Complementos:** [Necessidades dos usuários e justificativa do portal](Requisitos/Elicitacao/05-necessidades-dos-usuarios.md) · [SRS preliminar](Requisitos/Especificacao/04-SRS-preliminar.md) · [Glossário do domínio](Requisitos/Especificacao/05-glossario.md) · [Fontes e decisões](GestaoConfiguracao/02-fontes-e-decisoes.md).
+> **Aplicação e Figma têm funções diferentes:** o GitHub Pages demonstra a navegação e as interações; o Figma apresenta o trabalho visual em camadas editáveis. O arquivo do Figma não substitui a aplicação funcional.
 
-**Elicitação:** a entrevista com Lívia é uma **simulação de persona**, não uma pesquisa realizada com participante real. Os **achados documentais (AD)** são distintos das **hipóteses simuladas (SIM)**.
+## 💡 Sobre o projeto
 
-## 🗂️ Organização inspirada no repositório LAPIS
+**Problema:** informações sobre intercâmbio, dupla titulação, universidades parceiras, documentação e candidaturas estão distribuídas entre páginas da Unifor, editais e portais de instituições estrangeiras. Isso pode dificultar a compreensão do processo.
 
-```text
-README.md
-Requisitos/
-  README.md
-  Elicitacao/       → Visão, stakeholders, roteiros e persona
-  Especificacao/    → RF/RNF, RN, backlog, SRS e glossário
-  Artefatos/        → Referência aos templates do professor
-GestaoConfiguracao/ → Entrega P1, fontes, gestão de mudanças e sprints
-diagrams/           → Casos de Uso, Componentes e Implantação (SVG + PlantUML)
-evidencias/         → Registros e imagem do convite ao professor
-.github/            → Modelo de Pull Request para evoluções futuras
-```
+**Proposta:** reunir essas orientações em uma experiência mais intuitiva, com explicações antes de encaminhar o usuário ao serviço oficial correspondente. O estudante pode descobrir uma modalidade, pesquisar um destino, entender as etapas e consultar documentos em um único fluxo.
 
-Seguindo o [LAPIS do professor](https://github.com/marcelobezerra-dotcom/Lapis-unifor), o trabalho é organizado segundo **Análise de Viabilidade → Elicitação → Especificação → Validação**. Na P1, a elaboração inicial está documentada; **a validação com interessados ainda depende de contato real**.
+**Para quem?** Estudantes da Unifor interessados em experiências internacionais, estudantes estrangeiros e docentes que precisam de informações sobre cooperação acadêmica.
 
-[Índice de Requisitos](Requisitos/README.md) · [Gestão de Configuração](GestaoConfiguracao/README.md) · [Guia UML](diagrams/README.md) · [Evidências](evidencias/LEIA-ME.md)
+### O que é possível explorar
 
-### 🎤 Diagramas renovados para apresentação
+| Área | Funcionalidade | Acessar |
+|---|---|---|
+| ✈️ Programas | Intercâmbio, dupla titulação, Buddy Program, EducationUSA e Free Mover | [Programas](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/programas) |
+| 🌎 Universidades | Catálogo orientativo de **16 instituições em 11 países**, com filtros e informações por universidade | [Destinos](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/destinos) |
+| 🧭 Como funciona | Etapas para pesquisar, preparar documentos e compreender a candidatura | [Guia do processo](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/processo) |
+| 📑 Documentação | Guias oficiais, listas por curso e checklists orientativos por modalidade | [Documentos](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/documentos) |
+| 🎓 Dupla titulação | Diferenças em relação ao intercâmbio, exemplos de parceiros e referência ao Requerimento 175 | [Dupla titulação](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/programas/dupla-titulacao) |
+| 🗺️ Minha jornada | Roteiro de pesquisa conforme modalidade, área acadêmica e país de interesse | [Planejar](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/planejar) |
+| 💬 Atendimento | Orientações e canais institucionais para confirmar informações | [Contatos](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/contatos) |
 
-**[Abrir o roteiro de apresentação dos três diagramas](diagrams/GUIA-APRESENTACAO.md)** — traz falas sugeridas, requisitos correspondentes e um exemplo que conecta os três desenhos. Os SVG foram refeitos para visualização em tela cheia e em projetor, com fontes maiores, legenda visual e organização por finalidade. O PlantUML permanece editável.
+As instituições são **referências documentadas**, não uma lista de vagas disponíveis ou de convênios necessariamente ativos para todos os cursos. As candidaturas e a confirmação de requisitos pertencem aos canais oficiais da DRI e das universidades.
 
-### Visualizar os diagramas
+---
 
-<details><summary><strong>Casos de Uso</strong></summary>
+## 🎤 Pitch — apresentação do projeto
 
-![Casos de Uso](diagrams/01-casos-de-uso.svg)
+### Nossa ideia em poucas palavras
 
-</details>
-<details><summary><strong>Componentes</strong></summary>
+O Portal de Internacionalização do Grupo 08 nasceu para simplificar a busca por oportunidades acadêmicas no exterior. Em vez de enviar imediatamente o estudante para páginas diferentes, a aplicação explica **o que fazer, por que fazer e onde confirmar cada informação**.
 
-![Componentes](diagrams/02-componentes.svg)
+O diferencial não é apenas reunir links: é **orientar a jornada de quem deseja estudar fora**, com informações contextualizadas, pesquisa por destino e acesso direto às páginas específicas das instituições.
 
-</details>
-<details><summary><strong>Implantação</strong></summary>
+### Roteiro sugerido para demonstrar a aplicação
 
-![Implantação](diagrams/03-implantacao.svg)
+1. **Apresente o problema:** as informações estão espalhadas e nem sempre é simples identificar a próxima etapa.
+2. **Mostre a solução:** abra a [central do portal](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/painel) e explique a organização por necessidades.
+3. **Demonstre um caso real:** pesquise a [Universidad de Salamanca](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/destinos/salamanca), apresente o passo a passo e mostre os links para o site institucional, mobilidade por convênios e estudantes internacionais.
+4. **Apresente outras modalidades:** abra a [dupla titulação](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/programas/dupla-titulacao) e explique suas diferenças em relação ao intercâmbio comum.
+5. **Conclua a jornada:** mostre os [documentos](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/documentos) e o [planejamento orientativo](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/planejar).
+6. **Encerre com o desenvolvimento:** apresente o [Figma](https://www.figma.com/design/wINNQ9DbvhYKjjxyRV2lYc), o SRS, a UML e os testes do GitHub.
 
-</details>
+**Mensagem central do pitch:** tornar a internacionalização mais compreensível e acessível, ajudando o estudante a sair da dúvida inicial e chegar à fonte correta, com clareza sobre as etapas e os requisitos.
 
-## 🗓️ Sprints, issues e próximos passos
+📖 **[Abrir a auditoria geral e o roteiro detalhado do pitch](GestaoConfiguracao/09-auditoria-transversal-pitch-2026.md)**
 
-**Auditoria para apresentação em 26/11/2026:** [análise dos requisitos, limitações, testes e roteiro de demonstração](GestaoConfiguracao/05-auditoria-apresentacao-2026-11-26.md).
+---
 
-- **[Issues #1–#10](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues):** #1–#2 e #4–#9 concluídas; **#3** (entrevista real) e **#10** (evidência/AVA) reabertas por ausência de evidências. Issues **#13–#18** e **#20–#23** rastreiam a M2 e os entregáveis da P2.
-- **[Milestones](https://github.com/Ruan-levi/-requisitos-20262--grupo08/milestones):** M1 existente com 8 issues concluídas e 2 pendentes. **M2 — SRS, Consistência e Prototipação (P2)** criada automaticamente e associada a issues da Sprint 2; [execução com sucesso](https://github.com/Ruan-levi/-requisitos-20262--grupo08/actions/runs/45829236580). O Project/Kanban segue como melhoria opcional da issue #17.
-- **[GitHub Projects e Kanban](GestaoConfiguracao/04-guia-github-projects.md):** roteiro atualizado para criar o quadro e relacionar M1/M2; ainda não há confirmação de Project criado.
-- **Próximas atividades:** refinar SRS, casos de uso, controle de versões e possíveis protótipos **conforme os enunciados futuros**; não presumir novas exigências.
+## 📚 Documentação acadêmica
 
-## ✅ Antes de enviar no AVA
+O projeto começou na **P1 — Elicitação e Modelagem Inicial** e evoluiu na **P2 — Especificação Formal, Consistência e Prototipação**. As versões iniciais foram preservadas para registrar essa evolução.
 
-- [x] Visão, stakeholders, RF/RNF, regras, backlog, diagramas e análise documental publicados.
-- [x] Convite ao usuário **`marcelobezerra-dotcom`** registrado em [evidência visual](evidencias/registro-convite-professor.md); captura anterior mostrava **Pending Invite**.
-- [ ] Registrar resultados de **entrevista efetivamente realizada** para atender integralmente ao item.
-- [x] **Acesso do professor confirmado em 25/11/2026:** o GitHub retornou permissão **`write`** para `marcelobezerra-dotcom` (além do registro histórico do convite).
-- [x] **Todas as 10 issues foram associadas à Milestone M1** (8 fechadas e 2 abertas).
-- [ ] Configurar um **Project/Kanban**, se for solicitado para esta etapa ou utilizado no acompanhamento das próximas atividades.
-- [ ] Conferir o nome do repositório: possui hífen inicial extra (`-requisitos-20262--grupo08`), enquanto a P1 indica `requisitos-20262--grupo08`.
-- [ ] **Enviar o link do GitHub e a comprovação solicitada no AVA**.
+### P1 — Levantamento e modelagem
 
-**Critérios informados:** Visão 0,5 · Elicitação 0,5 · Requisitos 0,5 · UML 0,5 = **2,0 pontos possíveis**.
+| Entregável | Documento |
+|---|---|
+| Visão do projeto | [Documento de visão](Requisitos/Elicitacao/01-documento-de-visao.md) |
+| Partes interessadas | [Stakeholders](Requisitos/Elicitacao/02-stakeholders.md) |
+| Elicitação | [Roteiros e análise documental](Requisitos/Elicitacao/03-roteiros-e-resultados.md) |
+| Persona | [Entrevista simulada](Requisitos/Elicitacao/04-persona-e-entrevista-simulada.md) |
+| Requisitos | [Requisitos funcionais e não funcionais](Requisitos/Especificacao/01-requisitos-funcionais-e-nao-funcionais.md) |
+| Regras de negócio | [RN01–RN11](Requisitos/Especificacao/02-regras-de-negocio.md) |
+| Planejamento | [Backlog priorizado](Requisitos/Especificacao/03-backlog-priorizado.md) |
+| UML inicial | [Casos de uso, componentes e implantação](diagrams/README.md) |
 
-**Referência de organização:** [LAPIS — Marcelo Bezerra](https://github.com/marcelobezerra-dotcom/Lapis-unifor). *Projeto acadêmico; não representa sistema oficial ou já implantado da UNIFOR.*
+**Nota de transparência:** a entrevista apresentada como persona é uma simulação; a validação com entrevistados reais não deve ser considerada concluída.
 
-## 🌐 Protótipo navegável do Portal de Internacionalização
+### P2 — SRS, UML e prototipação
 
-O projeto também possui um **[protótipo interativo em HTML, CSS e JavaScript](prototipo/README.md)**, organizado separadamente na pasta [`prototipo/`](prototipo/).
+| Entregável | Documento |
+|---|---|
+| SRS (IEEE 830) | [Especificação formal v2.0](Requisitos/Especificacao/06-SRS-IEEE830-P2.md) |
+| Rastreabilidade | [Matriz de consistência entre requisitos e UML](Requisitos/Especificacao/07-matriz-consistencia-P2.md) |
+| Diagramas revisados | [UML P2 em PlantUML e SVG](diagrams/README.md) |
+| Wireframes | [14 telas editáveis e documentação](prototipo/wireframes/README.md) |
+| Protótipo web | [Documentação técnica da aplicação](prototipo/README.md) |
+| Planejamento da entrega | [Plano P2 e checklist](GestaoConfiguracao/06-plano-entrega-P2.md) |
 
-- **Demonstração:** página inicial e central interna com páginas para programas, instituições e filtros, documentação e checklists, docentes e internacionais, notícias, jornada orientativa, contatos, orientações e fontes contextuais; interface PT/EN, ajuste de texto e fluxo editorial **simulado**.
-- **Validação técnica:** `node --test prototipo/tests/*.test.cjs` executa testes de catálogo, rotas, fontes e contatos; a validação visual no navegador ainda precisa de evidência.
-- **Actions:** [CI de validação](.github/workflows/validar-prototipo.yml) para PRs/pushes e [deploy com testes como pré-requisito](.github/workflows/publicar-prototipo.yml) para GitHub Pages, publicando apenas `prototipo/`.
-- **Limites:** conteúdo didático, sem autenticação, inscrições ou dados reais. O protótipo **não é um serviço institucional da UNIFOR**.
+### Pesquisas e decisões de experiência
+
+- [Pesquisa da DRI, universidades estrangeiras e melhorias de UX](GestaoConfiguracao/07-pesquisa-dri-destinos-e-redesign.md)
+- [Catálogo ampliado de universidades e fontes oficiais](GestaoConfiguracao/08-catalogo-universidades-internacionais-2026.md)
+- [Revisão transversal do protótipo para o pitch](GestaoConfiguracao/09-auditoria-transversal-pitch-2026.md)
+- [Handoff e orientações para o Figma](prototipo/FIGMA-HANDOFF.md)
+
+## 🛠️ Desenvolvimento e acompanhamento
+
+**Tecnologias do protótipo:** HTML, CSS e JavaScript, hospedados no GitHub Pages. Os arquivos da aplicação ficam em [`prototipo/`](prototipo/); os diagramas e documentos permanecem em pastas próprias.
+
+**Qualidade:** o projeto possui testes automatizados para requisitos documentais, navegação, páginas de destinos e fluxos de preparação. A última revisão da ampliação do catálogo e do pitch registrou **40 testes aprovados**; isso não substitui testes manuais de usabilidade e acessibilidade.
+
+- [GitHub Actions — testes e publicação](https://github.com/Ruan-levi/-requisitos-20262--grupo08/actions)
+- [Issues — tarefas e pendências](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues)
+- [Milestones M1 e M2](https://github.com/Ruan-levi/-requisitos-20262--grupo08/milestones)
+- [Gestão de configuração e histórico](GestaoConfiguracao/README.md)
+- [Repositório de referência LAPIS](https://github.com/marcelobezerra-dotcom/Lapis-unifor)
+
+## ⚠️ Limites do protótipo
+
+Este é um **trabalho acadêmico independente**, não um portal oficial da Unifor. As informações orientam a pesquisa, mas **não garantem vagas, bolsas, elegibilidade ou validade atual de convênios**. A aplicação não realiza inscrições, não recebe documentos pessoais e não possui autenticação administrativa, API ou banco de dados em produção. Telas de gestão representam uma proposta futura. A homologação institucional e a entrega no AVA não devem ser presumidas.
+
+---
+
+**Equipe — Grupo 08:** Ruan Levi Ferreira Macedo · Lorhan Dejan Ferreira Macedo · Hiago Queiroz Barreto
+
+**Universidade de Fortaleza — Unifor · 2026.2**
