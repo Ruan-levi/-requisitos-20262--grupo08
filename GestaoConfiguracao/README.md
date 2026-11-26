@@ -14,3 +14,9 @@ Conforme a organização do [LAPIS](https://github.com/marcelobezerra-dotcom/Lap
 A existência da M1 **não significa que um quadro Kanban já tenha sido criado**.
 
 [Voltar ao início](../README.md).
+
+## Entrega P2 / Sprint 2
+
+[Plano e checklist P2](06-plano-entrega-P2.md) · [SRS IEEE 830 v2.0](../Requisitos/Especificacao/06-SRS-IEEE830-P2.md) · [Matriz de consistência](../Requisitos/Especificacao/07-matriz-consistencia-P2.md) · [Wireframes](../prototipo/wireframes/README.md).
+
+O workflow [Organizar M2](../.github/workflows/organizar-m2.yml) cria a milestone e vincula as issues automaticamente quando houver permissões; o Project/Kanban permanece uma organização complementar a conferir.

@@ -1,0 +1,35 @@
+@startuml
+' UML Sprint 2 - implantacao real e alvo conceitual
+title P2 - Implantação | Situação real vs. projeto futuro
+left to right direction
+skinparam backgroundColor white
+skinparam shadowing false
+node "Dispositivo do usuário" as DEV {
+ artifact "Navegador
+(PC / celular)" as B
+}
+node "Implantado: GitHub Pages" as GH #E8F2FF {
+ artifact "Site HTML/CSS/JS
+protótipo P2" as STATIC
+ artifact "Catálogo local
+sem persistência" as LOCAL
+}
+cloud "Fontes oficiais externas
+Unifor / DRI" as SOURCES
+node "CONCEITUAL: infraestrutura futura" as FUTURE #E8F7ED {
+ node "Servidor de aplicação" as SERVER {
+   artifact "API / Login / Gestão" as API
+ }
+ database "Banco de dados
+publicações e auditoria" as DB
+}
+B --> STATIC : HTTPS
+STATIC --> LOCAL : memória do cliente
+B ..> SOURCES : links HTTPS
+STATIC ..> API : integração não implementada
+API --> DB : conexão protegida (proposta)
+note bottom of FUTURE
+  Fora do deploy real da P2.
+  Backend sujeito a decisões futuras.
+end note
+@enduml

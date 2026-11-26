@@ -11,3 +11,10 @@
 **Status:** documentos iniciais **propostos**, ainda não validados institucionalmente. Guias de referência: [CDU](https://github.com/marcelobezerra-dotcom/Lapis-unifor/tree/main/Requisitos/Especifica%C3%A7%C3%A3o%20de%20Casos%20de%20Uso), [RN](https://github.com/marcelobezerra-dotcom/Lapis-unifor/tree/main/Requisitos/Especifica%C3%A7%C3%A3o%20de%20Regra%20de%20Negocio) e [RNF](https://github.com/marcelobezerra-dotcom/Lapis-unifor/tree/main/Requisitos/Requisitos%20N%C3%A3o%20Funcionais).
 
 [Voltar](../README.md).
+
+## SRS e consistência da Sprint 2 (P2)
+
+- [SRS formal IEEE 830 — versão 2.0](06-SRS-IEEE830-P2.md): introdução, descrição geral, requisitos detalhados e casos de uso.
+- [Matriz de consistência da Sprint 2](07-matriz-consistencia-P2.md): RF/RNF relacionados a UC, regras de negócio, UML, wireframes e situação de implementação.
+
+O documento [SRS 0.1](04-SRS-preliminar.md) permanece no histórico da M1. A nova versão não altera retrospectivamente o material daquela sprint.

@@ -51,3 +51,16 @@ O **MVP** deve permitir que o usuário **encontre, leia e confira orientações 
 - A revisão futura deverá registrar mudanças e justificativas, mantendo rastreabilidade entre achados, RF e histórias.
 
 **Status honesto:** as histórias de usuário são propostas acadêmicas e não depoimentos coletados.
+
+## 6.5 Sprint 2 / Milestone M2 — Trabalho P2
+
+**Período determinado no enunciado:** 03/11 a 23/11/2026. As alterações da documentação aqui registradas foram realizadas posteriormente e preservam suas datas reais nos commits.
+
+| Issue | Entregável P2 | Status documental |
+|---|---|---|
+| #20 | [SRS formal IEEE 830 v2](06-SRS-IEEE830-P2.md) | Preparada para validação/merge |
+| #21 | [UML revisada e matriz](07-matriz-consistencia-P2.md) | Preparada para validação/merge |
+| #22 | [Wireframes e galeria](../../prototipo/wireframes/README.md) | Preparados para validação/merge |
+| #23 | [Pacote P2 e Actions](../../GestaoConfiguracao/06-plano-entrega-P2.md) | Verificação de deploy/milestone |
+
+A M2 é uma milestone diferente da M1. Os RF09–RF12 e RF14 continuam **especificados e prototipados visualmente**, não desenvolvidos com autenticação persistente. As issues #13, #14 e #16 registram evidências de testes humanos ainda pendentes.
