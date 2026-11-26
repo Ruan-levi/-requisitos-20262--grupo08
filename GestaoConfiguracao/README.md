@@ -30,3 +30,7 @@ O workflow [Organizar M2](../.github/workflows/organizar-m2.yml) cria a mileston
 ## Novas universidades e países (26/11/2026)
 
 [Catálogo de 16 instituições em 11 países, com 3 categorias de links](08-catalogo-universidades-internacionais-2026.md): fonte Unifor, portal de mobilidade da universidade estrangeira e informações adicionais. [Explorar o protótipo](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/destinos).
+
+## Auditoria do pitch
+
+[Revisão de navegação, processos, documentação, dupla titulação, links e riscos de demonstração](09-auditoria-transversal-pitch-2026.md). O documento inclui um roteiro de pitch de 5–7 minutos e uma matriz das funcionalidades demonstráveis.

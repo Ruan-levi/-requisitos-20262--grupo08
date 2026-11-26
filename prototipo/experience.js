@@ -364,8 +364,29 @@
   })));
   // Mapa estável de áreas para o catálogo principal de universidades.
   verifiedDestinations.forEach(d=>{if(!d.field)d.field=d.id==='porto'?'tecnologia':'geral';});
+
+  // Páginas institucionais: diferentes dos formulários de candidatura.
+  const universityHomepages = {
+    porto:'https://www.up.pt/',salamanca:'https://usal.es/',cuyo:'https://www.uncuyo.edu.ar/',
+    minho:'https://www.uminho.pt/',aveiro:'https://www.ua.pt/',braganca:'https://ipb.pt/',
+    deggendorf:'https://www.th-deg.de/', 'hwr-berlin':'https://www.hwr-berlin.de/',
+    oviedo:'https://www.uniovi.es/',rotterdam:'https://www.rotterdamuas.com/',
+    'imt-albi':'https://www.imt-mines-albi.fr/en',sonora:'https://www.unison.mx/',
+    pucp:'https://www.pucp.edu.pe/',uniandes:'https://uniandes.edu.co/',
+    concordia:'https://www.concordia.ca/',appstate:'https://www.appstate.edu/'
+  };
+  const salamanaLinks = [
+    { url:'https://internacional.usal.es/programas/marco-convenios/', pt:'Mobilidade por convênios e nomeação', en:'Mobility agreements and nominations' },
+    { url:'https://estudiantesinternacionales.usal.es/', pt:'Portal para estudantes internacionais', en:'International students portal' },
+    { url:'https://internacional.usal.es/contacto/', pt:'Contatos de Relações Internacionais', en:'International Relations contacts' }
+  ];
+  verifiedDestinations.forEach(d=>{
+    d.homepage=universityHomepages[d.id] || null;
+    d.extraSources=d.id==='salamanca'?salamanaLinks:[];
+  });
+
   const externalWhitelist = new Set(
-    verifiedDestinations.flatMap(d=>[d.origin,d.process,d.extra])
+    verifiedDestinations.flatMap(d=>[d.origin,d.process,d.extra,d.homepage,...d.extraSources.map(s=>s.url)]).filter(Boolean)
       .concat(['https://educationusa.state.gov/your-5-steps-us-study'])
   );
   function verifiedExternal(url, label){
@@ -413,6 +434,74 @@
     const tags={geral:L('Todas as áreas','General / all fields'),tecnologia:L('Tecnologia e engenharias','Technology and engineering'),gestao:L('Negócios e gestão','Business and management'),saude:L('Saúde','Health')};
     return tr(tags[key]||tags.geral);
   }
+
+  function destinationInstitutionGuide(d){
+    if(d.id!=='salamanca') return '<div class="xp-info-pair"><div><h3>'+(lang()==='pt'?'Sobre a universidade':'About the university')+'</h3><p>'+esc(d.city?d.name+' — '+d.city+', '+d.country+'.':d.name+', '+d.country+'.')+'</p><p>'+
+       (lang()==='pt'?'Confira no site institucional os cursos, calendário, idiomas e serviços oferecidos aos estudantes internacionais.':'Visit the university website to examine degrees, academic calendar, languages and services for international students.')+
+       '</p></div><div><h3>'+(lang()==='pt'?'O que é necessário confirmar':'What to verify')+'</h3>'+
+       bullets(lang()==='pt'?['Vigência do convênio e modalidade para seu curso.','Edital, nomeação e critérios da instituição de origem.','Prazos, documentação, equivalência de disciplinas e custos.']:
+       ['Agreement validity and eligibility for your degree.','Call, nomination and home university rules.','Deadlines, documents, credits and expenses.'])+'</div></div>';
+    const stepsSal=lang()==='pt'?[
+      ['1. Confirme a possibilidade de intercâmbio pela Unifor','Antes de qualquer candidatura, procure a DRI e a coordenação para conferir se existe mobilidade aplicável ao seu curso, semestre e modalidade.'],
+      ['2. Entenda o programa de mobilidade da USAL','A área Movilidad IN reúne as opções de ingresso por programas internacionais. Na modalidade Marco de Convenios, a universidade de origem realiza a nomeação prévia.'],
+      ['3. Prepare o plano de estudos com seu curso','Converse com a coordenação da Unifor sobre disciplinas, créditos e compatibilidade antes de assumir compromissos com matérias na Espanha.'],
+      ['4. Siga a candidatura indicada após a nomeação','Somente quando aplicável, consulte as instruções recebidas da USAL para a solicitação eletrônica e documentação do programa, sem presumir que o formulário seja aberto a todos.'],
+      ['5. Confira idioma, seguro, requisitos migratórios e moradia','Exigências variam por programa. Verifique os requisitos atuais com a USAL e autoridades competentes, sem usar editais de anos anteriores como regra vigente.'],
+      ['6. Organize a chegada, matrícula e reconhecimento','A orientação da USAL recomenda contato com o coordenador internacional do centro para escolha de disciplinas, matrícula e documentos de chegada/saída.']
+    ]:[
+      ['1. Confirm your options with UNIFOR','Ask DRI and your degree coordinator about program-specific eligibility and available mobility opportunities.'],
+      ['2. Understand USAL incoming mobility','Movilidad IN includes several international routes. The framework agreement route requires prior nomination by the home institution.'],
+      ['3. Prepare an academic learning plan','Discuss subjects and credit recognition with your UNIFOR coordinator before choosing host classes.'],
+      ['4. Follow host instructions after nomination','Only when eligible, follow the USAL electronic application instructions for your specific program.'],
+      ['5. Review insurance, language and entry requirements','Verify current rules with USAL and relevant authorities rather than assuming archived calls are valid.'],
+      ['6. Prepare enrollment and arrival','The international coordinator at the host center can guide course choices, registration, and arrival/departure documents.']
+    ];
+    return '<section class="xp-campus-feature"><div class="xp-campus-feature__heading"><span class="xp-eyebrow">UNIVERSIDAD DE SALAMANCA</span><h2>'+(lang()==='pt'?'Como funciona estudar em Salamanca?':'How does studying in Salamanca work?')+'</h2><p>'+
+      (lang()==='pt'?'A USAL é uma universidade espanhola com diversos programas internacionais. Nem todas as opções de mobilidade usam o mesmo formulário, calendário ou conjunto de exigências.':
+      'USAL is a Spanish university with several international mobility schemes. Different programs may have distinct application processes and requirements.')+'</p></div>'+
+      '<ol class="xp-campus-timeline">'+stepsSal.map(([title,description],index)=>'<li><span class="xp-campus-index">'+String(index+1).padStart(2,'0')+'</span><div><h3>'+esc(title)+'</h3><p>'+esc(description)+'</p></div></li>').join('')+'</ol>'+
+      '<p class="xp-campus-callout">'+(lang()==='pt'?'A lista da Unifor não confirma seleção, vaga ou convênio atual para qualquer curso. A USAL também mantém modalidades próprias, que não equivalem automaticamente ao intercâmbio da Unifor.':'An institutional listing does not confirm a current agreement or available place. Not all USAL programs apply to UNIFOR exchanges.')+'</p></section>';
+  }
+  function doubleDegreeGuide(){
+    const pt=lang()==='pt';
+    const examples=[
+      ['Instituto Politécnico de Bragança','Portugal',pt?'Administração e Comércio Exterior':'Business Administration and International Trade','braganca'],
+      ['Berlin School of Economics and Law','Alemanha',pt?'Administração e Comércio Exterior':'Business Administration and International Trade','hwr-berlin'],
+      ['Deggendorf Institute of Technology','Alemanha',pt?'Ciências Econômicas e Comércio Exterior':'Economics and International Trade','deggendorf']
+    ];
+    const steps=pt?[
+      'Confira se seu curso participa de uma modalidade de dupla titulação e qual instituição está prevista no edital.',
+      'Leia o edital específico: exigência de período cursado, vínculo acadêmico, proficiência, passaporte, disciplinas e prazos podem variar.',
+      'Consulte a Secretaria Acadêmica sobre o Requerimento 175 e os canais de inscrição definidos para aquela edição.',
+      'Organize documentos, comprovantes e eventuais entrevistas conforme a seleção; não envie nada por este protótipo.',
+      'Se selecionado, siga o planejamento curricular com as duas instituições e confirme custos, matrícula e reconhecimento.',
+      'Conclua as etapas previstas no acordo; a obtenção de diplomas depende do cumprimento dos requisitos das duas instituições.'
+    ]:[
+      'Confirm whether your degree offers a double-degree program and which host institution is listed in the current call.',
+      'Read the specific notice: academic progress, language proof, passport, courses and deadlines vary.',
+      'Check the Academic Secretariat for Request 175 and the current application channel.',
+      'Prepare official documents and assessments; this prototype does not accept applications.',
+      'Once selected, follow the agreed study plan and confirm fees and course recognition.',
+      'Complete the required conditions at both institutions; awards are not automatic.'
+    ];
+    return '<section class="xp-double-degree">'+sectionHeader(pt?'Dupla titulação não é um intercâmbio comum':'A dual degree is different from a standard exchange',
+      pt?'Exemplos documentados pela Unifor, sujeitos à edição do edital e ao curso.':'Examples from UNIFOR publications, subject to the current call and degree.')+
+      '<div class="xp-info-pair"><div><h3>'+(pt?'Intercâmbio acadêmico':'Academic exchange')+'</h3><p>'+
+      (pt?'Você cursa um período no exterior e verifica o aproveitamento das disciplinas com a Unifor. O resultado principal é uma experiência curricular internacional.':'You study abroad and discuss credit recognition with your home university.')+'</p></div>'+
+      '<div><h3>'+(pt?'Dupla titulação':'Dual degree')+'</h3><p>'+
+      (pt?'Você cumpre uma trajetória específica definida por acordo de dupla titulação, podendo obter os títulos previstos ao satisfazer as exigências acadêmicas de ambas as instituições.':'You follow a specific academic pathway defined by a double-degree agreement, subject to the rules of both institutions.')+'</p></div></div>'+
+      sectionHeader(pt?'Exemplos de instituições por curso':'Examples by degree','')+
+      '<div class="xp-cards xp-cards--3">'+examples.map(e=>'<article class="xp-card xp-double-school"><span class="xp-eyebrow">'+e[1]+'</span><h3>'+e[0]+'</h3><p>'+e[2]+'</p>'+link('destinos/'+e[3],pt?'Conhecer instituição':'View institution')+'</article>').join('')+'</div>'+
+      sectionHeader(pt?'Etapas para se preparar':'Preparation checklist','')+stepsFnForDouble(steps)+
+      '<div class="xp-paper xp-double-official"><h3>'+(pt?'Onde consultar a inscrição e os critérios':'Where to check official requirements')+'</h3>'+
+      '<p>'+(pt?'O Requerimento 175 está descrito na Secretaria Acadêmica. Os critérios completos devem ser conferidos no edital da edição, nunca presumidos a partir de uma notícia antiga.':'Request 175 is listed by the Academic Secretariat. Full requirements belong to each applicable call.')+'</p>'+
+      out(URLs.secretaria,L('Secretaria Acadêmica — Requerimento 175','Academic Secretariat — Request 175'))+
+      out('https://www.unifor.br/cesta-de-servicos/praticas-e-projetos-academicos',L('Dupla titulação por curso — Unifor','Dual degrees by degree — UNIFOR'))+
+      out('https://unifor.br/-/conquiste-uma-carreira-global-com-as-oportunidades-de-internacionalizacao-da-unifor',L('Exemplo de notícia institucional de 2026','2026 institutional announcement example'))+
+      link('documentos',pt?'Conferir documentação':'Review documents')+'</div></section>';
+  }
+  function stepsFnForDouble(items){return steps(items);}
+
   function destinationCard(d){
     return '<article class="xp-destination-card"><div class="xp-destination-card__top"><span class="xp-destination-flag" aria-hidden="true">'+d.flag+'</span>'+badge(d.country)+'</div>'+
       '<div class="xp-destination-card__meta">'+esc(d.city||'')+' · '+esc(destinationFieldTitle(d.field))+'</div>'+
@@ -452,13 +541,16 @@
         '<div class="xp-two"><article class="xp-paper xp-maincol">'+
         sectionHeader(lang()==='pt'?'O que você precisa saber':'What you need to know','')+
         '<p class="xp-lead">'+esc(d.focus||'')+'</p>'+
-        sectionHeader(lang()==='pt'?'Passo a passo de consulta':'Suggested research steps','')+steps(tr(d.steps))+
+        destinationInstitutionGuide(d)+
+        (d.id==='salamanca'?'':sectionHeader(lang()==='pt'?'Passo a passo de consulta':'Suggested research steps','')+steps(tr(d.steps)))+
         '<div class="xp-disclaimer xp-disclaimer--soft"><span>ⓘ</span><p>'+esc(tr(d.note))+'</p></div>'+
         '<div class="xp-source-journey"><span>1 · Unifor / DRI</span><span aria-hidden="true">→</span><span>2 · '+esc(d.name)+'</span><span aria-hidden="true">→</span><span>3 · '+(lang()==='pt'?'Aceitação formal':'Formal acceptance')+'</span></div></article>'+
         '<aside class="xp-aside"><div class="xp-sidebar-card"><h3>'+(lang()==='pt'?'Portais e informações oficiais':'Official portals and resources')+'</h3><p>'+(lang()==='pt'?'A referência da Unifor e os serviços da universidade de destino têm finalidades diferentes. Confirme o processo aplicável.':'UNIFOR listings and host university portals serve different purposes. Confirm the applicable procedure.')+'</p>'+
+        verifiedExternal(d.homepage,lang()==='pt'?'Conhecer a universidade — site institucional':'Visit university website')+
         verifiedExternal(d.origin,lang()==='pt'?'Onde a Unifor cita esta instituição':'UNIFOR institutional reference')+
         verifiedExternal(d.process,lang()==='pt'?'Portal de mobilidade / informação do destino':'Host university mobility portal')+
         verifiedExternal(d.extra,lang()==='pt'?'Serviços, orientações ou formulários oficiais':'Official services, forms or guidance')+
+        (d.extraSources||[]).map(item=>verifiedExternal(item.url,lang()==='pt'?item.pt:item.en)).join('')+
         '<small>'+esc(S('history'))+'</small></div>'+
         '<div class="xp-sidebar-card"><h3>'+esc(S('next'))+'</h3>'+link('documentos',S('documents'))+link('processo',lang()==='pt'?'Etapas do processo':'Process steps')+link('contatos',S('contacts'))+'</div></aside></div>'+note();
     }
@@ -598,7 +690,7 @@
     return '<div class="xp-cards xp-cards--3">'+programs.map(p=>'<a class="xp-card xp-card--link" href="#/programas/'+p.id+'">'+iconBox(p.icon)+'<div><h3>'+esc(tr(p.label))+'</h3><p>'+esc(tr(p.tagline))+'</p></div><span class="xp-card-link">'+esc(S('details'))+' →</span></a>').join('')+'</div>';
   }
   function dashboard(){
-    return hero(S('title'),S('subtitle'))+'<div class="xp-statbar"><span><strong>5</strong> '+esc(S('programs'))+'</span><span><strong>5</strong> '+esc(S('records'))+'</span><span><strong>3</strong> '+esc(S('docProgress'))+'</span></div>'+
+    return hero(S('title'),S('subtitle'))+journeyOverview()+'<div class="xp-statbar"><span><strong>5</strong> '+esc(S('programs'))+'</span><span><strong>'+verifiedDestinations.length+'</strong> '+esc(S('records'))+'</span><span><strong>3</strong> '+esc(S('docProgress'))+'</span></div>'+
       sectionHeader(lang()==='pt'?'Por onde deseja começar?':'Where would you like to start?',lang()==='pt'?'Cada etapa abre uma área completa dentro do portal.':'Every choice opens an internal content page.')+
       '<div class="xp-cards xp-cards--3">'+[
         ['✈',S('programs'),'Conheça intercâmbio, dupla titulação e outras oportunidades.','Discover exchange, dual degrees and more.', 'programas'],
@@ -621,6 +713,7 @@
       '<div class="xp-two"><div class="xp-maincol"><article class="xp-paper"><h2>'+esc(lang()==='pt'?'Como funciona':'How it works')+'</h2><p class="xp-lead">'+esc(tr(p.intro))+'</p>'+
       sectionHeader(lang()==='pt'?'O que verificar antes':'What to verify first','')+bullets(tr(p.requirements))+
       sectionHeader(S('next'),'')+steps(tr(p.steps))+'<p class="xp-muted">'+esc(S('noEnroll'))+'</p></article>'+
+      (p.id==='dupla-titulacao'?doubleDegreeGuide():'')+
       '<article class="xp-paper">'+sectionHeader(S('faq'),'')+faqBlock(tr(p.faq).map(([q,a])=>({q:L(q,q),a:L(a,a)})))+'</article></div>'+
       '<aside class="xp-aside"><div class="xp-sidebar-card"><h3>'+esc(S('source'))+'</h3><p>'+esc(lang()==='pt'?'Confira as informações diretamente nas páginas relacionadas à modalidade.':'Check the latest information in the related official pages.')+'</p>'+renderLinks(p.links)+(p.id==='educationusa'?verifiedExternal('https://educationusa.state.gov/your-5-steps-us-study',lang()==='pt'?'Os 5 passos do EducationUSA':'EducationUSA 5 Steps'):'')+'<small>'+esc(S('updated'))+'</small></div>'+
       '<div class="xp-sidebar-card"><h3>'+esc(lang()==='pt'?'Continue sua pesquisa':'Keep exploring')+'</h3>'+link('universidades',S('universities'))+link('documentos',S('documents'))+link('contatos',S('contacts'))+'</div></aside></div>'+
@@ -658,6 +751,24 @@
     const rows = universities.filter(u=>(selectedCountry==='all'||u.country===selectedCountry)&&(selectedField==='all'||u.field===selectedField)&&norm(u.name+' '+u.country+' '+tr(u.label)).includes(norm(query)));
     result.innerHTML = '<div class="xp-results-count">'+rows.length+' '+esc(S('results'))+'</div>'+(rows.length?'<div class="xp-cards xp-cards--3">'+rows.map(universityCard).join('')+'</div>':'<div class="xp-empty">'+esc(S('noResults'))+'</div>');
   }
+
+  function documentByProgram(){
+    const pt=lang()==='pt';
+    return '<section class="xp-doc-programs">'+sectionHeader(pt?'Quais documentos conferir em cada modalidade?':'Documents to review by program',
+      pt?'As listas abaixo são orientações iniciais. Os itens obrigatórios são definidos em cada edital.':'These are examples. The applicable call defines requirements.')+
+      '<div class="xp-info-pair"><article class="xp-paper"><span class="xp-eyebrow">'+(pt?'INTERCÂMBIO ACADÊMICO':'ACADEMIC EXCHANGE')+'</span><h3>'+(pt?'Documentos da mobilidade':'Mobility documents')+'</h3>'+
+      bullets(pt?['Edital e formulário da edição aplicável.','Histórico e documentos acadêmicos definidos pela Unifor.','Comprovação de idioma, quando exigida.','Plano de disciplinas e carta de aceitação após seleção.','Passaporte e documentos migratórios conforme país.']:
+      ['Applicable call and registration form.','Academic transcripts and required records.','Language proof if requested.','Study plan and acceptance letter when applicable.','Passport and travel documents as required.'])+
+      link('programas/intercambio',pt?'Entender o intercâmbio':'About exchange')+
+      out(URLs.guida,L('Guia do Intercambista — 2024','Exchange Student Guide — 2024'))+'</article>'+
+      '<article class="xp-paper"><span class="xp-eyebrow">'+(pt?'DUPLA TITULAÇÃO':'DOUBLE DEGREE')+'</span><h3>'+(pt?'Documentação do programa específico':'Program-specific documents')+'</h3>'+
+      bullets(pt?['Verificar curso, instituição e edital vigente.','Consultar a Secretaria Acadêmica sobre o Requerimento 175, quando aplicável.','Conferir matrícula, histórico e planejamento curricular.','Checar proficiência e cartas quando exigidas.','Validar passaporte e condições do edital correspondente.']:
+      ['Check your degree, partner and current call.','Ask the Academic Secretariat about Request 175 when applicable.','Review enrollment and academic documents.','Check language and letters when requested.','Verify passport and current call conditions.'])+
+      link('programas/dupla-titulacao',pt?'Conhecer a dupla titulação':'About dual degrees')+
+      out(URLs.secretaria,L('Secretaria Acadêmica — Requerimento 175','Academic Secretariat — Request 175'))+'</article></div>'+
+      '<p class="xp-doc-programs__notice">'+(pt?'Não envie documentos por este protótipo. Editais antigos não significam inscrições abertas.':'Do not upload documents to this prototype. Archived calls are not open applications.')+'</p></section>';
+  }
+
   function documentsPage(){
     const active=docs.find(d=>d.id===selectedDoc)||docs[0];
     return hero(S('documents'),lang()==='pt'?'Prepare-se por etapas, consulte os documentos e entenda quando buscar orientação oficial.':'Prepare step by step, review documents and find the right official guidance.',S('documents'),link('planejar',S('planCta'),'xp-btn--gold'))+
@@ -668,7 +779,7 @@
         {name:L('Manual de Boas Práticas de Internacionalização · 2026','Internationalization Practices Manual · 2026'),year:'2026',url:URLs.manual},
         {name:L('Secretaria Acadêmica · serviços e requerimentos','Academic Secretariat · forms and requests'),year:'',url:URLs.secretaria},
         {name:L('DRI · apoio ao estudante e FAQ','DRI · student support and FAQ'),year:'',url:URLs.aluno}
-      ].map(item=>'<div class="xp-document-row"><div><strong>'+esc(tr(item.name))+'</strong>'+(item.year?'<small>'+esc(S('dateText'))+': '+item.year+'</small>':'')+'</div>'+out(item.url,L('Consultar fonte','Visit source'))+'</div>').join('')+'</div></div>'+note();
+      ].map(item=>'<div class="xp-document-row"><div><strong>'+esc(tr(item.name))+'</strong>'+(item.year?'<small>'+esc(S('dateText'))+': '+item.year+'</small>':'')+'</div>'+out(item.url,L('Consultar fonte','Visit source'))+'</div>').join('')+'</div></div>'+documentByProgram()+note();
   }
   function guidesPage(id){
     const list=(typeof guides !== 'undefined')?guides:[];
@@ -711,7 +822,7 @@
   function planningPage(){
     const programsOpts=programs.map(p=>'<option value="'+p.id+'">'+esc(tr(p.label))+'</option>').join('');
     return hero(S('planning'),lang()==='pt'?'Uma trilha de consulta para sua área e destino de interesse — sem cadastro e sem avaliação automática de elegibilidade.':'A consultation path for your academic field and destination — no registration or automatic eligibility decision.',S('planning'))+
-      '<div class="xp-paper"><form id="xpPlanForm" class="xp-plan-form"><label>'+esc(S('selectedProgram'))+'<select id="xpPlanProgram">'+programsOpts+'</select></label><label>'+esc(S('selectedCourse'))+'<select id="xpPlanCourse"><option value="grad">'+esc(S('student'))+'</option><option value="eng">'+esc(S('eng'))+'</option><option value="health">'+esc(S('health'))+'</option><option value="law">'+esc(S('law'))+'</option><option value="post">'+esc(S('post'))+'</option><option value="other">'+esc(S('other'))+'</option></select></label><label>'+esc(S('selectedCountry'))+'<select id="xpPlanCountry"><option value="all">'+esc(S('allCountries'))+'</option><option value="Portugal">Portugal</option><option value="Espanha">'+(lang()==='pt'?'Espanha':'Spain')+'</option><option value="Argentina">Argentina</option><option value="other">'+esc(S('other'))+'</option></select></label><button class="xp-btn xp-btn--primary" type="submit">'+esc(S('planCta'))+' →</button></form></div>'+
+      '<div class="xp-paper"><form id="xpPlanForm" class="xp-plan-form"><label>'+esc(S('selectedProgram'))+'<select id="xpPlanProgram">'+programsOpts+'</select></label><label>'+esc(S('selectedCourse'))+'<select id="xpPlanCourse"><option value="grad">'+esc(S('student'))+'</option><option value="eng">'+esc(S('eng'))+'</option><option value="health">'+esc(S('health'))+'</option><option value="law">'+esc(S('law'))+'</option><option value="post">'+esc(S('post'))+'</option><option value="other">'+esc(S('other'))+'</option></select></label><label>'+esc(S('selectedCountry'))+'<select id="xpPlanCountry"><option value="all">'+esc(S('allCountries'))+'</option>'+[...new Set(verifiedDestinations.map(d=>d.country))].sort((a,b)=>a.localeCompare(b,lang()==='pt'?'pt-BR':'en')).map(c=>'<option value="'+esc(c)+'">'+esc(c)+'</option>').join('')+'<option value="other">'+esc(S('other'))+'</option></select></label><button class="xp-btn xp-btn--primary" type="submit">'+esc(S('planCta'))+' →</button></form></div>'+
       '<div id="xpPlanResults" aria-live="polite"></div>'+note();
   }
   function renderPlan(form){
@@ -731,7 +842,7 @@
     if(!box)return;
     box.innerHTML='<div class="xp-paper xp-planned">'+sectionHeader(S('planResult'),S('generated'))+
       '<div class="xp-plan-tags">'+badge(tr(p.label))+badge(locLabel)+'</div>'+steps(details)+
-      '<div class="xp-plan-next">'+link('programas/'+p.id,S('programs'))+link('universidades',S('universities'))+link('documentos',S('documents'))+'</div>'+
+      '<div class="xp-plan-next">'+link('programas/'+p.id,S('programs'))+link('destinos',lang()==='pt'?'Portais estrangeiros':'Host portals')+link('documentos',S('documents'))+'</div>'+
       '<div class="xp-note">'+esc(matches.length?S('examples'):S('error'))+'</div><button id="xpPrint" type="button" class="xp-btn xp-btn--outline">'+esc(S('print'))+' ⎙</button></div>';
     box.scrollIntoView({block:'nearest',behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
   }
@@ -755,7 +866,7 @@
   function contactsPage(){
     return hero(S('contacts'),S('contactText'),S('contacts'))+
       '<div class="xp-cards xp-cards--3"><div class="xp-card">'+iconBox('✉')+'<h3>E-mail</h3><p>dri@unifor.br</p><a class="xp-card-link" href="mailto:dri@unifor.br">dri@unifor.br ↗</a></div><div class="xp-card">'+iconBox('☎')+'<h3>'+esc(lang()==='pt'?'Telefone':'Phone')+'</h3><p>(85) 3477-3834</p><a class="xp-card-link" href="tel:+558534773834">+55 85 3477-3834 ↗</a></div><div class="xp-card">'+iconBox('⌘')+'<h3>'+esc(lang()==='pt'?'Canal institucional':'Institutional channel')+'</h3><p>'+esc(lang()==='pt'?'Equipe responsável pelos diferentes assuntos de internacionalização.':'Office responsible for internationalization questions.')+'</p>'+out(URLs.contatos,L('Abrir contatos oficiais','Open official contacts'))+'</div></div>'+
-      '<div class="xp-paper">'+sectionHeader(S('faq'),'')+faqBlock(faq)+'</div>'+note();
+      '<div class="xp-paper xp-contact-extra"><h2>'+(lang()==='pt'?'Outros canais de internacionalização':'Additional international contacts')+'</h2><p>'+(lang()==='pt'?'Alguns serviços institucionais publicam international@unifor.br e o telefone (85) 3477-3127. Confira na DRI qual canal atende seu processo específico.':'Some institutional pages list international@unifor.br and +55 85 3477-3127. Ask DRI which contact applies to your program.')+'</p><a href="mailto:international@unifor.br">international@unifor.br ↗</a> '+out(URLs.contatos,L('Confirmar canais atuais na DRI','Verify DRI contact details'))+'</div><div class="xp-paper">'+sectionHeader(S('faq'),'')+faqBlock(faq)+'</div>'+note();
   }
   const routeMap=() => [
     ['painel',S('title')],['programas',S('programs')],['universidades',S('universities')],

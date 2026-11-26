@@ -159,3 +159,9 @@ A rota `#/destinos` agora possui pesquisa por nome/cidade, filtros de país e de
 [Catálogo de fontes completo](../GestaoConfiguracao/08-catalogo-universidades-internacionais-2026.md) · [Abrir destinos](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/destinos).
 
 Não são dados de vagas em tempo real. A pesquisa e os filtros não transmitem dados pessoais. O portfólio representa uma seleção de instituições mencionadas em fontes institucionais, não a base integral da DRI.
+
+## Revisão para o pitch — DRI e universidades estrangeiras
+
+A [auditoria transversal](../GestaoConfiguracao/09-auditoria-transversal-pitch-2026.md) explica o que está funcionando e o que permanece como protótipo. A tela da [Salamanca](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/destinos/salamanca) detalha seis etapas e disponibiliza links próprios para site institucional, mobilidade de entrada, Marco de Convenios, portal do estudante e contatos. O programa de [dupla titulação](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/programas/dupla-titulacao) diferencia as modalidades, associa exemplos de parceiros/cursos e conduz à Secretaria Acadêmica para consultar o Requerimento 175. A área de [documentação](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/documentos) possui orientações específicas por modalidade.
+
+O planejamento passou a oferecer todos os países representados no catálogo, mantendo sua natureza orientativa e sem cadastro. Testes automatizados de renderização verificam as páginas de destino e a consistência desses caminhos.

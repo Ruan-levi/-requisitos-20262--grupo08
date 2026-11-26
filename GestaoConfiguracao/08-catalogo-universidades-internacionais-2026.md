@@ -72,3 +72,7 @@
 - [README do projeto](../README.md)
 - [Pesquisa de UX anterior](07-pesquisa-dri-destinos-e-redesign.md)
 - [Documentação SRS P2](../Requisitos/Especificacao/06-SRS-IEEE830-P2.md)
+
+## 7. Página de detalhamento e contexto
+
+As fichas agora apresentam o **site institucional da universidade** separado do **portal de candidatura e mobilidade**. Para a Universidad de Salamanca, o protótipo incorpora uma orientação especial baseada em [Movilidad IN](https://internacional.usal.es/movilidad-in/), [Movilidad en el Marco de Convenios](https://internacional.usal.es/programas/marco-convenios/) e [Información para Estudiantes Internacionales](https://internacional.usal.es/estudiantes-in/), inclusive a necessidade de nomeação prévia pela instituição de origem quando a modalidade assim exigir. [Veja a auditoria do pitch](09-auditoria-transversal-pitch-2026.md).
