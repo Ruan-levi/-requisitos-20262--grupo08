@@ -2,7 +2,7 @@
 
 ## Artefatos e demonstração da P2
 
-- [Galeria dos 14 wireframes](wireframes/index.html), com SVG editável, inclusive telas administrativas propostas.
+- [Galeria dos 25 wireframes](wireframes/index.html), com SVG editável, inclusive telas administrativas propostas.
 - [Protótipo funcionando no GitHub Pages](https://ruan-levi.github.io/-requisitos-20262--grupo08/).
 - [SRS IEEE 830 v2](../Requisitos/Especificacao/06-SRS-IEEE830-P2.md) e [consistência UML](../Requisitos/Especificacao/07-matriz-consistencia-P2.md).
 - [Plano da Sprint 2 / envio no AVA](../GestaoConfiguracao/06-plano-entrega-P2.md).
@@ -165,3 +165,7 @@ Não são dados de vagas em tempo real. A pesquisa e os filtros não transmitem 
 A [auditoria transversal](../GestaoConfiguracao/09-auditoria-transversal-pitch-2026.md) explica o que está funcionando e o que permanece como protótipo. A tela da [Salamanca](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/destinos/salamanca) detalha seis etapas e disponibiliza links próprios para site institucional, mobilidade de entrada, Marco de Convenios, portal do estudante e contatos. O programa de [dupla titulação](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/programas/dupla-titulacao) diferencia as modalidades, associa exemplos de parceiros/cursos e conduz à Secretaria Acadêmica para consultar o Requerimento 175. A área de [documentação](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/documentos) possui orientações específicas por modalidade.
 
 O planejamento passou a oferecer todos os países representados no catálogo, mantendo sua natureza orientativa e sem cadastro. Testes automatizados de renderização verificam as páginas de destino e a consistência desses caminhos.
+
+## Atualização dos wireframes — versão do pitch
+
+A [galeria de 25 wireframes](wireframes/index.html) foi revisada a partir da versão atual: catálogo de 16 instituições/11 países, filtro por país e área, dossiê Salamanca com seis etapas, dupla titulação e Requerimento 175, documentos por modalidade, processo em seis etapas, públicos, notícias, jornada e layout para celular. **Nenhuma funcionalidade foi modificada na aplicação**; esta atualização diz respeito apenas aos desenhos, inventário e testes.
