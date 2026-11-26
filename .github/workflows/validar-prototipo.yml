@@ -1,0 +1,46 @@
+name: "CI | Validar protótipo"
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'prototipo/**'
+      - '.github/workflows/**'
+  push:
+    branches: [main]
+    paths:
+      - 'prototipo/**'
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: Testes e validação estática
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Conferir sintaxe dos scripts
+        run: |
+          node --check prototipo/app.js
+          node --check prototipo/experience.js
+
+      - name: Verificar integridade do catálogo e das páginas
+        run: node --test prototipo/tests/*.test.cjs
+
+      - name: Registrar resultado no resumo do workflow
+        if: success()
+        run: |
+          echo '### Qualidade do protótipo' >> "$GITHUB_STEP_SUMMARY"
+          echo '- JavaScript: sintaxe aprovada' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Catálogo, navegação e referências: testes automatizados aprovados' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Teste de navegador e acessibilidade: ainda requer validação manual' >> "$GITHUB_STEP_SUMMARY"

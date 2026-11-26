@@ -6,7 +6,7 @@
 
 > **Problema:** Como melhorar a experiência de estudantes e docentes na busca por informações e serviços de internacionalização?
 
-Propomos um **portal web informativo** que facilite encontrar orientações sobre intercâmbio, dupla titulação, vistos, documentação, aproveitamento de disciplinas, despesas, hospedagem e contatos. **Acessibilidade, organização da informação, versões multilíngues e governança de conteúdo** são pontos centrais da Proposta 4. **Não existe implementação do portal nesta entrega P1**; o trabalho trata de requisitos e modelagem.
+Propomos um **portal web informativo** que facilite encontrar orientações sobre intercâmbio, dupla titulação, vistos, documentação, aproveitamento de disciplinas, despesas, hospedagem e contatos. **Acessibilidade, organização da informação, versões multilíngues e governança de conteúdo** são pontos centrais da Proposta 4. **A P1 exigia documentação e modelagem, não implementação.** Posteriormente o grupo desenvolveu um protótipo web complementar, com fluxos públicos demonstrativos, sem autenticação ou backend.
 
 ## 📚 Entregáveis da P1
 
@@ -69,9 +69,11 @@ Seguindo o [LAPIS do professor](https://github.com/marcelobezerra-dotcom/Lapis-u
 
 ## 🗓️ Sprints, issues e próximos passos
 
-- **[Issues #1–#10](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues):** #1–#2 e #4–#9 concluídas; **#3** (entrevista real) e **#10** (evidência/AVA) abertas.
-- **[Milestones](https://github.com/Ruan-levi/-requisitos-20262--grupo08/milestones):** M1 criada e **as 10 issues #1–#10 vinculadas**, sendo 8 fechadas e 2 abertas.
-- **[GitHub Projects e Kanban](GestaoConfiguracao/04-guia-github-projects.md):** instruções para criar o quadro de acompanhamento indicado no LAPIS.
+**Auditoria para apresentação em 26/11/2026:** [análise dos requisitos, limitações, testes e roteiro de demonstração](GestaoConfiguracao/05-auditoria-apresentacao-2026-11-26.md).
+
+- **[Issues #1–#10](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues):** #1–#2 e #4–#9 concluídas; **#3** (entrevista real) e **#10** (evidência/AVA) reabertas por ausência de evidências. Issues **#13–#18** rastreiam a próxima etapa.
+- **[Milestones](https://github.com/Ruan-levi/-requisitos-20262--grupo08/milestones):** M1 existente com 8 issues concluídas e 2 pendentes. **M2 — Protótipo e validação ainda precisa ser criada no GitHub**; as tarefas de preparação estão na issue #17.
+- **[GitHub Projects e Kanban](GestaoConfiguracao/04-guia-github-projects.md):** roteiro atualizado para criar o quadro e relacionar M1/M2; ainda não há confirmação de Project criado.
 - **Próximas atividades:** refinar SRS, casos de uso, controle de versões e possíveis protótipos **conforme os enunciados futuros**; não presumir novas exigências.
 
 ## ✅ Antes de enviar no AVA
@@ -93,7 +95,7 @@ Seguindo o [LAPIS do professor](https://github.com/marcelobezerra-dotcom/Lapis-u
 
 O projeto também possui um **[protótipo interativo em HTML, CSS e JavaScript](prototipo/README.md)**, organizado separadamente na pasta [`prototipo/`](prototipo/).
 
-- **Demonstração:** pesquisa de orientações, filtros por assunto/público, consulta de universidades por curso com documentos institucionais, links específicos para convênios, documentação e contatos, página de detalhes com fonte e data de pesquisa, interface em português/inglês, ajuste de texto e simulação de revisão editorial.
-- **Validação técnica:** `node --test prototipo/tests/catalog.test.cjs` verifica o catálogo bilíngue, a cobertura de fontes e os links de referência.
-- **Publicação:** workflow [Publicar protótipo](.github/workflows/publicar-prototipo.yml) no GitHub Pages, usando somente a pasta `prototipo/`. Para ativar a primeira publicação, conferir **Settings → Pages → Source: GitHub Actions**.
+- **Demonstração:** página inicial e central interna com páginas para programas, instituições e filtros, documentação e checklists, docentes e internacionais, notícias, jornada orientativa, contatos, orientações e fontes contextuais; interface PT/EN, ajuste de texto e fluxo editorial **simulado**.
+- **Validação técnica:** `node --test prototipo/tests/*.test.cjs` executa testes de catálogo, rotas, fontes e contatos; a validação visual no navegador ainda precisa de evidência.
+- **Actions:** [CI de validação](.github/workflows/validar-prototipo.yml) para PRs/pushes e [deploy com testes como pré-requisito](.github/workflows/publicar-prototipo.yml) para GitHub Pages, publicando apenas `prototipo/`.
 - **Limites:** conteúdo didático, sem autenticação, inscrições ou dados reais. O protótipo **não é um serviço institucional da UNIFOR**.
