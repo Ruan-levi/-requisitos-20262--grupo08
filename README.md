@@ -10,7 +10,7 @@ Um protótipo acadêmico pensado para ajudar estudantes e docentes a **entender 
 |---|---|---|
 | 🌐 **Aplicação web** | **[Abrir o portal de internacionalização](https://ruan-levi.github.io/-requisitos-20262--grupo08/#/painel)** | Protótipo navegável, com páginas, filtros, guias e links para instituições estrangeiras |
 | 🎨 **Figma** | **[Visualizar o protótipo visual no Figma](https://www.figma.com/design/wINNQ9DbvhYKjjxyRV2lYc)** | Telas editáveis do redesign, incluindo início, destinos, Salamanca, dupla titulação e versão mobile |
-| 🧩 **Wireframes P2** | [Abrir galeria de wireframes](https://ruan-levi.github.io/-requisitos-20262--grupo08/wireframes/) | 14 telas vetoriais de baixa fidelidade |
+| 🧩 **Wireframes P2** | [Abrir galeria de wireframes](https://ruan-levi.github.io/-requisitos-20262--grupo08/wireframes/) | 25 telas vetoriais atualizadas (14 revisadas + 11 novas) |
 | 📂 **Documentação** | [Consultar os artefatos do projeto](Requisitos/README.md) | Requisitos, especificações, casos de uso e diagramas |
 
 > **Aplicação e Figma têm funções diferentes:** o GitHub Pages demonstra a navegação e as interações; o Figma apresenta o trabalho visual em camadas editáveis. O arquivo do Figma não substitui a aplicação funcional.
@@ -88,7 +88,7 @@ O projeto começou na **P1 — Elicitação e Modelagem Inicial** e evoluiu na *
 | SRS (IEEE 830) | [Especificação formal v2.0](Requisitos/Especificacao/06-SRS-IEEE830-P2.md) |
 | Rastreabilidade | [Matriz de consistência entre requisitos e UML](Requisitos/Especificacao/07-matriz-consistencia-P2.md) |
 | Diagramas revisados | [UML P2 em PlantUML e SVG](diagrams/README.md) |
-| Wireframes | [14 telas editáveis e documentação](prototipo/wireframes/README.md) |
+| Wireframes | [25 wireframes atualizados e documentação](prototipo/wireframes/README.md) |
 | Protótipo web | [Documentação técnica da aplicação](prototipo/README.md) |
 | Planejamento da entrega | [Plano P2 e checklist](GestaoConfiguracao/06-plano-entrega-P2.md) |
 
