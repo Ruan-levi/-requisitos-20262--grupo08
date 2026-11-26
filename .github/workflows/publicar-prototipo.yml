@@ -11,39 +11,55 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: github-pages
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  validate:
+    name: Validar antes de publicar
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Baixar arquivos do repositório
+      - name: Baixar o repositório
         uses: actions/checkout@v4
 
-      - name: Preparar Node.js para validação
+      - name: Configurar Node.js 22
         uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      - name: Validar catálogo, rotas e fontes
+      - name: Validar sintaxe JavaScript
+        run: |
+          node --check prototipo/app.js
+          node --check prototipo/experience.js
+
+      - name: Executar testes do protótipo
         run: node --test prototipo/tests/*.test.cjs
+
+  deploy:
+    name: Publicar após testes
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
 
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Preparar somente a pasta do protótipo
+      - name: Preparar somente a pasta prototipo
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./prototipo
 
-      - name: Publicar site
+      - name: Publicar protótipo
         id: deployment
         uses: actions/deploy-pages@v4

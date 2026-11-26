@@ -351,7 +351,7 @@
   }
   function contactsPage(){
     return hero(S('contacts'),S('contactText'),S('contacts'))+
-      '<div class="xp-cards xp-cards--3"><div class="xp-card">'+iconBox('✉')+'<h3>E-mail</h3><p>international@unifor.br</p><a class="xp-card-link" href="mailto:international@unifor.br">international@unifor.br ↗</a></div><div class="xp-card">'+iconBox('☎')+'<h3>'+esc(lang()==='pt'?'Telefone':'Phone')+'</h3><p>(85) 3477-3127</p><a class="xp-card-link" href="tel:+558534773127">+55 85 3477-3127 ↗</a></div><div class="xp-card">'+iconBox('⌘')+'<h3>'+esc(lang()==='pt'?'Canal institucional':'Institutional channel')+'</h3><p>'+esc(lang()==='pt'?'Equipe responsável pelos diferentes assuntos de internacionalização.':'Office responsible for internationalization questions.')+'</p>'+out(URLs.contatos,L('Abrir contatos oficiais','Open official contacts'))+'</div></div>'+
+      '<div class="xp-cards xp-cards--3"><div class="xp-card">'+iconBox('✉')+'<h3>E-mail</h3><p>dri@unifor.br</p><a class="xp-card-link" href="mailto:dri@unifor.br">dri@unifor.br ↗</a></div><div class="xp-card">'+iconBox('☎')+'<h3>'+esc(lang()==='pt'?'Telefone':'Phone')+'</h3><p>(85) 3477-3834</p><a class="xp-card-link" href="tel:+558534773834">+55 85 3477-3834 ↗</a></div><div class="xp-card">'+iconBox('⌘')+'<h3>'+esc(lang()==='pt'?'Canal institucional':'Institutional channel')+'</h3><p>'+esc(lang()==='pt'?'Equipe responsável pelos diferentes assuntos de internacionalização.':'Office responsible for internationalization questions.')+'</p>'+out(URLs.contatos,L('Abrir contatos oficiais','Open official contacts'))+'</div></div>'+
       '<div class="xp-paper">'+sectionHeader(S('faq'),'')+faqBlock(faq)+'</div>'+note();
   }
   const routeMap=() => [
@@ -402,7 +402,8 @@
     if(page==='orientacoes'&&!id)paintGuideResults();
     const oldHome=document.querySelector('#menu-principal .nav-active');
     if(oldHome)oldHome.classList.remove('nav-active');
-    document.title=(page==='painel'?S('title'):page==='noticias'?S('news'):S(page)||S('title'))+' | Grupo 08';
+    const pageTitleKey={painel:'title',programas:'programs',universidades:'universities',documentos:'documents',noticias:'news',docentes:'faculty',internacionais:'incoming',orientacoes:'guides',planejar:'planning',contatos:'contacts'};
+    document.title=S(pageTitleKey[page]||'title')+' | Grupo 08';
     window.scrollTo(0,0);
   }
   root.addEventListener('input',e=>{

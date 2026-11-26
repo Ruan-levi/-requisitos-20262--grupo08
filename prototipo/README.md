@@ -21,10 +21,10 @@
 
 Não é necessário executar `npm install`: este é um protótipo estático sem pacotes NPM.
 
-Para conferir a integridade do catálogo e das traduções, execute na raiz do repositório:
+Para conferir os testes de catálogo, links, rotas e requisitos demonstráveis, execute na raiz do repositório:
 
 ```bash
-node --test prototipo/tests/catalog.test.cjs
+node --test prototipo/tests/*.test.cjs
 ```
 
 Os testes utilizam apenas recursos nativos do Node.js.
@@ -36,15 +36,21 @@ prototipo/
 ├── index.html                  # Estrutura, áreas e acessibilidade da página
 ├── style.css                   # Identidade visual e responsividade
 ├── app.js                      # Busca, filtros, cursos, fontes, idioma e demonstração editorial
+├── experience.js               # Rotas e páginas internas de consulta
+├── experience.css              # Layout das páginas internas
 ├── README.md                   # Este guia
 ├── tests/
-│   └── catalog.test.cjs       # Testes de fontes, guias, cursos e traduções
+│   ├── catalog.test.cjs       # Testes do catálogo e idiomas
+│   ├── experience.test.cjs    # Testes estruturais da experiência
+│   └── audit.test.cjs         # Testes de contato e navegação
 └── assets/
     ├── conexoes-globais.svg   # Ilustração original do conceito internacional
     └── icone.svg              # Ícone original do protótipo
 ```
 
 ## O que pode ser demonstrado
+
+**Nota:** as linhas abaixo registram funcionalidades da interface original e dos primeiros guias. A versão 2 incorpora páginas internas de programas, universidades, documentos, docentes, internacionais, notícias e jornada, explicadas em [Experiência interna ampliada](#experiência-interna-ampliada-v2). Algumas ações agora abrem páginas internas em vez de links externos.
 
 | Funcionalidade | Teste prático | Artefatos relacionados |
 |---|---|---|
@@ -76,7 +82,7 @@ Os textos e os guias são definidos em um **catálogo local de demonstração** 
 
 ## Publicação pelo GitHub Pages
 
-O arquivo [`.github/workflows/publicar-prototipo.yml`](../.github/workflows/publicar-prototipo.yml) publica automaticamente **apenas a pasta `prototipo/`** quando houver atualização nessa pasta na branch `main`.
+O arquivo [`.github/workflows/publicar-prototipo.yml`](../.github/workflows/publicar-prototipo.yml) executa validação antes de publicar **apenas a pasta `prototipo/`** a partir da branch `main`. A rotina [CI de validação](../.github/workflows/validar-prototipo.yml) verifica pull requests e atualizações.
 
 Para ativar a hospedagem pela primeira vez, um administrador do repositório deverá selecionar:
 
@@ -98,6 +104,8 @@ Consulte o [documento de necessidades dos usuários](../Requisitos/Elicitacao/05
 
 
 ## Experiência interna ampliada (v2)
+
+**Auditoria de apresentação:** veja [resultado da análise e checklist](../GestaoConfiguracao/05-auditoria-apresentacao-2026-11-26.md).
 
 O portal incorpora uma **aplicação de navegação interna** integrada à página inicial, sem criar contas ou encaminhar visitantes à DRI a cada clique:
 
