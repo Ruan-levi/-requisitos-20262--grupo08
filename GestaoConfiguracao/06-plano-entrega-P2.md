@@ -11,7 +11,7 @@
 | **SRS formal IEEE 830 (0,5)** | [SRS v2.0](../Requisitos/Especificacao/06-SRS-IEEE830-P2.md) | Introdução, descrição geral, interfaces, requisitos detalhados, aceite, UC01–UC09 |
 | **Consistência SRS/UML (0,5)** | [Matriz de rastreabilidade P2](../Requisitos/Especificacao/07-matriz-consistencia-P2.md) e [diagramas P2](../diagrams/README.md) | RF01–RF14 mapeados para UC, RN, modelos e telas |
 | **Qualidade do protótipo (1,0)** | [14 wireframes](../prototipo/wireframes/README.md), [galeria](https://ruan-levi.github.io/-requisitos-20262--grupo08/wireframes/) e [protótipo navegável](https://ruan-levi.github.io/-requisitos-20262--grupo08/) | Wireframes vetoriais; interface pública navegável; estados e links |
-| **GitHub obrigatório** | SRS, PlantUML+SVG P2, protótipos, Issues + Milestone M2 | Workflow para criar M2 e associar issues, execução via Actions |
+| **GitHub obrigatório** | SRS, PlantUML+SVG P2, protótipos, Issues + Milestone M2 | [Milestone M2 criada e issues associadas](https://github.com/Ruan-levi/-requisitos-20262--grupo08/actions/runs/45829236580) |
 | **Envio no AVA** | Links para o repositório e o protótipo; arquivo de entrega conforme instrução de envio | A realização do envio é **externa e ainda não comprovada** |
 
 ## 2. Evidências e links para copiar ao AVA
@@ -46,7 +46,7 @@
 | #18 | Auditoria técnica do código/README | Concluída (histórico) |
 | #15 | Backend/gestão editorial real | Evolução **fora do escopo da P2**, não associar à M2 |
 
-**Automação M2:** [workflow idempotente](../.github/workflows/organizar-m2.yml) usa GitHub Actions com `issues: write` para criar a milestone **M2 — SRS, Consistência e Prototipação (P2)**, com término referente a 23/11/2026, e associar issues #13, #14, #16–#18 e #20–#23. A milestone será registrada como existente **somente depois da execução com sucesso**. Se a permissão do repositório impedir a criação, o workflow evidenciará o bloqueio.
+**Automação M2:** [workflow idempotente](../.github/workflows/organizar-m2.yml) usa GitHub Actions com `issues: write` para criar a milestone **M2 — SRS, Consistência e Prototipação (P2)**, com término referente a 23/11/2026, e associar issues #13, #14, #16–#18 e #20–#23. **Execução confirmada com sucesso em 26/11/2026:** M2 criada (número 2) e issues associadas. O Project/Kanban é pendência separada, não exigida explicitamente na P2.
 
 ## 5. Roteiro de apresentação (aprox. 5–7 min)
 
@@ -65,7 +65,8 @@
 - [x] Fonte PlantUML P2 e representação visual vetorial da UML.
 - [x] Wireframes públicos, mobile e administrativos (propostos).
 - [x] Links à aplicação e à galeria de wireframes preparados.
-- [ ] Confirmar execução do workflow de M2 e vinculação das issues.
+- [x] [M2 criada e issues associadas](https://github.com/Ruan-levi/-requisitos-20262--grupo08/actions/runs/45829236580).
+- [x] [CI com 23 testes aprovados](https://github.com/Ruan-levi/-requisitos-20262--grupo08/actions/runs/45829161072) e [GitHub Pages publicado](https://github.com/Ruan-levi/-requisitos-20262--grupo08/actions/runs/45829236614).
 - [ ] Executar e registrar teste visual completo do protótipo publicado em desktop/mobile.
 - [ ] Validar links institucionais externos individualmente.
 - [ ] Registrar entrega final no AVA; o assistente não acessa essa submissão automaticamente.

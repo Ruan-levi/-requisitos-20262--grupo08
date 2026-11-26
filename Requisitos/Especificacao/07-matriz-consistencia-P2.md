@@ -68,7 +68,7 @@ O diagrama de implantação revisado distingue uma **implantação real (navegad
 | RF07 não possui tradução institucional aprovada | Marcar PT/EN como demonstração e manter requisito alvo | Não comprovar aprovação indevida |
 | RF08 registra pesquisa, não revisão editorial persistente | Distinguir campos e indicar implementação futura | Requisito parcial |
 | Arquivos de wireframe inexistentes até a P2 | Gerar galeria de telas vetoriais editáveis e vinculá-las à SRS | Evidência acrescentada |
-| M2 no GitHub não era milestone efetivamente criada | Plano real da Sprint 2 e issues específicas; criação de milestone ainda depende da interface | Pendente exclusivamente no GitHub (não disfarçar) |
+| M2 no GitHub não era milestone efetivamente criada | Workflow [Organizar M2](../../.github/workflows/organizar-m2.yml) criou a milestone, vinculou as issues e concluiu [execução com sucesso](https://github.com/Ruan-levi/-requisitos-20262--grupo08/actions/runs/45829236580) | Resolvido (26/11/2026); Project separado pendente |
 | Entrevista real não comprovada na M1 | Manter issue #3 aberta; não usar persona simulada como validação | Integridade acadêmica preservada |
 
 ## 6. Critérios de aceite da consistência

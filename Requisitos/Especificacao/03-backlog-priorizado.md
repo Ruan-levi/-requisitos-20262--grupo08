@@ -64,3 +64,5 @@ O **MVP** deve permitir que o usuário **encontre, leia e confira orientações 
 | #23 | [Pacote P2 e Actions](../../GestaoConfiguracao/06-plano-entrega-P2.md) | Verificação de deploy/milestone |
 
 A M2 é uma milestone diferente da M1. Os RF09–RF12 e RF14 continuam **especificados e prototipados visualmente**, não desenvolvidos com autenticação persistente. As issues #13, #14 e #16 registram evidências de testes humanos ainda pendentes.
+
+**Atualização após publicação da P2:** a milestone **M2 (número 2)** foi [criada e vinculada pelo GitHub Actions](https://github.com/Ruan-levi/-requisitos-20262--grupo08/actions/runs/45829236580); artefatos versionados [via PR #24](https://github.com/Ruan-levi/-requisitos-20262--grupo08/pull/24) e [23 testes aprovados](https://github.com/Ruan-levi/-requisitos-20262--grupo08/actions/runs/45829161072).

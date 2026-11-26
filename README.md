@@ -79,8 +79,8 @@ Seguindo o [LAPIS do professor](https://github.com/marcelobezerra-dotcom/Lapis-u
 
 **Auditoria para apresentação em 26/11/2026:** [análise dos requisitos, limitações, testes e roteiro de demonstração](GestaoConfiguracao/05-auditoria-apresentacao-2026-11-26.md).
 
-- **[Issues #1–#10](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues):** #1–#2 e #4–#9 concluídas; **#3** (entrevista real) e **#10** (evidência/AVA) reabertas por ausência de evidências. Issues **#13–#18** rastreiam a próxima etapa.
-- **[Milestones](https://github.com/Ruan-levi/-requisitos-20262--grupo08/milestones):** M1 existente com 8 issues concluídas e 2 pendentes. **M2 — Protótipo e validação ainda precisa ser criada no GitHub**; as tarefas de preparação estão na issue #17.
+- **[Issues #1–#10](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues):** #1–#2 e #4–#9 concluídas; **#3** (entrevista real) e **#10** (evidência/AVA) reabertas por ausência de evidências. Issues **#13–#18** e **#20–#23** rastreiam a M2 e os entregáveis da P2.
+- **[Milestones](https://github.com/Ruan-levi/-requisitos-20262--grupo08/milestones):** M1 existente com 8 issues concluídas e 2 pendentes. **M2 — SRS, Consistência e Prototipação (P2)** criada automaticamente e associada a issues da Sprint 2; [execução com sucesso](https://github.com/Ruan-levi/-requisitos-20262--grupo08/actions/runs/45829236580). O Project/Kanban segue como melhoria opcional da issue #17.
 - **[GitHub Projects e Kanban](GestaoConfiguracao/04-guia-github-projects.md):** roteiro atualizado para criar o quadro e relacionar M1/M2; ainda não há confirmação de Project criado.
 - **Próximas atividades:** refinar SRS, casos de uso, controle de versões e possíveis protótipos **conforme os enunciados futuros**; não presumir novas exigências.
 

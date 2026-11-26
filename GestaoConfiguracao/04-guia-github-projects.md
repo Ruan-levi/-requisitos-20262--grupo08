@@ -18,7 +18,7 @@ Este guia aplica ao nosso projeto a organização ensinada no [tutorial do LAPIS
 
 ## Próxima etapa de organização — M2
 
-A M1 é histórica e mantém as issues **#3 (entrevistas reais) e #10 (comprovação externa)** abertas, pois ainda não há evidência de sua conclusão. A **M2 — Protótipo navegável e validação** é uma etapa de acompanhamento proposta pelo grupo, **não um novo prazo do professor**. A milestone M2 ainda não existe no GitHub; a [issue #17](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/17) registra a pendência.
+A M1 é histórica e mantém as issues **#3 (entrevistas reais) e #10 (comprovação externa)** abertas, pois ainda não há evidência de sua conclusão. A **M2 — SRS, Consistência e Prototipação (P2)** foi [criada automaticamente no GitHub](https://github.com/Ruan-levi/-requisitos-20262--grupo08/actions/runs/45829236580) com prazo de referência **23/11/2026**, conforme o enunciado. A issue #17 permanece aberta porque o quadro Project/Kanban não foi comprovado.
 
 | Issue | Atividade da M2 | Estado inicial |
 |---|---|---|
@@ -29,7 +29,7 @@ A M1 é histórica e mantém as issues **#3 (entrevistas reais) e #10 (comprova�
 | [#17](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/17) | Criar milestone M2 e GitHub Project | Aberta |
 | [#18](https://github.com/Ruan-levi/-requisitos-20262--grupo08/issues/18) | Documentação e GitHub Actions | Concluída: CI verde e publicação após PR #19 |
 
-Para criar o marco M2: **Issues → Milestones → New milestone**, nomear **M2 — Protótipo navegável e validação**, manter o prazo em branco até haver data definida e atribuir #13–#18. Não associar as issues M2 à M1 só para aumentar artificialmente o percentual de conclusão.
+O marco **M2 já existe** (número 2). O workflow `organizar-m2.yml` vinculou #13, #14, #16–#18 e #20–#23; #15 foi mantida fora da sprint de prototipação por tratar da implementação de backend.
 
 ## Como criar um Project do grupo
 
@@ -51,12 +51,12 @@ O LAPIS contém scripts PowerShell para importar issues e configurar sprints. **
 
 ## Próximas atividades
 
-Manter SRS, casos de uso, backlog e baselines em revisão incremental. A M2 sugerida aqui é organizacional; **não** pressupõe prazo ou novo requisito formal do professor.
+Manter SRS, casos de uso, backlog e baselines em revisão incremental. A M2 registra o período formal informado pelo professor, **03/11 a 23/11/2026**. Os commits posteriores preservam a data real de elaboração.
 
 [Gestão de configuração](README.md) · [Controle de mudanças](03-controle-de-mudancas.md).
 
 ## Sprint 2 real conforme enunciado da P2
 
-O professor estabeleceu **03/11 a 23/11/2026** para a M2, com foco em **SRS IEEE 830, consistência UML e protótipos**. Os novos registros de trabalho são as issues **#20–#23**. O [workflow organizar-m2.yml](../.github/workflows/organizar-m2.yml) foi projetado para criar/vincular automaticamente a M2 por GitHub Actions, de maneira idempotente. A execução deverá ser verificada na aba Actions e não se confunde com um quadro Projects/Kanban já existente.
+O professor estabeleceu **03/11 a 23/11/2026** para a M2, com foco em **SRS IEEE 830, consistência UML e protótipos**. Os novos registros de trabalho são as issues **#20–#23**. O [workflow organizar-m2.yml](../.github/workflows/organizar-m2.yml) **criou e associou a M2** com [execução bem-sucedida](https://github.com/Ruan-levi/-requisitos-20262--grupo08/actions/runs/45829236580). Isso **não equivale** à criação de um quadro Projects/Kanban; este permanece pendente de comprovação.
 
 A issue #15 de backend real não é exigência de implementação da P2; fica fora da M2. Os wireframes de administração atendem à **prototipação**, e não a um sistema com login efetivamente implantado.
