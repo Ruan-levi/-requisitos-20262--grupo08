@@ -58,7 +58,7 @@ test('P2: galeria traz 14 wireframes e labels de escopo', () => {
     assert.ok(svg.trimEnd().endsWith('</svg>'));
     assert.ok(gallery.includes('./'+f), 'Galeria não exibe '+f);
   }
-  assert.ok(gallery.includes('NÃO') || gallery.includes('não implementado'));
+  assert.match(gallery, /não implementad|proposta/i);
 });
 test('P2: plano contém sprint, critérios de nota e links AVA', () => {
   for (const item of ['03/11 a 23/11/2026','IEEE 830','0,5','1,0','https://ruan-levi.github.io/','https://github.com/']) assert.ok(summary.includes(item),item);
