@@ -113,7 +113,7 @@ O projeto começou na **P1 — Elicitação e Modelagem Inicial** e evoluiu na *
 
 ## ⚠️ Limites do protótipo
 
-Este é um **trabalho acadêmico independente**, não um portal oficial da Unifor. As informações orientam a pesquisa, mas **não garantem vagas, bolsas, elegibilidade ou validade atual de convênios**. A aplicação não realiza inscrições, não recebe documentos pessoais e não possui autenticação administrativa, API ou banco de dados em produção. Telas de gestão representam uma proposta futura. A homologação institucional e a entrega no AVA não devem ser presumidas.
+Este é um **trabalho acadêmico independente**, não um portal oficial da Unifor. As informações orientam a pesquisa, mas **não garantem vagas, bolsas, elegibilidade ou validade atual de convênios**. A aplicação não realiza inscrições, não recebe documentos pessoais e **não possui login**, autenticação administrativa, API ou banco de dados em produção. Telas de gestão representam uma proposta futura. A homologação institucional e a entrega no AVA não devem ser presumidas.
 
 ---
 
