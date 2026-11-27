@@ -80,7 +80,3 @@ A atividade P2 aceita **Figma ou similar**: o [protótipo HTML publicado](https:
 **[Abrir o arquivo de redesign no Figma](https://www.figma.com/design/wINNQ9DbvhYKjjxyRV2lYc)**. O arquivo contém telas de início, destinos/portais estrangeiros, sequência de preparação e layout mobile elaboradas como camadas editáveis. Essas telas acompanham o protótipo HTML, mas não o substituem. Para verificar os fluxos, consulte `#/processo` e `#/destinos` no site publicado.
 
 [Análise de UX e links externos](../GestaoConfiguracao/07-pesquisa-dri-destinos-e-redesign.md).
-
-## Wireframes revisados (pós-evolução)
-
-[Galeria de 25 wireframes atualizados](wireframes/index.html) • [README dos wireframes](wireframes/README.md). Os 14 SVGs iniciais foram revisados e 11 novos arquivos foram criados para representar as funcionalidades do portal em novembro de 2026. **O arquivo Figma existente não foi sincronizado automaticamente com os SVGs**. Este documento serve de roteiro para a futura importação e alinhamento de componentes.

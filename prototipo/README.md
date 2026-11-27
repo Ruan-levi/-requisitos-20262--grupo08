@@ -169,3 +169,12 @@ O planejamento passou a oferecer todos os países representados no catálogo, ma
 ## Atualização dos wireframes — versão do pitch
 
 A [galeria de 25 wireframes](wireframes/index.html) foi revisada a partir da versão atual: catálogo de 16 instituições/11 países, filtro por país e área, dossiê Salamanca com seis etapas, dupla titulação e Requerimento 175, documentos por modalidade, processo em seis etapas, públicos, notícias, jornada e layout para celular. **Nenhuma funcionalidade foi modificada na aplicação**; esta atualização diz respeito apenas aos desenhos, inventário e testes.
+
+## Cadastro, login e área pessoal — nova etapa
+
+- [Abrir contas](conta.html) · [Comunicados](publicacoes.html).
+- As três opções de registro são aluno, docente e solicitação de gestor. A concessão de administrador está bloqueada sem aprovação backend.
+- O cliente `auth-client.js` usa as APIs REST Auth e GraphQL do Nhost; os arquivos `nhost/migrations/` e `nhost/metadata/` definem o banco e o modelo de permissões.
+- `auth-config.js` está **intencionalmente vazio**. Não é possível cadastrar ou autenticar usuários reais antes de criar o projeto Nhost, executar a migração e validar as permissões.
+- A experiência pública antiga continua acessível sem login. Os arquivos de teste incluem casos de segurança e papéis.
+- [Requisitos e casos de uso complementares](../Requisitos/Especificacao/08-extensao-P3-cadastro-perfis.md) · [Implantação e checklist](../GestaoConfiguracao/11-implantacao-autenticacao-nhost.md).

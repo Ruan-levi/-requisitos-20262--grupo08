@@ -33,6 +33,10 @@ jobs:
         run: |
           node --check prototipo/app.js
           node --check prototipo/experience.js
+          node --check prototipo/auth-client.js
+          node --check prototipo/auth-ui.js
+          node --check prototipo/auth-config.js
+          node --check prototipo/publicacoes.js
 
       - name: Verificar integridade do catálogo e das páginas
         run: node --test prototipo/tests/*.test.cjs

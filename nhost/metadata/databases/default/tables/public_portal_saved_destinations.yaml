@@ -1,0 +1,22 @@
+table:
+  schema: public
+  name: portal_saved_destinations
+select_permissions:
+  - role: user
+    permission:
+      columns: [destination_id, created_at]
+      filter:
+        user_id: {_eq: X-Hasura-User-Id}
+insert_permissions:
+  - role: user
+    permission:
+      check:
+        user_id: {_eq: X-Hasura-User-Id}
+      set:
+        user_id: x-hasura-user-id
+      columns: [destination_id]
+delete_permissions:
+  - role: user
+    permission:
+      filter:
+        user_id: {_eq: X-Hasura-User-Id}

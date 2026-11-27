@@ -1,0 +1,9 @@
+table:
+  schema: public
+  name: portal_profiles
+select_permissions:
+  - role: user
+    permission:
+      columns: [user_id, display_name, role, requested_role, created_at]
+      filter:
+        user_id: {_eq: X-Hasura-User-Id}

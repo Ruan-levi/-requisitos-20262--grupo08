@@ -18,3 +18,7 @@
 - [Matriz de consistência da Sprint 2](07-matriz-consistencia-P2.md): RF/RNF relacionados a UC, regras de negócio, UML, wireframes e situação de implementação.
 
 O documento [SRS 0.1](04-SRS-preliminar.md) permanece no histórico da M1. A nova versão não altera retrospectivamente o material daquela sprint.
+
+## P3 — Ampliação de cadastro e perfis
+
+[Extensão dos requisitos e casos UC10–UC16](08-extensao-P3-cadastro-perfis.md): cadastro de aluno, docente e pedido de gestor, login, favoritos, checklist e gestão editorial. O arquivo é aditivo à SRS da P2 e distingue implementação cliente de backend ainda não provisionado.

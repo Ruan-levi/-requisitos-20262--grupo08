@@ -15,6 +15,18 @@ Um protótipo acadêmico pensado para ajudar estudantes e docentes a **entender 
 
 > **Aplicação e Figma têm funções diferentes:** o GitHub Pages demonstra a navegação e as interações; o Figma apresenta o trabalho visual em camadas editáveis. O arquivo do Figma não substitui a aplicação funcional.
 
+## 🔐 Cadastro e login — nova etapa de desenvolvimento
+
+A aplicação recebeu uma **área de contas** com opções de **Aluno**, **Professor / Docente** e **Administrador / Gestor**, além de favoritos, checklist pessoal e um módulo editorial para gestores autorizados.
+
+- **[Abrir interface de login e cadastro](https://ruan-levi.github.io/-requisitos-20262--grupo08/conta.html)**
+- [Comunicados publicados pelo módulo editorial](https://ruan-levi.github.io/-requisitos-20262--grupo08/publicacoes.html)
+- [Extensão dos requisitos e novos casos de uso](Requisitos/Especificacao/08-extensao-P3-cadastro-perfis.md)
+- [Guia de implantação do Nhost e das permissões](GestaoConfiguracao/11-implantacao-autenticacao-nhost.md)
+
+**Estado técnico:** interfaces, cliente Nhost Auth/GraphQL, SQL PostgreSQL, metadados de permissões e testes estão versionados. **O banco Nhost remoto ainda não foi criado/conectado**: até isso acontecer, a página informa que o cadastro está indisponível e não registra credenciais. Não é uma autenticação simulada. Ao solicitar perfil de gestor, a pessoa **não recebe permissões administrativas automaticamente**; a aprovação ocorre no backend.
+
+---
 ## 💡 Sobre o projeto
 
 **Problema:** informações sobre intercâmbio, dupla titulação, universidades parceiras, documentação e candidaturas estão distribuídas entre páginas da Unifor, editais e portais de instituições estrangeiras. Isso pode dificultar a compreensão do processo.

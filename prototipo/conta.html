@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Área de login, cadastro e organização acadêmica do Portal de Internacionalização.">
+<title>Minha conta | Portal de Internacionalização</title>
+<link rel="icon" href="./assets/icone.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./auth.css">
+<script src="./auth-config.js" defer></script>
+<script src="./auth-client.js" defer></script>
+<script src="./auth-ui.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#authMain">Pular para o conteúdo</a>
+<header class="site-head"><div class="container head-layout">
+<a class="brand" href="./#/painel"><span class="brand-icon" aria-hidden="true">✧</span><span>internacionaliza<strong>.</strong><small>UNIFOR · GRUPO 08</small></span></a>
+<nav aria-label="Navegação"><a href="./#/painel">Portal</a><a href="./#/destinos">Universidades</a><a href="./#/documentos">Documentos</a><a href="./#/processo">Como funciona</a></nav>
+</div></header>
+<main id="authMain" class="container">
+<section class="welcome"><span class="eyebrow">PORTAL ACADÊMICO · ACESSO PESSOAL</span><h1>Seu próximo passo, do seu jeito.</h1><p>Entre ou cadastre-se para organizar universidades de interesse e etapas de preparação. Você também pode continuar explorando o portal sem criar uma conta.</p><a href="./#/painel">Continuar sem login →</a></section>
+<div id="authUnavailable" class="notification warning" hidden role="status"><strong>Integração Nhost pendente.</strong> As telas estão prontas, mas o projeto de autenticação e o banco precisam ser criados e conectados para aceitar cadastros reais. Nenhuma senha é armazenada neste site.</div>
+<div id="authStatus" class="notification" role="status" aria-live="polite" hidden></div>
+<section id="authGuest" class="auth-layout" aria-label="Acesso de usuários">
+<div class="panel">
+<div class="tabs" role="tablist" aria-label="Entrar ou criar conta"><button type="button" class="selected" data-tab="login" role="tab" aria-selected="true" aria-controls="loginPanel">Entrar</button><button type="button" data-tab="register" role="tab" aria-selected="false" aria-controls="registerPanel">Criar conta</button></div>
+<div id="loginPanel" role="tabpanel">
+<h2>Boas-vindas de volta</h2><p>Escolha sua área de acesso e use seu e-mail e sua senha.</p>
+<form id="loginForm">
+<label for="loginRole">Entrar como</label><select id="loginRole" name="role"><option value="aluno">Aluno</option><option value="docente">Professor / docente</option><option value="administrador">Administrador / gestor</option></select>
+<label for="loginEmail">E-mail</label><input type="email" id="loginEmail" autocomplete="username" maxlength="254" required placeholder="voce@exemplo.com">
+<label for="loginPassword">Senha</label><input id="loginPassword" type="password" autocomplete="current-password" required placeholder="Sua senha">
+<button type="submit" class="primary" data-auth-action>Entrar na minha conta</button>
+</form></div>
+<div id="registerPanel" role="tabpanel" hidden>
+<h2>Crie sua conta</h2><p>Escolha seu perfil. O cadastro administrativo é uma solicitação e exige aprovação.</p>
+<form id="registerForm">
+<label for="registerRole">Tipo de cadastro</label><select id="registerRole" name="role"><option value="aluno">Aluno</option><option value="docente">Professor / docente</option><option value="administrador">Administrador / gestor (solicitar acesso)</option></select>
+<p id="roleHelp" class="role-help">Para estudantes: salve destinos e organize sua preparação.</p>
+<label for="registerName">Nome</label><input id="registerName" name="name" type="text" autocomplete="name" maxlength="32" minlength="2" required>
+<label for="registerEmail">E-mail</label><input type="email" id="registerEmail" name="email" autocomplete="email" maxlength="254" required>
+<label for="registerPassword">Senha (mínimo 10 caracteres)</label><input type="password" id="registerPassword" name="password" autocomplete="new-password" minlength="10" maxlength="50" required>
+<label for="registerConfirm">Confirme a senha</label><input type="password" id="registerConfirm" name="confirm" autocomplete="new-password" minlength="10" maxlength="50" required>
+<button type="submit" class="primary" data-auth-action>Solicitar cadastro</button>
+</form></div>
+</div>
+<aside class="info-panel">
+<span class="eyebrow">COMO FUNCIONAM OS PERFIS?</span><h2>Três caminhos, um mesmo portal.</h2>
+<article><span>🎓</span><div><h3>Aluno</h3><p>Consulte programas, salve universidades e organize seu checklist de preparação.</p></div></article>
+<article><span>👩‍🏫</span><div><h3>Docente</h3><p>Acesse orientações de mobilidade acadêmica e mantenha seus interesses organizados.</p></div></article>
+<article><span>🛡️</span><div><h3>Administrador</h3><p>Gerencie conteúdos apenas após aprovação formal do acesso pelo responsável do projeto.</p></div></article>
+<p class="fine">Por segurança, escolher “administrador” não concede permissões de gestor. Todo acesso administrativo depende de autorização no banco de dados.</p>
+</aside></section>
+<section id="authDashboard" hidden class="dash">
+<div class="dash-header"><div><span class="eyebrow">SUA ÁREA</span><h2 id="accountGreeting">Olá!</h2><p id="accountDetails"></p></div><button type="button" id="logoutButton" class="secondary">Sair da conta</button></div>
+<div class="dash-grid">
+<section class="panel"><h3>Universidades favoritas</h3><p>Salve instituições de referência para pesquisar depois. Não há inscrição automática.</p><label for="favoriteDestination">Escolha uma instituição</label><select id="favoriteDestination">
+<option value="salamanca">Universidad de Salamanca — Espanha</option>
+<option value="porto">Universidade do Porto — Portugal</option>
+<option value="cuyo">Universidad Nacional de Cuyo — Argentina</option>
+<option value="minho">Universidade do Minho — Portugal</option>
+<option value="aveiro">Universidade de Aveiro — Portugal</option>
+<option value="braganca">Instituto Politécnico de Bragança — Portugal</option>
+<option value="deggendorf">Deggendorf Institute of Technology — Alemanha</option>
+<option value="hwr-berlin">HWR Berlin — Alemanha</option>
+<option value="oviedo">Universidad de Oviedo — Espanha</option>
+<option value="rotterdam">Rotterdam University of Applied Sciences — Países Baixos</option>
+<option value="imt-albi">IMT Mines Albi — França</option>
+<option value="sonora">Universidad de Sonora — México</option>
+<option value="pucp">Pontificia Universidad Católica del Perú — Peru</option>
+<option value="uniandes">Universidad de los Andes — Colômbia</option>
+<option value="concordia">Concordia University — Canadá</option>
+<option value="appstate">Appalachian State University — Estados Unidos</option></select>
+<button id="addFavorite" type="button" class="secondary">Salvar universidade</button><ul id="favoritesList" class="favorite-list"></ul></section>
+<section class="panel"><h3>Meu checklist</h3><p>O progresso é salvo na sua conta, se o backend estiver configurado.</p>
+<div id="checklist">
+<label><input type="checkbox" data-check="programa"> Definir a modalidade</label>
+<label><input type="checkbox" data-check="edital"> Consultar o edital vigente</label>
+<label><input type="checkbox" data-check="destino"> Pesquisar a universidade</label>
+<label><input type="checkbox" data-check="idioma"> Conferir idioma e documentos</label>
+<label><input type="checkbox" data-check="custos"> Planejar custos e viagem</label>
+<label><input type="checkbox" data-check="dri"> Confirmar orientações com a DRI</label>
+</div><a href="./#/documentos">Consultar documentação →</a></section></div>
+<section id="teacherSection" class="role-section" hidden><h3>Espaço do docente</h3><p>Consulte os programas de mobilidade docente, pesquisa internacional e cooperação acadêmica.</p><a href="./#/docentes">Abrir orientações para docentes →</a></section>
+<section id="adminPending" class="notification warning" hidden><strong>Acesso de gestor em análise.</strong> Seu pedido foi registrado no cadastro; um administrador autorizado precisa conceder acesso no banco. Enquanto isso, você pode utilizar a área comum.</section>
+<section id="adminSection" class="panel role-section" hidden><span class="eyebrow">GESTÃO AUTORIZADA</span><h3>Publicar orientação institucional</h3><p>Apenas usuários explicitamente autorizados no banco podem enviar registros editoriais. Estes conteúdos são um módulo complementar e não alteram as páginas fixas existentes.</p>
+<form id="editorialForm">
+<label for="editorialTitle">Título</label><input id="editorialTitle" minlength="5" maxlength="160" required>
+<label for="editorialBody">Texto</label><textarea id="editorialBody" required minlength="12" rows="5"></textarea>
+<label for="editorialSource">Fonte oficial (https://)</label><input id="editorialSource" type="url" required placeholder="https://unifor.br/...">
+<label for="editorialStatus">Status</label><select id="editorialStatus"><option value="rascunho">Rascunho</option><option value="revisao">Em revisão</option><option value="publicado">Publicado</option></select>
+<button class="primary" type="submit">Salvar conteúdo</button>
+</form><div id="editorialList"></div></section>
+</section>
+</main><footer><div class="container">Portal acadêmico independente · Grupo 08 · <a href="https://unifor.br/dri/contatos" target="_blank" rel="noopener noreferrer">Contatos oficiais DRI</a> · <a href="./#/painel">Voltar ao portal</a></div></footer>
+</body></html>

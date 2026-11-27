@@ -1,0 +1,25 @@
+table:
+  schema: public
+  name: portal_checklist_progress
+select_permissions:
+  - role: user
+    permission:
+      columns: [check_key, completed, updated_at]
+      filter:
+        user_id: {_eq: X-Hasura-User-Id}
+insert_permissions:
+  - role: user
+    permission:
+      check:
+        user_id: {_eq: X-Hasura-User-Id}
+      set:
+        user_id: x-hasura-user-id
+      columns: [check_key, completed]
+update_permissions:
+  - role: user
+    permission:
+      columns: [completed]
+      filter:
+        user_id: {_eq: X-Hasura-User-Id}
+      check:
+        user_id: {_eq: X-Hasura-User-Id}
