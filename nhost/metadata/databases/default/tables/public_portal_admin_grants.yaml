@@ -1,0 +1,10 @@
+table:
+  schema: public
+  name: portal_admin_grants
+select_permissions:
+  - role: user
+    permission:
+      columns: [user_id, granted_at]
+      filter:
+        user_id: {_eq: X-Hasura-User-Id}
+# Sem insert, update ou delete pela API pública.

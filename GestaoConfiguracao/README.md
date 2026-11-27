@@ -34,3 +34,7 @@ O workflow [Organizar M2](../.github/workflows/organizar-m2.yml) cria a mileston
 ## Auditoria do pitch
 
 [Revisão de navegação, processos, documentação, dupla titulação, links e riscos de demonstração](09-auditoria-transversal-pitch-2026.md). O documento inclui um roteiro de pitch de 5–7 minutos e uma matriz das funcionalidades demonstráveis.
+
+## Próxima etapa — autenticação e Nhost
+
+[Guia de integração e segurança do Nhost](11-implantacao-autenticacao-nhost.md). A implantação real exige criar um projeto dedicado e aplicar SQL e permissões Hasura; o projeto antigo e os backups permanecem preservados.

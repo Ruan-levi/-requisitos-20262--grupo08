@@ -227,3 +227,6 @@ body{font-family:"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}
 .xp-contact-extra>a:not(.xp-source){color:#0f6a7f;font-weight:750}
 @media(max-width:860px){.xp-info-pair{grid-template-columns:1fr}.xp-double-official{flex-direction:column}}
 @media(max-width:560px){.xp-campus-timeline li{gap:11px}.xp-campus-index{width:38px;height:38px;flex-basis:38px}.xp-campus-timeline li:not(:last-child)::after{left:18px;top:50px}}
+
+/* Acesso às novas contas - a página pública continua sem login obrigatório */
+.account-entry{display:inline-flex;align-items:center;justify-content:center;padding:9px 13px;border:1px solid #c4dfe1;border-radius:10px;color:#0e5870;background:#e9f7f4;text-decoration:none;font-size:.79rem;font-weight:800;white-space:nowrap}.account-entry:hover{background:#d9f0ed;color:#0a4965}.account-entry:focus-visible{outline:3px solid #e8ad4b;outline-offset:3px}@media(max-width:780px){.account-entry{padding:8px 9px;font-size:.74rem}}

@@ -1,0 +1,47 @@
+table:
+  schema: public
+  name: portal_editorial_entries
+select_permissions:
+  - role: public
+    permission:
+      columns: [id, title, body, source_url, created_at]
+      filter:
+        status: {_eq: publicado}
+  - role: user
+    permission:
+      columns: [id, title, body, source_url, status, author_id, created_at, updated_at]
+      filter:
+        _or:
+          - status: {_eq: publicado}
+          - _exists:
+              _table: {schema: public, name: portal_admin_grants}
+              _where:
+                user_id: {_eq: X-Hasura-User-Id}
+insert_permissions:
+  - role: user
+    permission:
+      columns: [title, body, source_url, status]
+      set:
+        author_id: x-hasura-user-id
+      check:
+        _and:
+          - _exists:
+              _table: {schema: public, name: portal_admin_grants}
+              _where:
+                user_id: {_eq: X-Hasura-User-Id}
+          - author_id: {_eq: X-Hasura-User-Id}
+update_permissions:
+  - role: user
+    permission:
+      columns: [title, body, source_url, status]
+      filter:
+        _exists:
+          _table: {schema: public, name: portal_admin_grants}
+          _where:
+            user_id: {_eq: X-Hasura-User-Id}
+      check:
+        _exists:
+          _table: {schema: public, name: portal_admin_grants}
+          _where:
+            user_id: {_eq: X-Hasura-User-Id}
+# Aprovação no banco apenas por gestor autorizado.

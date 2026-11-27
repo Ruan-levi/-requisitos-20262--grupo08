@@ -1,0 +1,7 @@
+# Hasura metadata do backend Nhost (somente após configurar projeto)
+# Aplicar/tracking com CLI Nhost. Não concede admin em cadastros públicos.
+- "!include public_portal_profiles.yaml"
+- "!include public_portal_admin_grants.yaml"
+- "!include public_portal_saved_destinations.yaml"
+- "!include public_portal_checklist_progress.yaml"
+- "!include public_portal_editorial_entries.yaml"
