@@ -47,10 +47,10 @@ test('P2: UML atualizada mantém PlantUML e visual vetorial de cada diagrama', (
     assert.ok(svg.includes('<title'), 'SVG sem título: '+name);
   }
 });
-test('P2: galeria traz 14 wireframes e labels de escopo', () => {
+test('P2: galeria atualizada traz 25 wireframes e labels de escopo', () => {
   const dir=path.join(project,'prototipo/wireframes');
   const files=fs.readdirSync(dir).filter(f=>f.endsWith('.svg'));
-  assert.equal(files.length,14,'Esperados 14 wireframes');
+  assert.equal(files.length,25,'Esperados 25 wireframes atualizados');
   for(const f of files) {
     const svg=read('prototipo/wireframes/'+f);
     assert.match(svg,/xmlns="http:\/\/www.w3.org\/2000\/svg"/);
