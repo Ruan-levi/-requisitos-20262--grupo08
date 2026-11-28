@@ -6,12 +6,16 @@
   const client=window.PortalNhost.createClient(window.PORTAL_NHOST_CONFIG||{});
   let identity=null;
   let favoriteIds=new Set();
+  let editorialCache=[];
+  let lastMessage='';
+  const ui=text=>window.PortalAccountLocale?.t(text)||text;
   const selects=$("favoriteDestination");
   const labels=new Map([...selects.options].map(opt=>[opt.value,opt.textContent]));
   function visible(element,show){element.hidden=!show;}
   function message(text,error=false){
     const box=$("authStatus");
-    box.textContent=text;
+    lastMessage=text;
+    box.textContent=ui(text);
     box.classList.toggle("error",error);
     visible(box,!!text);
   }
@@ -30,27 +34,27 @@
     message("");
   }
   document.querySelectorAll("[data-tab]").forEach(b=>b.addEventListener("click",()=>switchTab(b.dataset.tab)));
-  function roleText(role){return role==="docente"?"Professor / docente":role==="administrador"?"Administrador / gestor":"Aluno";}
+  function roleText(role){return ui(role==="docente"?"Professor / docente":role==="administrador"?"Administrador / gestor":"Aluno");}
   $("registerRole").addEventListener("change",event=>{
     const role=event.target.value;
-    $("roleHelp").textContent=role==="administrador"?
+    $("roleHelp").textContent=ui(role==="administrador"?
       "O cadastro solicita acesso de gestor. Somente uma autorização no banco habilitará as funções administrativas.":
-      role==="docente"?"Área acadêmica para docentes, pesquisa e interesses pessoais. O perfil é autodeclarado.":"Área do estudante, com favoritos e checklist sincronizados.";
+      role==="docente"?"Área acadêmica para docentes, pesquisa e interesses pessoais. O perfil é autodeclarado.":"Área do estudante, com favoritos e checklist sincronizados.");
   });
   function renderFavorites(){
     const ul=$("favoritesList");ul.replaceChildren();
     if(!favoriteIds.size){
       const li=document.createElement("li");
-      li.textContent="Nenhuma universidade salva ainda.";
+      li.textContent=ui("Nenhuma universidade salva ainda.");
       ul.append(li);return;
     }
     for(const id of [...favoriteIds].sort()){
       const li=document.createElement("li");
       const a=document.createElement("a");
       a.href="./#/destinos/"+encodeURIComponent(id);
-      a.textContent=labels.get(id)||id;
+      a.textContent=[...selects.options].find(option=>option.value===id)?.textContent||labels.get(id)||id;
       const remove=document.createElement("button");
-      remove.type="button";remove.textContent="Remover";
+      remove.type="button";remove.textContent=ui("Remover");
       remove.addEventListener("click",async()=>{
         remove.disabled=true;
         try{await client.saveFavorite(id,false);favoriteIds.delete(id);renderFavorites();}
@@ -69,20 +73,21 @@
     document.querySelectorAll("[data-check]").forEach(input=>{input.checked=!!set.get(input.dataset.check);});
   }
   function renderEditorialList(items){
+    editorialCache=items;
     const box=$("editorialList");box.replaceChildren();
-    const h=document.createElement("h3");h.textContent="Conteúdos registrados";box.append(h);
-    if(!items.length){const p=document.createElement("p");p.textContent="Nenhum conteúdo editorial registrado.";box.append(p);return;}
+    const h=document.createElement("h3");h.textContent=ui("Conteúdos registrados");box.append(h);
+    if(!items.length){const p=document.createElement("p");p.textContent=ui("Nenhum conteúdo editorial registrado.");box.append(p);return;}
     for(const item of items){
       const div=document.createElement("article");div.className="editor-item";
       const title=document.createElement("strong");title.textContent=item.title;
-      const status=document.createElement("small");status.textContent="Status: "+item.status;
+      const status=document.createElement("small");status.textContent=ui("Status:")+" "+item.status;
       const body=document.createElement("p");body.textContent=item.body;
       const source=document.createElement("a");source.textContent="Fonte oficial ↗";source.href=item.source_url;source.target="_blank";source.rel="noopener noreferrer";
       div.append(title,status,body,source);
       const buttons=document.createElement("div");
       for(const [value,label] of [["rascunho","Rascunho"],["revisao","Enviar à revisão"],["publicado","Publicar"]]){
         if(value===item.status)continue;
-        const button=document.createElement("button");button.className="secondary";button.type="button";button.textContent=label;
+        const button=document.createElement("button");button.className="secondary";button.type="button";button.textContent=ui(label);
         button.addEventListener("click",async()=>{
           button.disabled=true;
           try{await client.updateEditorial(item.id,value);await refreshEditorial();message("Situação editorial atualizada.");}
@@ -97,8 +102,8 @@
   async function showIdentity(account){
     identity=account;
     visible($("authGuest"),false);visible($("authDashboard"),true);
-    $("accountGreeting").textContent="Olá, "+account.name+"!";
-    $("accountDetails").textContent="Perfil: "+roleText(account.role)+(account.isAdmin?" · Gestor autorizado":"");
+    $("accountGreeting").textContent=ui("Olá,")+" "+account.name+"!";
+    $("accountDetails").textContent=ui("Perfil:")+" "+roleText(account.role)+(account.isAdmin?" · "+ui("Gestor autorizado"):"");
     visible($("teacherSection"),account.role==="docente");
     visible($("adminPending"),account.requestedRole==="administrador"&&!account.isAdmin);
     visible($("adminSection"),account.isAdmin);
@@ -144,7 +149,7 @@
   $("logoutButton").addEventListener("click",async()=>{
     await client.logout();identity=null;
     visible($("authGuest"),true);visible($("authDashboard"),false);
-    message("Você saiu da conta.");switchTab("login");
+    switchTab("login");message("Você saiu da conta.");
   });
   $("addFavorite").addEventListener("click",async()=>{
     const id=selects.value;
@@ -182,5 +187,15 @@
     try{const current=await client.restore();if(current)await showIdentity(current);}
     catch(e){message("Não foi possível restaurar a sessão: "+e.message,true);}
   }
+  window.addEventListener('portal:language',()=>{
+    $("registerRole").dispatchEvent(new Event('change'));
+    if(identity){
+      $("accountGreeting").textContent=ui("Olá,")+" "+identity.name+"!";
+      $("accountDetails").textContent=ui("Perfil:")+" "+roleText(identity.role)+(identity.isAdmin?" · "+ui("Gestor autorizado"):"");
+      renderFavorites();
+      if(identity.isAdmin)renderEditorialList(editorialCache);
+    }
+    if(lastMessage && !$("authStatus").hidden)$("authStatus").textContent=ui(lastMessage);
+  });
   start();
 })();

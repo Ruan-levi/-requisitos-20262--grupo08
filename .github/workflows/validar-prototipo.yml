@@ -35,6 +35,7 @@ jobs:
           node --check prototipo/experience.js
           node --check prototipo/account-locale.js
           node --check prototipo/portal-settings.js
+          node --check prototipo/media-fallback.js
           node --check prototipo/auth-client.js
           node --check prototipo/auth-ui.js
           node --check prototipo/auth-config.js

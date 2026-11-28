@@ -154,3 +154,59 @@ html[data-theme="dark"] .account-preferences .portal-theme,
 html[data-theme="dark"] .account-preferences select{background-color:#1d3059;color:#e7f0ff;border-color:#48608e}
 html[data-theme="dark"] .site-head .head-layout nav{border-color:#344b75}
 html[data-theme="dark"] .site-head .institution-brand__copy strong{color:#edf5ff}
+
+
+/* Auditoria de responsividade: em notebooks o menu não deve desaparecer sem necessidade. */
+.site-header .main-nav a.mobile-account-link{display:none!important}
+@media (min-width:1025px) and (max-width:1370px){
+  html{scroll-padding-top:145px}
+  .site-header{height:auto}
+  .site-header__inner{height:auto;min-height:80px;flex-wrap:wrap;padding-block:9px 4px;row-gap:4px}
+  .site-header .main-nav,.site-header .main-nav.is-open{
+    display:flex;position:static;order:3;width:100%;height:auto;
+    flex-direction:row;align-items:center;justify-content:center;gap:8px;
+    padding:5px 0 1px;margin:0;background:transparent;border:0;
+    border-top:1px solid #e0e9f8;border-radius:0;box-shadow:none;
+  }
+  .site-header .main-nav a{font-size:.8rem;min-height:39px;height:auto;padding:8px 12px}
+  .site-header .main-nav a.nav-active::after{height:3px;width:85%;left:7.5%;top:auto;bottom:0}
+  .site-header .header-actions{margin-left:auto}
+  .site-header .mobile-menu-toggle{display:none}
+  html[data-theme="dark"] .site-header .main-nav{background:transparent;border-top-color:#34486f}
+}
+@media (max-width:1024px){
+  .site-header{height:auto}
+  .site-header__inner{height:auto;min-height:76px;flex-wrap:nowrap;gap:6px;padding-block:7px}
+  .site-header .main-nav{display:none;position:absolute;top:100%;left:0;right:0;width:100%;height:auto;
+    flex-direction:column;align-items:stretch;gap:2px;padding:12px 22px;
+    border:1px solid #d6e3f5;border-radius:0 0 13px 13px;
+    box-shadow:0 14px 32px #132a792c;background:#fff;z-index:50}
+  .site-header .main-nav.is-open{display:flex}
+  .site-header .main-nav a{min-height:44px;height:auto;padding:12px;font-size:.88rem}
+  .site-header .main-nav a.nav-active::after{height:60%;width:4px;left:0;top:20%;bottom:auto}
+  .site-header .mobile-menu-toggle{display:grid;place-items:center;flex:none}
+  .site-header .header-actions{margin-left:auto}
+  html[data-theme="dark"] .site-header .main-nav{background:#172847;border-color:#435984}
+}
+@media (max-width:430px){
+  .header-actions .account-entry{display:none!important}
+  .site-header .main-nav.is-open a.mobile-account-link{display:flex!important;align-items:center;
+    background:#e8f1ff;color:#163a9f;border-radius:9px;font-weight:800}
+  html[data-theme="dark"] .site-header .main-nav.is-open a.mobile-account-link{
+    background:#274378;color:#f4f8ff}
+}
+@media (prefers-reduced-motion:reduce){
+  .site-header .main-nav a,.xp-btn,.xp-card,.official-tile,.topic-card,.guide-card{transition:none!important}
+}
+
+/* Imagens externas ausentes: manter composição sem ícones de imagem quebrada. */
+.hero__photo.is-media-fallback,
+.institutional-welcome__photo img.is-media-fallback{
+ object-fit:contain!important;object-position:center!important;
+ background:linear-gradient(145deg,#182f91,#3059bd);
+ padding:16px;filter:none!important;
+}
+.institution-brand__logo.is-media-fallback{
+ object-fit:contain!important;object-position:center!important;
+ background:#eff5ff;border-color:#b8cef5;padding:8px;
+}

@@ -76,6 +76,37 @@ const entries=[
 ["voce@exemplo.com","you@example.com","usted@ejemplo.com"],["Sua senha","Your password","Su contraseña"],
 ["Nenhuma universidade salva ainda.","No saved universities yet.","Aún no hay universidades guardadas."]
 ];
+
+// Mensagens dinâmicas das telas de aluno, docente e gestão.
+entries.push(
+ ["Remover","Remove","Eliminar"],
+ ["Perfil:","Role:","Perfil:"],
+ ["Gestor autorizado","Authorized manager","Gestor autorizado"],
+ ["Olá,","Hello,","¡Hola,"],
+ ["Nenhuma universidade salva ainda.","No universities saved yet.","Aún no hay universidades guardadas."],
+ ["Esta universidade já está na sua lista.","This university is already saved.","Esta universidad ya está guardada."],
+ ["Universidade salva na sua conta.","University saved to your account.","Universidad guardada en su cuenta."],
+ ["Checklist atualizado.","Checklist updated.","Lista de preparación actualizada."],
+ ["Você saiu da conta.","You have signed out.","Ha cerrado la sesión."],
+ ["Autenticação concluída.","Sign-in successful.","Inicio de sesión correcto."],
+ ["Acesso administrativo não autorizado.","Administrative access not authorized.","Acceso administrativo no autorizado."],
+ ["Conteúdos registrados","Saved announcements","Contenidos registrados"],
+ ["Nenhum conteúdo editorial registrado.","No editorial entries yet.","Todavía no hay contenidos editoriales."],
+ ["Status:","Status:","Estado:"],
+ ["Enviar à revisão","Send for review","Enviar a revisión"],
+ ["Publicar","Publish","Publicar"],
+ ["Situação editorial atualizada.","Editorial status updated.","Estado editorial actualizado."],
+ ["Área do estudante, com favoritos e checklist sincronizados.","Student space with saved universities and a synchronized checklist.","Espacio del estudiante con universidades favoritas y lista sincronizada."],
+ ["Área acadêmica para docentes, pesquisa e interesses pessoais. O perfil é autodeclarado.","Faculty space for academic mobility and research. The role is self-declared.","Espacio académico para docentes, movilidad e investigación. El perfil es autodeclarado."],
+ ["O cadastro solicita acesso de gestor. Somente uma autorização no banco habilitará as funções administrativas.","Manager registration is a request. Only backend approval enables administrative tools.","El registro de gestor es una solicitud. Solo la autorización en la base de datos permite administrar."],
+ ["Os comunicados aguardam a configuração do banco Nhost do projeto. As demais páginas públicas continuam acessíveis.","Announcements are waiting for the Nhost database to be configured. Public pages remain available.","Los comunicados esperan la configuración de Nhost. Las páginas públicas siguen disponibles."],
+ ["Nenhum comunicado foi publicado ainda.","No announcements have been published yet.","Todavía no se han publicado comunicados."],
+ ["Consultar fonte oficial ↗","View official source ↗","Consultar la fuente oficial ↗"],
+ ["Fonte não disponível","Source unavailable","Fuente no disponible"],
+ ["Publicações indisponíveis no momento.","Announcements are currently unavailable.","Los comunicados no están disponibles por el momento."],
+ ["Nenhum conteúdo foi publicado ainda.","No content has been published yet.","Aún no se ha publicado contenido."]
+);
+
 const maps={en:new Map(entries.map(row=>[row[0],row[1]])),es:new Map(entries.map(row=>[row[0],row[2]]))};
 const originalTexts=new WeakMap();
 const originalPlaceholders=new WeakMap();
@@ -105,6 +136,11 @@ function translate(){
   ? (language==="es"?"Comunicados | Internacionaliza":language==="en"?"Announcements | Internacionaliza":"Comunicados | Internacionaliza")
   : (language==="es"?"Mi cuenta | Internacionaliza":language==="en"?"My account | Internacionaliza":"Minha conta | Internacionaliza");
 }
+function t(value){
+ const l=window.PortalPreferences?.language||"pt";
+ return l==="pt"?value:(maps[l]?.get(value)||value);
+}
+window.PortalAccountLocale={t,translate};
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",translate,{once:true});else translate();
 window.addEventListener("portal:language",translate);
 })();
