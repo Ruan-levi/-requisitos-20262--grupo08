@@ -281,10 +281,70 @@ const translations = {
   }
 };
 
-const state = { language: 'pt', query: '', topic: 'all', audience: 'todos', editorialStage: 0 };
+
+// Novo idioma de interface: espanhol. Documentos oficiais preservam o idioma de origem.
+translations.es = Object.assign({}, translations.en, {
+  prototypeTop:'Prototipo académico independiente · no oficial',officialSite:'Visitar la DRI oficial',
+  navHome:'Inicio',navPrograms:'Programas',navProcess:'Cómo funciona',navDestinations:'Portales extranjeros',navTopics:'Temas',navGuides:'Orientaciones',navHow:'Cómo funciona',navContact:'Contactos',navExplore:'Explorar el portal',
+  navUniversities:'Universidades',navSources:'Fuentes oficiales',
+  hubEyebrow:'ACCESOS DIRECTOS · UNIFOR',hubTitle:'La información adecuada, en la fuente correcta.',hubDescription:'Cada tema enlaza con la página o el documento institucional correspondiente.',hubNotice:'Fuentes institucionales consultadas en noviembre de 2026',
+  hubUniversities:'Universidades y convenios',hubUniversitiesDesc:'Conozca las colaboraciones internacionales de Unifor.',hubDocs:'Guía del estudiante de intercambio',hubDocsDesc:'Pasos y documentos de referencia (edición 2024).',hubApplications:'Intercambio y selección',hubApplicationsDesc:'Requisitos, preguntas y orientaciones para estudiantes.',hubContacts:'Atención de la DRI',hubContactsDesc:'Comuníquese con el equipo responsable.',hubGo:'Explorar en el portal',hubRead:'Consultar documentos',
+  uniEyebrow:'DESCUBRA POSIBILIDADES',uniTitle:'¿Qué universidad corresponde a su carrera?',uniDescription:'Elija su área para consultar una lista de referencia publicada por Unifor.',uniLabel:'Seleccione una carrera o área',uniAll:'Explorar todos los convenios',uniComputer:'Ingeniería Informática',uniNursing:'Enfermería',uniLaw:'Derecho',uniPostgraduate:'Posgrado',uniReference:'Referencia institucional',uniWarning:'Las listas históricas no garantizan plazas disponibles. Confirme convenios, carreras y convocatorias con la DRI.',
+  uniDefaultDate:'Página institucional de convenios',uniArchiveDate:(year)=>'Lista de referencia publicada en '+year,uniArchiveDesc:'Documento de universidades asociadas a esta área. Consulte a la DRI para confirmar la versión vigente.',uniOpenList:'Abrir lista oficial',uniOpenAll:'Explorar convenios de la DRI',
+  heroEyebrow:'INTERNACIONALIZACIÓN SIN COMPLICACIONES',heroTitle1:'El mundo está',heroTitle2:'más cerca',heroTitle3:'de lo que imaginas.',
+  heroLead:'Encuentre información sobre intercambios, doble titulación, documentos y todo lo necesario para dar el siguiente paso.',
+  searchLabel:'Buscar orientaciones',heroPlaceholder:'¿Qué busca? Ej.: intercambio',heroSearch:'Buscar',popularSearches:'Búsquedas frecuentes:',
+  suggestExchange:'Intercambio',suggestDocs:'Documentos',suggestDegree:'Doble titulación',
+  audienceLabel:'Este espacio es para...',audienceStudent:'Estudiantes de Unifor',audienceTeacher:'Docentes',audienceInternational:'Estudiantes internacionales',
+  topicsEyebrow:'EXPLORE POR INTERÉS',topicsTitle:'Todo comienza con una buena orientación.',topicsDescription:'Los principales temas de internacionalización, organizados para encontrar información fácilmente.',topicsAll:'Ver todas las orientaciones',
+  topicMobility:'Intercambio y movilidad',topicMobilityDesc:'Conozca oportunidades para estudiar y enseñar fuera.',topicDegree:'Doble titulación',topicDegreeDesc:'Comprenda las opciones académicas.',topicDocuments:'Documentos y visados',topicDocumentsDesc:'Sepa qué consultar antes de viajar.',topicAcademic:'Vida académica',topicAcademicDesc:'Asignaturas, créditos y cooperación.',topicPlanning:'Costos y alojamiento',topicPlanningDesc:'Prepare sus preguntas de planificación.',topicSupport:'Apoyo y contactos',topicSupportDesc:'Sepa dónde aclarar sus dudas.',
+  exploreEyebrow:'CENTRO DE ORIENTACIONES',exploreTitle:'Encuentre respuestas para comenzar.',exploreDescription:'Consulte contenidos de muestra, filtre por público o busque un tema.',demoBadge:'Contenido demostrativo',
+  searchGuides:'Buscar orientaciones',guidePlaceholder:'Busque temas y palabras clave...',filterByTopic:'Filtrar por tema',filterAllTopics:'Todos los temas',filterEveryone:'Todos los públicos',filterStudents:'Estudiantes',filterTeachers:'Docentes',filterInternationals:'Internacionales',clearFilters:'Limpiar filtros ×',
+  emptyTitle:'No se encontraron orientaciones.',emptyDescription:'Pruebe otra palabra o elimine algún filtro.',emptyReset:'Mostrar todas las orientaciones',
+  contentDisclaimer:'Las orientaciones de este prototipo son ilustrativas. Confirme normas, documentos y plazos con la DRI oficial.',
+  howEyebrow:'SENCILLO, DE PRINCIPIO A FIN',howTitle:'Su primer paso, con más claridad.',howDescription:'Este proyecto facilita la búsqueda de información. Es una herramienta de consulta, no de solicitud ni aprobación.',howCta:'Comenzar a explorar',
+  step1Title:'Elija un tema',step1Description:'Explore las categorías o busque lo que necesita saber.',step2Title:'Lea la orientación',step2Description:'Organice sus dudas sobre procedimientos, documentos y pasos siguientes.',step3Title:'Confirme en la fuente oficial',step3Description:'Verifique convocatorias vigentes y consulte con el sector responsable.',
+  editorialCardEyebrow:'DEMOSTRACIÓN DEL FLUJO',editorialSample:'Orientación sobre documentos de viaje',editorialSampleDescription:'Ejemplo ficticio del proceso de revisión de información.',
+  editorialEyebrow:'INFORMACIÓN CONFIABLE',editorialTitle:'La gestión responsable también forma parte de la experiencia.',editorialDescription:'Además de la consulta pública, el proyecto prevé un área restringida para revisar y publicar orientaciones.',
+  editorialPoint1:'Los borradores no aparecen públicamente.',editorialPoint2:'Aprobación por responsables autorizados.',editorialPoint3:'Identificación de fuentes y fechas de revisión.',
+  editorialLimit:'La autenticación real requiere configurar Nhost. El ejemplo anterior es una simulación local.',editorialWarning:'Simulación local: no publica datos y no requiere iniciar sesión.',editorialReset:'Reiniciar',
+  faqEyebrow:'PREGUNTAS FRECUENTES',faqTitle:'Las dudas merecen respuestas claras.',faqDescription:'Orientaciones iniciales antes de continuar.',faqTip:'Consejo: confirme requisitos y fechas en los canales oficiales.',
+  faqQ1:'¿El portal recibe solicitudes de intercambio?',faqA1:'No. Este prototipo organiza información. Las solicitudes siguen las convocatorias y los canales institucionales.',
+  faqQ2:'¿Cómo saber qué documentos necesito?',faqA2:'Depende del programa, destino y normas vigentes. Revise la convocatoria o consulte al sector responsable.',
+  faqQ3:'¿Puedo consultar sin registrarme?',faqA3:'Sí. La información pública no exige cuenta. El inicio de sesión opcional necesita una conexión Nhost configurada.',
+  faqQ4:'¿Estas orientaciones son oficiales?',faqA4:'No. Es un prototipo académico del Grupo 08, independiente de la Unifor. Consulte siempre los canales oficiales.',
+  contactEyebrow:'¿NECESITA INFORMACIÓN OFICIAL?',contactTitle:'El siguiente paso es consultar a la DRI.',contactDescription:'Para orientaciones, convocatorias y atención institucional, visite la Dirección de Relaciones Internacionales de Unifor.',contactButton:'Abrir contactos oficiales',
+  footerDescription:'Prototipo académico de un portal de consulta sobre internacionalización.',footerNavigate:'Navegue',footerFaq:'Preguntas frecuentes',footerReferences:'Referencias',footerRepository:'Repositorio del proyecto',footerSchool:'Proyecto de Requisitos y Modelado de Sistemas',footerDisclaimer:'Proyecto independiente, no oficial y sin recopilación de datos personales.',
+  dialogStepsTitle:'Por dónde comenzar',dialogNotice:'Orientación ilustrativa. Confirme requisitos y fechas en fuentes oficiales.',dialogOfficial:'Consultar la fuente oficial',dialogSourceHeading:'FUENTE ESPECÍFICA',sourceChecked:'Fuente consultada por el Grupo 08 el 19/11/2026',cardSource:'Fuente oficial',
+  results:(count)=>count+' '+(count===1?'orientación encontrada':'orientaciones encontradas'),seeGuide:'Leer orientación',demoGuide:'Guía ilustrativa',
+  status:['Borrador','En revisión','Publicado'],editorialAdvance:['Enviar a revisión','Aprobar publicación','Reiniciar demostración'],openMenu:'Abrir menú',closeMenu:'Cerrar menú',increaseFont:'Aumentar el tamaño del texto',normalFont:'Restablecer el tamaño del texto'
+});
+
+
+// Títulos e resumos centrais usados na busca por usuários de língua espanhola.
+const spanishGuideTitles={
+  intercambio:'Intercambio académico: ¿por dónde comenzar?',
+  'mobilidade-docente':'Movilidad académica para docentes',
+  'dupla-titulacao':'Doble titulación internacional',
+  'vistos-documentos':'Visados y documentos para viajar',
+  aproveitamento:'Reconocimiento académico y créditos',
+  'colaboracao-docente':'Cooperación internacional para docentes',
+  custos:'Costos y planificación financiera',
+  hospedagem:'Alojamiento y llegada',
+  'alunos-internacionais':'Primeros pasos para estudiantes internacionales',
+  contatos:'¿Cómo contactar a la DRI?',
+  'universidades-parceiras':'Universidades e instituciones asociadas',
+  editais:'Convocatorias, solicitudes y requisitos',
+  'documentos-academicos':'Documentos académicos y solicitudes'
+};
+function translatedGuideTitle(guide){
+ return state.language==='es' ? (spanishGuideTitles[guide.id]||guide.title.pt) : (guide.title[state.language]||guide.title.pt);
+}
+
+const state = { language: (typeof window !== 'undefined' && window.PortalPreferences && window.PortalPreferences.language) || 'pt', query: '', topic: 'all', audience: 'todos', editorialStage: 0 };
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => Array.from(document.querySelectorAll(selector));
-const t = (key) => translations[state.language][key];
+const t = (key) => (translations[state.language] || translations.pt)[key] ?? translations.pt[key];
 
 function normalized(value) {
   return String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
@@ -306,21 +366,21 @@ function createCard(guide) {
   tags.className = 'guide-card__top';
   const category = document.createElement('span');
   category.className = 'guide-tag';
-  category.textContent = categories[guide.category][state.language];
+  category.textContent = (categories[guide.category][state.language] || categories[guide.category].pt);
   const sample = document.createElement('span');
   sample.className = 'guide-tag guide-tag--secondary';
   sample.textContent = t('demoGuide');
   tags.append(category, sample);
 
   const title = document.createElement('h3');
-  title.textContent = guide.title[state.language];
+  title.textContent = translatedGuideTitle(guide);
   const summary = document.createElement('p');
-  summary.textContent = guide.summary[state.language];
+  summary.textContent = (guide.summary[state.language] || guide.summary.pt);
 
   const button = document.createElement('button');
   button.type = 'button';
   button.textContent = `${t('seeGuide')} →`;
-  button.setAttribute('aria-label', `${t('seeGuide')}: ${guide.title[state.language]}`);
+  button.setAttribute('aria-label', `${t('seeGuide')}: ${translatedGuideTitle(guide)}`);
   button.addEventListener('click', () => openGuide(guide.id));
   const source = document.createElement('a');
   source.className = 'guide-card__source';
@@ -328,7 +388,7 @@ function createCard(guide) {
   source.target = '_blank';
   source.rel = 'noopener noreferrer';
   source.textContent = `${t('cardSource')} ↗`;
-  source.setAttribute('aria-label', `${t('cardSource')}: ${guideSources[guide.id][state.language]}`);
+  source.setAttribute('aria-label', `${t('cardSource')}: ${(guideSources[guide.id][state.language] || guideSources[guide.id].pt)}`);
   const actions = document.createElement('div');
   actions.className = 'guide-card__actions';
   actions.append(button, source);
@@ -339,8 +399,8 @@ function createCard(guide) {
 function renderCourse() {
   const selected = courseSources[$('#courseSelect').value] || courseSources.all;
   const isArchive = Boolean(selected.year);
-  $('#courseResultTitle').textContent = selected.title[state.language];
-  $('#courseResultDescription').textContent = isArchive ? t('uniArchiveDesc') : selected.description[state.language];
+  $('#courseResultTitle').textContent = (selected.title[state.language] || selected.title.pt);
+  $('#courseResultDescription').textContent = isArchive ? t('uniArchiveDesc') : (selected.description[state.language] || selected.description.pt);
   $('#courseResultDate').textContent = isArchive ? t('uniArchiveDate')(selected.year) : t('uniDefaultDate');
   $('#courseResultLink').href = selected.url;
   $('#courseResultAction').textContent = isArchive ? t('uniOpenList') : t('uniOpenAll');
@@ -363,16 +423,16 @@ function renderGuides() {
 function openGuide(id) {
   const guide = guides.find((item) => item.id === id);
   if (!guide) return;
-  $('#dialogCategory').textContent = categories[guide.category][state.language];
-  $('#dialogTitle').textContent = guide.title[state.language];
-  $('#dialogDescription').textContent = guide.summary[state.language];
-  $('#dialogSteps').replaceChildren(...guide.steps[state.language].map((step) => {
+  $('#dialogCategory').textContent = (categories[guide.category][state.language] || categories[guide.category].pt);
+  $('#dialogTitle').textContent = translatedGuideTitle(guide);
+  $('#dialogDescription').textContent = (guide.summary[state.language] || guide.summary.pt);
+  $('#dialogSteps').replaceChildren(...(guide.steps[state.language] || guide.steps.pt).map((step) => {
     const li = document.createElement('li');
     li.textContent = step;
     return li;
   }));
   const source = guideSources[guide.id];
-  $('#dialogSourceName').textContent = source[state.language];
+  $('#dialogSourceName').textContent = (source[state.language] || source.pt);
   $('#dialogReviewed').textContent = t('sourceChecked');
   $('#dialogOfficialLink').href = source.url;
   $('#guideDialog').showModal();
@@ -431,7 +491,7 @@ function updateEditorial() {
 }
 
 function applyLanguage() {
-  document.documentElement.lang = state.language === 'pt' ? 'pt-BR' : 'en';
+  document.documentElement.lang = state.language === 'pt' ? 'pt-BR' : state.language;
   $$('[data-i18n]').forEach((element) => {
     const value = t(element.dataset.i18n);
     if (typeof value === 'string') {
@@ -444,20 +504,16 @@ function applyLanguage() {
   $$('[data-i18n-placeholder]').forEach((element) => {
     element.setAttribute('placeholder', t(element.dataset.i18nPlaceholder));
   });
-  $('#localeButton').textContent = state.language === 'pt' ? 'EN' : 'PT';
-  $('#localeButton').setAttribute('aria-label', state.language === 'pt' ? 'Switch to English' : 'Mudar para português');
+  $('#localeButton').value = state.language;
+  $('#localeButton').setAttribute('aria-label', state.language === 'es' ? 'Seleccionar idioma' : state.language === 'en' ? 'Select language' : 'Selecionar idioma');
   $('#menuButton').setAttribute('aria-label', t($('#menuButton').getAttribute('aria-expanded') === 'true' ? 'closeMenu' : 'openMenu'));
   $('#fontButton').setAttribute('aria-label', t(document.documentElement.classList.contains('font-large') ? 'normalFont' : 'increaseFont'));
-  $('#closeDialog').setAttribute('aria-label', state.language === 'pt' ? 'Fechar orientação' : 'Close guide');
-  $$('.audience-filters').forEach((element) => element.setAttribute('aria-label', state.language === 'pt' ? 'Filtrar por público' : 'Filter by audience'));
+  $('#closeDialog').setAttribute('aria-label', state.language === 'es' ? 'Cerrar orientación' : state.language === 'pt' ? 'Fechar orientação' : 'Close guide');
+  $$('.audience-filters').forEach((element) => element.setAttribute('aria-label', state.language === 'es' ? 'Filtrar por público' : state.language === 'pt' ? 'Filtrar por público' : 'Filter by audience'));
   updateEditorial();
   renderGuides();
   renderCourse();
-  if (state.language === 'pt') {
-    document.title = 'Portal de Internacionalização | Protótipo — Grupo 08';
-  } else {
-    document.title = 'Internationalization Portal | Prototype — Group 08';
-  }
+  document.title = state.language === 'es' ? 'Portal de Internacionalización | Prototipo — Grupo 08' : state.language === 'en' ? 'Internationalization Portal | Prototype — Group 08' : 'Portal de Internacionalização | Protótipo — Grupo 08';
 }
 
 $('#heroSearchForm').addEventListener('submit', (event) => {
@@ -480,8 +536,8 @@ $$('[data-search]').forEach((button) => button.addEventListener('click', () => s
 $('#clearFilters').addEventListener('click', clearFilters);
 $('#clearEmpty').addEventListener('click', clearFilters);
 
-$('#localeButton').addEventListener('click', () => {
-  state.language = state.language === 'pt' ? 'en' : 'pt';
+window.addEventListener('portal:language', event => {
+  state.language = event.detail.language;
   applyLanguage();
 });
 

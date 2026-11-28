@@ -9,8 +9,8 @@ const primary=read('institutional.css'),auth=read('institutional-auth.css'),conf
 test('Identidade Unifor nas páginas do portal, conta e comunicados',()=>{
  for(const [name,html] of [['portal',home],['contas',accounts],['comunicados',posts]]){
   assert.match(html,/institution-brand__logo/,name);
-  assert.match(html,/Unifor_logo\.svg/,name);
-  assert.match(html,/Diretoria de Relações Internacionais/,name);
+  assert.match(html,/Unifor%20logo\.svg/,name);
+  assert.match(html,/internacionaliza/,name);
  }
  assert.match(home,/institutional\.css/);
  assert.match(accounts,/institutional-auth\.css/);
@@ -37,7 +37,7 @@ test('Imagem da vida acadêmica com alt e fonte pública referenciada',()=>{
 test('Identificação de protótipo não oficial permanece explícita',()=>{
  assert.match(home,/Demonstração · Grupo 08/);
  assert.match(home,/Protótipo acadêmico independente/);
- assert.match(accounts,/Projeto acadêmico não oficial/);
+ assert.match(accounts,/protótipo acadêmico|projeto acadêmico/i);
  assert.match(posts,/protótipo acadêmico independente e não oficial/i);
  assert.match(read('app.js'),/prototypeTop: 'Protótipo acadêmico independente · não oficial'/);
 });

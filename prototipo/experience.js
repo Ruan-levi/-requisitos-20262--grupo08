@@ -80,6 +80,85 @@
     }
   };
 
+
+  // A interface está localizada. Documentos acadêmicos externos seguem no idioma original.
+  i18n.es=Object.assign({},i18n.en,{
+    home:'Volver al inicio',cap:'EXPERIENCIA INTERACTIVA',title:'Centro de internacionalización',
+    subtitle:'Explore orientaciones y prepare sus dudas sin salir del portal. Los enlaces oficiales aparecen en su contexto.',
+    programs:'Programas',news:'Noticias',universities:'Universidades',documents:'Documentación',faculty:'Docentes',
+    incoming:'Estudiantes internacionales',guides:'Orientaciones',planning:'Mi recorrido',contacts:'Contacto',
+    source:'Fuente institucional',external:'Abrir documento o página oficial ↗',updated:'Fuentes consultadas en noviembre de 2026',
+    disclaimer:'Prototipo académico independiente. Estas orientaciones no son convocatorias, garantías de plazas ni aprobación institucional.',
+    details:'Ver detalles',back:'Volver',next:'Próximos pasos',faq:'Preguntas frecuentes',
+    find:'Buscar universidad o país',allCountries:'Todos los países',allCourses:'Todas las áreas',
+    results:'resultados de referencia',noResults:'No hay resultados con estos filtros. Pruebe otra búsqueda.',
+    examples:'Muestra de referencias documentadas; no es un catálogo completo ni un listado de plazas abiertas.',
+    applies:'Área relacionada',history:'Registro institucional; disponibilidad actual no confirmada.',
+    modal:'Detalles de la institución',about:'Qué consultar',sources:'Dónde confirmar',
+    records:'Listas por carrera',formHint:'Consulte la lista oficial de su carrera (ediciones 2024–2025).',
+    searchGuides:'Buscar un tema',openGuide:'Leer la orientación completa',
+    noEnroll:'Las solicitudes y aprobaciones se realizan únicamente por los canales oficiales.',
+    docProgress:'Lista de preparación',docsNote:'Marque solo para organizar su lectura. No se envían datos.',
+    reset:'Desmarcar lista',planCta:'Preparar mi recorrido',
+    start:'Comenzar',planResult:'Recorrido de consulta sugerido',generated:'Este recorrido no evalúa la elegibilidad ni representa una solicitud.',
+    contactTitle:'Comuníquese con el equipo responsable',contactText:'Confirme fechas, requisitos, plazas, costos y documentos con la DRI antes de tomar decisiones.',
+    dateText:'Año de la fuente',selectedProgram:'Modalidad',selectedCountry:'País de interés',selectedCourse:'Área académica',
+    print:'Imprimir recorrido',student:'Grado',post:'Posgrado',eng:'Ingeniería/Tecnología',
+    health:'Salud',law:'Derecho',other:'Otras áreas',
+    missing:'Página no encontrada',missingDesc:'La dirección solicitada no forma parte de esta versión del prototipo.',
+    error:'No hay información suficiente para confirmar el destino.'
+  });
+  const SpanishTerms={
+    'Intercâmbio acadêmico':'Intercambio académico',
+    'Dupla titulação':'Doble titulación',
+    'Universidades e convênios':'Universidades y convenios',
+    'Modalidades de intercâmbio':'Modalidades de intercambio',
+    'Preparação para a mobilidade':'Preparación para la movilidad',
+    'Apoio ao estudante · DRI':'Apoyo al estudiante · DRI',
+    'Apoio ao estudante':'Apoyo al estudiante',
+    'Canais de atendimento':'Canales de atención',
+    'Secretaria Acadêmica':'Secretaría Académica',
+    'Portal da universidade':'Portal de la universidad',
+    'Como funciona':'Cómo funciona',
+    'Minha jornada':'Mi recorrido',
+    'Portais estrangeiros':'Portales extranjeros',
+    'Conhecer universidade':'Conocer universidad',
+    'Ver universidades':'Ver universidades',
+    'Consultar documentos':'Consultar documentos',
+    'Ver programas':'Ver programas',
+    'Voltar':'Volver',
+    'Fontes oficiais':'Fuentes oficiales',
+    'Documentação':'Documentación',
+    'Documentos':'Documentos',
+    'Universidades':'Universidades',
+    'Programas':'Programas',
+    'Orientações':'Orientaciones',
+    'Docentes':'Docentes',
+    'Internacionais':'Internacionales',
+    'Notícias':'Noticias',
+    'Contatos':'Contactos',
+    'Contato':'Contacto',
+    'Etapas do processo':'Etapas del proceso',
+    'Ver detalhes':'Ver detalles',
+    'Próximos passos':'Próximos pasos',
+    'Área acadêmica':'Área académica',
+    'Todos os países':'Todos los países',
+    'Todos os cursos':'Todas las carreras',
+    'Educação e oportunidades':'Educación y oportunidades',
+    'Todos':'Todos',
+    'Busque uma instituição':'Busque una institución',
+    'Pesquisar':'Buscar',
+    'Espanha':'España',
+    'Alemanha':'Alemania',
+    'Países Baixos':'Países Bajos',
+    'Estados Unidos':'Estados Unidos',
+    'França':'Francia',
+    'México':'México',
+    'Canadá':'Canadá',
+    'Portugal':'Portugal',
+    'Argentina':'Argentina'
+  };
+
   // Pesquisa 26/11/2026: portais oficiais dos destinos e da orientação EducationUSA.
   // A vinculação institucional não demonstra vagas, elegibilidade ou abertura de candidatura.
   const verifiedDestinations = [
@@ -395,7 +474,7 @@
     return '<a class="xp-resource-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer"><span class="xp-resource-link__text"><strong>'+esc(label)+'</strong><small>'+esc(host)+'</small></span><span aria-hidden="true">↗</span></a>';
   }
   function journeyOverview(){
-    const stages=lang()==='pt'?[
+    const stages=lang()!=='en'?[
       ['01','Descobrir','Conheça programas e escolha o objetivo.'],
       ['02','Comparar','Analise universidade e compatibilidade.'],
       ['03','Preparar','Verifique documentos, prazos e custos.'],
@@ -406,10 +485,10 @@
       ['03','Prepare','Review documents, dates and expenses.'],
       ['04','Confirm','Talk to DRI and follow official channels.']
     ];
-    return '<div class="xp-journey-panel"><div class="xp-journey-panel__intro"><span class="xp-eyebrow">'+(lang()==='pt'?'UM CAMINHO MAIS CLARO':'A CLEARER PATH')+'</span><h2>'+(lang()==='pt'?'Do primeiro interesse à candidatura':'From first interest to the application')+'</h2><p>'+(lang()==='pt'?'Não sabe por onde começar? Acompanhe as etapas e descubra o que você precisa confirmar em cada uma.':'Not sure where to begin? Follow these steps and discover what to verify.')+'</p>'+link('processo',lang()==='pt'?'Entender o processo completo':'Understand the full process','xp-btn--outline')+'</div><div class="xp-journey-steps">'+stages.map(x=>'<div class="xp-journey-step"><span>'+x[0]+'</span><strong>'+x[1]+'</strong><small>'+x[2]+'</small></div>').join('')+'</div></div>';
+    return '<div class="xp-journey-panel"><div class="xp-journey-panel__intro"><span class="xp-eyebrow">'+(lang()!=='en'?'UM CAMINHO MAIS CLARO':'A CLEARER PATH')+'</span><h2>'+(lang()!=='en'?'Do primeiro interesse à candidatura':'From first interest to the application')+'</h2><p>'+(lang()!=='en'?'Não sabe por onde começar? Acompanhe as etapas e descubra o que você precisa confirmar em cada uma.':'Not sure where to begin? Follow these steps and discover what to verify.')+'</p>'+link('processo',lang()!=='en'?'Entender o processo completo':'Understand the full process','xp-btn--outline')+'</div><div class="xp-journey-steps">'+stages.map(x=>'<div class="xp-journey-step"><span>'+x[0]+'</span><strong>'+x[1]+'</strong><small>'+x[2]+'</small></div>').join('')+'</div></div>';
   }
   function processPage(){
-    const all=lang()==='pt'?[
+    const all=lang()!=='en'?[
       ['Entenda suas opções','Veja a diferença entre intercâmbio acadêmico, dupla titulação e programas complementares.','programas'],
       ['Confira sua situação acadêmica','Verifique os requisitos do edital e a orientação da coordenação. Convênio não garante participação.','universidades'],
       ['Pesquise o destino','Abra a instituição no nosso portal, consulte o processo do parceiro e depois confirme a validade do vínculo.','destinos'],
@@ -424,9 +503,9 @@
       ['Plan your budget','Check fees, housing, insurance and visa matters with official authorities.','orientacoes'],
       ['Apply and obtain acceptance','Follow your home institution process first and the host requirements when appropriate.','contatos']
     ];
-    return hero(lang()==='pt'?'Como funciona o intercâmbio, do começo ao fim':'How international mobility works, step by step',lang()==='pt'?'Um guia prático do que estudar, decidir e confirmar antes de se candidatar.':'A practical journey covering what to investigate and verify before applying.',lang()==='pt'?'GUIA DE PREPARAÇÃO':'PREPARATION GUIDE',link('planejar',S('planCta'),'xp-btn--gold'))+
+    return hero(lang()!=='en'?'Como funciona o intercâmbio, do começo ao fim':'How international mobility works, step by step',lang()!=='en'?'Um guia prático do que estudar, decidir e confirmar antes de se candidatar.':'A practical journey covering what to investigate and verify before applying.',lang()!=='en'?'GUIA DE PREPARAÇÃO':'PREPARATION GUIDE',link('planejar',S('planCta'),'xp-btn--gold'))+
       '<div class="xp-process-list">'+all.map((x,i)=>'<article class="xp-process-item"><span class="xp-process-number">'+String(i+1).padStart(2,'0')+'</span><div><h2>'+esc(x[0])+'</h2><p>'+esc(x[1])+'</p>'+link(x[2],S('details'))+'</div></article>').join('')+'</div>'+
-      '<div class="xp-paper xp-process-last"><h2>'+(lang()==='pt'?'Antes de preencher qualquer inscrição':'Before completing any application')+'</h2><p>'+(lang()==='pt'?'Não envie documentos pessoais pelo protótipo. Informações aqui organizadas não substituem o edital, nem o processo seletivo institucional ou a carta de aceitação da universidade estrangeira.':'Do not submit personal documents through this prototype. This guide does not replace institutional calls or a host university acceptance letter.')+'</p>'+verifiedExternal(URLs.intercambio,lang()==='pt'?'Exemplo: notícia institucional sobre intercâmbio 2027.1':'Example: institutional exchange news')+'</div>'+note();
+      '<div class="xp-paper xp-process-last"><h2>'+(lang()!=='en'?'Antes de preencher qualquer inscrição':'Before completing any application')+'</h2><p>'+(lang()!=='en'?'Não envie documentos pessoais pelo protótipo. Informações aqui organizadas não substituem o edital, nem o processo seletivo institucional ou a carta de aceitação da universidade estrangeira.':'Do not submit personal documents through this prototype. This guide does not replace institutional calls or a host university acceptance letter.')+'</p>'+verifiedExternal(URLs.intercambio,lang()!=='en'?'Exemplo: notícia institucional sobre intercâmbio 2027.1':'Example: institutional exchange news')+'</div>'+note();
   }
 
   let destinationCountry='all', destinationField='all', destinationQuery='';
@@ -436,12 +515,12 @@
   }
 
   function destinationInstitutionGuide(d){
-    if(d.id!=='salamanca') return '<div class="xp-info-pair"><div><h3>'+(lang()==='pt'?'Sobre a universidade':'About the university')+'</h3><p>'+esc(d.city?d.name+' — '+d.city+', '+d.country+'.':d.name+', '+d.country+'.')+'</p><p>'+
-       (lang()==='pt'?'Confira no site institucional os cursos, calendário, idiomas e serviços oferecidos aos estudantes internacionais.':'Visit the university website to examine degrees, academic calendar, languages and services for international students.')+
-       '</p></div><div><h3>'+(lang()==='pt'?'O que é necessário confirmar':'What to verify')+'</h3>'+
-       bullets(lang()==='pt'?['Vigência do convênio e modalidade para seu curso.','Edital, nomeação e critérios da instituição de origem.','Prazos, documentação, equivalência de disciplinas e custos.']:
+    if(d.id!=='salamanca') return '<div class="xp-info-pair"><div><h3>'+(lang()!=='en'?'Sobre a universidade':'About the university')+'</h3><p>'+esc(d.city?d.name+' — '+d.city+', '+d.country+'.':d.name+', '+d.country+'.')+'</p><p>'+
+       (lang()!=='en'?'Confira no site institucional os cursos, calendário, idiomas e serviços oferecidos aos estudantes internacionais.':'Visit the university website to examine degrees, academic calendar, languages and services for international students.')+
+       '</p></div><div><h3>'+(lang()!=='en'?'O que é necessário confirmar':'What to verify')+'</h3>'+
+       bullets(lang()!=='en'?['Vigência do convênio e modalidade para seu curso.','Edital, nomeação e critérios da instituição de origem.','Prazos, documentação, equivalência de disciplinas e custos.']:
        ['Agreement validity and eligibility for your degree.','Call, nomination and home university rules.','Deadlines, documents, credits and expenses.'])+'</div></div>';
-    const stepsSal=lang()==='pt'?[
+    const stepsSal=lang()!=='en'?[
       ['1. Confirme a possibilidade de intercâmbio pela Unifor','Antes de qualquer candidatura, procure a DRI e a coordenação para conferir se existe mobilidade aplicável ao seu curso, semestre e modalidade.'],
       ['2. Entenda o programa de mobilidade da USAL','A área Movilidad IN reúne as opções de ingresso por programas internacionais. Na modalidade Marco de Convenios, a universidade de origem realiza a nomeação prévia.'],
       ['3. Prepare o plano de estudos com seu curso','Converse com a coordenação da Unifor sobre disciplinas, créditos e compatibilidade antes de assumir compromissos com matérias na Espanha.'],
@@ -456,11 +535,11 @@
       ['5. Review insurance, language and entry requirements','Verify current rules with USAL and relevant authorities rather than assuming archived calls are valid.'],
       ['6. Prepare enrollment and arrival','The international coordinator at the host center can guide course choices, registration, and arrival/departure documents.']
     ];
-    return '<section class="xp-campus-feature"><div class="xp-campus-feature__heading"><span class="xp-eyebrow">UNIVERSIDAD DE SALAMANCA</span><h2>'+(lang()==='pt'?'Como funciona estudar em Salamanca?':'How does studying in Salamanca work?')+'</h2><p>'+
-      (lang()==='pt'?'A USAL é uma universidade espanhola com diversos programas internacionais. Nem todas as opções de mobilidade usam o mesmo formulário, calendário ou conjunto de exigências.':
+    return '<section class="xp-campus-feature"><div class="xp-campus-feature__heading"><span class="xp-eyebrow">UNIVERSIDAD DE SALAMANCA</span><h2>'+(lang()!=='en'?'Como funciona estudar em Salamanca?':'How does studying in Salamanca work?')+'</h2><p>'+
+      (lang()!=='en'?'A USAL é uma universidade espanhola com diversos programas internacionais. Nem todas as opções de mobilidade usam o mesmo formulário, calendário ou conjunto de exigências.':
       'USAL is a Spanish university with several international mobility schemes. Different programs may have distinct application processes and requirements.')+'</p></div>'+
       '<ol class="xp-campus-timeline">'+stepsSal.map(([title,description],index)=>'<li><span class="xp-campus-index">'+String(index+1).padStart(2,'0')+'</span><div><h3>'+esc(title)+'</h3><p>'+esc(description)+'</p></div></li>').join('')+'</ol>'+
-      '<p class="xp-campus-callout">'+(lang()==='pt'?'A lista da Unifor não confirma seleção, vaga ou convênio atual para qualquer curso. A USAL também mantém modalidades próprias, que não equivalem automaticamente ao intercâmbio da Unifor.':'An institutional listing does not confirm a current agreement or available place. Not all USAL programs apply to UNIFOR exchanges.')+'</p></section>';
+      '<p class="xp-campus-callout">'+(lang()!=='en'?'A lista da Unifor não confirma seleção, vaga ou convênio atual para qualquer curso. A USAL também mantém modalidades próprias, que não equivalem automaticamente ao intercâmbio da Unifor.':'An institutional listing does not confirm a current agreement or available place. Not all USAL programs apply to UNIFOR exchanges.')+'</p></section>';
   }
   function doubleDegreeGuide(){
     const pt=lang()==='pt';
@@ -507,20 +586,20 @@
       '<div class="xp-destination-card__meta">'+esc(d.city||'')+' · '+esc(destinationFieldTitle(d.field))+'</div>'+
       '<h3>'+esc(d.name)+'</h3><p>'+esc(tr(d.summary))+'</p>'+
       '<div class="xp-destination-tags">'+tr(d.subjects).slice(0,2).map(t=>badge(t)).join('')+'</div>'+
-      (d.historical?'<p class="xp-destination-warning">'+(lang()==='pt'?'Referência histórica da Unifor.':'Historical UNIFOR reference.')+'</p>':'')+
-      '<div class="xp-destination-actions">'+link('destinos/'+d.id,lang()==='pt'?'Informações e portais':'Information and portals')+
-      verifiedExternal(d.process,lang()==='pt'?'Portal oficial da universidade':'Official host portal')+'</div></article>';
+      (d.historical?'<p class="xp-destination-warning">'+(lang()!=='en'?'Referência histórica da Unifor.':'Historical UNIFOR reference.')+'</p>':'')+
+      '<div class="xp-destination-actions">'+link('destinos/'+d.id,lang()!=='en'?'Informações e portais':'Information and portals')+
+      verifiedExternal(d.process,lang()!=='en'?'Portal oficial da universidade':'Official host portal')+'</div></article>';
   }
   function destinationFilters(){
-    const countries=[...new Set(verifiedDestinations.map(d=>d.country))].sort((a,b)=>a.localeCompare(b,lang()==='pt'?'pt-BR':'en'));
+    const countries=[...new Set(verifiedDestinations.map(d=>d.country))].sort((a,b)=>a.localeCompare(b,lang()!=='en'?'pt-BR':'en'));
     const opts=countries.map(c=>'<option value="'+esc(c)+'"'+(destinationCountry===c?' selected':'')+'>'+esc(c)+'</option>').join('');
     const fields=['tecnologia','gestao','geral'];
     return '<form class="xp-destination-filters" role="search" id="xpDestinationForm">'+
-      '<label>'+(lang()==='pt'?'Buscar universidade ou cidade':'Find a university or city')+
-      '<input id="xpDestinationQuery" type="search" autocomplete="off" value="'+esc(destinationQuery)+'" placeholder="'+(lang()==='pt'?'Ex.: Portugal, engenharia, Montréal':'e.g., Portugal, engineering, Montréal')+'"></label>'+
-      '<label>'+(lang()==='pt'?'País':'Country')+'<select id="xpDestinationCountry"><option value="all">'+esc(S('allCountries'))+'</option>'+opts+'</select></label>'+
-      '<label>'+(lang()==='pt'?'Área de interesse':'Field of interest')+'<select id="xpDestinationField"><option value="all">'+esc(S('allCourses'))+'</option>'+fields.map(f=>'<option value="'+f+'"'+(destinationField===f?' selected':'')+'>'+esc(destinationFieldTitle(f))+'</option>').join('')+'</select></label>'+
-      '<button type="button" id="xpDestinationReset" class="xp-btn xp-btn--outline">'+(lang()==='pt'?'Limpar filtros':'Clear filters')+'</button></form>';
+      '<label>'+(lang()!=='en'?'Buscar universidade ou cidade':'Find a university or city')+
+      '<input id="xpDestinationQuery" type="search" autocomplete="off" value="'+esc(destinationQuery)+'" placeholder="'+(lang()!=='en'?'Ex.: Portugal, engenharia, Montréal':'e.g., Portugal, engineering, Montréal')+'"></label>'+
+      '<label>'+(lang()!=='en'?'País':'Country')+'<select id="xpDestinationCountry"><option value="all">'+esc(S('allCountries'))+'</option>'+opts+'</select></label>'+
+      '<label>'+(lang()!=='en'?'Área de interesse':'Field of interest')+'<select id="xpDestinationField"><option value="all">'+esc(S('allCourses'))+'</option>'+fields.map(f=>'<option value="'+f+'"'+(destinationField===f?' selected':'')+'>'+esc(destinationFieldTitle(f))+'</option>').join('')+'</select></label>'+
+      '<button type="button" id="xpDestinationReset" class="xp-btn xp-btn--outline">'+(lang()!=='en'?'Limpar filtros':'Clear filters')+'</button></form>';
   }
   function paintDestinationResults(){
     const node=root.querySelector('#xpDestinationResults');if(!node)return;
@@ -529,43 +608,43 @@
       (destinationField==='all'||d.field===destinationField)&&
       norm([d.name,d.country,d.city,d.fieldLabel,d.focus,tr(d.summary)].join(' ')).includes(norm(destinationQuery))
     );
-    node.innerHTML='<p class="xp-results-count" role="status">'+rows.length+' '+(lang()==='pt'?'instituições de referência encontradas':'reference institutions found')+'</p>'+
+    node.innerHTML='<p class="xp-results-count" role="status">'+rows.length+' '+(lang()!=='en'?'instituições de referência encontradas':'reference institutions found')+'</p>'+
       (rows.length?'<div class="xp-cards xp-cards--3">'+rows.map(destinationCard).join('')+'</div>':
-      '<div class="xp-empty">'+(lang()==='pt'?'Nenhuma instituição corresponde à pesquisa. Limpe os filtros ou tente outra expressão.':'No institution matches these filters. Clear filters or try another search.')+'</div>');
+      '<div class="xp-empty">'+(lang()!=='en'?'Nenhuma instituição corresponde à pesquisa. Limpe os filtros ou tente outra expressão.':'No institution matches these filters. Clear filters or try another search.')+'</div>');
   }
   function destinationsPage(id){
     const d=verifiedDestinations.find(x=>x.id===id);
     if(d){
       return hero(d.name,tr(d.summary),d.flag+' '+d.country,link('destinos',S('back'),'xp-btn--gold'))+
-        '<div class="xp-destination-profile"><span>'+esc(d.city||d.country)+'</span><span>'+esc(destinationFieldTitle(d.field))+'</span><span>'+(lang()==='pt'?'Pesquisa documental: novembro de 2026':'Document review: November 2026')+'</span></div>'+
+        '<div class="xp-destination-profile"><span>'+esc(d.city||d.country)+'</span><span>'+esc(destinationFieldTitle(d.field))+'</span><span>'+(lang()!=='en'?'Pesquisa documental: novembro de 2026':'Document review: November 2026')+'</span></div>'+
         '<div class="xp-two"><article class="xp-paper xp-maincol">'+
-        sectionHeader(lang()==='pt'?'O que você precisa saber':'What you need to know','')+
+        sectionHeader(lang()!=='en'?'O que você precisa saber':'What you need to know','')+
         '<p class="xp-lead">'+esc(d.focus||'')+'</p>'+
         destinationInstitutionGuide(d)+
-        (d.id==='salamanca'?'':sectionHeader(lang()==='pt'?'Passo a passo de consulta':'Suggested research steps','')+steps(tr(d.steps)))+
+        (d.id==='salamanca'?'':sectionHeader(lang()!=='en'?'Passo a passo de consulta':'Suggested research steps','')+steps(tr(d.steps)))+
         '<div class="xp-disclaimer xp-disclaimer--soft"><span>ⓘ</span><p>'+esc(tr(d.note))+'</p></div>'+
-        '<div class="xp-source-journey"><span>1 · Unifor / DRI</span><span aria-hidden="true">→</span><span>2 · '+esc(d.name)+'</span><span aria-hidden="true">→</span><span>3 · '+(lang()==='pt'?'Aceitação formal':'Formal acceptance')+'</span></div></article>'+
-        '<aside class="xp-aside"><div class="xp-sidebar-card"><h3>'+(lang()==='pt'?'Portais e informações oficiais':'Official portals and resources')+'</h3><p>'+(lang()==='pt'?'A referência da Unifor e os serviços da universidade de destino têm finalidades diferentes. Confirme o processo aplicável.':'UNIFOR listings and host university portals serve different purposes. Confirm the applicable procedure.')+'</p>'+
-        verifiedExternal(d.homepage,lang()==='pt'?'Conhecer a universidade — site institucional':'Visit university website')+
-        verifiedExternal(d.origin,lang()==='pt'?'Onde a Unifor cita esta instituição':'UNIFOR institutional reference')+
-        verifiedExternal(d.process,lang()==='pt'?'Portal de mobilidade / informação do destino':'Host university mobility portal')+
-        verifiedExternal(d.extra,lang()==='pt'?'Serviços, orientações ou formulários oficiais':'Official services, forms or guidance')+
-        (d.extraSources||[]).map(item=>verifiedExternal(item.url,lang()==='pt'?item.pt:item.en)).join('')+
+        '<div class="xp-source-journey"><span>1 · Unifor / DRI</span><span aria-hidden="true">→</span><span>2 · '+esc(d.name)+'</span><span aria-hidden="true">→</span><span>3 · '+(lang()!=='en'?'Aceitação formal':'Formal acceptance')+'</span></div></article>'+
+        '<aside class="xp-aside"><div class="xp-sidebar-card"><h3>'+(lang()!=='en'?'Portais e informações oficiais':'Official portals and resources')+'</h3><p>'+(lang()!=='en'?'A referência da Unifor e os serviços da universidade de destino têm finalidades diferentes. Confirme o processo aplicável.':'UNIFOR listings and host university portals serve different purposes. Confirm the applicable procedure.')+'</p>'+
+        verifiedExternal(d.homepage,lang()!=='en'?'Conhecer a universidade — site institucional':'Visit university website')+
+        verifiedExternal(d.origin,lang()!=='en'?'Onde a Unifor cita esta instituição':'UNIFOR institutional reference')+
+        verifiedExternal(d.process,lang()!=='en'?'Portal de mobilidade / informação do destino':'Host university mobility portal')+
+        verifiedExternal(d.extra,lang()!=='en'?'Serviços, orientações ou formulários oficiais':'Official services, forms or guidance')+
+        (d.extraSources||[]).map(item=>verifiedExternal(item.url,lang()!=='en'?item.pt:item.en)).join('')+
         '<small>'+esc(S('history'))+'</small></div>'+
-        '<div class="xp-sidebar-card"><h3>'+esc(S('next'))+'</h3>'+link('documentos',S('documents'))+link('processo',lang()==='pt'?'Etapas do processo':'Process steps')+link('contatos',S('contacts'))+'</div></aside></div>'+note();
+        '<div class="xp-sidebar-card"><h3>'+esc(S('next'))+'</h3>'+link('documentos',S('documents'))+link('processo',lang()!=='en'?'Etapas do processo':'Process steps')+link('contatos',S('contacts'))+'</div></aside></div>'+note();
     }
     const totalCountries=new Set(verifiedDestinations.map(d=>d.country)).size;
-    return hero(lang()==='pt'?'Universidades e portais internacionais':'Universities and international portals',
-      lang()==='pt'?'Pesquise instituições citadas pela Unifor e conheça os serviços oficiais de cada destino, com orientação sobre como iniciar.':'Browse institutions listed in UNIFOR sources and explore their official services and study procedures.',
-      lang()==='pt'?'CATÁLOGO DE REFERÊNCIAS':'REFERENCE DIRECTORY',link('processo',lang()==='pt'?'Entenda as etapas':'Understand the steps','xp-btn--gold'))+
-      '<div class="xp-reference-overview"><div><strong>'+verifiedDestinations.length+'</strong><span>'+(lang()==='pt'?'universidades selecionadas':'selected institutions')+'</span></div><div><strong>'+totalCountries+'</strong><span>'+(lang()==='pt'?'países representados':'countries represented')+'</span></div><p>'+(lang()==='pt'?'Listagem orientativa, não é o número total de convênios ativos da Unifor.':'Illustrative list, not the total number of currently active UNIFOR agreements.')+'</p></div>'+
+    return hero(lang()!=='en'?'Universidades e portais internacionais':'Universities and international portals',
+      lang()!=='en'?'Pesquise instituições citadas pela Unifor e conheça os serviços oficiais de cada destino, com orientação sobre como iniciar.':'Browse institutions listed in UNIFOR sources and explore their official services and study procedures.',
+      lang()!=='en'?'CATÁLOGO DE REFERÊNCIAS':'REFERENCE DIRECTORY',link('processo',lang()!=='en'?'Entenda as etapas':'Understand the steps','xp-btn--gold'))+
+      '<div class="xp-reference-overview"><div><strong>'+verifiedDestinations.length+'</strong><span>'+(lang()!=='en'?'universidades selecionadas':'selected institutions')+'</span></div><div><strong>'+totalCountries+'</strong><span>'+(lang()!=='en'?'países representados':'countries represented')+'</span></div><p>'+(lang()!=='en'?'Listagem orientativa, não é o número total de convênios ativos da Unifor.':'Illustrative list, not the total number of currently active UNIFOR agreements.')+'</p></div>'+
       '<div class="xp-disclaimer xp-disclaimer--soft"><span>ⓘ</span><p>'+
-      (lang()==='pt'?'As referências vêm de páginas institucionais ou notícias da Unifor. A oferta de intercâmbio depende do curso, de acordo vigente, de editais e de eventual nomeação.':'References come from UNIFOR listings or institutional news. Mobility depends on academic area, active agreements, calls and any required nomination.')+
+      (lang()!=='en'?'As referências vêm de páginas institucionais ou notícias da Unifor. A oferta de intercâmbio depende do curso, de acordo vigente, de editais e de eventual nomeação.':'References come from UNIFOR listings or institutional news. Mobility depends on academic area, active agreements, calls and any required nomination.')+
       '</p></div>'+destinationFilters()+'<div id="xpDestinationResults" aria-live="polite"></div>'+
       '<div class="xp-paper xp-education"><div><span class="xp-eyebrow">EDUCATIONUSA</span><h2>'+
-      (lang()==='pt'?'Vai pesquisar instituições nos Estados Unidos?':'Considering the United States?')+
-      '</h2><p>'+(lang()==='pt'?'A orientação EducationUSA tem cinco etapas para o estudo no país, mas não equivale a convênio nem candidatura pela Unifor.':'EducationUSA offers five study preparation steps, not a UNIFOR partnership or application.')+
-      '</p></div>'+verifiedExternal('https://educationusa.state.gov/your-5-steps-us-study',lang()==='pt'?'Consultar EducaçãoUSA':'Visit EducationUSA')+'</div>'+note();
+      (lang()!=='en'?'Vai pesquisar instituições nos Estados Unidos?':'Considering the United States?')+
+      '</h2><p>'+(lang()!=='en'?'A orientação EducationUSA tem cinco etapas para o estudo no país, mas não equivale a convênio nem candidatura pela Unifor.':'EducationUSA offers five study preparation steps, not a UNIFOR partnership or application.')+
+      '</p></div>'+verifiedExternal('https://educationusa.state.gov/your-5-steps-us-study',lang()!=='en'?'Consultar EducaçãoUSA':'Visit EducationUSA')+'</div>'+note();
   }
 
   const programs = [
@@ -667,9 +746,9 @@
   ];
   const completed = new Set();
   let selectedCountry='all', selectedField='all', query='', selectedDoc='antes', planned=false, selectedGuide='';
-  const lang = () => (typeof state !== 'undefined' && state.language === 'en') ? 'en' : 'pt';
-  const S = (key) => i18n[lang()][key];
-  const tr = (v) => typeof v === 'string' ? v : (v && (v[lang()] || v.pt)) || '';
+  const lang = () => (typeof state !== 'undefined' && ['pt','en','es'].includes(state.language)) ? state.language : 'pt';
+  const S = (key) => (i18n[lang()]||i18n.pt)[key] ?? i18n.pt[key];
+  const tr = (v) => {if(typeof v==='string')return lang()==='es'?(SpanishTerms[v]||v):v;const x=(v&&(v[lang()]||v.pt))||'';return lang()==='es'&&typeof x==='string'?(SpanishTerms[x]||x):x;};
   const esc = (str) => String(str == null ? '' : str).replace(/[&<>"']/g, (x) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
   const norm = (str) => String(str || '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   const safeUrl = (url) => /^(https:\/\/(?:www\.)?unifor\.br\/)/.test(url) ? url : '#/contatos';
@@ -691,7 +770,7 @@
   }
   function dashboard(){
     return hero(S('title'),S('subtitle'))+journeyOverview()+'<div class="xp-statbar"><span><strong>5</strong> '+esc(S('programs'))+'</span><span><strong>'+verifiedDestinations.length+'</strong> '+esc(S('records'))+'</span><span><strong>3</strong> '+esc(S('docProgress'))+'</span></div>'+
-      sectionHeader(lang()==='pt'?'Por onde deseja começar?':'Where would you like to start?',lang()==='pt'?'Cada etapa abre uma área completa dentro do portal.':'Every choice opens an internal content page.')+
+      sectionHeader(lang()!=='en'?'Por onde deseja começar?':'Where would you like to start?',lang()!=='en'?'Cada etapa abre uma área completa dentro do portal.':'Every choice opens an internal content page.')+
       '<div class="xp-cards xp-cards--3">'+[
         ['✈',S('programs'),'Conheça intercâmbio, dupla titulação e outras oportunidades.','Discover exchange, dual degrees and more.', 'programas'],
         ['🌍',S('universities'),'Explore instituições e listas por curso e país.','Explore institutions and reference lists by degree and country.', 'universidades'],
@@ -699,31 +778,31 @@
         ['🧑‍🏫',S('faculty'),'Orientações para atividades acadêmicas internacionais.','Guidance for international academic activities.','docentes'],
         ['🎒',S('incoming'),'Acolhimento, integração e preparação para estudar na Unifor.','Arrival, support and studying at UNIFOR.', 'internacionais'],
         ['🧭',S('planning'),'Monte um roteiro orientativo para seu interesse.','Build a consultation route for your interests.','planejar']
-      ].map(item=>'<a href="#/'+item[4]+'" class="xp-card xp-card--link">'+iconBox(item[0])+'<h3>'+esc(item[1])+'</h3><p>'+esc(lang()==='pt'?item[2]:item[3])+'</p><span class="xp-card-link">'+esc(S('details'))+' →</span></a>').join('')+'</div>'+
-      sectionHeader(lang()==='pt'?'Modalidades em destaque':'Featured programs','')+programCards()+
-      '<div class="xp-destinations-invite">'+sectionHeader(lang()==='pt'?'Explore destinos reais':'Explore documented destinations',lang()==='pt'?'Vá além do guia: consulte as páginas das universidades estrangeiras.':'Go beyond generic links: read official host institution procedures.')+'<div class="xp-cards xp-cards--3">'+verifiedDestinations.slice(0,3).map(destinationCard).join('')+'</div>'+link('destinos',lang()==='pt'?'Explorar o catálogo completo':'Browse the full catalog')+'</div>'+
+      ].map(item=>'<a href="#/'+item[4]+'" class="xp-card xp-card--link">'+iconBox(item[0])+'<h3>'+esc(item[1])+'</h3><p>'+esc(lang()!=='en'?item[2]:item[3])+'</p><span class="xp-card-link">'+esc(S('details'))+' →</span></a>').join('')+'</div>'+
+      sectionHeader(lang()!=='en'?'Modalidades em destaque':'Featured programs','')+programCards()+
+      '<div class="xp-destinations-invite">'+sectionHeader(lang()!=='en'?'Explore destinos reais':'Explore documented destinations',lang()!=='en'?'Vá além do guia: consulte as páginas das universidades estrangeiras.':'Go beyond generic links: read official host institution procedures.')+'<div class="xp-cards xp-cards--3">'+verifiedDestinations.slice(0,3).map(destinationCard).join('')+'</div>'+link('destinos',lang()!=='en'?'Explorar o catálogo completo':'Browse the full catalog')+'</div>'+
       '<div class="xp-news-link">'+link('noticias',S('news'))+'</div>'+
-      '<div class="xp-callout"><div><h3>'+esc(lang()==='pt'?'Está se preparando para uma seleção?':'Planning to apply?')+'</h3><p>'+esc(lang()==='pt'?'Explore um roteiro personalizado de consulta, sem preencher cadastro e sem enviar documentos.':'Explore a personalized reading route without registration or document upload.')+'</p></div>'+link('planejar',S('planCta'),'xp-btn--gold')+'</div>'+note();
+      '<div class="xp-callout"><div><h3>'+esc(lang()!=='en'?'Está se preparando para uma seleção?':'Planning to apply?')+'</h3><p>'+esc(lang()!=='en'?'Explore um roteiro personalizado de consulta, sem preencher cadastro e sem enviar documentos.':'Explore a personalized reading route without registration or document upload.')+'</p></div>'+link('planejar',S('planCta'),'xp-btn--gold')+'</div>'+note();
   }
   function programsPage(id){
     const p=programs.find(item=>item.id===id);
-    if (!p) return hero(S('programs'),lang()==='pt'?'Escolha a modalidade que deseja conhecer.':'Select a program to explore.')+programCards()+note();
+    if (!p) return hero(S('programs'),lang()!=='en'?'Escolha a modalidade que deseja conhecer.':'Select a program to explore.')+programCards()+note();
     const related = programs.filter(item=>item.id!==p.id).slice(0,3);
     return hero(tr(p.label),tr(p.tagline),S('programs'),link('planejar',S('planCta'),'xp-btn--gold'))+
-      '<div class="xp-two"><div class="xp-maincol"><article class="xp-paper"><h2>'+esc(lang()==='pt'?'Como funciona':'How it works')+'</h2><p class="xp-lead">'+esc(tr(p.intro))+'</p>'+
-      sectionHeader(lang()==='pt'?'O que verificar antes':'What to verify first','')+bullets(tr(p.requirements))+
+      '<div class="xp-two"><div class="xp-maincol"><article class="xp-paper"><h2>'+esc(lang()!=='en'?'Como funciona':'How it works')+'</h2><p class="xp-lead">'+esc(tr(p.intro))+'</p>'+
+      sectionHeader(lang()!=='en'?'O que verificar antes':'What to verify first','')+bullets(tr(p.requirements))+
       sectionHeader(S('next'),'')+steps(tr(p.steps))+'<p class="xp-muted">'+esc(S('noEnroll'))+'</p></article>'+
       (p.id==='dupla-titulacao'?doubleDegreeGuide():'')+
       '<article class="xp-paper">'+sectionHeader(S('faq'),'')+faqBlock(tr(p.faq).map(([q,a])=>({q:L(q,q),a:L(a,a)})))+'</article></div>'+
-      '<aside class="xp-aside"><div class="xp-sidebar-card"><h3>'+esc(S('source'))+'</h3><p>'+esc(lang()==='pt'?'Confira as informações diretamente nas páginas relacionadas à modalidade.':'Check the latest information in the related official pages.')+'</p>'+renderLinks(p.links)+(p.id==='educationusa'?verifiedExternal('https://educationusa.state.gov/your-5-steps-us-study',lang()==='pt'?'Os 5 passos do EducationUSA':'EducationUSA 5 Steps'):'')+'<small>'+esc(S('updated'))+'</small></div>'+
-      '<div class="xp-sidebar-card"><h3>'+esc(lang()==='pt'?'Continue sua pesquisa':'Keep exploring')+'</h3>'+link('universidades',S('universities'))+link('documentos',S('documents'))+link('contatos',S('contacts'))+'</div></aside></div>'+
-      sectionHeader(lang()==='pt'?'Outros programas':'Other programs','')+'<div class="xp-cards xp-cards--3">'+related.map(item=>'<a class="xp-mini" href="#/programas/'+item.id+'">'+iconBox(item.icon)+'<strong>'+esc(tr(item.label))+'</strong><span>→</span></a>').join('')+'</div>'+note();
+      '<aside class="xp-aside"><div class="xp-sidebar-card"><h3>'+esc(S('source'))+'</h3><p>'+esc(lang()!=='en'?'Confira as informações diretamente nas páginas relacionadas à modalidade.':'Check the latest information in the related official pages.')+'</p>'+renderLinks(p.links)+(p.id==='educationusa'?verifiedExternal('https://educationusa.state.gov/your-5-steps-us-study',lang()!=='en'?'Os 5 passos do EducationUSA':'EducationUSA 5 Steps'):'')+'<small>'+esc(S('updated'))+'</small></div>'+
+      '<div class="xp-sidebar-card"><h3>'+esc(lang()!=='en'?'Continue sua pesquisa':'Keep exploring')+'</h3>'+link('universidades',S('universities'))+link('documentos',S('documents'))+link('contatos',S('contacts'))+'</div></aside></div>'+
+      sectionHeader(lang()!=='en'?'Outros programas':'Other programs','')+'<div class="xp-cards xp-cards--3">'+related.map(item=>'<a class="xp-mini" href="#/programas/'+item.id+'">'+iconBox(item.icon)+'<strong>'+esc(tr(item.label))+'</strong><span>→</span></a>').join('')+'</div>'+note();
   }
   function universityCard(u){
     return '<article class="xp-uni-card"><div class="xp-uni-top"><span class="xp-country-icon">'+u.flag+'</span>'+badge(u.country)+'</div><h3>'+esc(u.name)+'</h3><p>'+esc(tr(u.label))+'</p><div class="xp-uni-footer"><span>'+esc(S('history'))+'</span><a href="#/universidades/'+u.id+'">'+esc(S('details'))+' →</a></div></article>';
   }
   function filters(){
-    const countryOpts = [...new Set(universities.map(u=>u.country))].sort((a,b)=>a.localeCompare(b,lang()==='pt'?'pt-BR':'en'));
+    const countryOpts = [...new Set(universities.map(u=>u.country))].sort((a,b)=>a.localeCompare(b,lang()!=='en'?'pt-BR':'en'));
     const country = '<label>'+esc(S('selectedCountry'))+'<select id="xpCountry"><option value="all">'+esc(S('allCountries'))+'</option>'+countryOpts.map(c=>'<option value="'+c+'"'+(selectedCountry===c?' selected':'')+'>'+c+'</option>').join('')+'</select></label>';
     const fieldOpts = [['geral',L('Geral / intercultural','General / intercultural')],['tecnologia',L('Engenharia e tecnologia','Engineering and technology')],['saude',L('Ciências da saúde','Health sciences')],['gestao',L('Negócios e administração','Business and management')]];
     const field = '<label>'+esc(S('selectedCourse'))+'<select id="xpField"><option value="all">'+esc(S('allCourses'))+'</option>'+fieldOpts.map(([key,value])=>'<option value="'+key+'"'+(selectedField===key?' selected':'')+'>'+esc(tr(value))+'</option>').join('')+'</select></label>';
@@ -735,14 +814,14 @@
     if(u){
       return hero(u.name, u.country+' • '+tr(u.label),S('universities'))+
         '<div class="xp-two"><article class="xp-paper xp-maincol"><div class="xp-feature-flag">'+u.flag+'</div>'+
-        sectionHeader(lang()==='pt'?'O que sabemos sobre a instituição':'What we know about this institution','')+
+        sectionHeader(lang()!=='en'?'O que sabemos sobre a instituição':'What we know about this institution','')+
         '<p class="xp-lead">'+esc(tr(u.context))+'</p>'+
-        sectionHeader(S('about'),'')+bullets(lang()==='pt'?['Verificar cursos e modalidades contemplados pelo convênio.','Confirmar se a instituição possui vagas na chamada vigente.','Conferir disciplinas, idiomas e documentos exigidos.','Consultar a coordenação do seu curso antes da candidatura.']:['Verify eligible courses and programs.','Check places offered in the current call.','Check classes, language and documents.','Speak to your coordinator before applying.'])+
-        link('universidades',S('back'))+' '+link(u.id==='salamanca'?'destinos/salamanca':u.id==='cuyo'?'destinos/cuyo':u.id.startsWith('porto-')?'destinos/porto':'destinos',lang()==='pt'?'Conhecer portal da universidade':'Host university portal')+'</article><aside class="xp-aside"><div class="xp-sidebar-card"><h3>'+esc(S('source'))+'</h3>'+out(u.source,L('Referência publicada pela Unifor','UNIFOR institutional reference'))+'<p>'+esc(S('history'))+'</p></div><div class="xp-sidebar-card"><h3>'+esc(S('next'))+'</h3>'+link('documentos',S('documents'))+link('contatos',S('contacts'))+'</div></aside></div>'+note();
+        sectionHeader(S('about'),'')+bullets(lang()!=='en'?['Verificar cursos e modalidades contemplados pelo convênio.','Confirmar se a instituição possui vagas na chamada vigente.','Conferir disciplinas, idiomas e documentos exigidos.','Consultar a coordenação do seu curso antes da candidatura.']:['Verify eligible courses and programs.','Check places offered in the current call.','Check classes, language and documents.','Speak to your coordinator before applying.'])+
+        link('universidades',S('back'))+' '+link(u.id==='salamanca'?'destinos/salamanca':u.id==='cuyo'?'destinos/cuyo':u.id.startsWith('porto-')?'destinos/porto':'destinos',lang()!=='en'?'Conhecer portal da universidade':'Host university portal')+'</article><aside class="xp-aside"><div class="xp-sidebar-card"><h3>'+esc(S('source'))+'</h3>'+out(u.source,L('Referência publicada pela Unifor','UNIFOR institutional reference'))+'<p>'+esc(S('history'))+'</p></div><div class="xp-sidebar-card"><h3>'+esc(S('next'))+'</h3>'+link('documentos',S('documents'))+link('contatos',S('contacts'))+'</div></aside></div>'+note();
     }
-    return hero(S('universities'), lang()==='pt'?'Explore referências reais documentadas em páginas institucionais, com filtros e detalhes internos.':'Explore institutions documented in official sources using internal filters.',S('universities'),link('planejar',S('planCta'),'xp-btn--gold'))+
+    return hero(S('universities'), lang()!=='en'?'Explore referências reais documentadas em páginas institucionais, com filtros e detalhes internos.':'Explore institutions documented in official sources using internal filters.',S('universities'),link('planejar',S('planCta'),'xp-btn--gold'))+
       '<div class="xp-disclaimer xp-disclaimer--soft"><span aria-hidden="true">⌕</span><p>'+esc(S('examples'))+'</p></div>'+
-      '<div class="xp-mini-path"><div><strong>'+(lang()==='pt'?'Precisa entender o processo da universidade estrangeira?':'Need host university procedures?')+'</strong><p>'+(lang()==='pt'?'Explore universidades em 11 países e seus portais específicos de mobilidade.':'Explore universities across 11 countries and their official mobility portals.')+'</p></div>'+link('destinos',lang()==='pt'?'Ver portais internacionais':'Explore host portals','xp-btn--primary')+'</div>'+filters()+'<div id="xpUniResults" aria-live="polite"></div>'+
+      '<div class="xp-mini-path"><div><strong>'+(lang()!=='en'?'Precisa entender o processo da universidade estrangeira?':'Need host university procedures?')+'</strong><p>'+(lang()!=='en'?'Explore universidades em 11 países e seus portais específicos de mobilidade.':'Explore universities across 11 countries and their official mobility portals.')+'</p></div>'+link('destinos',lang()!=='en'?'Ver portais internacionais':'Explore host portals','xp-btn--primary')+'</div>'+filters()+'<div id="xpUniResults" aria-live="polite"></div>'+
       '<div class="xp-paper xp-doc-references">'+sectionHeader(S('records'),S('formHint'))+
       '<div class="xp-document-links">'+courseDocs.map(item=>'<div class="xp-document-row"><div><strong>'+esc(tr(item.name))+'</strong><small>'+esc(S('dateText'))+': '+item.year+'</small></div>'+out(item.url,L('Consultar lista de referência','Open reference list'))+'</div>').join('')+'</div></div>'+note();
   }
@@ -771,9 +850,9 @@
 
   function documentsPage(){
     const active=docs.find(d=>d.id===selectedDoc)||docs[0];
-    return hero(S('documents'),lang()==='pt'?'Prepare-se por etapas, consulte os documentos e entenda quando buscar orientação oficial.':'Prepare step by step, review documents and find the right official guidance.',S('documents'),link('planejar',S('planCta'),'xp-btn--gold'))+
+    return hero(S('documents'),lang()!=='en'?'Prepare-se por etapas, consulte os documentos e entenda quando buscar orientação oficial.':'Prepare step by step, review documents and find the right official guidance.',S('documents'),link('planejar',S('planCta'),'xp-btn--gold'))+
       '<div class="xp-doc-layout"><div class="xp-doc-navigation" role="tablist" aria-label="'+esc(S('docProgress'))+'">'+docs.map(item=>'<button role="tab" aria-selected="'+(item.id===active.id?'true':'false')+'" data-doc-tab="'+item.id+'">'+esc(item.icon)+' · '+esc(tr(item.title))+'</button>').join('')+'</div><article class="xp-paper xp-doc-sheet"><h2>'+esc(tr(active.title))+'</h2><p>'+esc(tr(active.intro))+'</p><div class="xp-check-tasks">'+tr(active.tasks).map((task,i)=>'<label class="xp-task"><input type="checkbox" data-check="'+active.id+'-'+i+'"'+(completed.has(active.id+'-'+i)?' checked':'')+'><span>'+esc(task)+'</span></label>').join('')+'</div><div class="xp-doc-actions"><small>'+esc(S('docsNote'))+'</small><button id="xpResetChecks" type="button">'+esc(S('reset'))+'</button></div></article></div>'+
-      '<div class="xp-paper xp-doc-references">'+sectionHeader(lang()==='pt'?'Documentos e portais de apoio':'Documents and support portals','')+
+      '<div class="xp-paper xp-doc-references">'+sectionHeader(lang()!=='en'?'Documentos e portais de apoio':'Documents and support portals','')+
       '<div class="xp-document-links">'+[
         {name:L('Guia Prático do Intercambista · edição 2024','Exchange Student Guide · 2024'),year:'2024',url:URLs.guida},
         {name:L('Manual de Boas Práticas de Internacionalização · 2026','Internationalization Practices Manual · 2026'),year:'2026',url:URLs.manual},
@@ -789,11 +868,11 @@
       const source=(typeof guideSources!=='undefined')?guideSources[guide.id]:null;
       return hero(guide.title[lang()],guide.summary[lang()],c,link('orientacoes',S('back')))+
         '<div class="xp-two"><article class="xp-paper xp-maincol">'+sectionHeader(S('next'),'')+steps(guide.steps[lang()])+
-        sectionHeader(lang()==='pt'?'Perguntas que vale fazer':'Questions worth asking','')+
-        bullets(lang()==='pt'?['Este procedimento possui edital ou prazo válido para meu semestre?','Quais documentos e aprovações são necessários para meu perfil?','Quem pode confirmar as condições específicas do meu curso?']:['Is there a valid call or deadline for my semester?','Which documents and approvals apply to my profile?','Who can confirm requirements for my degree?'])+
+        sectionHeader(lang()!=='en'?'Perguntas que vale fazer':'Questions worth asking','')+
+        bullets(lang()!=='en'?['Este procedimento possui edital ou prazo válido para meu semestre?','Quais documentos e aprovações são necessários para meu perfil?','Quem pode confirmar as condições específicas do meu curso?']:['Is there a valid call or deadline for my semester?','Which documents and approvals apply to my profile?','Who can confirm requirements for my degree?'])+
         '<p class="xp-muted">'+esc(S('noEnroll'))+'</p></article><aside class="xp-aside"><div class="xp-sidebar-card"><h3>'+esc(S('source'))+'</h3>'+(source?out(source.url,L(source.pt,source.en)):'')+'<small>'+esc(S('updated'))+'</small></div><div class="xp-sidebar-card">'+link('documentos',S('documents'))+link('contatos',S('contacts'))+'</div></aside></div>'+note();
     }
-    return hero(S('guides'),lang()==='pt'?'Informações por tema, com páginas completas e fontes por assunto.':'Guidance by topic, with detailed pages and contextual sources.',S('guides'))+
+    return hero(S('guides'),lang()!=='en'?'Informações por tema, com páginas completas e fontes por assunto.':'Guidance by topic, with detailed pages and contextual sources.',S('guides'))+
       '<div class="xp-filterbar"><label>'+esc(S('searchGuides'))+'<input id="xpGuideSearch" type="search" value="'+esc(selectedGuide)+'" placeholder="'+esc(S('searchGuides'))+'"></label></div><div id="xpGuideResults"></div>'+note();
   }
   function paintGuideResults(){
@@ -803,33 +882,33 @@
     box.innerHTML='<div class="xp-results-count">'+filtered.length+' '+esc(S('results'))+'</div>'+(filtered.length?'<div class="xp-cards xp-cards--3">'+filtered.map(g=>'<a href="#/orientacoes/'+g.id+'" class="xp-card xp-card--link"><span class="xp-kicker">'+esc(categories[g.category][lang()])+'</span><h3>'+esc(g.title[lang()])+'</h3><p>'+esc(g.summary[lang()])+'</p><span class="xp-card-link">'+esc(S('openGuide'))+' →</span></a>').join('')+'</div>':'<div class="xp-empty">'+esc(S('noResults'))+'</div>');
   }
   function facultyPage(){
-    return hero(S('faculty'),lang()==='pt'?'Mobilidade docente, projetos internacionais e internacionalização acadêmica.':'Faculty mobility, international projects and academic cooperation.',S('faculty'),link('contatos',S('contacts'),'xp-btn--gold'))+
+    return hero(S('faculty'),lang()!=='en'?'Mobilidade docente, projetos internacionais e internacionalização acadêmica.':'Faculty mobility, international projects and academic cooperation.',S('faculty'),link('contatos',S('contacts'),'xp-btn--gold'))+
       '<div class="xp-cards xp-cards--3">'+[
         ['🌐',L('Mobilidade docente','Faculty mobility'),L('Orientações para atividades acadêmicas no exterior ou recepção de visitantes.','Guidance for overseas activities and visiting faculty.')],
         ['🔬',L('Pesquisa internacional','International research'),L('Projetos de cooperação e redes de produção científica.','Collaborative research and academic networks.')],
         ['🏛️',L('Currículo internacionalizado','Internationalized curriculum'),L('Cooperação entre cursos e integração de perspectivas internacionais.','Academic cooperation and global perspectives in teaching.')]
       ].map(a=>'<div class="xp-card">'+iconBox(a[0])+'<h3>'+esc(tr(a[1]))+'</h3><p>'+esc(tr(a[2]))+'</p></div>').join('')+'</div>'+
-      '<div class="xp-two"><article class="xp-paper xp-maincol">'+sectionHeader(lang()==='pt'?'Como organizar a proposta':'How to prepare your proposal','')+
-      steps(lang()==='pt'?['Defina objetivos, tipo de mobilidade e instituição de interesse.','Converse com a coordenação ou gestão acadêmica sobre enquadramento.','Consulte o Manual de Boas Práticas e documentos relevantes.','Busque orientação institucional antes de confirmar compromissos ou despesas.']:['Define goals, mobility type and institution.','Discuss the scope with your academic coordinator.','Review the Internationalization Practices Manual.','Seek institutional guidance before committing to expenses.'])+'</article><aside class="xp-aside"><div class="xp-sidebar-card"><h3>'+esc(S('sources'))+'</h3>'+renderLinks([{url:URLs.manual,title:L('Manual de Boas Práticas · 2026','Practices Manual · 2026')},{url:URLs.docente,title:L('Apoio ao professor · DRI','Faculty support · DRI')},{url:URLs.contatos,title:L('Contatos institucionais','Institutional contacts')}])+'</div></aside></div>'+note();
+      '<div class="xp-two"><article class="xp-paper xp-maincol">'+sectionHeader(lang()!=='en'?'Como organizar a proposta':'How to prepare your proposal','')+
+      steps(lang()!=='en'?['Defina objetivos, tipo de mobilidade e instituição de interesse.','Converse com a coordenação ou gestão acadêmica sobre enquadramento.','Consulte o Manual de Boas Práticas e documentos relevantes.','Busque orientação institucional antes de confirmar compromissos ou despesas.']:['Define goals, mobility type and institution.','Discuss the scope with your academic coordinator.','Review the Internationalization Practices Manual.','Seek institutional guidance before committing to expenses.'])+'</article><aside class="xp-aside"><div class="xp-sidebar-card"><h3>'+esc(S('sources'))+'</h3>'+renderLinks([{url:URLs.manual,title:L('Manual de Boas Práticas · 2026','Practices Manual · 2026')},{url:URLs.docente,title:L('Apoio ao professor · DRI','Faculty support · DRI')},{url:URLs.contatos,title:L('Contatos institucionais','Institutional contacts')}])+'</div></aside></div>'+note();
   }
   function incomingPage(){
-    return hero(S('incoming'),lang()==='pt'?'Informações para estudantes estrangeiros que desejam conhecer ou estudar na Unifor.':'Guidance for international students interested in studying at UNIFOR.',S('incoming'),link('contatos',S('contacts'),'xp-btn--gold'))+
-      '<div class="xp-two"><article class="xp-paper xp-maincol">'+sectionHeader(lang()==='pt'?'Antes de chegar ao Brasil':'Before coming to Brazil','')+
-      steps(lang()==='pt'?['Consulte se sua instituição possui convênio aplicável.','Confirme a modalidade (por convênio ou eventual Free Mover) com a DRI.','Verifique disciplinas, idioma, período e eventuais taxas.','Planeje documentos migratórios e cuidados de saúde nos órgãos competentes.','Informe-se sobre recepção acadêmica e integração com a comunidade universitária.']:['Check whether your home institution has an applicable agreement.','Confirm your mobility route with DRI.','Check classes, language, period and fees.','Review immigration documents and health requirements with the relevant authorities.','Ask about orientation and integration programs.'])+
-      sectionHeader(lang()==='pt'?'Acolhimento e integração':'Reception and integration','')+
-      '<p>'+esc(lang()==='pt'?'O Buddy Program aparece entre as iniciativas de integração. Os critérios e o funcionamento são informados por edição; não trate chamadas anteriores como abertas.':'Buddy Program is one of the initiatives to welcome international students. Criteria vary by edition; past calls are not open applications.')+'</p>'+link('programas/buddy','Buddy Program')+'</article><aside class="xp-aside"><div class="xp-sidebar-card"><h3>'+esc(S('sources'))+'</h3>'+renderLinks([{url:URLs.aluno,title:L('Apoio ao estudante','Student support')},{url:URLs.contatos,title:L('Atendimento da DRI','DRI contacts')}])+'</div></aside></div>'+note();
+    return hero(S('incoming'),lang()!=='en'?'Informações para estudantes estrangeiros que desejam conhecer ou estudar na Unifor.':'Guidance for international students interested in studying at UNIFOR.',S('incoming'),link('contatos',S('contacts'),'xp-btn--gold'))+
+      '<div class="xp-two"><article class="xp-paper xp-maincol">'+sectionHeader(lang()!=='en'?'Antes de chegar ao Brasil':'Before coming to Brazil','')+
+      steps(lang()!=='en'?['Consulte se sua instituição possui convênio aplicável.','Confirme a modalidade (por convênio ou eventual Free Mover) com a DRI.','Verifique disciplinas, idioma, período e eventuais taxas.','Planeje documentos migratórios e cuidados de saúde nos órgãos competentes.','Informe-se sobre recepção acadêmica e integração com a comunidade universitária.']:['Check whether your home institution has an applicable agreement.','Confirm your mobility route with DRI.','Check classes, language, period and fees.','Review immigration documents and health requirements with the relevant authorities.','Ask about orientation and integration programs.'])+
+      sectionHeader(lang()!=='en'?'Acolhimento e integração':'Reception and integration','')+
+      '<p>'+esc(lang()!=='en'?'O Buddy Program aparece entre as iniciativas de integração. Os critérios e o funcionamento são informados por edição; não trate chamadas anteriores como abertas.':'Buddy Program is one of the initiatives to welcome international students. Criteria vary by edition; past calls are not open applications.')+'</p>'+link('programas/buddy','Buddy Program')+'</article><aside class="xp-aside"><div class="xp-sidebar-card"><h3>'+esc(S('sources'))+'</h3>'+renderLinks([{url:URLs.aluno,title:L('Apoio ao estudante','Student support')},{url:URLs.contatos,title:L('Atendimento da DRI','DRI contacts')}])+'</div></aside></div>'+note();
   }
   function planningPage(){
     const programsOpts=programs.map(p=>'<option value="'+p.id+'">'+esc(tr(p.label))+'</option>').join('');
-    return hero(S('planning'),lang()==='pt'?'Uma trilha de consulta para sua área e destino de interesse — sem cadastro e sem avaliação automática de elegibilidade.':'A consultation path for your academic field and destination — no registration or automatic eligibility decision.',S('planning'))+
-      '<div class="xp-paper"><form id="xpPlanForm" class="xp-plan-form"><label>'+esc(S('selectedProgram'))+'<select id="xpPlanProgram">'+programsOpts+'</select></label><label>'+esc(S('selectedCourse'))+'<select id="xpPlanCourse"><option value="grad">'+esc(S('student'))+'</option><option value="eng">'+esc(S('eng'))+'</option><option value="health">'+esc(S('health'))+'</option><option value="law">'+esc(S('law'))+'</option><option value="post">'+esc(S('post'))+'</option><option value="other">'+esc(S('other'))+'</option></select></label><label>'+esc(S('selectedCountry'))+'<select id="xpPlanCountry"><option value="all">'+esc(S('allCountries'))+'</option>'+[...new Set(verifiedDestinations.map(d=>d.country))].sort((a,b)=>a.localeCompare(b,lang()==='pt'?'pt-BR':'en')).map(c=>'<option value="'+esc(c)+'">'+esc(c)+'</option>').join('')+'<option value="other">'+esc(S('other'))+'</option></select></label><button class="xp-btn xp-btn--primary" type="submit">'+esc(S('planCta'))+' →</button></form></div>'+
+    return hero(S('planning'),lang()!=='en'?'Uma trilha de consulta para sua área e destino de interesse — sem cadastro e sem avaliação automática de elegibilidade.':'A consultation path for your academic field and destination — no registration or automatic eligibility decision.',S('planning'))+
+      '<div class="xp-paper"><form id="xpPlanForm" class="xp-plan-form"><label>'+esc(S('selectedProgram'))+'<select id="xpPlanProgram">'+programsOpts+'</select></label><label>'+esc(S('selectedCourse'))+'<select id="xpPlanCourse"><option value="grad">'+esc(S('student'))+'</option><option value="eng">'+esc(S('eng'))+'</option><option value="health">'+esc(S('health'))+'</option><option value="law">'+esc(S('law'))+'</option><option value="post">'+esc(S('post'))+'</option><option value="other">'+esc(S('other'))+'</option></select></label><label>'+esc(S('selectedCountry'))+'<select id="xpPlanCountry"><option value="all">'+esc(S('allCountries'))+'</option>'+[...new Set(verifiedDestinations.map(d=>d.country))].sort((a,b)=>a.localeCompare(b,lang()!=='en'?'pt-BR':'en')).map(c=>'<option value="'+esc(c)+'">'+esc(c)+'</option>').join('')+'<option value="other">'+esc(S('other'))+'</option></select></label><button class="xp-btn xp-btn--primary" type="submit">'+esc(S('planCta'))+' →</button></form></div>'+
       '<div id="xpPlanResults" aria-live="polite"></div>'+note();
   }
   function renderPlan(form){
     const p=programs.find(x=>x.id===form.program)||programs[0];
     const matches=universities.filter(u=>form.country==='all'||u.country===form.country);
     const locLabel = form.country==='all'?S('allCountries'):form.country==='other'?S('other'):form.country;
-    const details = lang()==='pt'?[
+    const details = lang()!=='en'?[
       'Leia as condições da modalidade '+tr(p.label)+'.',
       'Confira as listas institucionais da área '+(form.course==='eng'?'Engenharia/Tecnologia':form.course==='health'?'Saúde':form.course==='law'?'Direito':form.course==='post'?'Pós-graduação':'Graduação')+'.',
       'Pesquise instituições para o destino '+locLabel+' e confirme a vigência do convênio.',
@@ -842,7 +921,7 @@
     if(!box)return;
     box.innerHTML='<div class="xp-paper xp-planned">'+sectionHeader(S('planResult'),S('generated'))+
       '<div class="xp-plan-tags">'+badge(tr(p.label))+badge(locLabel)+'</div>'+steps(details)+
-      '<div class="xp-plan-next">'+link('programas/'+p.id,S('programs'))+link('destinos',lang()==='pt'?'Portais estrangeiros':'Host portals')+link('documentos',S('documents'))+'</div>'+
+      '<div class="xp-plan-next">'+link('programas/'+p.id,S('programs'))+link('destinos',lang()!=='en'?'Portais estrangeiros':'Host portals')+link('documentos',S('documents'))+'</div>'+
       '<div class="xp-note">'+esc(matches.length?S('examples'):S('error'))+'</div><button id="xpPrint" type="button" class="xp-btn xp-btn--outline">'+esc(S('print'))+' ⎙</button></div>';
     box.scrollIntoView({block:'nearest',behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
   }
@@ -851,26 +930,26 @@
     const article=news.find(item=>item.id===id);
     if(article){
       return hero(tr(article.title),tr(article.summary),S('news'),link('noticias',S('back')))+
-        '<div class="xp-two"><article class="xp-paper xp-maincol">'+sectionHeader(lang()==='pt'?'Entenda a notícia':'About this article','')+
+        '<div class="xp-two"><article class="xp-paper xp-maincol">'+sectionHeader(lang()!=='en'?'Entenda a notícia':'About this article','')+
         bullets(tr(article.points))+
-        '<p class="xp-muted">'+esc(lang()==='pt'?'Registro documental, sem atualização automática de inscrições, vagas ou convênios.':'Documentary record, without automatic updates on places or agreements.')+'</p></article>'+
+        '<p class="xp-muted">'+esc(lang()!=='en'?'Registro documental, sem atualização automática de inscrições, vagas ou convênios.':'Documentary record, without automatic updates on places or agreements.')+'</p></article>'+
         '<aside class="xp-aside"><div class="xp-sidebar-card"><h3>'+esc(S('source'))+'</h3>'+
         out(article.source,L('Notícia original da Unifor','Original UNIFOR article'))+'<small>'+esc(S('dateText'))+': '+article.year+'</small></div>'+
         '<div class="xp-sidebar-card">'+link('programas',S('programs'))+link('universidades',S('universities'))+'</div></aside></div>'+note();
     }
-    return hero(S('news'),lang()==='pt'?'Notícias e registros institucionais que ajudam a entender programas e parcerias.':'Institutional articles and past announcements about programs and partnerships.',S('news'))+
-      '<div class="xp-disclaimer xp-disclaimer--soft"><span aria-hidden="true">⌕</span><p>'+esc(lang()==='pt'?'Arquivo de notícias selecionadas — não é feed atualizado automaticamente.':'Selected articles archive — not an automatically updated news feed.')+'</p></div>'+
+    return hero(S('news'),lang()!=='en'?'Notícias e registros institucionais que ajudam a entender programas e parcerias.':'Institutional articles and past announcements about programs and partnerships.',S('news'))+
+      '<div class="xp-disclaimer xp-disclaimer--soft"><span aria-hidden="true">⌕</span><p>'+esc(lang()!=='en'?'Arquivo de notícias selecionadas — não é feed atualizado automaticamente.':'Selected articles archive — not an automatically updated news feed.')+'</p></div>'+
       '<div class="xp-cards xp-cards--3">'+news.map(item=>'<a href="#/noticias/'+item.id+'" class="xp-card xp-card--link">'+badge(item.year)+
       '<h3>'+esc(tr(item.title))+'</h3><p>'+esc(tr(item.summary))+'</p><span class="xp-card-link">'+esc(S('details'))+' →</span></a>').join('')+'</div>'+note();
   }
   function contactsPage(){
     return hero(S('contacts'),S('contactText'),S('contacts'))+
-      '<div class="xp-cards xp-cards--3"><div class="xp-card">'+iconBox('✉')+'<h3>E-mail</h3><p>dri@unifor.br</p><a class="xp-card-link" href="mailto:dri@unifor.br">dri@unifor.br ↗</a></div><div class="xp-card">'+iconBox('☎')+'<h3>'+esc(lang()==='pt'?'Telefone':'Phone')+'</h3><p>(85) 3477-3834</p><a class="xp-card-link" href="tel:+558534773834">+55 85 3477-3834 ↗</a></div><div class="xp-card">'+iconBox('⌘')+'<h3>'+esc(lang()==='pt'?'Canal institucional':'Institutional channel')+'</h3><p>'+esc(lang()==='pt'?'Equipe responsável pelos diferentes assuntos de internacionalização.':'Office responsible for internationalization questions.')+'</p>'+out(URLs.contatos,L('Abrir contatos oficiais','Open official contacts'))+'</div></div>'+
-      '<div class="xp-paper xp-contact-extra"><h2>'+(lang()==='pt'?'Outros canais de internacionalização':'Additional international contacts')+'</h2><p>'+(lang()==='pt'?'Alguns serviços institucionais publicam international@unifor.br e o telefone (85) 3477-3127. Confira na DRI qual canal atende seu processo específico.':'Some institutional pages list international@unifor.br and +55 85 3477-3127. Ask DRI which contact applies to your program.')+'</p><a href="mailto:international@unifor.br">international@unifor.br ↗</a> '+out(URLs.contatos,L('Confirmar canais atuais na DRI','Verify DRI contact details'))+'</div><div class="xp-paper">'+sectionHeader(S('faq'),'')+faqBlock(faq)+'</div>'+note();
+      '<div class="xp-cards xp-cards--3"><div class="xp-card">'+iconBox('✉')+'<h3>E-mail</h3><p>dri@unifor.br</p><a class="xp-card-link" href="mailto:dri@unifor.br">dri@unifor.br ↗</a></div><div class="xp-card">'+iconBox('☎')+'<h3>'+esc(lang()!=='en'?'Telefone':'Phone')+'</h3><p>(85) 3477-3834</p><a class="xp-card-link" href="tel:+558534773834">+55 85 3477-3834 ↗</a></div><div class="xp-card">'+iconBox('⌘')+'<h3>'+esc(lang()!=='en'?'Canal institucional':'Institutional channel')+'</h3><p>'+esc(lang()!=='en'?'Equipe responsável pelos diferentes assuntos de internacionalização.':'Office responsible for internationalization questions.')+'</p>'+out(URLs.contatos,L('Abrir contatos oficiais','Open official contacts'))+'</div></div>'+
+      '<div class="xp-paper xp-contact-extra"><h2>'+(lang()!=='en'?'Outros canais de internacionalização':'Additional international contacts')+'</h2><p>'+(lang()!=='en'?'Alguns serviços institucionais publicam international@unifor.br e o telefone (85) 3477-3127. Confira na DRI qual canal atende seu processo específico.':'Some institutional pages list international@unifor.br and +55 85 3477-3127. Ask DRI which contact applies to your program.')+'</p><a href="mailto:international@unifor.br">international@unifor.br ↗</a> '+out(URLs.contatos,L('Confirmar canais atuais na DRI','Verify DRI contact details'))+'</div><div class="xp-paper">'+sectionHeader(S('faq'),'')+faqBlock(faq)+'</div>'+note();
   }
   const routeMap=() => [
     ['painel',S('title')],['programas',S('programs')],['universidades',S('universities')],
-    ['documentos',S('documents')],['processo',lang()==='pt'?'Como funciona':'How it works'],['destinos',lang()==='pt'?'Portais estrangeiros':'Host portals'],['noticias',S('news')],['docentes',S('faculty')],['internacionais',S('incoming')],
+    ['documentos',S('documents')],['processo',lang()!=='en'?'Como funciona':'How it works'],['destinos',lang()!=='en'?'Portais estrangeiros':'Host portals'],['noticias',S('news')],['docentes',S('faculty')],['internacionais',S('incoming')],
     ['orientacoes',S('guides')],['planejar',S('planning')],['contatos',S('contacts')]
   ];
   function navigation(){
@@ -890,7 +969,7 @@
     const home=!parts;
     [...main.children].forEach(child=>{child.hidden = home ? child===root : child!==root;});
     document.body.classList.toggle('xp-is-open',!home);
-    if(home){const homeNav=document.querySelector('#menu-principal [href="#inicio"]');if(homeNav)homeNav.classList.add('nav-active');if(!location.hash||location.hash==='#inicio')window.scrollTo(0,0);document.title = lang()==='pt'?'Portal de Internacionalização | Protótipo — Grupo 08':'Internationalization Portal | Prototype — Group 08';return;}
+    if(home){const homeNav=document.querySelector('#menu-principal [href="#inicio"]');if(homeNav)homeNav.classList.add('nav-active');if(!location.hash||location.hash==='#inicio')window.scrollTo(0,0);document.title = lang()==='es'?'Portal de Internacionalización | Prototipo — Grupo 08':lang()!=='en'?'Portal de Internacionalização | Protótipo — Grupo 08':'Internationalization Portal | Prototype — Group 08';return;}
     root.hidden=false;
     root.innerHTML=navigation();
     const page=parts[0]||'painel', id=parts[1]||'';
@@ -963,13 +1042,16 @@
       if(guide){e.preventDefault();e.stopImmediatePropagation();location.hash='#/orientacoes/'+guide.id;}return;
     }
     const suggest=e.target.closest('[data-search]');
-    if(suggest){e.preventDefault();e.stopImmediatePropagation();selectedGuide=lang()==='pt'?suggest.dataset.search:suggest.dataset.searchEn;location.hash='#/orientacoes';return;}
+    if(suggest){e.preventDefault();e.stopImmediatePropagation();selectedGuide=lang()!=='en'?suggest.dataset.search:suggest.dataset.searchEn;location.hash='#/orientacoes';return;}
   },true);
   document.addEventListener('submit',e=>{
     if(e.target.id==='heroSearchForm'){e.preventDefault();e.stopImmediatePropagation();selectedGuide=document.getElementById('heroSearchInput').value;location.hash='#/orientacoes';}
   },true);
   // Linguagem herdada do cabeçalho existente; a camada interna também acompanha PT/EN.
-  document.getElementById('localeButton').addEventListener('click',()=>{if(currentRoute())activate();});
+  const localeButton=document.getElementById('localeButton');
+  if(localeButton && typeof window!=='undefined' && typeof window.addEventListener==='function'){
+    window.addEventListener('portal:language',()=>{if(currentRoute())activate();});
+  }
   addEventListener('hashchange',()=>{activate();});
   activate();
 })();
