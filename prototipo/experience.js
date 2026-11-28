@@ -1048,7 +1048,10 @@
     if(e.target.id==='heroSearchForm'){e.preventDefault();e.stopImmediatePropagation();selectedGuide=document.getElementById('heroSearchInput').value;location.hash='#/orientacoes';}
   },true);
   // Linguagem herdada do cabeçalho existente; a camada interna também acompanha PT/EN.
-  window.addEventListener('portal:language',()=>{if(currentRoute())activate();});
+  const localeButton=document.getElementById('localeButton');
+  if(localeButton && typeof window!=='undefined' && typeof window.addEventListener==='function'){
+    window.addEventListener('portal:language',()=>{if(currentRoute())activate();});
+  }
   addEventListener('hashchange',()=>{activate();});
   activate();
 })();

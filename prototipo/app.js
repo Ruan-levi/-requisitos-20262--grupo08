@@ -341,7 +341,7 @@ function translatedGuideTitle(guide){
  return state.language==='es' ? (spanishGuideTitles[guide.id]||guide.title.pt) : (guide.title[state.language]||guide.title.pt);
 }
 
-const state = { language: (window.PortalPreferences && window.PortalPreferences.language) || 'pt', query: '', topic: 'all', audience: 'todos', editorialStage: 0 };
+const state = { language: (typeof window !== 'undefined' && window.PortalPreferences && window.PortalPreferences.language) || 'pt', query: '', topic: 'all', audience: 'todos', editorialStage: 0 };
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => Array.from(document.querySelectorAll(selector));
 const t = (key) => (translations[state.language] || translations.pt)[key] ?? translations.pt[key];
