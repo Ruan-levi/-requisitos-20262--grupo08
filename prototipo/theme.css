@@ -210,3 +210,141 @@ html[data-theme="dark"] .site-head .institution-brand__copy strong{color:#edf5ff
  object-fit:contain!important;object-position:center!important;
  background:#eff5ff;border-color:#b8cef5;padding:8px;
 }
+
+
+/* Correção do cabeçalho — vídeo de 28/11/2026.
+   A largura de 1200px da página não cabe logo + 7 links + 5 ações.
+   O cabeçalho usa a largura da janela, sem empurrar menus sobre botões.
+   Em janelas intermediárias o menu vira painel compacto de uma linha. */
+html{scroll-padding-top:84px}
+.top-strip,.top-strip__inner{min-height:30px}
+.top-strip__inner{gap:12px}
+.site-header{height:auto!important;min-height:76px}
+.site-header > .container.site-header__inner{
+  width:min(calc(100% - 40px),1860px);
+  max-width:none;
+  min-height:76px;
+  height:auto;
+  margin-inline:auto;
+  display:grid;
+  grid-template-columns:minmax(280px,320px) minmax(0,1fr) max-content;
+  align-items:center;
+  gap:14px;
+  padding-block:10px;
+}
+.site-header .brand.institution-brand{margin:0;min-width:0}
+.site-header .institution-brand__copy small{white-space:normal}
+.site-header .main-nav,.site-header .main-nav.is-open{
+  display:flex;position:static;
+  min-width:0;width:auto;height:auto;max-height:none;
+  flex-direction:row;justify-content:center;align-items:center;
+  gap:0;margin:0;padding:0;border:0;border-radius:0;
+  background:transparent;box-shadow:none;overflow:visible;
+}
+.site-header .main-nav a{
+  height:auto;min-height:42px;white-space:nowrap;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:.8rem;line-height:1.25;
+  padding:9px clamp(4px,.42vw,10px);
+}
+.site-header .main-nav a.nav-active::after{
+  width:calc(100% - 16px);height:3px;left:8px;top:auto;bottom:2px;
+}
+.site-header .header-actions{
+  min-width:0;margin:0;gap:6px;flex-wrap:nowrap;
+  justify-self:end;
+}
+.site-header .header-actions > *{flex-shrink:0}
+.site-header .header-actions .account-entry{padding:8px 10px;font-size:.74rem;min-height:40px}
+.site-header .header-cta{min-height:40px;padding:9px 11px;font-size:.77rem}
+.site-header .mobile-menu-toggle{display:none}
+.portal-workspace{padding-top:18px}
+.xp-breadcrumb{margin-bottom:14px}
+.xp-sidenav{top:92px}
+@media (min-width:1025px) and (max-width:1370px){
+  html{scroll-padding-top:84px}
+}
+/* As ações da direita permanecem visíveis, sem comprimir os links de navegação. */
+@media (max-width:1800px){
+  .site-header > .container.site-header__inner{
+    display:flex;
+    width:min(calc(100% - 40px),1660px);
+    min-height:74px;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+    gap:12px;
+    padding-block:8px;
+  }
+  .site-header .header-actions{margin-left:auto}
+  .site-header .mobile-menu-toggle{display:grid;place-items:center;width:42px;height:41px;flex:none}
+  .site-header .main-nav,.site-header .main-nav.is-open{
+    position:absolute;top:100%;left:auto;right:20px;
+    width:min(360px,calc(100vw - 40px));height:auto;
+    max-height:calc(100dvh - 115px);overflow-y:auto;
+    flex-direction:column;justify-content:flex-start;align-items:stretch;
+    gap:3px;padding:12px;
+    background:#fff;border:1px solid #d6e3f5;border-radius:0 0 14px 14px;
+    box-shadow:0 20px 44px #132b8630;z-index:45;
+  }
+  .site-header .main-nav{display:none}
+  .site-header .main-nav.is-open{display:flex}
+  .site-header .main-nav a{
+    justify-content:flex-start;min-height:43px;
+    padding:12px 14px;font-size:.87rem;
+  }
+  .site-header .main-nav a.nav-active::after{
+    width:3px;height:60%;left:0;top:20%;bottom:auto;
+  }
+  html[data-theme="dark"] .site-header .main-nav,
+  html[data-theme="dark"] .site-header .main-nav.is-open{
+    background:#172847;border-color:#435984;
+  }
+}
+/* Tablet e telefone: o cabeçalho nunca precisa de uma segunda linha fixa. */
+@media (max-width:1024px){
+  .site-header > .container.site-header__inner{
+    width:calc(100% - 28px);
+    min-height:68px;
+    padding-block:7px;
+    gap:7px;
+  }
+  .site-header .main-nav,.site-header .main-nav.is-open{
+    width:min(360px,calc(100vw - 28px));right:14px;
+  }
+  .portal-workspace{padding-top:13px}
+  .xp-breadcrumb{margin-bottom:12px}
+}
+@media (max-width:720px){
+  .site-header .header-cta{display:none!important}
+  .site-header .institution-brand__copy small{display:none}
+}
+@media (max-width:430px){
+  .site-header .main-nav.is-open a.mobile-account-link{
+    display:flex!important;justify-content:flex-start;
+  }
+}
+
+/* A navegação horizontal integra-se à superfície escura do cabeçalho. */
+@media (min-width:1801px){
+  html[data-theme="dark"] .site-header .main-nav,
+  html[data-theme="dark"] .site-header .main-nav.is-open{
+    background:transparent;border:0;box-shadow:none;
+  }
+}
+/* Acessibilidade: ampliar fontes não deve criar colisão na largura desktop. */
+@media (min-width:1801px){
+  html.font-large .site-header > .container.site-header__inner{
+    display:flex;justify-content:space-between;flex-wrap:nowrap;
+  }
+  html.font-large .site-header .main-nav{
+    display:none;position:absolute;top:100%;left:auto;right:20px;
+    width:360px;max-height:calc(100dvh - 115px);overflow-y:auto;
+    flex-direction:column;align-items:stretch;gap:3px;
+    padding:12px;background:#fff;border:1px solid #d6e3f5;
+    border-radius:0 0 14px 14px;box-shadow:0 20px 44px #132b8630;
+  }
+  html.font-large .site-header .main-nav.is-open{display:flex}
+  html.font-large .site-header .main-nav a{justify-content:flex-start;padding:12px 14px}
+  html.font-large .site-header .mobile-menu-toggle{display:grid;place-items:center}
+  html.font-large[data-theme="dark"] .site-header .main-nav{background:#172847;border-color:#435984}
+}
