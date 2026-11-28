@@ -178,3 +178,11 @@ A [galeria de 25 wireframes](wireframes/index.html) foi revisada a partir da ver
 - `auth-config.js` está **intencionalmente vazio**. Não é possível cadastrar ou autenticar usuários reais antes de criar o projeto Nhost, executar a migração e validar as permissões.
 - A experiência pública antiga continua acessível sem login. Os arquivos de teste incluem casos de segurança e papéis.
 - [Requisitos e casos de uso complementares](../Requisitos/Especificacao/08-extensao-P3-cadastro-perfis.md) · [Implantação e checklist](../GestaoConfiguracao/11-implantacao-autenticacao-nhost.md).
+
+## Identidade visual DRI / Unifor — atualização de novembro/2026
+
+A nova camada `institutional.css` aplica a paleta oficial de referência (**Anil #004AF7, Marinho #132190, Azul Claro #87B7FE e Gelo #E4F2FE**) às telas públicas, com maior organização tipográfica, fotografia de campus e navegação responsiva. A folha `institutional-auth.css` aplica a mesma linguagem gráfica às interfaces de **aluno, docente e administrador** e aos comunicados, sem alterar o comportamento da autenticação ou do backend.
+
+As páginas possuem referência visual à marca Unifor, com aviso explícito de **protótipo independente não oficial**, origem das imagens e link para a Central de Marca. O logotipo é carregado a partir de um recurso público do Wikimedia Commons (marca registrada) e as fotos são exibidas a partir de fontes institucionais; o carregamento dessas imagens depende da disponibilidade dos fornecedores. Para uso institucional oficial, validar autorização.
+
+[Registro de decisões visuais e fontes](../GestaoConfiguracao/12-diretrizes-visuais-dri-unifor.md). O arquivo Figma existente não foi alterado por essa atualização; os 25 wireframes documentais também foram preservados.

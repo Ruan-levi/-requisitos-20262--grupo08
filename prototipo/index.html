@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#07345e" />
+    <meta name="theme-color" content="#132190" />
     <meta name="description" content="Protótipo acadêmico do Portal de Internacionalização da UNIFOR — Grupo 08. Consulte orientações e explore possibilidades de mobilidade acadêmica." />
     <title>Portal de Internacionalização | Protótipo — Grupo 08</title>
     <link rel="icon" href="./assets/icone.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./experience.css" />
     <link rel="stylesheet" href="./redesign.css" />
+    <link rel="stylesheet" href="./institutional.css" />
     <script src="./app.js" defer></script>
     <script src="./experience.js" defer></script>
   </head>
@@ -39,16 +40,17 @@
 
     <div class="top-strip">
       <div class="container top-strip__inner">
-        <span class="top-strip__notice"><span class="tiny-dot"></span><span data-i18n="prototypeTop">Protótipo acadêmico · UNIFOR · Grupo 08</span></span>
+        <span class="top-strip__notice"><span class="tiny-dot"></span><span data-i18n="prototypeTop">Protótipo acadêmico independente · não oficial</span></span><span class="institutional-disclaimer">Demonstração · Grupo 08</span>
         <a href="https://unifor.br/dri/inicial" rel="noopener noreferrer" target="_blank"><span data-i18n="officialSite">Conheça a DRI oficial</span><svg class="icon icon--tiny"><use href="#icon-arrow-up-right" /></svg></a>
       </div>
     </div>
 
     <header class="site-header">
       <div class="container site-header__inner">
-        <a class="brand" href="#inicio" aria-label="Portal de Internacionalização — início">
-          <span class="brand__symbol" aria-hidden="true"><svg class="icon"><use href="#icon-globe" /></svg></span>
-          <span class="brand__text"><strong>internacionaliza<span class="brand__dot">.</span></strong><small>UNIFOR · GRUPO 08</small></span>
+        <a class="brand institution-brand" href="#inicio" aria-label="Início do protótipo do Portal de Internacionalização — referência visual à Unifor">
+          <img class="institution-brand__logo" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Unifor_logo.svg" alt="Universidade de Fortaleza" width="108" height="47" loading="eager" referrerpolicy="no-referrer" />
+          <span class="institution-brand__separator" aria-hidden="true"></span>
+          <span class="institution-brand__copy"><strong>Diretoria de Relações Internacionais</strong><small>Portal acadêmico · Grupo 08</small></span>
         </a>
         <nav class="main-nav" id="menu-principal" aria-label="Navegação principal">
           <a href="#inicio" class="nav-active" data-i18n="navHome">Início</a>
@@ -88,7 +90,7 @@
           </div>
           <div class="hero__visual" aria-hidden="true">
             <div class="hero__image-halo"></div>
-            <img class="hero__illustration" src="./assets/conexoes-globais.svg" alt="" loading="eager" />
+            <div class="hero__photo-frame"><img class="hero__photo" src="https://www.unifor.br/documents/20143/573160/Capa%2BRevista%2B800.jpg/62277e26-7261-8447-0937-10871294c98f?t=1705002547956" alt="Estudantes caminhando pelo campus da Universidade de Fortaleza" loading="eager" decoding="async" referrerpolicy="no-referrer" /><span class="hero__photo-credit">Imagem de referência · Unifor</span></div>
             <div class="hero__floating hero__floating--top"><span class="floating-icon"><svg class="icon"><use href="#icon-plane" /></svg></span><span><strong>Novos caminhos</strong><small>Experiências além-fronteiras</small></span></div>
             <div class="hero__floating hero__floating--bottom"><span class="floating-signal"></span><span><strong>Informações em um só lugar</strong><small>Explore. Entenda. Planeje.</small></span></div>
           </div>
@@ -188,7 +190,7 @@
       <section class="contact-section" id="contatos" aria-labelledby="contact-title"><div class="container contact-section__inner"><div class="contact-section__orb" aria-hidden="true"><svg class="icon"><use href="#icon-globe" /></svg></div><div><div class="eyebrow eyebrow--light"><span class="eyebrow__line"></span><span data-i18n="contactEyebrow">PRECISA DE INFORMAÇÕES OFICIAIS?</span></div><h2 id="contact-title" data-i18n="contactTitle">O seu próximo passo é falar com a DRI.</h2><p data-i18n="contactDescription">Para orientações vigentes, editais e atendimento institucional, consulte o site oficial da Diretoria de Relações Internacionais da UNIFOR.</p></div><a class="btn btn--white contact-section__button" href="https://unifor.br/dri/contatos" target="_blank" rel="noopener noreferrer"><span data-i18n="contactButton">Acessar contatos oficiais</span><svg class="icon icon--small"><use href="#icon-arrow-up-right" /></svg></a></div></section>
     </main>
 
-    <footer class="site-footer"><div class="container footer-main"><div class="footer-brand"><a class="brand brand--footer" href="#inicio"><span class="brand__symbol"><svg class="icon"><use href="#icon-globe" /></svg></span><span class="brand__text"><strong>internacionaliza<span class="brand__dot">.</span></strong><small>UNIFOR · GRUPO 08</small></span></a><p data-i18n="footerDescription">Protótipo acadêmico de um portal de consulta sobre internacionalização. Desenvolvido como parte da disciplina de Requisitos e Modelagem de Sistemas.</p></div><div class="footer-links"><strong data-i18n="footerNavigate">Navegue</strong><a href="#categorias" data-i18n="navTopics">Temas</a><a href="#/orientacoes" data-i18n="navGuides">Orientações</a><a href="#duvidas" data-i18n="footerFaq">Dúvidas frequentes</a></div><div class="footer-links"><strong data-i18n="footerReferences">Referências</strong><a href="./wireframes/">Wireframes P2</a><a href="./conta.html">Login e cadastro</a><a href="./publicacoes.html">Comunicados</a><a href="https://www.figma.com/design/wINNQ9DbvhYKjjxyRV2lYc" target="_blank" rel="noopener noreferrer">Projeto no Figma ↗</a><a href="https://unifor.br/dri/inicial" target="_blank" rel="noopener noreferrer">DRI — UNIFOR <svg class="icon icon--tiny"><use href="#icon-arrow-up-right" /></svg></a><a href="https://github.com/Ruan-levi/-requisitos-20262--grupo08" target="_blank" rel="noopener noreferrer"><span data-i18n="footerRepository">Repositório do projeto</span><svg class="icon icon--tiny"><use href="#icon-arrow-up-right" /></svg></a></div></div><div class="container footer-bottom"><span>© 2026 · Grupo 08 · <span data-i18n="footerSchool">Projeto de Requisitos e Modelagem de Sistemas</span></span><span class="footer-disclaimer" data-i18n="footerDisclaimer">Projeto independente, não oficial e sem coleta de dados pessoais.</span></div></footer>
+    <footer class="site-footer"><div class="container footer-main"><div class="footer-brand"><a class="brand brand--footer institution-brand" href="#inicio" aria-label="Protótipo acadêmico do Portal de Internacionalização"><img class="institution-brand__logo" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Unifor_logo.svg" alt="Universidade de Fortaleza" width="108" height="47" loading="lazy" referrerpolicy="no-referrer" /><span class="institution-brand__separator" aria-hidden="true"></span><span class="institution-brand__copy"><strong>Diretoria de Relações Internacionais</strong><small>Protótipo independente · Grupo 08</small></span></a><p data-i18n="footerDescription">Protótipo acadêmico de um portal de consulta sobre internacionalização. Desenvolvido como parte da disciplina de Requisitos e Modelagem de Sistemas.</p><p class="institutional-credits">Referência de identidade visual: <a href="https://unifor.br/central-de-marca" target="_blank" rel="noopener noreferrer">Central de Marca Unifor</a>. Fotografia: <a href="https://unifor.br/-/revista-unifor-internacionalizacao-vai-alem-do-intercambio" target="_blank" rel="noopener noreferrer">Revista Unifor</a>. Projeto acadêmico independente, sem vínculo de publicação oficial com a DRI.</p></div><div class="footer-links"><strong data-i18n="footerNavigate">Navegue</strong><a href="#categorias" data-i18n="navTopics">Temas</a><a href="#/orientacoes" data-i18n="navGuides">Orientações</a><a href="#duvidas" data-i18n="footerFaq">Dúvidas frequentes</a></div><div class="footer-links"><strong data-i18n="footerReferences">Referências</strong><a href="./wireframes/">Wireframes P2</a><a href="./conta.html">Login e cadastro</a><a href="./publicacoes.html">Comunicados</a><a href="https://www.figma.com/design/wINNQ9DbvhYKjjxyRV2lYc" target="_blank" rel="noopener noreferrer">Projeto no Figma ↗</a><a href="https://unifor.br/dri/inicial" target="_blank" rel="noopener noreferrer">DRI — UNIFOR <svg class="icon icon--tiny"><use href="#icon-arrow-up-right" /></svg></a><a href="https://github.com/Ruan-levi/-requisitos-20262--grupo08" target="_blank" rel="noopener noreferrer"><span data-i18n="footerRepository">Repositório do projeto</span><svg class="icon icon--tiny"><use href="#icon-arrow-up-right" /></svg></a></div></div><div class="container footer-bottom"><span>© 2026 · Grupo 08 · <span data-i18n="footerSchool">Projeto de Requisitos e Modelagem de Sistemas</span></span><span class="footer-disclaimer" data-i18n="footerDisclaimer">Projeto independente, não oficial e sem coleta de dados pessoais.</span></div></footer>
 
     <dialog id="guideDialog" class="guide-dialog" aria-labelledby="dialogTitle"><div class="guide-dialog__body"><button class="dialog-close" id="closeDialog" type="button" aria-label="Fechar orientação"><svg class="icon"><use href="#icon-close" /></svg></button><span class="dialog-kicker" id="dialogCategory"></span><h2 id="dialogTitle"></h2><p id="dialogDescription" class="dialog-intro"></p><h3 id="dialogStepsTitle" data-i18n="dialogStepsTitle">Por onde começar</h3><ol id="dialogSteps"></ol><div class="dialog-source"><span data-i18n="dialogSourceHeading">FONTE ESPECÍFICA</span><strong id="dialogSourceName"></strong><small id="dialogReviewed"></small></div><p class="dialog-notice"><svg class="icon icon--small"><use href="#icon-info" /></svg><span data-i18n="dialogNotice">Orientação ilustrativa. Confirme procedimentos e prazos nas fontes oficiais.</span></p><a href="https://unifor.br/dri/inicial" class="btn btn--navy" id="dialogOfficialLink" target="_blank" rel="noopener noreferrer"><span data-i18n="dialogOfficial">Consultar DRI oficial</span><svg class="icon icon--small"><use href="#icon-arrow-up-right" /></svg></a></div></dialog>
   </body>

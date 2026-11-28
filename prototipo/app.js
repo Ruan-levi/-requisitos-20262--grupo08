@@ -190,7 +190,7 @@ const courseSources = {
 
 const translations = {
   pt: {
-    prototypeTop: 'Protótipo acadêmico · UNIFOR · Grupo 08', officialSite: 'Conheça a DRI oficial',
+    prototypeTop: 'Protótipo acadêmico independente · não oficial', officialSite: 'Conheça a DRI oficial',
     navHome: 'Início', navPrograms: 'Programas', navProcess: 'Como funciona', navDestinations: 'Portais estrangeiros', navTopics: 'Temas', navGuides: 'Orientações', navHow: 'Como funciona', navContact: 'Contatos', navExplore: 'Explorar portal',
     navUniversities: 'Universidades', navSources: 'Fontes oficiais',
     hubEyebrow: 'ACESSOS DIRETOS · UNIFOR', hubTitle: 'A informação certa, na fonte certa.', hubDescription: 'Cada assunto leva à página ou ao documento institucional correspondente — sem precisar recomeçar a navegação.', hubNotice: 'Fontes institucionais pesquisadas em novembro de 2026',
@@ -218,12 +218,12 @@ const translations = {
     editorialCardEyebrow: 'DEMONSTRAÇÃO DE FLUXO', editorialSample: 'Orientação sobre documentos de viagem', editorialSampleDescription: 'Exemplo fictício para demonstrar a revisão de informações antes da publicação.',
     editorialEyebrow: 'INFORMAÇÃO CONFIÁVEL', editorialTitle: 'Informação bem cuidada também faz parte da experiência.', editorialDescription: 'Além de facilitar a consulta, o projeto prevê uma área restrita para editores e publicadores responsáveis por revisar informações antes que elas apareçam ao público.',
     editorialPoint1: 'Rascunhos não aparecem na consulta pública.', editorialPoint2: 'Aprovação por responsáveis autorizados.', editorialPoint3: 'Fontes e datas de revisão identificáveis.',
-    editorialLimit: 'Autenticação real e publicação segura dependem de um backend, fora do escopo deste protótipo estático.', editorialWarning: 'Simulação local no navegador: não altera conteúdos reais e não possui login.',
+    editorialLimit: 'A autenticação e a publicação segura dependem da configuração do banco Nhost. A simulação acima é apenas demonstrativa.', editorialWarning: 'Simulação local no navegador: não altera conteúdos reais e não possui login.',
     editorialReset: 'Reiniciar',
     faqEyebrow: 'PERGUNTAS FREQUENTES', faqTitle: 'Dúvidas que merecem respostas claras.', faqDescription: 'Orientações iniciais para você saber o que verificar antes de avançar.', faqTip: 'Dica: sempre confirme requisitos e prazos em editais e canais oficiais.',
     faqQ1: 'O portal faz inscrições para intercâmbio?', faqA1: 'Não. Este protótipo organiza informações para consulta. Inscrições e seleções seguem procedimentos e canais oficiais informados pela universidade.',
     faqQ2: 'Como saber quais documentos são exigidos?', faqA2: 'A documentação depende da modalidade, do destino e das regras vigentes. Use este portal para localizar o assunto e confira o edital ou setor responsável antes de tomar decisões.',
-    faqQ3: 'Posso consultar as orientações sem cadastro?', faqA3: 'Sim, na proposta a consulta pública não exige conta. A autenticação é prevista apenas para quem administra e publica conteúdos.',
+    faqQ3: 'Posso consultar as orientações sem cadastro?', faqA3: 'Sim. Todas as orientações públicas podem ser consultadas sem conta. O login opcional para alunos, docentes e gestores ainda depende de uma conexão Nhost configurada.',
     faqQ4: 'Estas orientações já são oficiais da UNIFOR?', faqA4: 'Não. Trata-se de uma demonstração acadêmica do Grupo 08. O portal não representa um sistema institucional implantado, e os conteúdos de exemplo não substituem fontes oficiais.',
     contactEyebrow: 'PRECISA DE INFORMAÇÕES OFICIAIS?', contactTitle: 'O seu próximo passo é falar com a DRI.', contactDescription: 'Para orientações vigentes, editais e atendimento institucional, consulte o site oficial da Diretoria de Relações Internacionais da UNIFOR.', contactButton: 'Acessar contatos oficiais',
     footerDescription: 'Protótipo acadêmico de um portal de consulta sobre internacionalização. Desenvolvido como parte da disciplina de Requisitos e Modelagem de Sistemas.', footerNavigate: 'Navegue', footerFaq: 'Dúvidas frequentes', footerReferences: 'Referências', footerRepository: 'Repositório do projeto', footerSchool: 'Projeto de Requisitos e Modelagem de Sistemas', footerDisclaimer: 'Projeto independente, não oficial e sem coleta de dados pessoais.',
@@ -235,7 +235,7 @@ const translations = {
     openMenu: 'Abrir menu', closeMenu: 'Fechar menu', increaseFont: 'Aumentar tamanho do texto', normalFont: 'Restaurar tamanho do texto'
   },
   en: {
-    prototypeTop: 'Academic prototype · UNIFOR · Group 08', officialSite: 'Visit the official DRI website',
+    prototypeTop: 'Independent academic prototype · not official', officialSite: 'Visit the official DRI website',
     navHome: 'Home', navPrograms: 'Programs', navProcess: 'How it works', navDestinations: 'Host portals', navTopics: 'Topics', navGuides: 'Guides', navHow: 'How it works', navContact: 'Contacts', navExplore: 'Explore portal',
     navUniversities: 'Universities', navSources: 'Official sources',
     hubEyebrow: 'DIRECT ACCESS · UNIFOR', hubTitle: 'The right information, from the right source.', hubDescription: 'Each subject links to its specific institutional page or document, so you can find answers with fewer steps.', hubNotice: 'Institutional sources researched in November 2026',
@@ -263,12 +263,12 @@ const translations = {
     editorialCardEyebrow: 'WORKFLOW DEMONSTRATION', editorialSample: 'Travel documents guidance', editorialSampleDescription: 'A fictional example illustrating the review process before publication.',
     editorialEyebrow: 'TRUSTWORTHY INFORMATION', editorialTitle: 'Well-managed information is part of the experience.', editorialDescription: 'Alongside public access, the project proposes a restricted area for editors and publishers to review guidance before it reaches visitors.',
     editorialPoint1: 'Drafts are not visible to the public.', editorialPoint2: 'Approval by authorized staff.', editorialPoint3: 'Identifiable sources and review dates.',
-    editorialLimit: 'Real authentication and secure publishing require a backend, beyond this static prototype.', editorialWarning: 'Local browser simulation: does not modify real content and has no login.',
+    editorialLimit: 'Authentication and secure publishing require a configured Nhost backend. The workflow above is a local demonstration.', editorialWarning: 'Local browser simulation: does not modify real content and has no login.',
     editorialReset: 'Reset',
     faqEyebrow: 'FREQUENTLY ASKED QUESTIONS', faqTitle: 'Questions deserve clear answers.', faqDescription: 'Initial guidance about what to check before moving forward.', faqTip: 'Tip: always confirm requirements and deadlines in official calls and institutional channels.',
     faqQ1: 'Can I apply for an exchange through this portal?', faqA1: 'No. This prototype organizes information for consultation. Applications and selections follow official institutional procedures and channels.',
     faqQ2: 'How do I know which documents are required?', faqA2: 'Required documents depend on the program, destination and current rules. Use the portal to find a topic, then check the official call or contact the responsible office.',
-    faqQ3: 'Can I browse guides without an account?', faqA3: 'Yes. The proposed public information area does not require an account. Authentication is planned only for people who manage and publish content.',
+    faqQ3: 'Can I browse guides without an account?', faqA3: 'Yes. Public information is available without an account. Optional student, faculty and administrator sign-in still requires a configured Nhost connection.',
     faqQ4: 'Are these guides official UNIFOR information?', faqA4: 'No. This is an academic demonstration by Group 08. It is not an official institutional system, and sample content does not replace official sources.',
     contactEyebrow: 'NEED OFFICIAL INFORMATION?', contactTitle: 'Your next step is to contact DRI.', contactDescription: 'For current guidance, calls and institutional assistance, please consult the official UNIFOR International Relations Directorate website.', contactButton: 'Visit official contacts',
     footerDescription: 'Academic prototype of an internationalization guidance portal. Developed for the Requirements and Systems Modeling course.', footerNavigate: 'Navigate', footerFaq: 'Frequently asked questions', footerReferences: 'References', footerRepository: 'Project repository', footerSchool: 'Requirements and Systems Modeling project', footerDisclaimer: 'Independent, unofficial project with no personal data collection.',
