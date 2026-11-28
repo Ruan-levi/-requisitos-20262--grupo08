@@ -28,10 +28,10 @@ test('Paleta institucional correta e layout responsivo',()=>{
 });
 test('Imagem da vida acadêmica com alt e fonte pública referenciada',()=>{
  assert.match(home,/hero__photo-frame/);
- assert.match(home,/Estudantes caminhando pelo campus/);
+ assert.match(home,/Imagem de referência institucional utilizada no protótipo acadêmico/);
  assert.match(home,/unifor\.br\/documents/);
  assert.match(home,/Central de Marca Unifor/);
- assert.match(accounts,/Estudantes no campus da Universidade de Fortaleza/);
+ assert.match(accounts,/Imagem ilustrativa de atividades acadêmicas na Universidade de Fortaleza/);
  assert.match(posts,/Comunidade acadêmica da Universidade de Fortaleza/);
 });
 test('Identificação de protótipo não oficial permanece explícita',()=>{

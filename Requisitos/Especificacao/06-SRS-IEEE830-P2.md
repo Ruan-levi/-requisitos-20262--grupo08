@@ -181,7 +181,7 @@ Cada caso relaciona ator, condição, sequência, alternativa, resultado e requi
 - **Pré-condição:** Há portal publicado.
 - **Fluxo principal:** Acessa capa; escolhe categoria ou programa; lê explicações e etapas; acessa documentação..
 - **Alternativa/exceção:** Categoria sem conteúdo exibe orientação alternativa..
-- **Pós-condição:** Acessou informação contextual; nenhum cadastro obrigatório..
+- **Pós-condição:** Acessou informação contextual; nenhum cadastro obrigatório.
 - **Rastreabilidade:** RF01, RF04, RF05.
 - **Wireframe(s):** Tela 01, 02, 03.
 
@@ -219,7 +219,7 @@ Cada caso relaciona ator, condição, sequência, alternativa, resultado e requi
 
 - **Ator(es):** Visitante / internacional.
 - **Pré-condição:** Conteúdo público disponível.
-- **Fluxo principal:** Alterna idioma; lê contato e origem do material; abre referência oficial contextual..
+- **Fluxo principal:** Alterna idioma; lê contato e origem do material; abre referência oficial contextual.
 - **Alternativa/exceção:** Tradução não aprovada: não é declarada oficial; fonte indisponível: notificar usuário..
 - **Pós-condição:** Consulta rastreável à fonte, sujeito a verificação..
 - **Rastreabilidade:** RF05, RF06, RF07, RF08.
@@ -250,7 +250,7 @@ Cada caso relaciona ator, condição, sequência, alternativa, resultado e requi
 - **Ator(es):** Administrador.
 - **Pré-condição:** Administrador autenticado.
 - **Fluxo principal:** Acessa usuários; altera perfil; confirma ação; sistema registra log..
-- **Alternativa/exceção:** Acesso de não administrador é recusado..
+- **Alternativa/exceção:** Acesso de não administrador é recusado.
 - **Pós-condição:** Perfil atualizado com trilha de auditoria..
 - **Rastreabilidade:** RF09, RF14.
 - **Wireframe(s):** Tela 12 — proposta.

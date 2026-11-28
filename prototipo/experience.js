@@ -109,6 +109,12 @@
     error:'No hay información suficiente para confirmar el destino.'
   });
   const SpanishTerms={
+    'Intercâmbio e mobilidade':'Intercambio y movilidad',
+    'Documentos e vistos':'Documentos y visados',
+    'Vida acadêmica':'Vida académica',
+    'Custos e hospedagem':'Costos y alojamiento',
+    'Apoio e contatos':'Apoyo y contactos',
+
     'Intercâmbio acadêmico':'Intercambio académico',
     'Dupla titulação':'Doble titulación',
     'Universidades e convênios':'Universidades y convenios',
@@ -749,6 +755,30 @@
   const lang = () => (typeof state !== 'undefined' && ['pt','en','es'].includes(state.language)) ? state.language : 'pt';
   const S = (key) => (i18n[lang()]||i18n.pt)[key] ?? i18n.pt[key];
   const tr = (v) => {if(typeof v==='string')return lang()==='es'?(SpanishTerms[v]||v):v;const x=(v&&(v[lang()]||v.pt))||'';return lang()==='es'&&typeof x==='string'?(SpanishTerms[x]||x):x;};
+  // O catálogo P1 possui entradas PT/EN. Para ES, textos longos mantêm PT como
+  // referência, mas os títulos das orientações exibidos ao usuário são localizados.
+  const spanishGuideLabels={
+    intercambio:'Intercambio académico',
+    'mobilidade-docente':'Movilidad docente',
+    'dupla-titulacao':'Doble titulación',
+    'vistos-documentos':'Visados y documentos',
+    aproveitamento:'Reconocimiento académico y créditos',
+    'colaboracao-docente':'Cooperación académica internacional',
+    custos:'Costos y planificación',
+    hospedagem:'Alojamiento y llegada',
+    'alunos-internacionais':'Primeros pasos para estudiantes internacionales',
+    contatos:'¿Cómo contactar a la DRI?',
+    'universidades-parceiras':'Universidades asociadas',
+    editais:'Convocatorias y solicitudes',
+    'documentos-academicos':'Documentos académicos y formularios'
+  };
+  const guideText=(guide,field)=>
+    lang()==='es' && field==='title'
+    ? (spanishGuideLabels[guide.id]||tr(guide[field]))
+    : tr(guide[field]);
+  const guideCategory=(guide)=>
+    (typeof categories!=='undefined'&&categories[guide.category])
+      ? tr(categories[guide.category]) : S('guides');
   const esc = (str) => String(str == null ? '' : str).replace(/[&<>"']/g, (x) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
   const norm = (str) => String(str || '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   const safeUrl = (url) => /^(https:\/\/(?:www\.)?unifor\.br\/)/.test(url) ? url : '#/contatos';
@@ -864,10 +894,10 @@
     const list=(typeof guides !== 'undefined')?guides:[];
     const guide=list.find(g=>g.id===id);
     if(guide){
-      const c=(typeof categories!=='undefined'&&categories[guide.category])?categories[guide.category][lang()]:S('guides');
+      const c=guideCategory(guide);
       const source=(typeof guideSources!=='undefined')?guideSources[guide.id]:null;
-      return hero(guide.title[lang()],guide.summary[lang()],c,link('orientacoes',S('back')))+
-        '<div class="xp-two"><article class="xp-paper xp-maincol">'+sectionHeader(S('next'),'')+steps(guide.steps[lang()])+
+      return hero(guideText(guide,'title'),guideText(guide,'summary'),c,link('orientacoes',S('back')))+
+        '<div class="xp-two"><article class="xp-paper xp-maincol">'+sectionHeader(S('next'),'')+steps(tr(guide.steps))+
         sectionHeader(lang()!=='en'?'Perguntas que vale fazer':'Questions worth asking','')+
         bullets(lang()!=='en'?['Este procedimento possui edital ou prazo válido para meu semestre?','Quais documentos e aprovações são necessários para meu perfil?','Quem pode confirmar as condições específicas do meu curso?']:['Is there a valid call or deadline for my semester?','Which documents and approvals apply to my profile?','Who can confirm requirements for my degree?'])+
         '<p class="xp-muted">'+esc(S('noEnroll'))+'</p></article><aside class="xp-aside"><div class="xp-sidebar-card"><h3>'+esc(S('source'))+'</h3>'+(source?out(source.url,L(source.pt,source.en)):'')+'<small>'+esc(S('updated'))+'</small></div><div class="xp-sidebar-card">'+link('documentos',S('documents'))+link('contatos',S('contacts'))+'</div></aside></div>'+note();
@@ -878,8 +908,8 @@
   function paintGuideResults(){
     const box=root.querySelector('#xpGuideResults');if(!box)return;
     const list=(typeof guides!=='undefined')?guides:[];
-    const filtered=list.filter(g=>norm(g.title.pt+' '+g.title.en+' '+g.summary.pt+' '+g.summary.en).includes(norm(selectedGuide)));
-    box.innerHTML='<div class="xp-results-count">'+filtered.length+' '+esc(S('results'))+'</div>'+(filtered.length?'<div class="xp-cards xp-cards--3">'+filtered.map(g=>'<a href="#/orientacoes/'+g.id+'" class="xp-card xp-card--link"><span class="xp-kicker">'+esc(categories[g.category][lang()])+'</span><h3>'+esc(g.title[lang()])+'</h3><p>'+esc(g.summary[lang()])+'</p><span class="xp-card-link">'+esc(S('openGuide'))+' →</span></a>').join('')+'</div>':'<div class="xp-empty">'+esc(S('noResults'))+'</div>');
+    const filtered=list.filter(g=>norm(g.title.pt+' '+g.title.en+' '+guideText(g,'title')+' '+g.summary.pt+' '+g.summary.en).includes(norm(selectedGuide)));
+    box.innerHTML='<div class="xp-results-count">'+filtered.length+' '+esc(S('results'))+'</div>'+(filtered.length?'<div class="xp-cards xp-cards--3">'+filtered.map(g=>'<a href="#/orientacoes/'+g.id+'" class="xp-card xp-card--link"><span class="xp-kicker">'+esc(guideCategory(g))+'</span><h3>'+esc(guideText(g,'title'))+'</h3><p>'+esc(guideText(g,'summary'))+'</p><span class="xp-card-link">'+esc(S('openGuide'))+' →</span></a>').join('')+'</div>':'<div class="xp-empty">'+esc(S('noResults'))+'</div>');
   }
   function facultyPage(){
     return hero(S('faculty'),lang()!=='en'?'Mobilidade docente, projetos internacionais e internacionalização acadêmica.':'Faculty mobility, international projects and academic cooperation.',S('faculty'),link('contatos',S('contacts'),'xp-btn--gold'))+

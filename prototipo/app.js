@@ -1,7 +1,8 @@
 /**
  * Portal de Internacionalização — demonstração acadêmica (Grupo 08).
  * As sínteses são didáticas; os links externos apontam para fontes da UNIFOR.
- * Nenhum dado é enviado a serviços externos. Não existe autenticação real.
+ * A consulta pública não exige login nem envia o checklist. A área de contas é separada
+ * e depende de um serviço Nhost remoto ainda não configurado.
  */
 
 const DRI_HOME = 'https://unifor.br/dri/inicial';
@@ -226,7 +227,7 @@ const translations = {
     faqQ3: 'Posso consultar as orientações sem cadastro?', faqA3: 'Sim. Todas as orientações públicas podem ser consultadas sem conta. O login opcional para alunos, docentes e gestores ainda depende de uma conexão Nhost configurada.',
     faqQ4: 'Estas orientações já são oficiais da UNIFOR?', faqA4: 'Não. Trata-se de uma demonstração acadêmica do Grupo 08. O portal não representa um sistema institucional implantado, e os conteúdos de exemplo não substituem fontes oficiais.',
     contactEyebrow: 'PRECISA DE INFORMAÇÕES OFICIAIS?', contactTitle: 'O seu próximo passo é falar com a DRI.', contactDescription: 'Para orientações vigentes, editais e atendimento institucional, consulte o site oficial da Diretoria de Relações Internacionais da UNIFOR.', contactButton: 'Acessar contatos oficiais',
-    footerDescription: 'Protótipo acadêmico de um portal de consulta sobre internacionalização. Desenvolvido como parte da disciplina de Requisitos e Modelagem de Sistemas.', footerNavigate: 'Navegue', footerFaq: 'Dúvidas frequentes', footerReferences: 'Referências', footerRepository: 'Repositório do projeto', footerSchool: 'Projeto de Requisitos e Modelagem de Sistemas', footerDisclaimer: 'Projeto independente, não oficial e sem coleta de dados pessoais.',
+    footerDescription: 'Protótipo acadêmico de um portal de consulta sobre internacionalização. Desenvolvido como parte da disciplina de Requisitos e Modelagem de Sistemas.', footerNavigate: 'Navegue', footerFaq: 'Dúvidas frequentes', footerReferences: 'Referências', footerRepository: 'Repositório do projeto', footerSchool: 'Projeto de Requisitos e Modelagem de Sistemas', footerDisclaimer: 'Protótipo não oficial. O cadastro depende da configuração segura do Nhost.',
     dialogStepsTitle: 'Por onde começar', dialogNotice: 'Orientação ilustrativa. Confirme procedimentos e prazos nas fontes oficiais.', dialogOfficial: 'Abrir fonte específica na Unifor', dialogSourceHeading: 'FONTE ESPECÍFICA', sourceChecked: 'Fonte pesquisada pelo Grupo 08 em 19/11/2026', cardSource: 'Fonte oficial',
     results: (count) => `${count} ${count === 1 ? 'orientação encontrada' : 'orientações encontradas'}`,
     seeGuide: 'Ler orientação', demoGuide: 'Guia ilustrativo',
@@ -271,7 +272,7 @@ const translations = {
     faqQ3: 'Can I browse guides without an account?', faqA3: 'Yes. Public information is available without an account. Optional student, faculty and administrator sign-in still requires a configured Nhost connection.',
     faqQ4: 'Are these guides official UNIFOR information?', faqA4: 'No. This is an academic demonstration by Group 08. It is not an official institutional system, and sample content does not replace official sources.',
     contactEyebrow: 'NEED OFFICIAL INFORMATION?', contactTitle: 'Your next step is to contact DRI.', contactDescription: 'For current guidance, calls and institutional assistance, please consult the official UNIFOR International Relations Directorate website.', contactButton: 'Visit official contacts',
-    footerDescription: 'Academic prototype of an internationalization guidance portal. Developed for the Requirements and Systems Modeling course.', footerNavigate: 'Navigate', footerFaq: 'Frequently asked questions', footerReferences: 'References', footerRepository: 'Project repository', footerSchool: 'Requirements and Systems Modeling project', footerDisclaimer: 'Independent, unofficial project with no personal data collection.',
+    footerDescription: 'Academic prototype of an internationalization guidance portal. Developed for the Requirements and Systems Modeling course.', footerNavigate: 'Navigate', footerFaq: 'Frequently asked questions', footerReferences: 'References', footerRepository: 'Project repository', footerSchool: 'Requirements and Systems Modeling project', footerDisclaimer: 'Unofficial prototype. Registration requires a securely configured Nhost backend.',
     dialogStepsTitle: 'Where to start', dialogNotice: 'Illustrative guidance. Check procedures and deadlines with official sources.', dialogOfficial: 'Open specific UNIFOR source', dialogSourceHeading: 'SPECIFIC SOURCE', sourceChecked: 'Source researched by Group 08 on 19 Nov 2026', cardSource: 'Official source',
     results: (count) => `${count} ${count === 1 ? 'guide found' : 'guides found'}`,
     seeGuide: 'Read guide', demoGuide: 'Sample guide',
@@ -314,7 +315,7 @@ translations.es = Object.assign({}, translations.en, {
   faqQ3:'¿Puedo consultar sin registrarme?',faqA3:'Sí. La información pública no exige cuenta. El inicio de sesión opcional necesita una conexión Nhost configurada.',
   faqQ4:'¿Estas orientaciones son oficiales?',faqA4:'No. Es un prototipo académico del Grupo 08, independiente de la Unifor. Consulte siempre los canales oficiales.',
   contactEyebrow:'¿NECESITA INFORMACIÓN OFICIAL?',contactTitle:'El siguiente paso es consultar a la DRI.',contactDescription:'Para orientaciones, convocatorias y atención institucional, visite la Dirección de Relaciones Internacionales de Unifor.',contactButton:'Abrir contactos oficiales',
-  footerDescription:'Prototipo académico de un portal de consulta sobre internacionalización.',footerNavigate:'Navegue',footerFaq:'Preguntas frecuentes',footerReferences:'Referencias',footerRepository:'Repositorio del proyecto',footerSchool:'Proyecto de Requisitos y Modelado de Sistemas',footerDisclaimer:'Proyecto independiente, no oficial y sin recopilación de datos personales.',
+  footerDescription:'Prototipo académico de un portal de consulta sobre internacionalización.',footerNavigate:'Navegue',footerFaq:'Preguntas frecuentes',footerReferences:'Referencias',footerRepository:'Repositorio del proyecto',footerSchool:'Proyecto de Requisitos y Modelado de Sistemas',footerDisclaimer:'Prototipo no oficial. El registro depende de una conexión Nhost segura.',
   dialogStepsTitle:'Por dónde comenzar',dialogNotice:'Orientación ilustrativa. Confirme requisitos y fechas en fuentes oficiales.',dialogOfficial:'Consultar la fuente oficial',dialogSourceHeading:'FUENTE ESPECÍFICA',sourceChecked:'Fuente consultada por el Grupo 08 el 19/11/2026',cardSource:'Fuente oficial',
   results:(count)=>count+' '+(count===1?'orientación encontrada':'orientaciones encontradas'),seeGuide:'Leer orientación',demoGuide:'Guía ilustrativa',
   status:['Borrador','En revisión','Publicado'],editorialAdvance:['Enviar a revisión','Aprobar publicación','Reiniciar demostración'],openMenu:'Abrir menú',closeMenu:'Cerrar menú',increaseFont:'Aumentar el tamaño del texto',normalFont:'Restablecer el tamaño del texto'
@@ -341,10 +342,19 @@ function translatedGuideTitle(guide){
  return state.language==='es' ? (spanishGuideTitles[guide.id]||guide.title.pt) : (guide.title[state.language]||guide.title.pt);
 }
 
+const spanishCategories = {
+  mobilidade:'Intercambio y movilidad',
+  titulacao:'Doble titulación',
+  documentos:'Documentos y visados',
+  academico:'Vida académica',
+  planejamento:'Costos y alojamiento',
+  apoio:'Apoyo y contactos'
+};
 const state = { language: (typeof window !== 'undefined' && window.PortalPreferences && window.PortalPreferences.language) || 'pt', query: '', topic: 'all', audience: 'todos', editorialStage: 0 };
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => Array.from(document.querySelectorAll(selector));
 const t = (key) => (translations[state.language] || translations.pt)[key] ?? translations.pt[key];
+const categoryLabel = id => state.language === 'es' ? (spanishCategories[id] || categories[id].pt) : (categories[id][state.language] || categories[id].pt);
 
 function normalized(value) {
   return String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
@@ -353,8 +363,8 @@ function normalized(value) {
 function matchesGuide(guide) {
   const topicMatches = state.topic === 'all' || guide.category === state.topic;
   const audienceMatches = state.audience === 'todos' || guide.audience.includes(state.audience);
-  const searchable = [guide.title.pt, guide.title.en, guide.summary.pt, guide.summary.en,
-    categories[guide.category].pt, categories[guide.category].en, ...guide.steps.pt, ...guide.steps.en].join(' ');
+  const searchable = [guide.title.pt, guide.title.en, spanishGuideTitles[guide.id] || '', guide.summary.pt, guide.summary.en,
+    categories[guide.category].pt, categories[guide.category].en, spanishCategories[guide.category] || '', ...guide.steps.pt, ...guide.steps.en].join(' ');
   return topicMatches && audienceMatches && normalized(searchable).includes(normalized(state.query));
 }
 
@@ -366,7 +376,7 @@ function createCard(guide) {
   tags.className = 'guide-card__top';
   const category = document.createElement('span');
   category.className = 'guide-tag';
-  category.textContent = (categories[guide.category][state.language] || categories[guide.category].pt);
+  category.textContent = categoryLabel(guide.category);
   const sample = document.createElement('span');
   sample.className = 'guide-tag guide-tag--secondary';
   sample.textContent = t('demoGuide');
@@ -423,7 +433,7 @@ function renderGuides() {
 function openGuide(id) {
   const guide = guides.find((item) => item.id === id);
   if (!guide) return;
-  $('#dialogCategory').textContent = (categories[guide.category][state.language] || categories[guide.category].pt);
+  $('#dialogCategory').textContent = categoryLabel(guide.category);
   $('#dialogTitle').textContent = translatedGuideTitle(guide);
   $('#dialogDescription').textContent = (guide.summary[state.language] || guide.summary.pt);
   $('#dialogSteps').replaceChildren(...(guide.steps[state.language] || guide.steps.pt).map((step) => {
