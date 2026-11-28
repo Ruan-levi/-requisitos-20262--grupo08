@@ -27,6 +27,15 @@ A aplicação recebeu uma **área de contas** com opções de **Aluno**, **Profe
 **Estado técnico:** interfaces, cliente Nhost Auth/GraphQL, SQL PostgreSQL, metadados de permissões e testes estão versionados. **O banco Nhost remoto ainda não foi criado/conectado**: até isso acontecer, a página informa que o cadastro está indisponível e não registra credenciais. Não é uma autenticação simulada. Ao solicitar perfil de gestor, a pessoa **não recebe permissões administrativas automaticamente**; a aprovação ocorre no backend.
 
 ---
+## 🎨 Identidade visual inspirada na DRI / Unifor
+
+O portal foi redesenhado em **azul Anil, azul Marinho, Azul Claro e Gelo**, tomando como referência a [Central de Marca da Unifor](https://unifor.br/central-de-marca) e o [guia institucional de identidade visual](https://unifor.br/documents/20143/6718465/guia_de_marca_unifor.pdf/252dcd04-3cb7-818f-0607-d4a31ac04382). A página inicial incorpora uma fotografia de referência institucional, hierarquia visual aprimorada e uma assinatura gráfica com o símbolo da universidade. A identidade se estende às telas internas e à área de contas.
+
+**Este é um protótipo acadêmico independente, não um serviço oficial da Unifor ou da DRI.** Os símbolos e as imagens institucionais pertencem aos respectivos titulares; eventual implantação oficial deve seguir as regras de uso da marca e autorização da instituição. A camada visual não modifica autenticação, dados, permissões ou os fluxos de navegação.
+
+[Detalhes da identidade visual e fontes utilizadas](GestaoConfiguracao/12-diretrizes-visuais-dri-unifor.md)
+
+---
 ## 💡 Sobre o projeto
 
 **Problema:** informações sobre intercâmbio, dupla titulação, universidades parceiras, documentação e candidaturas estão distribuídas entre páginas da Unifor, editais e portais de instituições estrangeiras. Isso pode dificultar a compreensão do processo.
